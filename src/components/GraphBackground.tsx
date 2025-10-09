@@ -5,8 +5,21 @@ interface Node {
   y: number;
   baseX: number;
   baseY: number;
+  baseTargetX?: number;
+  baseTargetY?: number;
+  relayoutT?: number;
   connections: number[];
   cluster: number;
+  radius: number; // draw radius 3-5px
+  angleX: number;
+  angleY: number;
+  speedX: number; // radians/sec
+  speedY: number; // radians/sec
+  offsetX: number;
+  offsetY: number;
+  vx: number;
+  vy: number;
+  driftR: number; // drift radius 9-10px
 }
 
 export const GraphBackground = () => {
@@ -22,14 +35,37 @@ export const GraphBackground = () => {
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // Track canvas size to scale nodes on resize (no re-creation)
+    let prevWidth = 0;
+    let prevHeight = 0;
+    let initialized = false;
+
     const resizeCanvas = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-      initNodes();
+      const newW = canvas.offsetWidth;
+      const newH = canvas.offsetHeight;
+      const scaleX = prevWidth ? newW / prevWidth : 1;
+      const scaleY = prevHeight ? newH / prevHeight : 1;
+      canvas.width = newW;
+      canvas.height = newH;
+
+      if (initialized) {
+        nodes.forEach((n) => {
+          n.baseX *= scaleX;
+          n.baseY *= scaleY;
+          n.x = n.baseX + n.offsetX;
+          n.y = n.baseY + n.offsetY;
+        });
+      } else {
+        initNodes();
+        initialized = true;
+      }
+
+      prevWidth = newW;
+      prevHeight = newH;
     };
     
     // TL-weighted distribution: 50-55% in upper-left third, rest spread
-    const totalNodes = 42;
+    const totalNodes = 56;
 
     let nodes: Node[] = [];
     
@@ -55,8 +91,21 @@ export const GraphBackground = () => {
           y,
           baseX: x,
           baseY: y,
+          baseTargetX: x,
+          baseTargetY: y,
+          relayoutT: 1,
           connections: [],
-          cluster: Math.floor(i / (totalNodes / 3))
+          cluster: Math.floor(i / (totalNodes / 3)),
+          radius: 3 + Math.random() * 2, // 3-5px
+          angleX: Math.random() * Math.PI * 2,
+          angleY: Math.random() * Math.PI * 2,
+          speedX: (Math.PI * 2) / (7 + Math.random() * 2), // 7-9s period
+          speedY: (Math.PI * 2) / (7 + Math.random() * 2),
+          offsetX: 0,
+          offsetY: 0,
+          vx: 0,
+          vy: 0,
+          driftR: 9 + Math.random() * 1 // 9-10px
         });
       }
 

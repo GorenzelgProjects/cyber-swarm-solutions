@@ -57,15 +57,15 @@ const Index = () => {
         style={{ 
           display: 'grid',
           marginTop: 0,
-          height: 'clamp(480px, 52vh, 620px)',
-          minHeight: '480px',
-          maxHeight: '620px',
-          padding: '0 24px 32px',
+          height: 'clamp(420px, 46vh, 560px)',
+          minHeight: '420px',
+          maxHeight: '560px',
+          padding: '0 24px',
           position: 'relative'
         }}
       >
         <GraphBackground />
-        <div className="relative z-10 max-w-[820px] mx-auto text-center" style={{ marginTop: 0 }}>
+        <div className="relative z-10 max-w-[820px] mx-auto text-center" style={{ marginTop: 0, padding: '12px 0' }}>
           <div className="animate-fade-in" style={{ marginTop: 0 }}>
             <h1 
               className="font-bold leading-tight text-foreground"
