@@ -98,9 +98,7 @@ export const GraphBackground = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      if (!prefersReducedMotion) {
-        time += 0.016; // ~60fps
-      }
+      time += 0.016; // ~60fps
 
       const isDark = document.documentElement.classList.contains("dark");
       
@@ -119,23 +117,18 @@ export const GraphBackground = () => {
       // Draw connections first
       nodes.forEach((node) => {
         // Update position with smooth drift (±8-10px over 7-10s)
-        if (!prefersReducedMotion) {
-          const driftX = Math.sin(time * 0.08 + node.baseX) * 9;
-          const driftY = Math.cos(time * 0.085 + node.baseY) * 9;
-          
-          node.x = node.baseX + driftX;
-          node.y = node.baseY + driftY;
+        const driftX = Math.sin(time * 0.08 + node.baseX) * 9;
+        const driftY = Math.cos(time * 0.085 + node.baseY) * 9;
+        
+        node.x = node.baseX + driftX;
+        node.y = node.baseY + driftY;
 
-          // Gentle re-layout every 16-22s
-          if (time - lastReorganize > 19) {
-            const shift = Math.random() * 3 - 1.5;
-            node.baseX += shift;
-            node.baseY += shift;
-            lastReorganize = time;
-          }
-        } else {
-          node.x = node.baseX;
-          node.y = node.baseY;
+        // Gentle re-layout every 16-22s
+        if (time - lastReorganize > 19) {
+          const shift = Math.random() * 3 - 1.5;
+          node.baseX += shift;
+          node.baseY += shift;
+          lastReorganize = time;
         }
 
         // Draw connections with slight curves

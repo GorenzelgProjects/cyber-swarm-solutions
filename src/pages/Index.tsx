@@ -48,7 +48,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen" style={{ paddingTop: '116px', margin: 0 }}>
+    <div className="min-h-screen" style={{ margin: 0 }}>
       <Navigation />
       
       {/* Hero Section */}
