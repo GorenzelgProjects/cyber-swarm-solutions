@@ -47,6 +47,10 @@ All colors MUST be HSL.
     --espresso: 25 25% 20%;
     --charcoal: 220 15% 25%;
     
+    /* Preview banner colors */
+    --preview-banner: 0 45% 70%;
+    --preview-banner-foreground: 0 0% 15%;
+    
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(40 30% 94%) 0%, hsl(38 40% 98%) 50%, hsl(35 35% 90%) 100%);
     --gradient-mesh: linear-gradient(135deg, hsl(28 60% 45% / 0.05) 0%, hsl(30 55% 55% / 0.05) 100%);
@@ -95,6 +99,10 @@ All colors MUST be HSL.
     --coffee: 25 15% 12%;
     --graphite: 220 10% 18%;
     --sepia: 30 50% 50%;
+    
+    /* Preview banner dark mode colors */
+    --preview-banner-dark: 25 25% 25%;
+    --preview-banner-foreground-dark: 40 30% 92%;
     
     /* Gradients - dark warm */
     --gradient-hero: linear-gradient(135deg, hsl(25 15% 12%) 0%, hsl(25 15% 16%) 50%, hsl(25 15% 14%) 100%);

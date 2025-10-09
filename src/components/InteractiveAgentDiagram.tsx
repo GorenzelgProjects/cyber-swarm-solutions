@@ -55,15 +55,6 @@ export const InteractiveAgentDiagram = () => {
               </p>
             </CardContent>
           </Card>
-          
-          {/* Animated connection indicator */}
-          <div className="hidden md:block absolute top-1/2 -right-8 transform -translate-y-1/2">
-            <div className={`w-16 h-0.5 bg-gradient-to-r from-red-400 to-blue-400 ${
-              activeAgent ? "animate-pulse" : ""
-            }`}>
-              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full" />
-            </div>
-          </div>
         </div>
 
         {/* Blue Team Agent */}

@@ -20,7 +20,7 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-soft">
+    <nav className="fixed top-[52px] w-full z-40 bg-background/95 backdrop-blur-lg border-b border-border shadow-soft">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2.5">
