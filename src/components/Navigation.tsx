@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,18 +20,18 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-soft">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-accent rounded-lg" />
-            <span className="text-xl font-bold bg-gradient-accent bg-clip-text text-transparent">
-              ColleaiQ
+          <Link to="/" className="flex items-center space-x-2.5">
+            <div className="w-8 h-8 bg-gradient-accent rounded-xl" />
+            <span className="text-xl font-semibold text-foreground">
+              Collea<span className="text-primary">i</span>Q
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -42,19 +43,22 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button asChild size="sm">
+            <ThemeToggle />
+            <Button asChild size="sm" className="rounded-2xl">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -72,7 +76,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button asChild size="sm" className="w-full">
+            <Button asChild size="sm" className="w-full rounded-2xl">
               <Link to="/contact" onClick={() => setIsOpen(false)}>
                 Contact Us
               </Link>

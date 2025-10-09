@@ -1,49 +1,49 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Network, Eye, Lock, Target, Zap } from "lucide-react";
+import { Shield, Network, Eye, Lock, Target, Zap, AlertCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-cyber.jpg";
+import { GraphBackground } from "@/components/GraphBackground";
 
 const Index = () => {
   const features = [
     {
       icon: Network,
-      title: "Multi-Agent System",
-      description: "Specialized AI agents collaborate in real-time for comprehensive threat coverage."
+      title: "Multi-Agent Networks",
+      description: "Specialised AI agents collaborate in real-time, simulating red-team attacks and blue-team defence in safe, bounded environments."
     },
     {
       icon: Shield,
-      title: "Proactive Defense",
-      description: "Red-team agents simulate attacks while blue-team agents defend continuously."
+      title: "Proactive Defence",
+      description: "Discover vulnerabilities internally before attackers do through continuous, realistic threat simulation."
     },
     {
       icon: Eye,
-      title: "Traceable & Auditable",
-      description: "Full visibility into agent decisions for NIS2 compliance and trust."
+      title: "Explainable & Auditable",
+      description: "Every agent decision is traceable and transparent, meeting NIS2 compliance requirements with full visibility."
     },
     {
       icon: Target,
-      title: "Zero-Day Detection",
-      description: "Discover vulnerabilities before attackers do through continuous simulation."
+      title: "Zero-Day-Like Discovery",
+      description: "Uncover unknown vulnerabilities through advanced graph analytics and reinforcement learning."
     },
     {
       icon: Zap,
-      title: "Continuous Improvement",
-      description: "Agents learn from analyst decisions and improve detection over time."
+      title: "Continuous Learning",
+      description: "Agents evolve from analyst decisions and simulation outcomes, improving detection capabilities over time."
     },
     {
       icon: Lock,
-      title: "Safe Simulations",
-      description: "All attacks run in secure, bounded sandbox environments."
+      title: "Safe Sandbox Simulation",
+      description: "All attack scenarios run in secure, isolated environments that mirror production without risk."
     }
   ];
 
   const stats = [
-    { value: "~3,000", label: "Danish organizations need NIS2 compliance" },
+    { value: "~3,000", label: "Danish organisations need NIS2 compliance" },
     { value: "4.7M", label: "Unfilled cybersecurity roles globally" },
-    { value: "24/7", label: "Continuous threat monitoring" },
+    { value: "24/7", label: "Continuous threat monitoring & simulation" },
     { value: "First", label: "Multi-agent network in EU cybersecurity" }
   ];
 
@@ -52,33 +52,28 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImage} 
-            alt="AI Cybersecurity Network" 
-            className="w-full h-full object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
-        </div>
+      <section className="pt-32 pb-24 px-4 relative overflow-hidden">
+        <GraphBackground />
+        <div className="absolute inset-0 bg-gradient-mesh pointer-events-none" />
         
         <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Proactive Cybersecurity with{" "}
-              <span className="bg-gradient-accent bg-clip-text text-transparent">
-                Multi-Agent AI
+          <div className="max-w-5xl mx-auto text-center space-y-10 animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-foreground">
+              Proactive, Explainable{" "}
+              <span className="text-primary">
+                Cyber Defence
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Europe's first multi-agent AI platform that simulates real attacker behavior 
-              to defend your organization before threats emerge.
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Europe's first multi-agent AI platform that simulates real attacker behaviour 
+              to uncover vulnerabilities internally, then translates findings into auditable 
+              actions your SOC can trust.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="text-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button asChild size="lg" className="text-lg rounded-2xl shadow-hover">
                 <Link to="/solution">Explore Our Solution</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg">
+              <Button asChild size="lg" variant="outline" className="text-lg rounded-2xl">
                 <Link to="/contact">Request Demo</Link>
               </Button>
             </div>
@@ -87,12 +82,12 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-gradient-cyber">
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
@@ -103,54 +98,54 @@ const Index = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 px-4">
+      <section className="py-24 px-4">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               The Cybersecurity Challenge
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Organizations face unprecedented threats while struggling with talent shortages 
-              and complex compliance requirements.
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Organisations face unprecedented threats whilst struggling with talent shortages 
+              and increasingly complex compliance mandates.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-card border-border shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in">
-              <CardContent className="p-6 space-y-4">
-                <div className="h-12 w-12 rounded-lg bg-gradient-cyber flex items-center justify-center">
-                  <Zap className="h-6 w-6 text-primary" />
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all duration-300 animate-fade-in rounded-2xl">
+              <CardContent className="p-8 space-y-4">
+                <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                  <AlertCircle className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold">New Threats & Compliance</h3>
-                <p className="text-muted-foreground">
-                  Generative AI weaponizes CVEs. NIS2 requires ~3,000 Danish organizations 
-                  to show explainable, auditable security measures.
+                <h3 className="text-xl font-semibold text-foreground">New Threats & Compliance</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Generative AI lowers barriers for attackers. NIS2 requires ~3,000 Danish organisations 
+                  to demonstrate explainable, auditable security measures.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-border shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <CardContent className="p-6 space-y-4">
-                <div className="h-12 w-12 rounded-lg bg-gradient-cyber flex items-center justify-center">
-                  <Target className="h-6 w-6 text-primary" />
+            <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all duration-300 animate-fade-in rounded-2xl" style={{ animationDelay: "0.1s" }}>
+              <CardContent className="p-8 space-y-4">
+                <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                  <Target className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold">Zero-Day Vulnerabilities</h3>
-                <p className="text-muted-foreground">
-                  Reactive cybersecurity leaves organizations exposed. Impact proven: 
-                  NotPetya cost Mærsk ≈ $300M in damages.
+                <h3 className="text-xl font-semibold text-foreground">Reactive Posture = Risk</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Waiting for incidents is costly. NotPetya cost Mærsk ≈ DKK 2 billion. 
+                  Proactive simulation finds weaknesses before attackers do.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-border shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <CardContent className="p-6 space-y-4">
-                <div className="h-12 w-12 rounded-lg bg-gradient-cyber flex items-center justify-center">
-                  <Shield className="h-6 w-6 text-primary" />
+            <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all duration-300 animate-fade-in rounded-2xl" style={{ animationDelay: "0.2s" }}>
+              <CardContent className="p-8 space-y-4">
+                <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                  <Shield className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold">Talent Shortage</h3>
-                <p className="text-muted-foreground">
-                  ~4.7 million unfilled cybersecurity roles globally. Organizations need 
-                  intelligent automation for 24/7 coverage.
+                <h3 className="text-xl font-semibold text-foreground">Talent Shortage</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  ~4.7 million unfilled cybersecurity roles globally. Organisations need 
+                  intelligent automation for 24/7 coverage and expert-level analysis.
                 </p>
               </CardContent>
             </Card>
@@ -159,27 +154,28 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-gradient-cyber">
-        <div className="container mx-auto">
+      <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
+        <div className="absolute inset-0 graph-pattern opacity-50" />
+        <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold">
-              Our Innovative Solutions
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+              Our Innovative Approach
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Multi-agent systems working together to provide proactive, 
               traceable, and continuously improving cybersecurity.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-card border-border shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6 space-y-4">
-                  <div className="h-12 w-12 rounded-lg bg-gradient-cyber flex items-center justify-center">
-                    <feature.icon className="h-6 w-6 text-primary" />
+              <Card key={index} className="bg-card border-border shadow-card hover:shadow-hover transition-all duration-300 animate-fade-in rounded-2xl" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardContent className="p-8 space-y-4">
+                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                    <feature.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -188,22 +184,22 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-24 px-4">
         <div className="container mx-auto">
-          <Card className="bg-gradient-cyber border-border shadow-glow overflow-hidden">
-            <CardContent className="p-12 text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">
+          <Card className="bg-gradient-mesh border-border shadow-hover overflow-hidden rounded-2xl max-w-4xl mx-auto">
+            <CardContent className="p-12 md:p-16 text-center space-y-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Ready to Stay Ahead of Cyber Threats?
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Join the organizations transforming their cybersecurity from reactive to proactive 
-                with ColleaiQ's multi-agent AI platform.
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Join the organisations transforming their cybersecurity from reactive to proactive 
+                with ColleaiQ's explainable multi-agent AI platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="rounded-2xl shadow-hover">
                   <Link to="/contact">Get Started</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg" variant="outline" className="rounded-2xl">
                   <Link to="/story">Learn Our Story</Link>
                 </Button>
               </div>

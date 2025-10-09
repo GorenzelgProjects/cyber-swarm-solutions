@@ -1,7 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Lightbulb, Rocket, Globe } from "lucide-react";
+import { Target, Lightbulb, Rocket, Globe, Shield } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { GraphBackground } from "@/components/GraphBackground";
 
 const Story = () => {
   const milestones = [
@@ -23,7 +24,7 @@ const Story = () => {
     {
       icon: Globe,
       title: "European Leadership",
-      description: "ColleaiQ aims to be the first company in Europe utilizing multi-agent networks in cybersecurity - a proposal that might finally bring cybersecurity ahead of cyber terrorists."
+      description: "ColleaiQ aims to be the first company in Europe utilising multi-agent networks in cybersecurity - a proposal that might finally bring cybersecurity ahead of cyber threats."
     }
   ];
 
@@ -33,35 +34,36 @@ const Story = () => {
       
       <div className="pt-24 pb-20">
         {/* Hero */}
-        <section className="px-4 py-20">
-          <div className="container mx-auto max-w-4xl text-center space-y-6 animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold">
-              Our <span className="bg-gradient-accent bg-clip-text text-transparent">Story</span>
+        <section className="px-4 py-20 relative overflow-hidden">
+          <GraphBackground />
+          <div className="container mx-auto max-w-4xl text-center space-y-8 animate-fade-in relative z-10">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground">
+              Our <span className="text-primary">Story</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Building the bridge between advanced AI and cybersecurity to create 
-              proactive, explainable defense for organizations that can't afford to wait.
+              proactive, explainable defence for organisations that can't afford to wait.
             </p>
           </div>
         </section>
 
         {/* Vision Statement */}
-        <section className="px-4 py-16 bg-gradient-cyber">
+        <section className="px-4 py-16 bg-muted/30">
           <div className="container mx-auto max-w-5xl">
-            <Card className="bg-card border-border shadow-card">
-              <CardContent className="p-8 md:p-12">
-                <h2 className="text-3xl font-bold mb-6 text-center">Our Vision</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <Card className="bg-card border-border shadow-card rounded-2xl">
+              <CardContent className="p-8 md:p-12 space-y-6">
+                <h2 className="text-3xl font-bold text-center text-foreground">Our Vision</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   2025 has been called the year of agentic AI. However, ColleaiQ explores the natural 
-                  next step: multi-agent networks. ColleaiQ aims to be the first company in Europe that 
-                  utilizes these networks in cybersecurity - a proposal that might finally bring 
-                  cybersecurity ahead of cyberterrorists.
+                  next step: <span className="font-semibold text-foreground">multi-agent networks</span>. ColleaiQ aims to be the first company in Europe that 
+                  utilises these networks in cybersecurity - a proposal that might finally bring 
+                  cybersecurity ahead of cyber threats.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  ColleaiQ is building proactive, explainable cyber defense for organizations that can't 
-                  afford to wait for the next incident. Our platform uses specialized AI agents that 
-                  continuously simulate real attacker behavior in safe, bounded environments, then translate 
-                  those findings into clear, auditable actions your security operations center can trust.
+                  ColleaiQ is building <span className="font-semibold text-foreground">proactive, explainable cyber defence</span> for organisations that can't 
+                  afford to wait for the next incident. Our platform uses specialised AI agents that 
+                  continuously simulate real attacker behaviour in safe, bounded environments, then translate 
+                  those findings into clear, auditable actions your security operations centre can trust.
                 </p>
               </CardContent>
             </Card>
@@ -69,21 +71,21 @@ const Story = () => {
         </section>
 
         {/* The Journey */}
-        <section className="px-4 py-20">
+        <section className="px-4 py-24">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-16">The Journey</h2>
+            <h2 className="text-4xl font-bold text-center mb-16 text-foreground">The Journey</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {milestones.map((milestone, index) => (
                 <Card 
                   key={index} 
-                  className="bg-card border-border shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in"
+                  className="bg-card border-border shadow-card hover:shadow-hover transition-all duration-300 animate-fade-in rounded-2xl"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-8 space-y-4">
-                    <div className="h-14 w-14 rounded-lg bg-gradient-cyber flex items-center justify-center">
+                    <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
                       <milestone.icon className="h-7 w-7 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-semibold">{milestone.title}</h3>
+                    <h3 className="text-2xl font-semibold text-foreground">{milestone.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {milestone.description}
                     </p>
@@ -95,48 +97,69 @@ const Story = () => {
         </section>
 
         {/* The Need */}
-        <section className="px-4 py-20 bg-gradient-cyber">
-          <div className="container mx-auto max-w-5xl">
-            <h2 className="text-4xl font-bold text-center mb-12">Why Now?</h2>
-            <Card className="bg-card border-border shadow-card">
-              <CardContent className="p-8 md:p-12 space-y-6">
+        <section className="px-4 py-24 bg-muted/30 relative overflow-hidden">
+          <div className="absolute inset-0 graph-pattern opacity-50" />
+          <div className="container mx-auto max-w-5xl relative z-10">
+            <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Why Now?</h2>
+            <Card className="bg-card border-border shadow-card rounded-2xl">
+              <CardContent className="p-8 md:p-12 space-y-8">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold">The European Security Landscape</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Denmark and the rest of Europe find themselves in an extraordinary security situation 
-                    following the conflict in Ukraine and a politically uncertain USA. During this time, 
-                    it is particularly important to promote the UN's sustainable development goals of creating 
-                    robust digital infrastructure and supporting strong operation and sovereignty of critical functions.
-                  </p>
+                  <div className="flex items-start gap-4">
+                    <Shield className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-2xl font-semibold text-foreground mb-3">The European Security Landscape</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Denmark and the rest of Europe find themselves in an extraordinary security situation 
+                        following the conflict in Ukraine and a politically uncertain USA. During this time, 
+                        it is particularly important to promote the UN's sustainable development goals of creating 
+                        robust digital infrastructure and supporting strong operation and sovereignty of critical functions.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold">Digital Vulnerability</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Danish society has for many years benefited from being one of the world's most digitalized 
-                    countries, but the benefits it has brought also bring increased risk and consequences for 
-                    cyber attacks. Danish Industry assesses the cyber threat as one of the greatest societal 
-                    risks, and almost every other Danish company is not sufficiently secured.
-                  </p>
+                  <div className="flex items-start gap-4">
+                    <Target className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-2xl font-semibold text-foreground mb-3">Digital Vulnerability</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Danish society has for many years benefited from being one of the world's most digitalised 
+                        countries, but the benefits it has brought also bring increased risk and consequences for 
+                        cyber-attacks. Danish Industry assesses the cyber threat as one of the greatest societal 
+                        risks, and almost every other Danish company is not sufficiently secured.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold">The Wake-Up Call</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    The need became particularly clear in 2017, when Danish companies truly had their eyes 
-                    opened when Mærsk was hit by the hacker attack, NotPetya, which cost them up to 2 billion 
-                    kroner. For shipping companies and other actors operating 24/7, downtime can result in 
-                    losses in the millions per day.
-                  </p>
+                  <div className="flex items-start gap-4">
+                    <Lightbulb className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-2xl font-semibold text-foreground mb-3">The Wake-Up Call</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        The need became particularly clear in 2017, when Danish companies truly had their eyes 
+                        opened when Mærsk was hit by the NotPetya attack, which cost them up to DKK 2 billion. 
+                        For shipping companies and other actors operating 24/7, downtime can result in 
+                        losses in the millions per day.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold">Supporting Digital Sovereignty</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    As Danish-developed technology, our solution supports the EU's strategy and requirements 
-                    for digital sovereignty and can be scaled to other EU countries where the same needs exist. 
-                    We're not just building a product - we're contributing to European cybersecurity independence.
-                  </p>
+                  <div className="flex items-start gap-4">
+                    <Globe className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-2xl font-semibold text-foreground mb-3">Supporting Digital Sovereignty</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        As Danish-developed technology, our solution supports the EU's strategy and requirements 
+                        for digital sovereignty and can be scaled to other EU countries where the same needs exist. 
+                        We're not just building a product - we're contributing to European cybersecurity independence.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -144,17 +167,17 @@ const Story = () => {
         </section>
 
         {/* Mission */}
-        <section className="px-4 py-20">
+        <section className="px-4 py-24">
           <div className="container mx-auto max-w-4xl text-center">
-            <Card className="bg-gradient-cyber border-border shadow-glow">
-              <CardContent className="p-12 space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
+            <Card className="bg-gradient-mesh border-border shadow-hover rounded-2xl">
+              <CardContent className="p-12 md:p-16 space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Mission</h2>
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   To become a natural tool in the fight for cybersecurity and sovereignty, 
-                  providing explainable and secure AI within sectors where the threat of cyber attacks 
-                  is very high - including energy, defense, shipping, and critical infrastructure.
+                  providing explainable and secure AI within sectors where the threat of cyber-attacks 
+                  is very high - including energy, defence, shipping, and critical infrastructure.
                 </p>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-foreground font-semibold">
                   We're bridging AI and cybersecurity to create a safer digital Europe.
                 </p>
               </CardContent>

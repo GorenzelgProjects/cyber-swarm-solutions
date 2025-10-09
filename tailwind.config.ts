@@ -47,9 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        cyber: {
-          blue: "hsl(var(--cyber-blue))",
-          purple: "hsl(var(--cyber-purple))",
+        brand: {
+          cream: "hsl(var(--cream))",
+          beige: "hsl(var(--beige))",
+          tan: "hsl(var(--tan))",
+          brown: "hsl(var(--brown))",
+          espresso: "hsl(var(--espresso))",
         },
       },
       backgroundImage: {
@@ -58,8 +61,9 @@ export default {
         'gradient-accent': 'var(--gradient-accent)',
       },
       boxShadow: {
-        'glow': 'var(--shadow-glow)',
+        'soft': 'var(--shadow-soft)',
         'card': 'var(--shadow-card)',
+        'hover': 'var(--shadow-hover)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -90,6 +94,14 @@ export default {
         "pulse-glow": {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" }
+        },
+        "draw-line": {
+          "0%": { strokeDashoffset: "1000" },
+          "100%": { strokeDashoffset: "0" }
+        },
+        "node-pulse": {
+          "0%, 100%": { opacity: "0.4", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.1)" }
         }
       },
       animation: {
@@ -99,6 +111,8 @@ export default {
         "slide-in": "slide-in 0.5s ease-out",
         "float": "float 3s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "draw-line": "draw-line 2s ease-out forwards",
+        "node-pulse": "node-pulse 3s ease-in-out infinite",
       },
     },
   },

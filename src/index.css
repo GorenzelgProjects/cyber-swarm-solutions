@@ -8,53 +8,103 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 25% 8%;
-    --foreground: 210 40% 98%;
+    /* Light theme - Warm cream/beige palette */
+    --background: 40 30% 94%;
+    --foreground: 25 25% 20%;
 
-    --card: 220 23% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 38 40% 98%;
+    --card-foreground: 25 25% 20%;
 
-    --popover: 220 23% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 38 40% 98%;
+    --popover-foreground: 25 25% 20%;
 
-    --primary: 193 95% 58%;
-    --primary-foreground: 220 25% 8%;
+    --primary: 28 60% 45%;
+    --primary-foreground: 40 30% 94%;
 
-    --secondary: 263 70% 60%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 35 35% 75%;
+    --secondary-foreground: 25 25% 20%;
 
-    --muted: 220 20% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 35 20% 88%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 193 95% 58%;
-    --accent-foreground: 220 25% 8%;
+    --accent: 30 55% 55%;
+    --accent-foreground: 40 30% 94%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 30% 94%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 18%;
-    --ring: 193 95% 58%;
+    --border: 35 20% 82%;
+    --input: 35 20% 88%;
+    --ring: 28 60% 45%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom cybersecurity theme tokens */
-    --cyber-blue: 193 95% 58%;
-    --cyber-purple: 263 70% 60%;
-    --navy-deep: 220 25% 8%;
-    --navy-light: 220 23% 12%;
+    /* Brand colours - cream/brown palette */
+    --cream: 40 30% 94%;
+    --beige: 35 35% 85%;
+    --tan: 30 30% 65%;
+    --brown: 28 60% 45%;
+    --espresso: 25 25% 20%;
+    --charcoal: 220 15% 25%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 25% 8%) 0%, hsl(220 23% 12%) 50%, hsl(220 25% 10%) 100%);
-    --gradient-cyber: linear-gradient(135deg, hsl(193 95% 58% / 0.1) 0%, hsl(263 70% 60% / 0.1) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(193 95% 58%) 0%, hsl(263 70% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(40 30% 94%) 0%, hsl(38 40% 98%) 50%, hsl(35 35% 90%) 100%);
+    --gradient-mesh: linear-gradient(135deg, hsl(28 60% 45% / 0.05) 0%, hsl(30 55% 55% / 0.05) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(28 60% 45%) 0%, hsl(30 55% 55%) 100%);
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(193 95% 58% / 0.3);
-    --shadow-card: 0 4px 20px hsl(220 25% 4% / 0.5);
+    /* Shadows - soft and warm */
+    --shadow-soft: 0 2px 16px hsl(25 25% 20% / 0.08);
+    --shadow-card: 0 4px 24px hsl(25 25% 20% / 0.1);
+    --shadow-hover: 0 8px 32px hsl(25 25% 20% / 0.12);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    /* Dark theme - Dark coffee/graphite with warm accents */
+    --background: 25 15% 12%;
+    --foreground: 40 25% 88%;
+
+    --card: 25 15% 16%;
+    --card-foreground: 40 25% 88%;
+
+    --popover: 25 15% 16%;
+    --popover-foreground: 40 25% 88%;
+
+    --primary: 35 45% 65%;
+    --primary-foreground: 25 15% 12%;
+
+    --secondary: 28 25% 30%;
+    --secondary-foreground: 40 25% 88%;
+
+    --muted: 25 12% 22%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 30 50% 50%;
+    --accent-foreground: 40 25% 88%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 25% 88%;
+
+    --border: 25 12% 24%;
+    --input: 25 12% 22%;
+    --ring: 35 45% 65%;
+
+    /* Dark mode specific colours */
+    --coffee: 25 15% 12%;
+    --graphite: 220 10% 18%;
+    --sepia: 30 50% 50%;
+    
+    /* Gradients - dark warm */
+    --gradient-hero: linear-gradient(135deg, hsl(25 15% 12%) 0%, hsl(25 15% 16%) 50%, hsl(25 15% 14%) 100%);
+    --gradient-mesh: linear-gradient(135deg, hsl(35 45% 65% / 0.08) 0%, hsl(30 50% 50% / 0.08) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(35 45% 65%) 0%, hsl(30 50% 50%) 100%);
+    
+    /* Shadows - subtle glow */
+    --shadow-soft: 0 2px 16px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
+    --shadow-hover: 0 8px 32px hsl(35 45% 65% / 0.15);
   }
 }
 
@@ -64,7 +114,31 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+  }
+}
+
+/* Graph background pattern */
+.graph-pattern {
+  background-image: 
+    linear-gradient(hsl(var(--border)) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -1px -1px;
+}
+
+.dark .graph-pattern {
+  background-image: 
+    linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
 }
