@@ -66,7 +66,7 @@ const Index = () => {
           paddingBottom: "24px",
           height: "clamp(420px, 46vh, 560px)",
           minHeight: "420px",
-          maxHeight: "560px",
+          maxHeight: "420px",
           position: "relative",
         }}
       >
