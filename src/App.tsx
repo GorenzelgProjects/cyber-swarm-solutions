@@ -21,12 +21,8 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
       <BrowserRouter>
-        <div style={{ margin: 0, padding: 0 }}>
-          <PreviewBanner />
-        </div>
+        <PreviewBanner />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/story" element={<Story />} />

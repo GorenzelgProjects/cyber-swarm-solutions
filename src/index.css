@@ -190,7 +190,16 @@ All colors MUST be HSL.
     position: relative;
     z-index: 1;
   }
+
+  /* Layout hardening for sticky top bars */
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    scroll-padding-top: 0;
+  }
 }
+
 
 /* Graph background pattern */
 .graph-pattern {

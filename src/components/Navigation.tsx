@@ -32,7 +32,7 @@ const Navigation = () => {
       }}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           <Link to="/" className="flex items-center space-x-2.5">
             <div className="w-8 h-8 bg-gradient-accent rounded-xl" />
             <span className="text-xl font-semibold text-foreground">
