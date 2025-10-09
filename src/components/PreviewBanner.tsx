@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 export const PreviewBanner = () => {
   return (
     <div 
-      className="fixed top-0 left-0 right-0 z-50 bg-preview-banner dark:bg-preview-banner-dark border-b border-border"
+      className="sticky top-0 left-0 right-0 bg-preview-banner dark:bg-preview-banner-dark border-b border-border"
+      style={{ zIndex: 1000 }}
       role="status"
       aria-live="polite"
     >

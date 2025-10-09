@@ -53,7 +53,6 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="pt-32 pb-24 px-4 relative overflow-hidden">
-        <GraphBackground />
         <div className="absolute inset-0 bg-gradient-mesh pointer-events-none" />
         
         <div className="container mx-auto relative z-10">
