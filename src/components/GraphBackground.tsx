@@ -116,9 +116,9 @@ export const GraphBackground = () => {
 
       // Draw connections first
       nodes.forEach((node) => {
-        // Update position with smooth drift (±8-10px over 7-10s)
-        const driftX = Math.sin(time * 0.08 + node.baseX) * 9;
-        const driftY = Math.cos(time * 0.085 + node.baseY) * 9;
+        // Update position with smooth, faster drift (±8-10px over 4-6s)
+        const driftX = Math.sin(time * 0.15 + node.baseX) * 9;
+        const driftY = Math.cos(time * 0.16 + node.baseY) * 9;
         
         node.x = node.baseX + driftX;
         node.y = node.baseY + driftY;
