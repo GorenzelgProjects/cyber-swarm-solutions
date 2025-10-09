@@ -55,22 +55,25 @@ const Index = () => {
       <section 
         className="relative overflow-hidden grid place-items-center" 
         style={{ 
+          display: 'grid',
           marginTop: 0,
-          height: 'clamp(520px, 58vh, 640px)',
-          minHeight: '520px',
-          maxHeight: '640px',
-          padding: '0 24px 40px'
+          paddingTop: 0,
+          height: 'clamp(480px, 52vh, 620px)',
+          minHeight: '480px',
+          maxHeight: '620px',
+          padding: '0 24px 32px',
+          position: 'relative'
         }}
       >
         <GraphBackground />
-        <div className="relative z-10 max-w-[820px] mx-auto text-center">
-          <div className="space-y-6 animate-fade-in">
+        <div className="relative z-10 max-w-[820px] mx-auto text-center" style={{ marginTop: 0 }}>
+          <div className="animate-fade-in" style={{ marginTop: 0 }}>
             <h1 
               className="font-bold leading-tight text-foreground"
               style={{
                 fontSize: 'clamp(32px, 4vw, 56px)',
                 lineHeight: '1.06',
-                margin: '0 0 16px'
+                margin: '0 0 14px'
               }}
             >
               Proactive, Explainable{" "}
@@ -84,7 +87,7 @@ const Index = () => {
                 fontSize: 'clamp(16px, 1.6vw, 20px)',
                 lineHeight: '1.5',
                 opacity: 0.9,
-                margin: '0 0 24px'
+                margin: '0 0 22px'
               }}
             >
               Europe's first multi-agent AI platform that simulates real attacker behaviour 
@@ -101,13 +104,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div 
-          className="absolute inset-0 pointer-events-none" 
-          style={{
-            background: 'linear-gradient(transparent 0%, rgba(255,255,255,0.05) 55%, transparent 100%)',
-            zIndex: 5
-          }}
-        />
       </section>
 
       {/* Stats Section */}

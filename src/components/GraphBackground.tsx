@@ -28,22 +28,22 @@ export const GraphBackground = () => {
       initNodes();
     };
     
-    // TL-weighted distribution: 55-60% in upper-left third, rest spread
-    const totalNodes = 20;
+    // TL-weighted distribution: 50-55% in upper-left third, rest spread
+    const totalNodes = 42;
 
     let nodes: Node[] = [];
     
     const initNodes = () => {
       nodes = [];
       
-      // Generate nodes with TL weighting: 55-60% in upper-left third
+      // Generate nodes with TL weighting: 50-55% in upper-left third
       for (let i = 0; i < totalNodes; i++) {
         let x, y;
         
-        // 58% in upper-left third (upper 55% width, upper 45% height)
-        if (i < totalNodes * 0.58) {
-          x = Math.random() * canvas.width * 0.55;
-          y = Math.random() * canvas.height * 0.45;
+        // 52% in upper-left third (upper 60% width, upper 50% height)
+        if (i < totalNodes * 0.52) {
+          x = Math.random() * canvas.width * 0.6;
+          y = Math.random() * canvas.height * 0.5;
         } else {
           // Rest spread across remaining area
           x = Math.random() * canvas.width;
@@ -62,9 +62,9 @@ export const GraphBackground = () => {
 
       // Create connections within clusters and a few bridges
       nodes.forEach((node, i) => {
-      // Connect to 0-1 nodes in same cluster (edgesPerNode ≈ 0.8-1.0)
+      // Connect to 1-2 nodes in same cluster (edgesPerNode ≈ 1.1-1.4)
         const sameCluster = nodes.filter((n, idx) => idx !== i && n.cluster === node.cluster);
-        const connectCount = Math.random() < 0.85 ? Math.min(1, sameCluster.length) : 0;
+        const connectCount = Math.random() < 0.7 ? Math.min(2, sameCluster.length) : Math.min(1, sameCluster.length);
         
         for (let j = 0; j < connectCount; j++) {
           const target = sameCluster[Math.floor(Math.random() * sameCluster.length)];
@@ -74,8 +74,8 @@ export const GraphBackground = () => {
           }
         }
         
-        // Occasional bridge to other cluster (15% chance)
-        if (Math.random() < 0.15) {
+        // Occasional bridge to other cluster (20% chance)
+        if (Math.random() < 0.2) {
           const otherCluster = nodes.filter((n, idx) => idx !== i && n.cluster !== node.cluster);
           if (otherCluster.length > 0) {
             const bridge = otherCluster[Math.floor(Math.random() * otherCluster.length)];
@@ -104,9 +104,9 @@ export const GraphBackground = () => {
 
       const isDark = document.documentElement.classList.contains("dark");
       
-      // Quieter opacity values
-      const nodeOpacity = isDark ? 0.30 : 0.26;
-      const edgeOpacity = isDark ? 0.23 : 0.19;
+      // Livelier opacity values
+      const nodeOpacity = isDark ? 0.33 : 0.31;
+      const edgeOpacity = isDark ? 0.26 : 0.22;
       
       const nodeColor = isDark 
         ? `rgba(212, 191, 165, ${nodeOpacity})` 
@@ -118,17 +118,17 @@ export const GraphBackground = () => {
 
       // Draw connections first
       nodes.forEach((node) => {
-        // Update position with very slow drift (±5-6px over 10-12s)
+        // Update position with smooth drift (±8-10px over 7-10s)
         if (!prefersReducedMotion) {
-          const driftX = Math.sin(time * 0.055 + node.baseX) * 5.5;
-          const driftY = Math.cos(time * 0.058 + node.baseY) * 5.5;
+          const driftX = Math.sin(time * 0.08 + node.baseX) * 9;
+          const driftY = Math.cos(time * 0.085 + node.baseY) * 9;
           
           node.x = node.baseX + driftX;
           node.y = node.baseY + driftY;
 
-          // Gentle re-layout every 18-24s
-          if (time - lastReorganize > 20) {
-            const shift = Math.random() * 2.5 - 1.25;
+          // Gentle re-layout every 16-22s
+          if (time - lastReorganize > 19) {
+            const shift = Math.random() * 3 - 1.5;
             node.baseX += shift;
             node.baseY += shift;
             lastReorganize = time;
@@ -151,7 +151,7 @@ export const GraphBackground = () => {
           
           ctx.strokeStyle = edgeColor;
           ctx.globalAlpha = fadeFactor;
-          ctx.lineWidth = 1.0;
+          ctx.lineWidth = 1.15;
           ctx.beginPath();
           ctx.moveTo(node.x, node.y);
           
@@ -182,7 +182,7 @@ export const GraphBackground = () => {
         ctx.fillStyle = nodeColor;
         ctx.globalAlpha = fadeFactor;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 3.5, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
         ctx.fill();
       });
 
@@ -217,7 +217,7 @@ export const GraphBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ zIndex: 0, transform: 'translateY(6%)' }}
+      style={{ zIndex: 0 }}
       aria-hidden="true"
     />
   );
