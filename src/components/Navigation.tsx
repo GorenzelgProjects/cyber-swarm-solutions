@@ -21,9 +21,8 @@ const Navigation = () => {
 
   return (
     <nav 
-      className="sticky w-full bg-background border-b border-border"
+      className="sticky top-0 w-full bg-background border-b border-border"
       style={{ 
-        top: '52px',
         zIndex: 900,
         backgroundColor: 'hsl(var(--background))',
         margin: 0,
