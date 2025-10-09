@@ -1,18 +1,18 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface Node {
   x: number;
   y: number;
+  baseX: number;
+  baseY: number;
   vx: number;
   vy: number;
   connections: number[];
-  pulse: number;
-  pulseDirection: number;
+  cluster: number;
 }
 
 export const GraphBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -31,131 +31,184 @@ export const GraphBackground = () => {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Track mouse position for interactive ripple effect
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      setMousePos({ 
-        x: e.clientX - rect.left, 
-        y: e.clientY - rect.top 
-      });
-    };
-    canvas.addEventListener("mousemove", handleMouseMove);
+    // Create 3 clusters anchored near top-left
+    const clusters = [
+      { centerX: 0.15, centerY: 0.15, size: 20 },
+      { centerX: 0.25, centerY: 0.30, size: 15 },
+      { centerX: 0.35, centerY: 0.20, size: 12 }
+    ];
 
-    // Initialize nodes with larger size and pulses
-    const nodeCount = 35;
-    const nodes: Node[] = Array.from({ length: nodeCount }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5, // Slightly faster movement
-      vy: (Math.random() - 0.5) * 0.5,
-      connections: [],
-      pulse: Math.random() * Math.PI * 2, // Random starting pulse phase
-      pulseDirection: 1,
-    }));
+    const nodes: Node[] = [];
+    
+    // Generate nodes in clusters
+    clusters.forEach((cluster, clusterIndex) => {
+      const clusterNodes = cluster.size;
+      for (let i = 0; i < clusterNodes; i++) {
+        const angle = (i / clusterNodes) * Math.PI * 2;
+        const radius = (Math.random() * 0.08 + 0.05) * canvas.width;
+        const x = cluster.centerX * canvas.width + Math.cos(angle) * radius;
+        const y = cluster.centerY * canvas.height + Math.sin(angle) * radius;
+        
+        nodes.push({
+          x,
+          y,
+          baseX: x,
+          baseY: y,
+          vx: (Math.random() - 0.5) * 0.08,
+          vy: (Math.random() - 0.5) * 0.08,
+          connections: [],
+          cluster: clusterIndex
+        });
+      }
+    });
 
-    // Create connections
+    // Create connections within clusters and a few bridges
     nodes.forEach((node, i) => {
-      const connectionCount = Math.floor(Math.random() * 3) + 1;
-      for (let j = 0; j < connectionCount; j++) {
-        const targetIndex = Math.floor(Math.random() * nodeCount);
-        if (targetIndex !== i && !node.connections.includes(targetIndex)) {
+      // Connect to 2-4 nodes in same cluster
+      const sameCluster = nodes.filter((n, idx) => idx !== i && n.cluster === node.cluster);
+      const connectCount = Math.min(Math.floor(Math.random() * 3) + 2, sameCluster.length);
+      
+      for (let j = 0; j < connectCount; j++) {
+        const target = sameCluster[Math.floor(Math.random() * sameCluster.length)];
+        const targetIndex = nodes.indexOf(target);
+        if (targetIndex !== -1 && !node.connections.includes(targetIndex)) {
           node.connections.push(targetIndex);
+        }
+      }
+      
+      // Occasional bridge to other cluster (10% chance)
+      if (Math.random() < 0.1) {
+        const otherCluster = nodes.filter((n, idx) => idx !== i && n.cluster !== node.cluster);
+        if (otherCluster.length > 0) {
+          const bridge = otherCluster[Math.floor(Math.random() * otherCluster.length)];
+          const bridgeIndex = nodes.indexOf(bridge);
+          if (bridgeIndex !== -1 && !node.connections.includes(bridgeIndex)) {
+            node.connections.push(bridgeIndex);
+          }
         }
       }
     });
 
     let animationId: number;
+    let time = 0;
+    let lastReorganize = 0;
+
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      time += 0.016; // ~60fps
 
-      // Get theme colors - more prominent
       const isDark = document.documentElement.classList.contains("dark");
-      const nodeColor = isDark ? "rgba(212, 191, 165, 0.6)" : "rgba(139, 99, 68, 0.5)";
-      const lineColor = isDark ? "rgba(212, 191, 165, 0.3)" : "rgba(139, 99, 68, 0.25)";
-      const pulseColor = isDark ? "rgba(212, 191, 165, 0.4)" : "rgba(139, 99, 68, 0.3)";
+      
+      // Light mode: espresso/sepia nodes and edges
+      // Dark mode: warm beige/sepia on graphite
+      const nodeOpacity = isDark ? 0.35 : 0.35;
+      const edgeOpacity = isDark ? 0.26 : 0.26;
+      
+      const nodeColor = isDark 
+        ? `rgba(212, 191, 165, ${nodeOpacity})` 
+        : `rgba(70, 45, 25, ${nodeOpacity})`;
+      
+      const edgeColor = isDark
+        ? `rgba(212, 191, 165, ${edgeOpacity})`
+        : `rgba(70, 45, 25, ${edgeOpacity})`;
+
+      // Apply radial fade mask from top-left
+      const gradient = ctx.createRadialGradient(
+        canvas.width * 0.25,
+        canvas.height * 0.25,
+        0,
+        canvas.width * 0.25,
+        canvas.height * 0.25,
+        canvas.width * 0.9
+      );
+      gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+      gradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.4)');
+      gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      
+      ctx.save();
+      ctx.globalCompositeOperation = 'destination-in';
 
       // Update and draw nodes
-      nodes.forEach((node, index) => {
+      nodes.forEach((node) => {
         if (!prefersReducedMotion) {
-          // Update position with subtle drift
-          node.x += node.vx;
-          node.y += node.vy;
+          // Very slow drift (6-10px over 6-10s)
+          const driftX = Math.sin(time * 0.1 + node.baseX) * 8;
+          const driftY = Math.cos(time * 0.12 + node.baseY) * 8;
+          
+          node.x = node.baseX + driftX;
+          node.y = node.baseY + driftY;
 
-          // Bounce off edges
-          if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
-          if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
-
-          // Keep in bounds
-          node.x = Math.max(0, Math.min(canvas.width, node.x));
-          node.y = Math.max(0, Math.min(canvas.height, node.y));
-
-          // Update pulse (~0.5 Hz as specified)
-          node.pulse += 0.03 * node.pulseDirection;
-          if (node.pulse > Math.PI * 2 || node.pulse < 0) {
-            node.pulseDirection *= -1;
-          }
-
-          // Interactive ripple effect near mouse
-          const dx = mousePos.x - node.x;
-          const dy = mousePos.y - node.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < 150) {
-            const rippleForce = (150 - distance) / 150;
-            node.x -= (dx / distance) * rippleForce * 2;
-            node.y -= (dy / distance) * rippleForce * 2;
+          // Slight reorganization every 12-20s
+          if (time - lastReorganize > 15) {
+            node.vx = (Math.random() - 0.5) * 0.05;
+            node.vy = (Math.random() - 0.5) * 0.05;
+            node.baseX += node.vx;
+            node.baseY += node.vy;
           }
         }
 
-        // Draw connections with varying opacity
+        // Draw connections with slight curves
         node.connections.forEach((targetIndex) => {
           const target = nodes[targetIndex];
           const distance = Math.sqrt(
             Math.pow(target.x - node.x, 2) + Math.pow(target.y - node.y, 2)
           );
-          const opacity = Math.max(0.1, 1 - distance / 300);
           
-          ctx.strokeStyle = isDark 
-            ? `rgba(212, 191, 165, ${opacity * 0.3})` 
-            : `rgba(139, 99, 68, ${opacity * 0.25})`;
+          // Distance-based fade
+          const distanceFromOrigin = Math.sqrt(
+            Math.pow(node.x - canvas.width * 0.15, 2) + 
+            Math.pow(node.y - canvas.height * 0.15, 2)
+          );
+          const fadeFactor = Math.max(0.1, 1 - distanceFromOrigin / (canvas.width * 0.6));
+          
+          ctx.strokeStyle = edgeColor;
+          ctx.globalAlpha = fadeFactor;
           ctx.lineWidth = 1.5;
           ctx.beginPath();
           ctx.moveTo(node.x, node.y);
-          ctx.lineTo(target.x, target.y);
+          
+          // Add subtle curve to some edges
+          if (Math.abs(target.cluster - node.cluster) > 0 || Math.random() < 0.3) {
+            const midX = (node.x + target.x) / 2;
+            const midY = (node.y + target.y) / 2;
+            const offsetX = (target.y - node.y) * 0.1;
+            const offsetY = -(target.x - node.x) * 0.1;
+            ctx.quadraticCurveTo(midX + offsetX, midY + offsetY, target.x, target.y);
+          } else {
+            ctx.lineTo(target.x, target.y);
+          }
+          
           ctx.stroke();
         });
 
-        // Draw pulsing glow
-        const pulseIntensity = (Math.sin(node.pulse) + 1) / 2;
-        const glowRadius = 8 + pulseIntensity * 4;
-        
-        const gradient = ctx.createRadialGradient(
-          node.x, node.y, 0,
-          node.x, node.y, glowRadius
+        // Draw node
+        const distanceFromOrigin = Math.sqrt(
+          Math.pow(node.x - canvas.width * 0.15, 2) + 
+          Math.pow(node.y - canvas.height * 0.15, 2)
         );
-        gradient.addColorStop(0, pulseColor);
-        gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        const fadeFactor = Math.max(0.1, 1 - distanceFromOrigin / (canvas.width * 0.6));
         
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, glowRadius, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Draw main node - larger and more visible
         ctx.fillStyle = nodeColor;
+        ctx.globalAlpha = fadeFactor;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 5 + pulseIntensity * 2, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
         ctx.fill();
-
-        // Draw node border
-        ctx.strokeStyle = isDark ? 'rgba(212, 191, 165, 0.8)' : 'rgba(139, 99, 68, 0.7)';
-        ctx.lineWidth = 1;
-        ctx.stroke();
       });
+
+      ctx.restore();
+      
+      // Apply radial mask
+      ctx.globalCompositeOperation = 'destination-in';
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      if (time - lastReorganize > 15) {
+        lastReorganize = time;
+      }
 
       animationId = requestAnimationFrame(animate);
     };
 
-    // Pause animation when tab is inactive
     const handleVisibilityChange = () => {
       if (document.hidden) {
         cancelAnimationFrame(animationId);
@@ -165,21 +218,21 @@ export const GraphBackground = () => {
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
-    animate();
+    // Lazy init after first paint
+    requestIdleCallback ? requestIdleCallback(() => animate()) : setTimeout(animate, 100);
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
-      canvas.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       cancelAnimationFrame(animationId);
     };
-  }, [mousePos]);
+  }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full"
-      style={{ mixBlendMode: "multiply", pointerEvents: "none" }}
+      className="fixed inset-0 w-full h-full pointer-events-none"
+      style={{ zIndex: 0 }}
       aria-hidden="true"
     />
   );

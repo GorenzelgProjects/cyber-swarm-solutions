@@ -39,7 +39,7 @@ export const InteractiveAgentDiagram = () => {
           onMouseLeave={() => setActiveAgent(null)}
         >
           <Card 
-            className={`bg-card border-2 shadow-card hover:shadow-hover transition-all duration-300 rounded-2xl cursor-pointer ${
+            className={`bg-card border-2 shadow-card hover:shadow-hover transition-all duration-300 rounded-2xl cursor-pointer overflow-hidden ${
               activeAgent === "red" ? agents[0].borderColor : "border-border"
             }`}
           >
@@ -64,7 +64,7 @@ export const InteractiveAgentDiagram = () => {
           onMouseLeave={() => setActiveAgent(null)}
         >
           <Card 
-            className={`bg-card border-2 shadow-card hover:shadow-hover transition-all duration-300 rounded-2xl cursor-pointer ${
+            className={`bg-card border-2 shadow-card hover:shadow-hover transition-all duration-300 rounded-2xl cursor-pointer overflow-hidden ${
               activeAgent === "blue" ? agents[1].borderColor : "border-border"
             }`}
           >
