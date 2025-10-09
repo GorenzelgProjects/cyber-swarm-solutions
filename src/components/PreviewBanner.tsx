@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export const PreviewBanner = () => {
   return (
     <div 
-      className="sticky top-0 left-0 right-0 border-b border-border"
+      className="fixed top-0 left-0 right-0 border-b border-border"
       style={{ 
         zIndex: 1000,
         backgroundColor: 'hsl(var(--preview-banner))',
