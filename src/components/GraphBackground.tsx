@@ -28,36 +28,27 @@ export const GraphBackground = () => {
       initNodes();
     };
     
-    // Create 3 clusters anchored near top-left
-    const clusters = [
-      { centerX: 0.15, centerY: 0.15, size: 20 },
-      { centerX: 0.25, centerY: 0.30, size: 15 },
-      { centerX: 0.35, centerY: 0.20, size: 12 }
-    ];
+    // Uniform distribution across entire hero
+    const totalNodes = 50;
 
     let nodes: Node[] = [];
     
     const initNodes = () => {
       nodes = [];
-      // Generate nodes in clusters
-      clusters.forEach((cluster, clusterIndex) => {
-        const clusterNodes = cluster.size;
-        for (let i = 0; i < clusterNodes; i++) {
-          const angle = (i / clusterNodes) * Math.PI * 2;
-          const radius = (Math.random() * 0.08 + 0.05) * canvas.width;
-          const x = cluster.centerX * canvas.width + Math.cos(angle) * radius;
-          const y = cluster.centerY * canvas.height + Math.sin(angle) * radius;
-          
-          nodes.push({
-            x,
-            y,
-            baseX: x,
-            baseY: y,
-            connections: [],
-            cluster: clusterIndex
-          });
-        }
-      });
+      // Generate nodes uniformly distributed
+      for (let i = 0; i < totalNodes; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        
+        nodes.push({
+          x,
+          y,
+          baseX: x,
+          baseY: y,
+          connections: [],
+          cluster: Math.floor(i / (totalNodes / 3)) // 3 loose groups for connection logic
+        });
+      }
 
       // Create connections within clusters and a few bridges
       nodes.forEach((node, i) => {
@@ -142,15 +133,8 @@ export const GraphBackground = () => {
         node.connections.forEach((targetIndex) => {
           const target = nodes[targetIndex];
           
-          // Distance-based fade from top-left origin
-          const distanceFromOrigin = Math.sqrt(
-            Math.pow(node.x - canvas.width * 0.15, 2) + 
-            Math.pow(node.y - canvas.height * 0.15, 2)
-          );
-          const fadeFactor = Math.max(0.05, 1 - distanceFromOrigin / (canvas.width * 0.65));
-          
           ctx.strokeStyle = edgeColor;
-          ctx.globalAlpha = fadeFactor;
+          ctx.globalAlpha = 1;
           ctx.lineWidth = 1.5;
           ctx.beginPath();
           ctx.moveTo(node.x, node.y);
@@ -172,14 +156,8 @@ export const GraphBackground = () => {
 
       // Draw nodes on top
       nodes.forEach((node) => {
-        const distanceFromOrigin = Math.sqrt(
-          Math.pow(node.x - canvas.width * 0.15, 2) + 
-          Math.pow(node.y - canvas.height * 0.15, 2)
-        );
-        const fadeFactor = Math.max(0.05, 1 - distanceFromOrigin / (canvas.width * 0.65));
-        
         ctx.fillStyle = nodeColor;
-        ctx.globalAlpha = fadeFactor;
+        ctx.globalAlpha = 1;
         ctx.beginPath();
         ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
         ctx.fill();
