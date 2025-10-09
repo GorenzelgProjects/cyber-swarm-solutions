@@ -22,16 +22,10 @@ export const GraphBackground = () => {
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    };
     const resizeCanvas = () => {
-      const dpr = Math.max(1, window.devicePixelRatio || 1);
-      const rect = canvas.getBoundingClientRect();
-      canvas.width = Math.round(rect.width * dpr);
-      canvas.height = Math.round(rect.height * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
       initNodes();
-    };
-
     
     // TL-weighted distribution: 50-55% in upper-left third, rest spread
     const totalNodes = 42;
