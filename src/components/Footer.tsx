@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 bg-gradient-accent rounded-xl" />
+              <img src={logo} alt="ColleaiQ Logo" className="w-8 h-8" />
               <span className="text-xl font-semibold text-foreground">
                 Collea<span className="text-primary">i</span>Q
               </span>
