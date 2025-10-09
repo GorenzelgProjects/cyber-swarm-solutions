@@ -24,7 +24,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <PreviewBanner />
+        <div style={{ margin: 0, padding: 0 }}>
+          <PreviewBanner />
+        </div>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/story" element={<Story />} />

@@ -1,13 +1,36 @@
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 export const PreviewBanner = () => {
+  const bannerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateBannerHeight = () => {
+      if (bannerRef.current) {
+        const height = bannerRef.current.offsetHeight;
+        document.documentElement.style.setProperty('--banner-height', `${height}px`);
+      }
+    };
+
+    // Update on mount and when fonts load
+    updateBannerHeight();
+    document.fonts.ready.then(updateBannerHeight);
+
+    // Update on resize
+    window.addEventListener('resize', updateBannerHeight);
+    
+    return () => {
+      window.removeEventListener('resize', updateBannerHeight);
+    };
+  }, []);
+
   return (
     <div 
+      ref={bannerRef}
       className="sticky top-0 left-0 right-0 border-b border-border"
       style={{ 
         zIndex: 1000,
         backgroundColor: 'hsl(var(--preview-banner))',
-        minHeight: 'var(--banner-h)',
         margin: 0,
         padding: '10px 0'
       }}

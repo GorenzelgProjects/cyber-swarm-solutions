@@ -53,7 +53,7 @@ const Index = () => {
       
       {/* Hero Section */}
       <section 
-        className="relative overflow-hidden grid place-items-center !pt-0 !pb-0" 
+        className="relative grid place-items-center !pt-0 !pb-0" 
         style={{ 
           display: 'grid',
           marginTop: 0,
