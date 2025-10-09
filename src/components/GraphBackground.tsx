@@ -28,17 +28,27 @@ export const GraphBackground = () => {
       initNodes();
     };
     
-    // Uniform distribution across entire hero
-    const totalNodes = 50;
+    // TL-weighted distribution: 60-65% in top-left, rest spread across hero
+    const totalNodes = 45;
 
     let nodes: Node[] = [];
     
     const initNodes = () => {
       nodes = [];
-      // Generate nodes uniformly distributed
+      
+      // Generate nodes with TL weighting
       for (let i = 0; i < totalNodes; i++) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
+        let x, y;
+        
+        // 60-65% in top-left quadrant
+        if (i < totalNodes * 0.625) {
+          x = Math.random() * canvas.width * 0.5;
+          y = Math.random() * canvas.height * 0.5;
+        } else {
+          // Rest spread across remaining area
+          x = Math.random() * canvas.width;
+          y = Math.random() * canvas.height;
+        }
         
         nodes.push({
           x,
@@ -46,15 +56,15 @@ export const GraphBackground = () => {
           baseX: x,
           baseY: y,
           connections: [],
-          cluster: Math.floor(i / (totalNodes / 3)) // 3 loose groups for connection logic
+          cluster: Math.floor(i / (totalNodes / 3))
         });
       }
 
       // Create connections within clusters and a few bridges
       nodes.forEach((node, i) => {
-        // Connect to 2-4 nodes in same cluster
+        // Connect to 1-2 nodes in same cluster (reduced from 2-4)
         const sameCluster = nodes.filter((n, idx) => idx !== i && n.cluster === node.cluster);
-        const connectCount = Math.min(Math.floor(Math.random() * 3) + 2, sameCluster.length);
+        const connectCount = Math.min(Math.floor(Math.random() * 2) + 1, sameCluster.length);
         
         for (let j = 0; j < connectCount; j++) {
           const target = sameCluster[Math.floor(Math.random() * sameCluster.length)];
@@ -94,10 +104,9 @@ export const GraphBackground = () => {
 
       const isDark = document.documentElement.classList.contains("dark");
       
-      // Light mode: espresso/sepia at specified opacities
-      // Dark mode: warm beige/sepia on graphite
-      const nodeOpacity = 0.4;
-      const edgeOpacity = 0.3;
+      // Reduced opacity for subtler effect
+      const nodeOpacity = isDark ? 0.31 : 0.27;
+      const edgeOpacity = isDark ? 0.24 : 0.20;
       
       const nodeColor = isDark 
         ? `rgba(212, 191, 165, ${nodeOpacity})` 
@@ -109,17 +118,17 @@ export const GraphBackground = () => {
 
       // Draw connections first
       nodes.forEach((node) => {
-        // Update position with very slow drift (~8px over ~8s)
+        // Update position with very slow drift (~6px over ~10s)
         if (!prefersReducedMotion) {
-          const driftX = Math.sin(time * 0.08 + node.baseX) * 8;
-          const driftY = Math.cos(time * 0.09 + node.baseY) * 8;
+          const driftX = Math.sin(time * 0.06 + node.baseX) * 6;
+          const driftY = Math.cos(time * 0.065 + node.baseY) * 6;
           
           node.x = node.baseX + driftX;
           node.y = node.baseY + driftY;
 
-          // Gentle re-layout every 15-20s
-          if (time - lastReorganize > 17) {
-            const shift = Math.random() * 4 - 2;
+          // Gentle re-layout every 20-24s
+          if (time - lastReorganize > 21) {
+            const shift = Math.random() * 3 - 1.5;
             node.baseX += shift;
             node.baseY += shift;
             lastReorganize = time;
@@ -133,9 +142,16 @@ export const GraphBackground = () => {
         node.connections.forEach((targetIndex) => {
           const target = nodes[targetIndex];
           
+          // Density-based fade: strongest at TL, fades toward BR
+          const tlDistance = Math.sqrt(
+            Math.pow(node.x, 2) + Math.pow(node.y, 2)
+          );
+          const maxDistance = Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2));
+          const fadeFactor = Math.max(0.2, 1 - (tlDistance / maxDistance) * 0.75);
+          
           ctx.strokeStyle = edgeColor;
-          ctx.globalAlpha = 1;
-          ctx.lineWidth = 1.5;
+          ctx.globalAlpha = fadeFactor;
+          ctx.lineWidth = 1.1;
           ctx.beginPath();
           ctx.moveTo(node.x, node.y);
           
@@ -156,10 +172,17 @@ export const GraphBackground = () => {
 
       // Draw nodes on top
       nodes.forEach((node) => {
+        // Density-based fade matching edges
+        const tlDistance = Math.sqrt(
+          Math.pow(node.x, 2) + Math.pow(node.y, 2)
+        );
+        const maxDistance = Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2));
+        const fadeFactor = Math.max(0.2, 1 - (tlDistance / maxDistance) * 0.75);
+        
         ctx.fillStyle = nodeColor;
-        ctx.globalAlpha = 1;
+        ctx.globalAlpha = fadeFactor;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
         ctx.fill();
       });
 

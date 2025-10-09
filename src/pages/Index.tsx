@@ -48,13 +48,13 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ paddingTop: '116px' }}>
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-24 px-4 relative overflow-hidden">
+      <section className="relative overflow-hidden" style={{ marginTop: 0 }}>
         <GraphBackground />
-        <div className="container mx-auto relative z-10">
+        <div className="container mx-auto relative z-10 py-24 px-4">
           <div className="max-w-5xl mx-auto text-center space-y-10 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight text-foreground">
               Proactive, Explainable{" "}
