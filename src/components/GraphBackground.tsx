@@ -26,6 +26,7 @@ export const GraphBackground = () => {
       canvas.width = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
       initNodes();
+    };
     
     // TL-weighted distribution: 50-55% in upper-left third, rest spread
     const totalNodes = 42;
