@@ -23,6 +23,7 @@ const Navigation = () => {
     <nav 
       className="sticky top-0 w-full bg-background border-b border-border"
       style={{ 
+        top: 'var(--banner-h)',
         zIndex: 900,
         backgroundColor: 'hsl(var(--background))',
         margin: 0,

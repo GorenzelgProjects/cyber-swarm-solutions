@@ -63,6 +63,7 @@ All colors MUST be HSL.
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --banner-h: 52px;
   }
 
   .dark {
@@ -119,6 +120,11 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    padding-top: 0;
+    margin: 0;
   }
 
   body {
