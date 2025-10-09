@@ -48,13 +48,11 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-[116px]">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-mesh pointer-events-none" />
-        
+      <section className="py-24 px-4 relative">
         <div className="container mx-auto relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-10 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight text-foreground">
@@ -81,8 +79,8 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto">
+      <section className="py-20 px-4 bg-background/50 backdrop-blur-sm relative">
+        <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -97,8 +95,8 @@ const Index = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-24 px-4">
-        <div className="container mx-auto">
+      <section className="py-24 px-4 relative">
+        <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               The Cybersecurity Challenge
@@ -153,8 +151,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
-        <div className="absolute inset-0 graph-pattern opacity-50" />
+      <section className="py-24 px-4 bg-background/50 backdrop-blur-sm relative">
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
@@ -183,8 +180,8 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-4">
-        <div className="container mx-auto">
+      <section className="py-24 px-4 relative">
+        <div className="container mx-auto relative z-10">
           <Card className="bg-gradient-mesh border-border shadow-hover overflow-hidden rounded-2xl max-w-4xl mx-auto">
             <CardContent className="p-12 md:p-16 text-center space-y-8">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">

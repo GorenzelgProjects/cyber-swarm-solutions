@@ -105,16 +105,16 @@ export const GraphBackground = () => {
       
       // Light mode: espresso/sepia at specified opacities
       // Dark mode: warm beige/sepia on graphite
-      const nodeOpacity = 0.35;
-      const edgeOpacity = 0.25;
+      const nodeOpacity = 0.4;
+      const edgeOpacity = 0.3;
       
       const nodeColor = isDark 
         ? `rgba(212, 191, 165, ${nodeOpacity})` 
-        : `rgba(70, 45, 25, ${nodeOpacity})`;
+        : `rgba(100, 70, 45, ${nodeOpacity})`;
       
       const edgeColor = isDark
         ? `rgba(212, 191, 165, ${edgeOpacity})`
-        : `rgba(70, 45, 25, ${edgeOpacity})`;
+        : `rgba(100, 70, 45, ${edgeOpacity})`;
 
       // Draw connections first
       nodes.forEach((node) => {
