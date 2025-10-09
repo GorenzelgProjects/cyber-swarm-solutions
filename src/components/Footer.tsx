@@ -14,37 +14,26 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Europe's first explainable multi-agent AI cybersecurity platform for proactive defence.
+              Proactive, explainable AI cyber defence for European organisations.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/story" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Our Story
-                </Link>
-              </li>
               <li>
                 <Link to="/solution" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Solution
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Blog
+                <Link to="/simulation-deep-dive" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  How It Works
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
               <li>
-                <Link to="/community" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Community
+                <Link to="/compliance" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Compliance
                 </Link>
               </li>
               <li>
@@ -52,9 +41,30 @@ const Footer = () => {
                   FAQ
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
               <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Contact
+                <Link to="/story" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Our Mission
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/community" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Community
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Careers
                 </Link>
               </li>
             </ul>
@@ -63,6 +73,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
+              <li>
+                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Contact Us
+                </Link>
+              </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:kontakt@colleaiq.dk" className="hover:text-primary transition-colors">

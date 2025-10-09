@@ -10,11 +10,11 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Our Story", path: "/story" },
+    { name: "Our Mission", path: "/story" },
     { name: "Solution", path: "/solution" },
+    { name: "Compliance", path: "/compliance" },
     { name: "Blog", path: "/blog" },
     { name: "Community", path: "/community" },
-    { name: "FAQ", path: "/faq" },
   ];
 
   const isActive = (path: string) => location.pathname === path;

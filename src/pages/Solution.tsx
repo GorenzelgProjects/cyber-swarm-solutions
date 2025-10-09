@@ -1,8 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Network, Shield, Eye, RefreshCw, CheckCircle, AlertTriangle, Lock } from "lucide-react";
+import { Shield, Target, Database, Brain, GitBranch, Eye } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { GraphBackground } from "@/components/GraphBackground";
+import { InteractiveAgentDiagram } from "@/components/InteractiveAgentDiagram";
+import { Button } from "@/components/ui/button";
+import { Network, RefreshCw, CheckCircle, AlertTriangle, Lock } from "lucide-react";
 
 const Solution = () => {
   const components = [
@@ -106,11 +109,23 @@ const Solution = () => {
           </div>
         </section>
 
-        {/* Attack Simulation Example */}
+        {/* Multi-Agent Architecture */}
+        <section className="px-4 py-24 bg-muted/30">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-4xl font-bold text-center mb-8 text-foreground">Multi-Agent Architecture</h2>
+            <p className="text-center text-lg text-muted-foreground mb-16 max-w-3xl mx-auto">
+              Our specialised AI agents work in concert: red-team agents simulate threats whilst blue-team agents 
+              detect and respond. The result is continuous, proactive defence with full explainability.
+            </p>
+            <InteractiveAgentDiagram />
+          </div>
+        </section>
+
+        {/* How It Works */}
         <section className="px-4 py-24">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4 text-foreground">How It Works</h2>
+              <h2 className="text-4xl font-bold mb-4 text-foreground">Continuous Defence Cycle</h2>
               <p className="text-xl text-muted-foreground">
                 Example: Credential Dumping Attack Simulation
               </p>
@@ -218,6 +233,28 @@ const Solution = () => {
                       effective at identifying and preventing sophisticated attacks.
                     </p>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="px-4 py-24 bg-muted/30">
+          <div className="container mx-auto max-w-4xl text-center">
+            <Card className="bg-gradient-mesh border-border shadow-hover rounded-2xl">
+              <CardContent className="p-12 md:p-16 space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Ready to See It in Action?</h2>
+                <p className="text-xl text-muted-foreground">
+                  Experience how our multi-agent system can transform your cybersecurity posture.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                  <Button size="lg" className="rounded-2xl" asChild>
+                    <a href="/contact">Request a Demo</a>
+                  </Button>
+                  <Button size="lg" variant="outline" className="rounded-2xl" asChild>
+                    <a href="/simulation-deep-dive">Explore Simulation Process</a>
+                  </Button>
                 </div>
               </CardContent>
             </Card>

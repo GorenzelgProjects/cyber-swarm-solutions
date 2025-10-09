@@ -10,6 +10,9 @@ import Blog from "./pages/Blog";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import SimulationDeepDive from "./pages/SimulationDeepDive";
+import Compliance from "./pages/Compliance";
+import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +31,9 @@ const App = () => (
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/simulation-deep-dive" element={<SimulationDeepDive />} />
+          <Route path="/compliance" element={<Compliance />} />
+          <Route path="/careers" element={<Careers />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
