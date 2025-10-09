@@ -21,11 +21,14 @@ const Navigation = () => {
 
   return (
     <nav 
-      className="fixed w-full bg-background border-b border-border m-0"
+      className="fixed w-full bg-background border-b border-border"
       style={{ 
         top: '52px',
         zIndex: 900,
-        backgroundColor: 'hsl(var(--background))'
+        backgroundColor: 'hsl(var(--background))',
+        margin: 0,
+        paddingTop: 0,
+        paddingBottom: 0
       }}
     >
       <div className="container mx-auto px-4">

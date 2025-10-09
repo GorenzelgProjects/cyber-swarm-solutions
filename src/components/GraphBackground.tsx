@@ -217,7 +217,7 @@ export const GraphBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ zIndex: 0, transform: 'translateY(8%)' }}
+      style={{ zIndex: 0, transform: 'translateY(6%)' }}
       aria-hidden="true"
     />
   );

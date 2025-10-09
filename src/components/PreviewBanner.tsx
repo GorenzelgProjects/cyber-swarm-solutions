@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 export const PreviewBanner = () => {
   return (
     <div 
-      className="fixed top-0 left-0 right-0 border-b border-border m-0"
+      className="fixed top-0 left-0 right-0 border-b border-border"
       style={{ 
         zIndex: 1000,
         backgroundColor: 'hsl(var(--preview-banner))',
-        height: '52px'
+        height: '52px',
+        margin: 0,
+        padding: '8px 0'
       }}
       role="status"
       aria-live="polite"
