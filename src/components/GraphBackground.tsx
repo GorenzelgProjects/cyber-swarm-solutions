@@ -28,22 +28,22 @@ export const GraphBackground = () => {
       initNodes();
     };
     
-    // TL-weighted distribution: 60-65% in top-left, rest spread across hero
-    const totalNodes = 45;
+    // TL-weighted distribution: 55-60% in upper-left third, rest spread
+    const totalNodes = 20;
 
     let nodes: Node[] = [];
     
     const initNodes = () => {
       nodes = [];
       
-      // Generate nodes with TL weighting
+      // Generate nodes with TL weighting: 55-60% in upper-left third
       for (let i = 0; i < totalNodes; i++) {
         let x, y;
         
-        // 60-65% in top-left quadrant
-        if (i < totalNodes * 0.625) {
-          x = Math.random() * canvas.width * 0.5;
-          y = Math.random() * canvas.height * 0.5;
+        // 58% in upper-left third (upper 55% width, upper 45% height)
+        if (i < totalNodes * 0.58) {
+          x = Math.random() * canvas.width * 0.55;
+          y = Math.random() * canvas.height * 0.45;
         } else {
           // Rest spread across remaining area
           x = Math.random() * canvas.width;
@@ -62,9 +62,9 @@ export const GraphBackground = () => {
 
       // Create connections within clusters and a few bridges
       nodes.forEach((node, i) => {
-        // Connect to 1-2 nodes in same cluster (reduced from 2-4)
+      // Connect to 0-1 nodes in same cluster (edgesPerNode ≈ 0.8-1.0)
         const sameCluster = nodes.filter((n, idx) => idx !== i && n.cluster === node.cluster);
-        const connectCount = Math.min(Math.floor(Math.random() * 2) + 1, sameCluster.length);
+        const connectCount = Math.random() < 0.85 ? Math.min(1, sameCluster.length) : 0;
         
         for (let j = 0; j < connectCount; j++) {
           const target = sameCluster[Math.floor(Math.random() * sameCluster.length)];
@@ -104,9 +104,9 @@ export const GraphBackground = () => {
 
       const isDark = document.documentElement.classList.contains("dark");
       
-      // Reduced opacity for subtler effect
-      const nodeOpacity = isDark ? 0.31 : 0.27;
-      const edgeOpacity = isDark ? 0.24 : 0.20;
+      // Quieter opacity values
+      const nodeOpacity = isDark ? 0.30 : 0.26;
+      const edgeOpacity = isDark ? 0.23 : 0.19;
       
       const nodeColor = isDark 
         ? `rgba(212, 191, 165, ${nodeOpacity})` 
@@ -118,17 +118,17 @@ export const GraphBackground = () => {
 
       // Draw connections first
       nodes.forEach((node) => {
-        // Update position with very slow drift (~6px over ~10s)
+        // Update position with very slow drift (±5-6px over 10-12s)
         if (!prefersReducedMotion) {
-          const driftX = Math.sin(time * 0.06 + node.baseX) * 6;
-          const driftY = Math.cos(time * 0.065 + node.baseY) * 6;
+          const driftX = Math.sin(time * 0.055 + node.baseX) * 5.5;
+          const driftY = Math.cos(time * 0.058 + node.baseY) * 5.5;
           
           node.x = node.baseX + driftX;
           node.y = node.baseY + driftY;
 
-          // Gentle re-layout every 20-24s
-          if (time - lastReorganize > 21) {
-            const shift = Math.random() * 3 - 1.5;
+          // Gentle re-layout every 18-24s
+          if (time - lastReorganize > 20) {
+            const shift = Math.random() * 2.5 - 1.25;
             node.baseX += shift;
             node.baseY += shift;
             lastReorganize = time;
@@ -151,7 +151,7 @@ export const GraphBackground = () => {
           
           ctx.strokeStyle = edgeColor;
           ctx.globalAlpha = fadeFactor;
-          ctx.lineWidth = 1.1;
+          ctx.lineWidth = 1.0;
           ctx.beginPath();
           ctx.moveTo(node.x, node.y);
           
@@ -182,7 +182,7 @@ export const GraphBackground = () => {
         ctx.fillStyle = nodeColor;
         ctx.globalAlpha = fadeFactor;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, 3.5, 0, Math.PI * 2);
         ctx.fill();
       });
 
@@ -217,7 +217,7 @@ export const GraphBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ zIndex: 0 }}
+      style={{ zIndex: 0, transform: 'translateY(8%)' }}
       aria-hidden="true"
     />
   );

@@ -52,31 +52,66 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden" style={{ marginTop: 0 }}>
+      <section 
+        className="relative overflow-hidden" 
+        style={{ 
+          marginTop: 0,
+          height: 'clamp(420px, 50vh, 640px)',
+          minHeight: '420px',
+          maxHeight: '640px',
+          paddingTop: 0,
+          paddingBottom: '40px'
+        }}
+      >
         <GraphBackground />
-        <div className="container mx-auto relative z-10 py-24 px-4">
-          <div className="max-w-5xl mx-auto text-center space-y-10 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-foreground">
-              Proactive, Explainable{" "}
-              <span className="text-primary">
-                Cyber Defence
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Europe's first multi-agent AI platform that simulates real attacker behaviour 
-              to uncover vulnerabilities internally, then translates findings into auditable 
-              actions your SOC can trust.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button asChild size="lg" className="text-lg rounded-2xl shadow-hover">
-                <Link to="/solution">Explore Our Solution</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg rounded-2xl">
-                <Link to="/contact">Request Demo</Link>
-              </Button>
+        <div className="container mx-auto relative z-10 h-full px-4">
+          <div className="grid grid-cols-12 h-full items-center">
+            <div className="col-span-12 lg:col-span-7 max-w-[720px] space-y-6 animate-fade-in">
+              <h1 
+                className="font-bold leading-tight text-foreground"
+                style={{
+                  fontSize: 'clamp(32px, 4vw, 56px)',
+                  lineHeight: '1.06',
+                  marginTop: 0,
+                  marginBottom: '16px'
+                }}
+              >
+                Proactive, Explainable{" "}
+                <span className="text-primary">
+                  Cyber Defence
+                </span>
+              </h1>
+              <p 
+                className="text-muted-foreground leading-relaxed"
+                style={{
+                  fontSize: 'clamp(16px, 1.6vw, 20px)',
+                  lineHeight: '1.5',
+                  opacity: 0.9,
+                  marginBottom: '24px'
+                }}
+              >
+                Europe's first multi-agent AI platform that simulates real attacker behaviour 
+                to uncover vulnerabilities internally, then translates findings into auditable 
+                actions your SOC can trust.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 pt-1">
+                <Button asChild size="lg" className="text-lg rounded-2xl shadow-hover">
+                  <Link to="/solution">Explore Our Solution</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="text-lg rounded-2xl">
+                  <Link to="/contact">Request Demo</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
+        <div 
+          className="absolute inset-0 pointer-events-none" 
+          style={{
+            background: 'linear-gradient(transparent 0%, rgba(255,255,255,0.05) 55%, transparent 100%)',
+            zIndex: 5
+          }}
+        />
       </section>
 
       {/* Stats Section */}
