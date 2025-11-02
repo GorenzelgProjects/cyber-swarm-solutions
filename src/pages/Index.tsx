@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Network, Eye, Lock, Target, Zap, AlertCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { GraphBackground } from "@/components/GraphBackground";
 
 const Index = () => {
   const features = [
@@ -64,7 +63,6 @@ const Index = () => {
           position: 'relative'
         }}
       >
-        <GraphBackground />
         <div className="relative z-10 max-w-[820px] mx-auto text-center" style={{ marginTop: 0, padding: '12px 0' }}>
           <div className="animate-fade-in" style={{ marginTop: 0 }}>
             <h1 

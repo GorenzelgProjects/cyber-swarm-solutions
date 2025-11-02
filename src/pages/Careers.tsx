@@ -2,7 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Globe, Rocket, Users, Mail, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { GraphBackground } from "@/components/GraphBackground";
 import { Button } from "@/components/ui/button";
 
 const Careers = () => {
@@ -63,7 +62,6 @@ const Careers = () => {
       <div className="pt-24 pb-20">
         {/* Hero */}
         <section className="px-4 py-20 relative overflow-hidden">
-          <GraphBackground />
           <div className="container mx-auto max-w-4xl text-center space-y-8 animate-fade-in relative z-10">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground">
               Build the Future of <span className="text-primary">Proactive Cyber Defence</span>

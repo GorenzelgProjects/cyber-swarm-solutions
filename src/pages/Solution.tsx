@@ -2,7 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Target, Database, Brain, GitBranch, Eye } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { GraphBackground } from "@/components/GraphBackground";
 import { InteractiveAgentDiagram } from "@/components/InteractiveAgentDiagram";
 import { Button } from "@/components/ui/button";
 import { Network, RefreshCw, CheckCircle, AlertTriangle, Lock } from "lucide-react";
@@ -71,7 +70,6 @@ const Solution = () => {
       <div className="pt-24 pb-20">
         {/* Hero */}
         <section className="px-4 py-20 relative overflow-hidden">
-          <GraphBackground />
           <div className="container mx-auto max-w-4xl text-center space-y-8 animate-fade-in relative z-10">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground">
               Our <span className="text-primary">Solution</span>
