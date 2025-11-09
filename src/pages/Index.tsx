@@ -13,7 +13,9 @@ const Index = () => {
       {/* Hero Section */}
       <section className="px-4 pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="content-wrapper text-center space-y-6 animate-fade-in">
-          <h1 className="text-foreground">Where <span className="text-sage">artificial intelligence</span> meets collective intelligence</h1>
+          <h1 className="text-foreground">
+            Where <span className="text-sage">Artificial Intelligence</span> meets Collective Intelligence
+          </h1>
 
           <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-2xl mx-auto">
             <p>
@@ -291,7 +293,8 @@ const Index = () => {
           <h2 className="text-foreground">Ready to move from reactive to proactive?</h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            If you want rehearsals instead of surprises, let's talk. We'll map your setup, agree on what "good" looks like, and onboard you to a pilot where every run is explainable and human-approved.
+            If you want rehearsals instead of surprises, let's talk. We'll map your setup, agree on what "good" looks
+            like, and onboard you to a pilot where every run is explainable and human-approved.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
