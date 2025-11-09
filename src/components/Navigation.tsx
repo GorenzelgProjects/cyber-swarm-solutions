@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import LanguageToggle from "@/components/LanguageToggle";
 import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
 
@@ -57,7 +56,6 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <LanguageToggle />
             <ThemeToggle />
             <Button asChild size="sm" className="rounded-2xl">
               <a href="mailto:kontakt@colleaiq.dk">{t('nav.contact')}</a>
@@ -66,7 +64,6 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            <LanguageToggle />
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
