@@ -46,7 +46,7 @@ const TeamMemberProfile = () => {
         </section>
 
         {/* Bio */}
-        <section className="container mx-auto max-w-4xl mt-4 space-y-6">
+        <section className="container mx-auto max-w-4xl mt-0 space-y-6">
           <div className="space-y-4">
             <p className="text-lg text-foreground">{member.intro}</p>
           </div>
