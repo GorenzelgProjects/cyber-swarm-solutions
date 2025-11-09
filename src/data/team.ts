@@ -70,7 +70,7 @@ export const teamMembers: TeamMember[] = [
     phone: "+45 50 48 14 49",
     background: [
       "DTU — Bachelor of Science in Engineering",
-      "DTU — MSc in Business Analytics",
+      "DTU — MSc in Business Analytics (ongoing)",
       "Co-founder & CFO, ColleaiQ",
     ],
     caresAbout:
