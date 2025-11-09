@@ -15,7 +15,7 @@ const Team = () => {
           <h1 className="text-foreground">
             Our <span className="text-sage">Team</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">People behind ColleaiQ.</p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Meet the people who make ColleaiQ possible</p>
         </div>
 
         <section className="mt-12">
