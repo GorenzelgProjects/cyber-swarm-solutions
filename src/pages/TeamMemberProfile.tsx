@@ -24,7 +24,7 @@ const TeamMemberProfile = () => {
 
       <main className="pt-24 pb-16 px-4">
         {/* Header */}
-        <section className="container mx-auto max-w-4xl">
+        <section className="container mx-auto max-w-4xl mb-0">
           <div className="flex flex-col md:flex-row gap-6 items-start">
             <img
               src={member.image}
@@ -46,7 +46,7 @@ const TeamMemberProfile = () => {
         </section>
 
         {/* Bio */}
-        <section className="container mx-auto max-w-4xl mt-0 space-y-6">
+        <section className="container mx-auto max-w-4xl space-y-6">
           <div className="space-y-4">
             <p className="text-lg text-foreground">{member.intro}</p>
           </div>
