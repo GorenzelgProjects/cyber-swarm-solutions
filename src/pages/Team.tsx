@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { teamMembers } from "@/data/team";
 
-
 const Team = () => {
   return (
     <div className="min-h-screen">
@@ -13,21 +12,17 @@ const Team = () => {
 
       <main className="pt-24 pb-24 px-4">
         <div className="content-wrapper text-center space-y-4">
-          <h1 className="text-foreground">Our <span className="text-sage">team</span></h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Three founders building the future of proactive cybersecurity.
-          </p>
+          <h1 className="text-foreground">
+            Our <span className="text-sage">team</span>
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">People behind ColleaiQ.</p>
         </div>
 
         <section className="mt-12">
           <div className="container mx-auto max-w-5xl">
             <div className="grid gap-6 md:grid-cols-3 grid-cols-1">
               {teamMembers.map((member) => (
-                <Link 
-                  key={member.slug} 
-                  to={`/team/${member.slug}`}
-                  className="group"
-                >
+                <Link key={member.slug} to={`/team/${member.slug}`} className="group">
                   <Card className="border-[#E6E8E6] shadow-soft hover:shadow-hover hover:-translate-y-1 transition-all duration-200">
                     <CardContent className="p-6 text-center space-y-4">
                       <img
@@ -36,9 +31,7 @@ const Team = () => {
                         className="w-28 h-28 rounded-full object-cover border-2 border-border mx-auto"
                       />
                       <div className="space-y-1">
-                        <h3 className="text-lg font-semibold text-foreground">
-                          {member.name}
-                        </h3>
+                        <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
                         <p className="text-sm text-muted-foreground">{member.title}</p>
                       </div>
                       <p className="text-sm text-muted-foreground">{member.focus}</p>
