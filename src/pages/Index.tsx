@@ -14,18 +14,15 @@ const Index = () => {
       <section className="px-4 pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="content-wrapper text-center space-y-6 animate-fade-in">
           <h1 className="text-foreground">
-            [[Hero headline – one powerful sentence about proactive cybersecurity]]
+            Where AI meets collective intelligence
           </h1>
           
           <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-2xl mx-auto">
             <p>
-              [[Hero paragraph 1 – explain the core problem: enterprises face growing cyber threats, 
-              traditional reactive defenses aren't enough, breaches happen faster than detection.]]
+              We service cars and run fire drills before anything goes wrong. Cybersecurity should work the same way. Too many teams still wait for an incident, then scramble.
             </p>
             <p>
-              [[Hero paragraph 2 – introduce ColleaiQ's approach: multi-agent AI that continuously 
-              simulates attacks, identifies vulnerabilities before attackers do, provides actionable 
-              insights to security teams.]]
+              ColleaiQ is our push in the opposite direction. We use a small team of AI agents to rehearse attacks in a safe sandbox, gather evidence, and turn it into plain-English actions. A human analyst reviews every result. The boring work is automated, the judgement stays human, and each run makes the next one better.
             </p>
           </div>
 
@@ -50,6 +47,12 @@ const Index = () => {
               </a>
             </Button>
           </div>
+
+          <div className="pt-4">
+            <a href="/blog/safe-sandbox-threat-hunting" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Latest from the lab: <span className="underline">Safe Sandbox Threat Hunting</span> →
+            </a>
+          </div>
         </div>
       </section>
 
@@ -62,17 +65,13 @@ const Index = () => {
           
           <div className="text-lg text-muted-foreground space-y-4">
             <p>
-              [[Problem paragraph 1 – describe current state: organizations rely on signature-based 
-              detection, threat feeds, and manual pentests. These are reactive, slow, and incomplete.]]
+              If you've lived in a SOC, you know the pattern: signatures, threat feeds, a quarterly pentest, and a SIEM that never sleeps. Useful—just late.
             </p>
             <p>
-              [[Problem paragraph 2 – consequences: attackers exploit zero-days faster than defenders 
-              can patch. Compliance frameworks require continuous validation. Security teams are 
-              overwhelmed with alerts but lack context.]]
+              Exposures spread faster than patches. Regulators ask for proof, not vibes. And most alerts arrive without the context you need to act.
             </p>
             <p>
-              [[Problem paragraph 3 – industry pain: average breach dwell time, cost of incidents, 
-              talent shortage. Organizations need proactive defense that scales.]]
+              With headcount tight, we need proactive work that doesn't touch production and produces evidence you can take to an auditor or a board.
             </p>
           </div>
         </div>
@@ -82,7 +81,7 @@ const Index = () => {
       <section className="px-4">
         <div className="content-wrapper text-center space-y-4">
           <h2 className="text-foreground">How ColleaiQ Works</h2>
-          <p className="text-lg text-muted-foreground">[[Intro to features – one paragraph explaining the multi-agent architecture and continuous simulation approach.]]</p>
+          <p className="text-lg text-muted-foreground">Think of ColleaiQ as a digital blue team you supervise. Our agents explore realistic paths an attacker would try—inside a sandbox that mirrors your setup. We record what we attempted, what we saw and why it matters, then draft a practical fix. An analyst approves or edits the plan, and that decision teaches the system what to focus on next.</p>
         </div>
       </section>
 
@@ -94,7 +93,7 @@ const Index = () => {
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">Why teams work with us</h3>
-                <p className="text-muted-foreground">[[Paragraph – explain analyst experience, clear evidence, and calm workflows.]]</p>
+                <p className="text-muted-foreground">Less noise, more signal. Each finding shows the attempt, the evidence, the impact, and the next step—no detective work required. It's easy to brief and easy to audit, which means fixes actually get done.</p>
               </div>
               <div className="md:col-span-2 order-2">
                 <img src="/images/soc-audit-diagram.svg" alt="Security workflow with audit trail" loading="lazy" width={960} height={540} className="w-full h-auto rounded-xl border border-muted shadow-soft" />
@@ -110,7 +109,7 @@ const Index = () => {
               </div>
               <div className="md:col-span-3 order-1 md:order-2 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">What you get today</h3>
-                <p className="text-muted-foreground">[[Paragraph – outline tangible outputs available on day one.]]</p>
+                <p className="text-muted-foreground">We're in alpha with a handful of partners. Today you get: safe sandbox simulations; evidence-first reports with affected assets and a proposed fix; analyst-in-the-loop approval; and a clean audit trail built for EU workflows. We integrate and price through partners like itm8. We're not claiming autonomous red teaming.</p>
               </div>
             </div>
           </div>
@@ -120,7 +119,7 @@ const Index = () => {
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">Safe rehearsal: exposure → sandbox → observations</h3>
-                <p className="text-muted-foreground">[[Steps 1–2 combined – description of safe rehearsal flow.]]</p>
+                <p className="text-muted-foreground">A new exposure pops up. We translate it into a realistic path and run it in the sandbox—never on live systems—then collect what really happened.</p>
               </div>
               <div className="md:col-span-2 order-2">
                 <img src="/images/rehearsal-flow-16x9.svg" alt="Safe rehearsal flow from exposure to observations" loading="lazy" width={960} height={540} className="w-full h-auto rounded-xl border border-muted shadow-soft" />
@@ -136,7 +135,7 @@ const Index = () => {
               </div>
               <div className="md:col-span-3 order-1 md:order-2 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">Analyst approval and learning loop</h3>
-                <p className="text-muted-foreground">[[Steps 3–4 combined – how analysts approve actions and the system learns.]]</p>
+                <p className="text-muted-foreground">We suggest a fix. A human approves or adjusts, and that feedback shapes the next run. Over time, the system gets sharper without changing your risk appetite.</p>
               </div>
             </div>
           </div>
@@ -146,7 +145,7 @@ const Index = () => {
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">Compliance & documentation</h3>
-                <p className="text-muted-foreground">[[Paragraph – structured finding with evidence, impact and decision log.]]</p>
+                <p className="text-muted-foreground">Every result links attempt → evidence → impact → decision. That gives you the artefacts to show risk management, testing activity and documented responses under NIS2. We don't certify you—we help you prove what you did and why.</p>
               </div>
               <div className="md:col-span-2 order-2">
                 <img src="/images/finding-report-mock.webp" alt="Structured finding with evidence and decision log" loading="lazy" width={960} height={540} className="w-full h-auto rounded-xl border border-muted shadow-soft" />
@@ -165,19 +164,13 @@ const Index = () => {
           
           <div className="text-lg text-muted-foreground space-y-4">
             <p>
-              [[Use case paragraph 1 – CISOs and security leaders who need continuous security 
-              validation without overwhelming their teams. Prove security posture to board and 
-              regulators.]]
+              CISOs & leaders: continuous validation you can explain in one slide, with artefacts that stand up in audit.
             </p>
             <p>
-              [[Use case paragraph 2 – Red teams and penetration testers who want to scale their 
-              impact beyond manual testing. Focus on critical findings while AI handles routine 
-              reconnaissance.]]
+              Red teams & testers: let the system handle routine recon so you can spend time on bespoke tradecraft.
             </p>
             <p>
-              [[Use case paragraph 3 – Organizations in regulated industries (finance, healthcare, 
-              critical infrastructure) that require continuous compliance and evidence of proactive 
-              defense measures.]]
+              Regulated orgs: repeatable runs and clear evidence for finance, healthcare and critical infrastructure.
             </p>
           </div>
         </div>
@@ -194,7 +187,10 @@ const Index = () => {
                   <img src={posts[0].thumbnail} alt="Abstract sandbox thumbnail" width={1200} height={675} loading="lazy" className="w-full h-auto rounded-t-xl border-b border-border" />
                   <div className="p-6">
                     <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">{posts[0].title}</h3>
-                    <p className="text-sm text-muted-foreground mb-2">{new Date(posts[0].date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</p>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      {new Date(posts[0].date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                      {posts[0].readTime && ` • ${posts[0].readTime}`}
+                    </p>
                     <p className="text-muted-foreground">{posts[0].excerpt}</p>
                   </div>
                 </Card>

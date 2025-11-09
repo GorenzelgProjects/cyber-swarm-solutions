@@ -16,6 +16,7 @@ import Compliance from "./pages/Compliance";
 import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
 import SafeSandboxThreatHunting from "./pages/blog/SafeSandboxThreatHunting";
+import Team from "./pages/Team";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/simulation-deep-dive" element={<SimulationDeepDive />} />
           <Route path="/compliance" element={<Compliance />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/team" element={<Team />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
