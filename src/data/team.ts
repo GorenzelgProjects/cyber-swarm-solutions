@@ -69,9 +69,9 @@ export const teamMembers: TeamMember[] = [
     track: "MSc track — Business Analytics",
     phone: "+45 50 48 14 49",
     background: [
-      "DTU — Bachelor of Science in Engineering (BSc)",
-      "DTU — MSc in Business Analytics (in progress)",
-      "Co-founder & CFO, ColleaiQ (2025– )",
+      "DTU — Bachelor of Science in Engineering",
+      "DTU — MSc in Business Analytics",
+      "Co-founder & CFO, ColleaiQ",
     ],
     caresAbout:
       "Plain language, tidy scope, and dependable execution. I like written decisions, realistic timelines, and a single owner for the next step.",
