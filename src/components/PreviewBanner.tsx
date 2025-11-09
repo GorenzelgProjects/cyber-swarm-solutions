@@ -39,14 +39,13 @@ export const PreviewBanner = () => {
     >
       <div className="container mx-auto px-4 flex items-center">
         <p className="text-sm md:text-base text-preview-banner-foreground dark:text-preview-banner-foreground-dark text-center w-full">
-          Preview notice: ColleaiQ is under active development. Features and specifications are evolving. If this is relevant to you,{" "}
-          <Link 
-            to="/contact" 
+          ColleaiQ is in active development. Email{" "}
+          <a 
+            href="mailto:kontakt@colleaiq.dk" 
             className="underline hover:no-underline font-semibold"
           >
-            write to us
-          </Link>
-          {" "}and let's talk.
+            kontakt@colleaiq.dk
+          </a>
         </p>
       </div>
     </div>

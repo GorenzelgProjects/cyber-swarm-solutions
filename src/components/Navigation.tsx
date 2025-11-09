@@ -14,8 +14,6 @@ const Navigation = () => {
     { name: "Our Mission", path: "/story" },
     { name: "Solution", path: "/solution" },
     { name: "Compliance", path: "/compliance" },
-    { name: "Blog", path: "/blog" },
-    { name: "Community", path: "/community" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -56,7 +54,7 @@ const Navigation = () => {
             ))}
             <ThemeToggle />
             <Button asChild size="sm" className="rounded-2xl">
-              <Link to="/contact">Contact Us</Link>
+              <a href="mailto:kontakt@colleaiq.dk">Contact Us</a>
             </Button>
           </div>
 
@@ -88,9 +86,9 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild size="sm" className="w-full rounded-2xl">
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
+              <a href="mailto:kontakt@colleaiq.dk" onClick={() => setIsOpen(false)}>
                 Contact Us
-              </Link>
+              </a>
             </Button>
           </div>
         )}
