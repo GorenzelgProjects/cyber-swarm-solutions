@@ -17,14 +17,14 @@ const teamMembers: TeamMember[] = [
     name: "Mikkel Romvig Grøngaard",
     title: "CEO & Co-founder",
     slug: "mikkel-romvig-grongaard",
-    image: "/images/team/mikkel.jpg",
+    image: "/images/team/mikkel.png",
     focus: "Leads ColleaiQ's direction and partnerships.",
   },
   {
     name: "Martin Christoffersen",
     title: "CTO & Co-founder",
     slug: "martin-christoffersen",
-    image: "/images/team/martin.jpg",
+    image: "/images/team/martin.png",
     focus: "Builds the technical foundation of our multi-agent platform.",
   },
   {
