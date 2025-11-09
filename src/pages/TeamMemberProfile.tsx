@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { Linkedin } from "lucide-react";
 import posts from "@/data/blog";
 import { teamMembers } from "@/data/team";
 
@@ -38,6 +39,19 @@ const TeamMemberProfile = () => {
                 <p className="text-sm text-muted-foreground">
                   <a href={`tel:${member.phone.replace(/\s/g, "")}`} className="hover:text-primary transition-colors">
                     {member.phone}
+                  </a>
+                </p>
+              )}
+              {member.linkedin && (
+                <p className="text-sm">
+                  <a 
+                    href={member.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    LinkedIn Profile
                   </a>
                 </p>
               )}

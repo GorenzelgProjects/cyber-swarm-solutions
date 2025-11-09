@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -88,6 +88,12 @@ const Footer = () => {
               <li className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5" />
                 <span>Elbagade 19, 2. tv<br />2300 København S</span>
+              </li>
+              <li className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Linkedin className="h-4 w-4" />
+                <a href="https://www.linkedin.com/company/colleaiq/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  LinkedIn
+                </a>
               </li>
             </ul>
           </div>
