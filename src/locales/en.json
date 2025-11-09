@@ -2,7 +2,7 @@
   "nav": {
     "mission": "Our Mission",
     "solution": "Solution",
-    "story": "Story",
+    "story": "Our Mission",
     "team": "Team",
     "careers": "Open Positions",
     "contact": "Contact",
@@ -17,7 +17,7 @@
     "resources": "Resources",
     "legal": "Legal",
     "mission": "Our Mission",
-    "story": "Story",
+    "story": "Our Mission",
     "team": "Team",
     "careers": "Open Positions",
     "blog": "Blog",
@@ -34,37 +34,218 @@
     "email": "kontakt@colleaiq.dk",
     "website": "colleaiq.dk"
   },
+  "preview": {
+    "banner": "ColleaiQ is under active development. Write to kontakt@colleaiq.dk"
+  },
   "index": {
     "hero": {
       "badge": "Proactive cybersecurity",
       "headline": "Where Artificial Intelligence meets collective intelligence",
-      "paragraph1": "We service cars and run fire drills before anything goes wrong — then wait for the real incident to tell us what we missed. Cyber teams run the same script: build controls, wait for alerts, react.",
-      "paragraph2": "ColleaiQ is our push in the opposite direction: simulated attacks, AI agents trained on your own SOC analysts' decisions, and a feedback loop that closes itself. Less noise, more clarity, and a team that gets better with every drill.",
-      "ctaPrimary": "Contact Us",
-      "ctaSecondary": "Read Our Story"
+      "paragraph1": "We service cars and run fire drills before anything goes wrong. Cybersecurity should work the same way. Too many teams still wait for an incident, then scramble.",
+      "paragraph2": "ColleaiQ is our push in the opposite direction. We use a small team of AI agents to rehearse attacks in a safe sandbox, gather evidence, and turn it into plain-English actions. A human analyst reviews every result. The boring work is automated, the judgement stays human, and each run makes the next one better.",
+      "ctaPrimary": "Get in Touch",
+      "ctaSecondary": "Learn About Our Mission",
+      "latestPost": "Latest post: Safe Sandbox Threat Hunting →"
+    },
+    "challenge": {
+      "headline": "The Challenge",
+      "paragraph1": "If you've lived in a SOC, you know the pattern: signatures, threat feeds, a quarterly pentest, and a SIEM that never sleeps. Useful—just late.",
+      "paragraph2": "Exposures spread faster than patches. Regulators ask for proof, not vibes. And most alerts arrive without the context you need to act.",
+      "paragraph3": "With headcount tight, we need proactive work that doesn't touch production and produces evidence you can take to an auditor or a board."
+    },
+    "howItWorks": {
+      "headline": "How ColleaiQ Works",
+      "description": "Think of ColleaiQ as a digital blue team you supervise. Our agents explore realistic paths an attacker would try—inside a sandbox that mirrors your setup. We record what we attempted, what we saw and why it matters, then draft a practical fix. An analyst approves or edits the plan, and that decision teaches the system what to focus on next."
+    },
+    "whyTeams": {
+      "headline": "Why teams work with us",
+      "description": "Less noise, more signal. Each finding shows the attempt, the evidence, the impact, and the next step—no detective work required. It's easy to brief and easy to audit, which means fixes actually get done.",
+      "imageAlt1": "Security workflow with audit trail",
+      "imageAlt2": "Isolated sandbox mirroring production"
+    },
+    "whatYouGet": {
+      "headline": "What you get today",
+      "description": "We're in alpha with a handful of partners. Today you get: safe sandbox simulations; evidence-first reports with affected assets and a proposed fix; analyst-in-the-loop approval; and a clean audit trail built for EU workflows. We integrate and price through partners like itm8. We're not claiming autonomous red teaming."
+    },
+    "rehearsal": {
+      "headline": "Safe rehearsal: exposure → sandbox → observations",
+      "description": "A new exposure pops up. We translate it into a realistic path and run it in the sandbox—never on live systems—then collect what really happened."
+    },
+    "learning": {
+      "headline": "Analyst approval and learning loop",
+      "description": "We suggest a fix. A human approves or adjusts, and that feedback shapes the next run. Over time, the system gets sharper without changing your risk appetite."
+    },
+    "compliance": {
+      "headline": "Compliance & documentation",
+      "description": "Every result links attempt → evidence → impact → decision. That gives you the artefacts to show risk management, testing activity and documented responses under NIS2. We don't certify you—we help you prove what you did and why.",
+      "imageAlt": "Structured finding with evidence and decision log"
+    },
+    "builtFor": {
+      "headline": "Built for Enterprise Security Teams",
+      "ciso": "CISOs & leaders: continuous validation you can explain in one slide, with artefacts that stand up in audit.",
+      "redTeams": "Red teams & testers: let the system handle routine recon so you can spend time on bespoke tradecraft.",
+      "regulated": "Regulated orgs: repeatable runs and clear evidence for finance, healthcare and critical infrastructure."
+    },
+    "fromLab": {
+      "headline": "From the lab",
+      "postTitle": "Safe Sandbox Threat Hunting",
+      "postMeta": "Mar 1, 2025 • 4 min read",
+      "postExcerpt": "We rehearse attacks in a sandbox that mirrors production—never on live systems—and deliver evidence, impact, and a practical fix for human approval."
+    },
+    "whyColleaiQ": {
+      "headline": "Why ColleaiQ",
+      "point1": "Built in Copenhagen with focus on European workflows and explainability.",
+      "point2": "Context over alerts: findings connect attempt, observation, and relevance to your environment.",
+      "point3": "Gets better with use: analyst feedback guides the agents, so each run sharpens the next."
+    },
+    "finalCTA": {
+      "headline": "Ready to move from reactive to proactive?",
+      "description": "If you want rehearsals instead of surprises, let's talk. We'll map your setup, agree on what \"good\" looks like, and onboard you to a pilot where every run is explainable and human-approved.",
+      "ctaPrimary": "Get in Touch",
+      "ctaSecondary": "Learn about our mission"
+    }
+  },
+  "story": {
+    "hero": {
+      "headline": "Our Mission",
+      "subtitle": "We bridge advanced AI and cybersecurity to create proactive, explainable protection for organizations that cannot wait for the next incident."
+    },
+    "vision": {
+      "headline": "Vision",
+      "description": "2025 has been called the year of agentic AI. ColleaiQ explores the natural next step: multi-agent networks. Our goal is to make this approach usable in European cybersecurity—so defense can get ahead of threats."
+    },
+    "platform": {
+      "description": "Specialized AI agents simulate realistic attacker behavior in secure, contained environments and translate findings into clear, auditable actions your SOC can use."
+    },
+    "journey": {
+      "headline": "The Journey",
+      "genesis": {
+        "title": "Genesis",
+        "description": "The multi-agent foundation began in support/HR tasks. The complexity fit better in technical domains."
+      },
+      "pivot": {
+        "title": "Strategic Pivot",
+        "description": "Conversations with Danish IT and security companies pointed to a gap in cybersecurity—here our technology matched the challenge."
+      },
+      "innovation": {
+        "title": "Innovation Focus",
+        "description": "We build the bridge between AI and security: from agentic AI to collaborative multi-agent networks."
+      },
+      "leadership": {
+        "title": "European Leadership",
+        "description": "We develop in Denmark with an eye on EU needs, data handling, and documentation requirements."
+      }
+    },
+    "whyNow": {
+      "headline": "Why Now?",
+      "threat": {
+        "title": "The European threat landscape",
+        "description": "An intensified security environment demands robust digital infrastructure and operations."
+      },
+      "vulnerability": {
+        "title": "Digital vulnerability",
+        "description": "Denmark is highly digital—the benefits come with increased risk. Many companies are not adequately secured."
+      },
+      "wakeup": {
+        "title": "Wake-up call",
+        "description": "NotPetya against Mærsk in 2017 cost up to DKK 2 billion. Downtime costs—even today."
+      },
+      "sovereignty": {
+        "title": "Digital sovereignty",
+        "description": "Danish-developed technology, scalable in the EU, aligned with European sovereignty goals."
+      }
     },
     "mission": {
-      "badge": "Our Mission",
-      "headline": "Building explainable multi-agent systems for proactive cyber defense",
-      "paragraph1": "ColleaiQ is a Danish startup building explainable multi-agent AI systems that simulate cyber incidents, train on SOC analyst decisions, and deliver proactive security — no black boxes, no noise.",
-      "paragraph2": "We started ColleaiQ because we believe cyber teams deserve tools that explain their reasoning, learn from real analyst decisions, and work with the team — not against them."
+      "description": "To become a natural tool in the work for cybersecurity and sovereignty—explainable and secure AI for high-risk sectors such as energy, defense, shipping and critical infrastructure."
+    }
+  },
+  "solution": {
+    "hero": {
+      "headline": "Our Solution",
+      "subtitle": "A multi-agent AI system that defends proactively through continuous attack simulations and explainable recommendations."
     },
-    "solution": {
-      "badge": "The Solution",
-      "headline": "Train agents. Run simulations. Close the loop.",
-      "description": "Our platform simulates adversary tactics in a safe sandbox, trains AI agents on SOC analyst decisions, and generates explainable findings — closing the feedback loop between learning and action.",
-      "cta": "See How It Works"
+    "components": {
+      "headline": "Core Components",
+      "multiAgent": {
+        "title": "Multi-agent collaboration",
+        "description": "Specialized agents work together. \"Red\" simulates, \"blue\" monitors and defends."
+      },
+      "traceable": {
+        "title": "Traceable recommendations",
+        "description": "Every action is explainable and auditable—helps with NIS2 documentation."
+      },
+      "learning": {
+        "title": "Continuous learning",
+        "description": "Agents learn from analyst decisions and results—sharpen rules and focus over time."
+      }
     },
-    "team": {
-      "badge": "Team",
-      "headline": "Meet the founders",
-      "description": "Three engineers who believe cyber teams deserve tools that explain their reasoning and work with the team — not against them.",
-      "cta": "Meet The Team"
+    "architecture": {
+      "headline": "Architecture",
+      "redTeam": "Red team agent → simulates threats in sandbox.",
+      "blueTeam": "Blue team agent → gathers signals, explains findings and proposes remediation.",
+      "sandbox": "Sandbox environment → secure, isolated, mirrors production.",
+      "explainable": "Explainable outputs → context, rationale and audit trail."
     },
-    "ready": {
-      "headline": "Ready to upgrade your cyber defense?",
-      "description": "Let's talk about how explainable AI agents can help your SOC team stay ahead.",
-      "cta": "Get in Touch"
+    "cycle": {
+      "headline": "Continuous defense cycle — example (Credential Dumping)",
+      "red": "Red: simulates LSASS extraction in sandbox",
+      "blue": "Blue: detects patterns and warns",
+      "solution": "Solution: generate EDR rule with audit trail",
+      "analyst": "Analyst: reviews, assesses, approves"
+    },
+    "benefits": {
+      "headline": "Benefits",
+      "benefit1": "Finds weaknesses before attackers",
+      "benefit2": "Reduces false positives through learning",
+      "benefit3": "24/7 coverage without expanding the team",
+      "benefit4": "Explainable AI for audit and compliance",
+      "benefit5": "Safe simulations in contained environments",
+      "benefit6": "Fits into existing SOC flows",
+      "benefit7": "Traceability that helps NIS2",
+      "benefit8": "EU-developed technology"
+    },
+    "technical": {
+      "headline": "Technical Foundation",
+      "description": "Generative models combined with graph analysis, RL and deterministic logic. Expertise from security specialists is integrated for explainable, credible results."
+    },
+    "cta": {
+      "headline": "Ready to see it in practice?",
+      "description": "Experience how our multi-agent system can elevate your security.",
+      "ctaPrimary": "Book a demo",
+      "ctaSecondary": "See the simulation process"
+    }
+  },
+  "blog": {
+    "hero": {
+      "headline": "Blog",
+      "subtitle": "Brief field notes while we build ColleaiQ—what we tried, what worked, and what we changed."
+    },
+    "safeSandbox": {
+      "title": "Safe Sandbox Threat Hunting",
+      "date": "Mar 1, 2025",
+      "readTime": "4 min read",
+      "excerpt": "We rehearse attacks in a sandbox that mirrors production—never on live systems—and deliver evidence, impact, and a practical fix for human approval."
+    }
+  },
+  "team": {
+    "hero": {
+      "headline": "Team",
+      "subtitle": "Three founders building sober, proactive cybersecurity."
+    },
+    "mikkel": {
+      "title": "CEO & Co-founder",
+      "description": "Sets direction and drives partnerships.",
+      "cta": "View profile"
+    },
+    "martin": {
+      "title": "CTO & Co-founder",
+      "description": "Builds the technical platform for our multi-agent system.",
+      "cta": "View profile"
+    },
+    "christoffer": {
+      "title": "CFO & Co-founder",
+      "description": "Operations, partnerships and planning.",
+      "cta": "View profile"
     }
   },
   "careers": {
@@ -85,6 +266,42 @@
     "interestedDescription": "Use the Contact page to write us a short note (e.g., \"Thesis/PhD partnership\" or \"Future roles\").",
     "contactButton": "Contact Us",
     "noPositions": "No positions available."
+  },
+  "compliance": {
+    "hero": {
+      "headline": "Compliance & Security",
+      "subtitle": "Built for EU requirements—transparent, auditable, and aligned with digital sovereignty."
+    },
+    "nis2": {
+      "headline": "NIS2",
+      "description": "EU's NIS2 sets stricter requirements for critical infrastructure and essential services. ColleaiQ helps with:",
+      "risk": "Continuous risk assessment—proactive simulations find weaknesses early.",
+      "incident": "Incident response—explainable recommendations for rapid reaction.",
+      "management": "Security management—complete logging and audit trail.",
+      "supply": "Supply chain—European-developed solution for sovereignty."
+    },
+    "features": {
+      "headline": "Security & Compliance Features",
+      "nis2Ready": "Ready for NIS2 documentation",
+      "explainability": "Explainability as standard",
+      "secure": "Secure development practices (sandbox, privacy, human control)",
+      "sovereignty": "Data sovereignty in focus"
+    },
+    "standards": {
+      "headline": "Standards & Best Practice",
+      "iso": "ISO 27001-supported infrastructure",
+      "gdpr": "GDPR considerations",
+      "audit": "Complete audit trail",
+      "sandbox": "Secure sandbox isolation",
+      "encryption": "End-to-end encryption",
+      "rbac": "RBAC"
+    },
+    "documentation": {
+      "headline": "Documentation?",
+      "description": "Contact us for your specific requirements. We deliver detailed documentation and evidence for audits and certifications.",
+      "ctaPrimary": "Contact compliance team",
+      "ctaSecondary": "See how it works"
+    }
   },
   "contact": {
     "badge": "Get in Touch",

@@ -1,31 +1,31 @@
 {
   "nav": {
-    "mission": "Vores Mission",
+    "mission": "Vores mission",
     "solution": "Løsning",
-    "story": "Historie",
+    "story": "Vores mission",
     "team": "Team",
-    "careers": "Ledige Stillinger",
+    "careers": "Ledige stillinger",
     "contact": "Kontakt",
     "faq": "FAQ",
     "compliance": "Compliance",
-    "community": "Fællesskab",
+    "community": "Community",
     "blog": "Blog"
   },
   "footer": {
-    "tagline": "Opgraderer cybersikkerhed med forklarlige multi-agent systemer",
+    "tagline": "Vi opgraderer cybersikkerhed med forklarlige multi-agent systemer",
     "company": "Virksomhed",
     "resources": "Ressourcer",
     "legal": "Juridisk",
-    "mission": "Vores Mission",
-    "story": "Historie",
+    "mission": "Vores mission",
+    "story": "Vores mission",
     "team": "Team",
-    "careers": "Ledige Stillinger",
+    "careers": "Ledige stillinger",
     "blog": "Blog",
     "faq": "FAQ",
     "compliance": "Compliance",
-    "community": "Fællesskab",
+    "community": "Community",
     "solution": "Løsning",
-    "simulationDeepDive": "Simulering Deep Dive",
+    "simulationDeepDive": "Simulations-dyk",
     "privacy": "Privatlivspolitik",
     "terms": "Servicevilkår",
     "contact": "Kontakt",
@@ -34,57 +34,274 @@
     "email": "kontakt@colleaiq.dk",
     "website": "colleaiq.dk"
   },
+  "preview": {
+    "banner": "ColleaiQ er under aktiv udvikling. Skriv til kontakt@colleaiq.dk"
+  },
   "index": {
     "hero": {
       "badge": "Proaktiv cybersikkerhed",
       "headline": "Hvor kunstig intelligens møder kollektiv intelligens",
-      "paragraph1": "Vi servicerer biler og laver brandøvelser, før noget går galt — og venter så på den rigtige hændelse for at se, hvad vi gik glip af. Cyberteams kører det samme manuskript: byg kontroller, vent på advarsler, reager.",
-      "paragraph2": "ColleaiQ er vores modsvar til den reaktive tilgang: simulerede angreb, AI-agenter trænet på dine egne SOC-analytikers beslutninger, og en feedback-loop, der lukker sig selv. Mindre støj, mere klarhed, og et team, der bliver bedre med hver øvelse.",
-      "ctaPrimary": "Kontakt Os",
-      "ctaSecondary": "Læs Vores Historie"
+      "paragraph1": "Vi servicerer biler og laver brandøvelser, før noget går galt — men i cybersikkerhed venter mange stadig på det rigtige angreb for at se, hvad der manglede.",
+      "paragraph2": "ColleaiQ går den anden vej: simulerede angreb, AI-agenter der lærer af jeres egne SOC-beslutninger, og en feedback-sløjfe der lukker sig selv. Mindre støj, mere klarhed — og et team der bliver bedre for hver øvelse.",
+      "ctaPrimary": "Kontakt os",
+      "ctaSecondary": "Læs vores historie",
+      "latestPost": "Seneste indlæg: Safe Sandbox Threat Hunting →"
+    },
+    "challenge": {
+      "headline": "Udfordringen",
+      "paragraph1": "Hvis du har siddet i et SOC, kender du mønstret: signaturer, trusselsfeeds, et kvartalsvist pentest — og et SIEM der aldrig sover. Brugbart, men sent.",
+      "paragraph2": "Eksponeringer spreder sig hurtigere end patches. Myndigheder vil have beviser — ikke mavefornemmelser. Og de fleste alarmer mangler kontekst.",
+      "paragraph3": "Når bemandingen er stram, har vi brug for proaktivt arbejde, der ikke rører produktion — og som skaber dokumentation, du kan tage med til bestyrelse og audit."
+    },
+    "howItWorks": {
+      "headline": "Sådan fungerer ColleaiQ",
+      "description": "Tænk ColleaiQ som et digitalt blåteam, du superviserer. Agenterne afprøver realistiske angrebsveje i en sandkasse, der spejler jeres opsætning. Vi registrerer hvad vi forsøgte, hvad vi så, og hvorfor det betyder noget — og foreslår en praktisk løsning. En analytiker godkender eller justerer, og den beslutning lærer systemet af til næste kørsel."
+    },
+    "whyTeams": {
+      "headline": "Derfor vælger teams os",
+      "description": "Mindre støj, mere signal. Hvert fund viser forsøg, bevis, påvirkning og næste skridt — uden detektivarbejde. Nemt at briefe, nemt at auditere — og derfor bliver tingene faktisk løst.",
+      "imageAlt1": "Sikkerhedsworkflow med revisionsspor",
+      "imageAlt2": "Isoleret sandkasse der spejler produktion"
+    },
+    "whatYouGet": {
+      "headline": "Det får du i dag",
+      "description": "Vi er i alpha med få partnere. I dag får du: sikre sandkasse-simulationer; evidens-første rapporter med berørte aktiver og foreslået løsning; analyst-in-the-loop godkendelse; og et rent revisionsspor til EU-arbejdsgange. Vi integrerer og priser via partnere som itm8. Vi påstår ikke autonom red teaming."
+    },
+    "rehearsal": {
+      "headline": "Safe rehearsal: exposure → sandbox → observations",
+      "description": "En ny eksponering dukker op. Vi oversætter den til en realistisk angrebsvej og kører den i sandkassen — aldrig på live — og indsamler hvad der faktisk skete."
+    },
+    "learning": {
+      "headline": "Analyst approval and learning loop",
+      "description": "Vi foreslår en løsning. Et menneske godkender eller justerer, og den feedback former næste kørsel. Over tid bliver systemet skarpere uden at ændre jeres risikoprofil."
+    },
+    "compliance": {
+      "headline": "Compliance og dokumentation",
+      "description": "Hvert resultat kæder forsøg → bevis → påvirkning → beslutning. Det giver artefakter til at vise risikostyring, testaktivitet og dokumenterede svar under NIS2. Vi certificerer ikke — vi hjælper jer med at bevise, hvad I gjorde og hvorfor.",
+      "imageAlt": "Struktureret fund med bevis og beslutningslog"
+    },
+    "builtFor": {
+      "headline": "Bygget til sikkerhedsteams i større organisationer",
+      "ciso": "CISO'er og ledere: løbende validering, der kan forklares på én slide — med artefakter der holder i audit.",
+      "redTeams": "Red teams og testere: lad systemet håndtere rutine-recon, så mennesker kan fokusere på specialiseret tradecraft.",
+      "regulated": "Regulerede brancher: gentagelige kørsler og klare beviser til finans, sundhed og kritisk infrastruktur."
+    },
+    "fromLab": {
+      "headline": "Fra laboratoriet",
+      "postTitle": "Safe Sandbox Threat Hunting",
+      "postMeta": "1. mar. 2025 • 4 min. læsning",
+      "postExcerpt": "Vi øver angreb i en sandkasse, der spejler produktion — aldrig på live — og leverer bevis, påvirkning og en praktisk løsning til menneskelig godkendelse."
+    },
+    "whyColleaiQ": {
+      "headline": "Hvorfor ColleaiQ",
+      "point1": "Udviklet i København med fokus på europæiske arbejdsgange og forklarlighed.",
+      "point2": "Kontekst frem for alarmer: fund forbinder forsøg, observation og relevans for jeres miljø.",
+      "point3": "Bliver bedre i brug: analytiker-feedback guider agenterne, så hver kørsel skærper den næste."
+    },
+    "finalCTA": {
+      "headline": "Klar til at gå fra reaktiv til proaktiv?",
+      "description": "Hvis du foretrækker øvelser frem for overraskelser, så lad os tale sammen. Vi kortlægger jeres setup, bliver enige om hvad \"godt\" betyder, og onboarder jer til et pilotforløb, hvor hver kørsel er forklarlig og menneskeligt godkendt.",
+      "ctaPrimary": "Kontakt os",
+      "ctaSecondary": "Læs om vores mission"
+    }
+  },
+  "story": {
+    "hero": {
+      "headline": "Vores mission",
+      "subtitle": "Vi bygger bro mellem avanceret AI og cybersikkerhed for at skabe proaktiv, forklarlig beskyttelse for organisationer, der ikke kan vente på næste hændelse."
+    },
+    "vision": {
+      "headline": "Vision",
+      "description": "2025 er blevet kaldt året for agentisk AI. ColleaiQ undersøger det naturlige næste skridt: multi-agent netværk. Vores mål er at gøre denne tilgang brugbar i europæisk cybersikkerhed — så forsvaret kan komme foran truslerne."
+    },
+    "platform": {
+      "description": "Specialiserede AI-agenter simulerer realistisk angriberadfærd i sikre, afgrænsede miljøer og oversætter fund til klare, reviderbare handlinger, som jeres SOC kan bruge."
+    },
+    "journey": {
+      "headline": "Rejsen",
+      "genesis": {
+        "title": "Genesis",
+        "description": "Multi-agent fundamentet begyndte i support/HR-opgaver. Kompleksiteten passede bedre til tekniske domæner."
+      },
+      "pivot": {
+        "title": "Strategic Pivot",
+        "description": "Dialoger med danske IT- og sikkerhedsvirksomheder pegede på et hul i cybersikkerhed — her matchede vores teknologi udfordringen."
+      },
+      "innovation": {
+        "title": "Innovation Focus",
+        "description": "Vi bygger broen mellem AI og sikkerhed: fra agentisk AI til samarbejdende multi-agent netværk."
+      },
+      "leadership": {
+        "title": "European Leadership",
+        "description": "Vi udvikler i Danmark med blikket på EU-behov, datahåndtering og dokumentationskrav."
+      }
+    },
+    "whyNow": {
+      "headline": "Hvorfor nu?",
+      "threat": {
+        "title": "Det europæiske trusselsbillede",
+        "description": "Et skærpet sikkerhedsbillede stiller krav til robust digital infrastruktur og drift."
+      },
+      "vulnerability": {
+        "title": "Digital sårbarhed",
+        "description": "Danmark er højdigitalt — fordelene følges af øget risiko. Mange virksomheder er ikke tilstrækkeligt sikret."
+      },
+      "wakeup": {
+        "title": "Wake-up call",
+        "description": "NotPetya mod Mærsk i 2017 kostede op mod 2 mia. DKK. Nedetid koster — også i dag."
+      },
+      "sovereignty": {
+        "title": "Digital suverænitet",
+        "description": "Dansk-udviklet teknologi, skalerbar i EU, i tråd med europæiske suverænitetsmål."
+      }
     },
     "mission": {
-      "badge": "Vores Mission",
-      "headline": "Bygger forklarlige multi-agent systemer til proaktivt cyberforsvar",
-      "paragraph1": "ColleaiQ er en dansk startup, der bygger forklarlige multi-agent AI-systemer, som simulerer cyberhændelser, træner på SOC-analytikers beslutninger og leverer proaktiv sikkerhed — ingen black boxes, ingen støj.",
-      "paragraph2": "Vi startede ColleaiQ, fordi vi mener, at cyberteams fortjener værktøjer, der forklarer deres ræsonnement, lærer af rigtige analytikerbeslutninger og arbejder med teamet — ikke imod det."
+      "description": "At blive et naturligt værktøj i arbejdet for cybersikkerhed og suverænitet — forklarlig og sikker AI til sektorer med høj risiko som energi, forsvar, shipping og kritisk infrastruktur."
+    }
+  },
+  "solution": {
+    "hero": {
+      "headline": "Vores løsning",
+      "subtitle": "Et multi-agent AI-system der forsvarer proaktivt via kontinuerlige angrebssimulationer og forklarlige anbefalinger."
     },
-    "solution": {
-      "badge": "Løsningen",
-      "headline": "Træn agenter. Kør simuleringer. Luk loopet.",
-      "description": "Vores platform simulerer modstandertaktikker i en sikker sandkasse, træner AI-agenter på SOC-analytikers beslutninger og genererer forklarlige fund — lukker feedback-loopet mellem læring og handling.",
-      "cta": "Se Hvordan Det Virker"
+    "components": {
+      "headline": "Kernekomponenter",
+      "multiAgent": {
+        "title": "Multi-agent samarbejde",
+        "description": "Specialiserede agenter arbejder sammen. \"Rød\" simulerer, \"blå\" overvåger og forsvarer."
+      },
+      "traceable": {
+        "title": "Sporbare anbefalinger",
+        "description": "Hver handling er forklarlig og kan auditeres — hjælper NIS2-dokumentation."
+      },
+      "learning": {
+        "title": "Kontinuerlig læring",
+        "description": "Agenter lærer af analytiker-beslutninger og resultater — skærper regler og fokus over tid."
+      }
     },
-    "team": {
-      "badge": "Team",
-      "headline": "Mød stifterne",
-      "description": "Tre ingeniører, der mener, at cyberteams fortjener værktøjer, der forklarer deres ræsonnement og arbejder med teamet — ikke imod det.",
-      "cta": "Mød Teamet"
+    "architecture": {
+      "headline": "Arkitektur",
+      "redTeam": "Rød-team agent → simulerer trusler i sandkasse.",
+      "blueTeam": "Blå-team agent → samler signaler, forklarer fund og foreslår afhjælpning.",
+      "sandbox": "Sandkassemiljø → sikkert, isoleret, spejler produktion.",
+      "explainable": "Forklarlige output → kontekst, begrundelse og revisionsspor."
     },
-    "ready": {
-      "headline": "Klar til at opgradere dit cyberforsvar?",
-      "description": "Lad os tale om, hvordan forklarlig AI kan hjælpe dit SOC-team med at være på forkant.",
-      "cta": "Kontakt Os"
+    "cycle": {
+      "headline": "Kontinuerlig forsvarscyklus — eksempel (Credential Dumping)",
+      "red": "Rød: simulerer LSASS-udtræk i sandkasse",
+      "blue": "Blå: registrerer mønstre og advarer",
+      "solution": "Løsning: generér EDR-regel med auditspor",
+      "analyst": "Analytiker: gennemser, vurderer, godkender"
+    },
+    "benefits": {
+      "headline": "Fordele",
+      "benefit1": "Finder svagheder før angribere",
+      "benefit2": "Reducerer falske positiver via læring",
+      "benefit3": "Dækning 24/7 uden at udvide teamet",
+      "benefit4": "Forklarlig AI til audit og compliance",
+      "benefit5": "Sikre simulationer i afgrænsede miljøer",
+      "benefit6": "Passer ind i eksisterende SOC-flows",
+      "benefit7": "Sporbarhed der hjælper NIS2",
+      "benefit8": "EU-udviklet teknologi"
+    },
+    "technical": {
+      "headline": "Teknisk fundament",
+      "description": "Generative modeller kombineret med grafanalyse, RL og deterministisk logik. Ekspertise fra sikkerhedsspecialister integreres for forklarlige, troværdige resultater."
+    },
+    "cta": {
+      "headline": "Klar til at se det i praksis?",
+      "description": "Oplev hvordan vores multi-agent system kan løfte jeres sikkerhed.",
+      "ctaPrimary": "Book en demo",
+      "ctaSecondary": "Se simulationsprocessen"
+    }
+  },
+  "blog": {
+    "hero": {
+      "headline": "Blog",
+      "subtitle": "Korte felt-noter mens vi bygger ColleaiQ — hvad vi prøvede, hvad der virkede, og hvad vi ændrede."
+    },
+    "safeSandbox": {
+      "title": "Safe Sandbox Threat Hunting",
+      "date": "1. mar. 2025",
+      "readTime": "4 min. læsning",
+      "excerpt": "Vi øver angreb i en sandkasse, der spejler produktion — aldrig på live — og sender bevis, påvirkning og et praktisk forslag til menneskelig godkendelse."
+    }
+  },
+  "team": {
+    "hero": {
+      "headline": "Team",
+      "subtitle": "Tre stiftere der bygger nøgtern, proaktiv cybersikkerhed."
+    },
+    "mikkel": {
+      "title": "CEO & Co-founder",
+      "description": "Sætter retningen og driver partnerskaber.",
+      "cta": "Se profil"
+    },
+    "martin": {
+      "title": "CTO & Co-founder",
+      "description": "Bygger den tekniske platform for vores multi-agent system.",
+      "cta": "Se profil"
+    },
+    "christoffer": {
+      "title": "CFO & Co-founder",
+      "description": "Drift, partnerskaber og planlægning.",
+      "cta": "Se profil"
     }
   },
   "careers": {
-    "badge": "Alpha stage team",
-    "headline": "Ledige Stillinger",
-    "intro": "Vi er et lille team, og vi ansætter sjældent og bevidst. Der er ingen ledige stillinger lige nu.",
+    "badge": "Alpha team",
+    "headline": "Ledige stillinger",
+    "intro": "Vi er et lille team og ansætter sjældent og bevidst. Der er ingen åbne stillinger lige nu.",
     "noHiring": "Vi ansætter ikke lige nu",
-    "thesisTitle": "Speciale / PhD samarbejder",
-    "thesisDescription": "Vi er interesserede i at samarbejde med speciale- eller PhD-studerende om emner som forklarlige multi-agent systemer, sandkassede cybersimuleringer, modelevaluering/reproducerbarhed, reinforcement learning, grafanalyse og reviderbarhed for NIS2. Vi kan tilbyde konkrete problemstillinger, syntetiske/benchmark data, ugentlige check-ins og medforfatterskab, hvor det er relevant.",
-    "futureTitle": "Hvad vi måske åbner næste gang",
+    "thesisTitle": "Samarbejde (Thesis/PhD)",
+    "thesisDescription": "Vi samarbejder gerne med kandidat- eller PhD-studerende om fx forklarlige multi-agent systemer, sandkasse-simulationer, model-evaluering/reproducerbarhed, reinforcement learning, grafanalyse og NIS2-auditabilitet. Vi tilbyder rigtige problemstillinger, syntetiske/bench-data, ugentlige check-ins og evt. medforfatterskab.",
+    "futureTitle": "Hvad vi evt. åbner næste",
     "futureSubtitle": "(ikke åbent i dag)",
     "futureRoles": {
-      "engineer": "Softwareingeniør (agenter / backend)",
-      "frontend": "Frontend / Produktingeniør",
-      "analyst": "Sikkerhedsanalytiker (rådgiver / deltid)"
+      "engineer": "Software Engineer (agents/backend)",
+      "frontend": "Frontend/Product Engineer",
+      "analyst": "Security Analyst (rådgiver/deltid)"
     },
     "interestedTitle": "Interesseret?",
-    "interestedDescription": "Brug Kontakt-siden til at skrive en kort besked til os (f.eks. \"Speciale/PhD partnerskab\" eller \"Fremtidige roller\").",
+    "interestedDescription": "Brug Kontakt-siden til at skrive en kort besked (fx \"Thesis/PhD-samarbejde\" eller \"Fremtidige roller\").",
     "contactButton": "Kontakt Os",
-    "noPositions": "Ingen ledige stillinger."
+    "noPositions": "Ingen stillinger tilgængelige."
+  },
+  "compliance": {
+    "hero": {
+      "headline": "Compliance & sikkerhed",
+      "subtitle": "Bygget til EU-krav — transparent, auditerbart og i tråd med digital suverænitet."
+    },
+    "nis2": {
+      "headline": "NIS2",
+      "description": "EU's NIS2 stiller skærpede krav til kritisk infrastruktur og væsentlige tjenester. ColleaiQ hjælper med:",
+      "risk": "Løbende risikovurdering — proaktive simulationer finder svagheder tidligt.",
+      "incident": "Hændelsesrespons — forklarlige anbefalinger til hurtig reaktion.",
+      "management": "Sikkerhedsstyring — komplet logning og revisionsspor.",
+      "supply": "Forsyningskæde — europæisk udviklet løsning til suverænitet."
+    },
+    "features": {
+      "headline": "Sikkerhed & Compliance-features",
+      "nis2Ready": "Klar til NIS2-dokumentation",
+      "explainability": "Forklarlighed som standard",
+      "secure": "Sikker udviklingspraksis (sandbox, privatliv, menneskelig kontrol)",
+      "sovereignty": "Datasuverænitet i fokus"
+    },
+    "standards": {
+      "headline": "Standarder & best practice",
+      "iso": "ISO 27001-understøttet infrastruktur",
+      "gdpr": "GDPR-hensyn",
+      "audit": "Komplet revisionsspor",
+      "sandbox": "Sikker sandbox-isolering",
+      "encryption": "Kryptering end-to-end",
+      "rbac": "RBAC"
+    },
+    "documentation": {
+      "headline": "Dokumentation?",
+      "description": "Kontakt os for jeres specifikke krav. Vi leverer detaljeret dokumentation og beviser til audits og certificeringer.",
+      "ctaPrimary": "Kontakt compliance-team",
+      "ctaSecondary": "Se hvordan det virker"
+    }
   },
   "contact": {
     "badge": "Kontakt",
