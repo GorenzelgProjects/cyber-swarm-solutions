@@ -77,10 +77,26 @@ const SimulationDeepDive = () => {
         <section className="px-4 py-16">
           <div className="container mx-auto max-w-6xl">
             {/* Progress Bar */}
-            <div className="mb-12">
-              <div className="flex items-center justify-between mb-4">
+            <div className="mb-12 relative">
+              {/* Background line */}
+              <div className="absolute top-6 left-0 right-0 h-1 bg-border hidden md:block" style={{ left: '5%', right: '5%' }} />
+              
+              {/* Progress line */}
+              <div 
+                className="absolute top-6 left-0 h-1 bg-primary hidden md:block transition-all duration-500"
+                style={{ 
+                  left: '5%',
+                  width: `${(currentStep / (steps.length - 1)) * 90}%`
+                }}
+              />
+              
+              <div className="flex items-center justify-between relative z-10">
                 {steps.map((step, index) => (
-                  <div key={index} className="flex flex-col items-center flex-1">
+                  <div 
+                    key={index} 
+                    className="flex flex-col items-center cursor-pointer"
+                    onClick={() => setCurrentStep(index)}
+                  >
                     <div 
                       className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                         index === currentStep 
@@ -92,13 +108,6 @@ const SimulationDeepDive = () => {
                     >
                       <step.icon className="h-6 w-6" />
                     </div>
-                    {index < steps.length - 1 && (
-                      <div className="hidden md:block w-full h-1 relative -mt-6 ml-12">
-                        <div className={`h-full transition-all duration-300 ${
-                          index < currentStep ? "bg-primary" : "bg-border"
-                        }`} />
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>
