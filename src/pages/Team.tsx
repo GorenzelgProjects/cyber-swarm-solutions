@@ -31,7 +31,7 @@ const teamMembers: TeamMember[] = [
     name: "Christoffer Christian Dreist",
     title: "CFO & Co-founder",
     slug: "christoffer-christian-dreist",
-    image: "/images/team/christoffer.jpg",
+    image: "/images/team/christoffer.png",
     focus: "Operations, funding and customer discovery.",
   },
 ];

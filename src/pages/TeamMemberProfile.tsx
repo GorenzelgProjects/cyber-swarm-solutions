@@ -61,7 +61,7 @@ const teamMembers: TeamMember[] = [
     firstName: "Christoffer",
     title: "CFO & Co-founder",
     slug: "christoffer-christian-dreist",
-    image: "/images/team/christoffer.jpg",
+    image: "/images/team/christoffer.png",
     email: "Christofferdreist@colleaiq.dk",
     intro: "Engineer from DTU; currently pursuing an MSc in Business Analytics. Focused on building explainable, human-in-the-loop security.",
     degree: "DTU — BSc Engineering",
