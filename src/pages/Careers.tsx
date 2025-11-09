@@ -49,7 +49,7 @@ const Careers = () => {
         </section>
 
         {/* Job list pattern preview */}
-        <section className="mt-12">
+        <section className="mt-8">
           <div className="container mx-auto max-w-5xl">
             <div className="space-y-4">
               {[0, 1, 2].map((i) => (

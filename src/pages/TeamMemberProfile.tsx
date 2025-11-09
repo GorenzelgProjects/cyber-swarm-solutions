@@ -17,6 +17,7 @@ type TeamMember = {
   caresAbout: string;
   degree?: string;
   track?: string;
+  phone?: string;
 };
 
 const teamMembers: TeamMember[] = [
@@ -61,6 +62,7 @@ const teamMembers: TeamMember[] = [
     intro: "Engineer from DTU; currently pursuing an MSc in Business Analytics. Focused on building explainable, human-in-the-loop security.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
+    phone: "+45 50 48 14 49",
     background: [
       "DTU — BSc Engineering",
       "MSc track — Business Analytics",
@@ -85,10 +87,10 @@ const TeamMemberProfile = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      <main className="pt-24 pb-24 px-4">
+      <main className="pt-24 pb-16 px-4">
         {/* Header */}
         <section className="container mx-auto max-w-4xl">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
+          <div className="flex flex-col md:flex-row gap-6 items-start">
             <img
               src={member.image}
               alt={member.name}
@@ -97,12 +99,19 @@ const TeamMemberProfile = () => {
             <div className="flex-1 space-y-2">
               <h1 className="text-4xl font-bold text-foreground">{member.name}</h1>
               <p className="text-xl text-muted-foreground">{member.title}</p>
+              {member.phone && (
+                <p className="text-sm text-muted-foreground">
+                  <a href={`tel:${member.phone.replace(/\s/g, '')}`} className="hover:text-primary transition-colors">
+                    {member.phone}
+                  </a>
+                </p>
+              )}
             </div>
           </div>
         </section>
 
         {/* Bio */}
-        <section className="container mx-auto max-w-4xl mt-12 space-y-8">
+        <section className="container mx-auto max-w-4xl mt-8 space-y-6">
           <div className="space-y-4">
             <p className="text-lg text-foreground">{member.intro}</p>
           </div>
@@ -155,7 +164,7 @@ const TeamMemberProfile = () => {
           )}
 
           {/* CTA */}
-          <div className="pt-8">
+          <div className="pt-4">
             <Button asChild size="lg">
               <a href={`mailto:kontakt@colleaiq.dk?subject=To%20${member.firstName}`}>
                 Email {member.firstName}
