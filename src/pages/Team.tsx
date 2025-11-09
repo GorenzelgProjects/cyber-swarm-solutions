@@ -43,7 +43,7 @@ const Team = () => {
 
       <main className="pt-24 pb-24 px-4">
         <div className="content-wrapper text-center space-y-4">
-          <h1 className="text-foreground">Our team</h1>
+          <h1 className="text-foreground">Our <span className="text-sage">team</span></h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Three founders building the future of proactive cybersecurity.
           </p>

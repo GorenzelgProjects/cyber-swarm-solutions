@@ -18,6 +18,7 @@ type TeamMember = {
   degree?: string;
   track?: string;
   phone?: string;
+  email?: string;
 };
 
 const teamMembers: TeamMember[] = [
@@ -27,6 +28,7 @@ const teamMembers: TeamMember[] = [
     title: "CEO & Co-founder",
     slug: "mikkel-romvig-grongaard",
     image: "/images/team/mikkel.jpg",
+    email: "Mikkelromvig@colleaiq.dk",
     intro: "Engineer from DTU; currently pursuing an MSc in Human-Centered Artificial Intelligence. Focused on building explainable, human-in-the-loop security.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Human-Centered Artificial Intelligence",
@@ -43,6 +45,7 @@ const teamMembers: TeamMember[] = [
     title: "CTO & Co-founder",
     slug: "martin-christoffersen",
     image: "/images/team/martin.jpg",
+    email: "Martinchristoffersen@colleaiq.dk",
     intro: "Engineer from DTU; currently pursuing an MSc in Business Analytics. Focused on building explainable, human-in-the-loop security.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
@@ -59,6 +62,7 @@ const teamMembers: TeamMember[] = [
     title: "CFO & Co-founder",
     slug: "christoffer-christian-dreist",
     image: "/images/team/christoffer.jpg",
+    email: "Christofferdreist@colleaiq.dk",
     intro: "Engineer from DTU; currently pursuing an MSc in Business Analytics. Focused on building explainable, human-in-the-loop security.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
@@ -94,9 +98,9 @@ const TeamMemberProfile = () => {
             <img
               src={member.image}
               alt={member.name}
-              className="w-40 h-40 rounded-full object-cover border-2 border-border"
+              className="w-40 h-40 rounded-full object-cover object-top border-2 border-border"
             />
-            <div className="flex-1 space-y-2">
+            <div className="flex-1 space-y-1">
               <h1 className="text-4xl font-bold text-foreground">{member.name}</h1>
               <p className="text-xl text-muted-foreground">{member.title}</p>
               {member.phone && (
@@ -111,7 +115,7 @@ const TeamMemberProfile = () => {
         </section>
 
         {/* Bio */}
-        <section className="container mx-auto max-w-4xl mt-8 space-y-6">
+        <section className="container mx-auto max-w-4xl mt-4 space-y-6">
           <div className="space-y-4">
             <p className="text-lg text-foreground">{member.intro}</p>
           </div>
@@ -166,7 +170,7 @@ const TeamMemberProfile = () => {
           {/* CTA */}
           <div className="pt-4">
             <Button asChild size="lg">
-              <a href={`mailto:kontakt@colleaiq.dk?subject=To%20${member.firstName}`}>
+              <a href={`mailto:${member.email || "kontakt@colleaiq.dk"}?subject=To%20${member.firstName}`}>
                 Email {member.firstName}
               </a>
             </Button>
