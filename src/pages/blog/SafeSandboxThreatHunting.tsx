@@ -3,8 +3,14 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import posts from "@/data/blog";
+import { teamMembers } from "@/data/team";
 
 const Post = () => {
+  // Get author details from team data
+  const post = posts.find(p => p.slug === "safe-sandbox-threat-hunting");
+  const author = post?.author ? teamMembers.find(m => m.slug === post.author) : null;
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -24,17 +30,19 @@ const Post = () => {
                 Safe Sandbox Threat Hunting: How We Test Without Touching Production
               </h1>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Link 
-                  to="/team/mikkel-romvig-grongaard" 
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
-                >
-                  <img 
-                    src="/images/team/mikkel.jpg" 
-                    alt="Mikkel Romvig Grøngaard" 
-                    className="w-8 h-8 rounded-full object-cover border border-border"
-                  />
-                  <span>Mikkel Romvig Grøngaard</span>
-                </Link>
+                {author && (
+                  <Link 
+                    to={`/team/${author.slug}`}
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <img 
+                      src={author.image}
+                      alt={author.name}
+                      className="w-8 h-8 rounded-full object-cover border border-border"
+                    />
+                    <span>{author.name}</span>
+                  </Link>
+                )}
                 <span>•</span>
                 <span>
                   {new Date("2025-03-01").toLocaleDateString("en-US", { 

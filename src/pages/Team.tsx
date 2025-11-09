@@ -3,38 +3,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { teamMembers } from "@/data/team";
 
-type TeamMember = {
-  name: string;
-  title: string;
-  slug: string;
-  image: string;
-  focus: string;
-};
-
-const teamMembers: TeamMember[] = [
-  {
-    name: "Mikkel Romvig Grøngaard",
-    title: "CEO & Co-founder",
-    slug: "mikkel-romvig-grongaard",
-    image: "/images/team/mikkel.png",
-    focus: "Leads ColleaiQ's direction and partnerships.",
-  },
-  {
-    name: "Martin Christoffersen",
-    title: "CTO & Co-founder",
-    slug: "martin-christoffersen",
-    image: "/images/team/martin.png",
-    focus: "Builds the technical foundation of our multi-agent platform.",
-  },
-  {
-    name: "Christoffer Christian Dreist",
-    title: "CFO & Co-founder",
-    slug: "christoffer-christian-dreist",
-    image: "/images/team/christoffer.png",
-    focus: "Operations, funding and customer discovery.",
-  },
-];
 
 const Team = () => {
   return (
