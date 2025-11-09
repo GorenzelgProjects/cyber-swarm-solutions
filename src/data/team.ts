@@ -25,7 +25,8 @@ export const teamMembers: TeamMember[] = [
     email: "Mikkelromvig@colleaiq.dk",
     linkedin: "https://www.linkedin.com/in/mikkel-gr%C3%B8ng%C3%A5rd-a8b149286/",
     focus: "Leads ColleaiQ's direction and partnerships.",
-    intro: "Engineer from DTU; currently pursuing an MSc in Human-Centered Artificial Intelligence. Focused on building explainable, human-in-the-loop security.",
+    intro:
+      "Engineer from DTU; currently pursuing an MSc in Human-Centered Artificial Intelligence. Focused on building explainable, human-in-the-loop security.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Human-Centered Artificial Intelligence",
     background: [
@@ -33,7 +34,8 @@ export const teamMembers: TeamMember[] = [
       "MSc track — Human-Centered Artificial Intelligence",
       "ColleaiQ — Co-founder, CEO",
     ],
-    caresAbout: "Proactive security that real analysts can trust. Clear evidence, calm workflows, and tools that get better with each iteration.",
+    caresAbout:
+      "Proactive security that real analysts can trust. Clear evidence, calm workflows, and tools that get better with each iteration.",
   },
   {
     name: "Martin Christoffersen",
@@ -44,15 +46,13 @@ export const teamMembers: TeamMember[] = [
     email: "Martinchristoffersen@colleaiq.dk",
     linkedin: "https://www.linkedin.com/in/martin-christoffersen-b48142253/",
     focus: "Builds the technical foundation of our multi-agent platform.",
-    intro: "Engineer from DTU; currently pursuing an MSc in Business Analytics. Focused on building explainable, human-in-the-loop security.",
+    intro:
+      "Engineer from DTU; currently pursuing an MSc in Business Analytics. Focused on building explainable, human-in-the-loop security.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
-    background: [
-      "DTU — BSc Engineering",
-      "MSc track — Business Analytics",
-      "ColleaiQ — Co-founder, CTO",
-    ],
-    caresAbout: "Proactive security that real analysts can trust. Clear evidence, calm workflows, and tools that get better with each iteration.",
+    background: ["DTU — BSc Engineering", "MSc track — Business Analytics", "ColleaiQ — Co-founder, CTO"],
+    caresAbout:
+      "Proactive security that real analysts can trust. Clear evidence, calm workflows, and tools that get better with each iteration.",
   },
   {
     name: "Christoffer Christian Dreist",
@@ -63,7 +63,8 @@ export const teamMembers: TeamMember[] = [
     email: "Christofferdreist@colleaiq.dk",
     linkedin: "https://www.linkedin.com/in/christoffer-dreist-b71849186/",
     focus: "Operations, funding and customer discovery.",
-    intro: "Christoffer Christian Dreist is co-founder and CFO at ColleaiQ. He holds a BSc in Engineering from DTU and is completing an MSc in Business Analytics. Christoffer keeps pilots and partnerships on track: clear plans, clear handovers, and a product we can deliver as promised.",
+    intro:
+      "Christoffer Christian Dreist is co-founder and CFO at ColleaiQ. He holds a BSc in Engineering from DTU and is completing an MSc in Business Analytics. Christoffer keeps pilots and partnerships on track: clear plans, clear handovers, and a product we can deliver as promised.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
     phone: "+45 50 48 14 49",
@@ -71,9 +72,9 @@ export const teamMembers: TeamMember[] = [
       "DTU — Bachelor of Science in Engineering (BSc)",
       "DTU — MSc in Business Analytics (in progress)",
       "Co-founder & CFO, ColleaiQ (2025– )",
-      "Economic Policy & Analysis, Dansk Industri — student employee",
     ],
-    caresAbout: "Plain language, tidy scope, and dependable execution. I like written decisions, realistic timelines, and a single owner for the next step.",
+    caresAbout:
+      "Plain language, tidy scope, and dependable execution. I like written decisions, realistic timelines, and a single owner for the next step.",
   },
 ];
 
