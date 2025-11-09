@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "mission": "Vores Mission",
+    "solution": "Løsning",
+    "story": "Historie",
+    "team": "Team",
+    "careers": "Ledige Stillinger",
+    "contact": "Kontakt",
+    "faq": "FAQ",
+    "compliance": "Compliance",
+    "community": "Fællesskab",
+    "blog": "Blog"
+  },
+  "footer": {
+    "tagline": "Opgraderer cybersikkerhed med forklarlige multi-agent systemer",
+    "company": "Virksomhed",
+    "resources": "Ressourcer",
+    "legal": "Juridisk",
+    "mission": "Vores Mission",
+    "story": "Historie",
+    "team": "Team",
+    "careers": "Ledige Stillinger",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "compliance": "Compliance",
+    "community": "Fællesskab",
+    "solution": "Løsning",
+    "simulationDeepDive": "Simulering Deep Dive",
+    "privacy": "Privatlivspolitik",
+    "terms": "Servicevilkår",
+    "contact": "Kontakt",
+    "rights": "© 2025 ColleaiQ. Alle rettigheder forbeholdes.",
+    "address": "Anker Engelunds Vej 1, 2800 Kgs. Lyngby, Danmark",
+    "email": "kontakt@colleaiq.dk",
+    "website": "colleaiq.dk"
+  },
+  "index": {
+    "hero": {
+      "badge": "Proaktiv cybersikkerhed",
+      "headline": "Hvor kunstig intelligens møder kollektiv intelligens",
+      "paragraph1": "Vi servicerer biler og laver brandøvelser, før noget går galt — og venter så på den rigtige hændelse for at se, hvad vi gik glip af. Cyberteams kører det samme manuskript: byg kontroller, vent på advarsler, reager.",
+      "paragraph2": "ColleaiQ er vores modsvar til den reaktive tilgang: simulerede angreb, AI-agenter trænet på dine egne SOC-analytikers beslutninger, og en feedback-loop, der lukker sig selv. Mindre støj, mere klarhed, og et team, der bliver bedre med hver øvelse.",
+      "ctaPrimary": "Kontakt Os",
+      "ctaSecondary": "Læs Vores Historie"
+    },
+    "mission": {
+      "badge": "Vores Mission",
+      "headline": "Bygger forklarlige multi-agent systemer til proaktivt cyberforsvar",
+      "paragraph1": "ColleaiQ er en dansk startup, der bygger forklarlige multi-agent AI-systemer, som simulerer cyberhændelser, træner på SOC-analytikers beslutninger og leverer proaktiv sikkerhed — ingen black boxes, ingen støj.",
+      "paragraph2": "Vi startede ColleaiQ, fordi vi mener, at cyberteams fortjener værktøjer, der forklarer deres ræsonnement, lærer af rigtige analytikerbeslutninger og arbejder med teamet — ikke imod det."
+    },
+    "solution": {
+      "badge": "Løsningen",
+      "headline": "Træn agenter. Kør simuleringer. Luk loopet.",
+      "description": "Vores platform simulerer modstandertaktikker i en sikker sandkasse, træner AI-agenter på SOC-analytikers beslutninger og genererer forklarlige fund — lukker feedback-loopet mellem læring og handling.",
+      "cta": "Se Hvordan Det Virker"
+    },
+    "team": {
+      "badge": "Team",
+      "headline": "Mød stifterne",
+      "description": "Tre ingeniører, der mener, at cyberteams fortjener værktøjer, der forklarer deres ræsonnement og arbejder med teamet — ikke imod det.",
+      "cta": "Mød Teamet"
+    },
+    "ready": {
+      "headline": "Klar til at opgradere dit cyberforsvar?",
+      "description": "Lad os tale om, hvordan forklarlig AI kan hjælpe dit SOC-team med at være på forkant.",
+      "cta": "Kontakt Os"
+    }
+  },
+  "careers": {
+    "badge": "Alpha stage team",
+    "headline": "Ledige Stillinger",
+    "intro": "Vi er et lille team, og vi ansætter sjældent og bevidst. Der er ingen ledige stillinger lige nu.",
+    "noHiring": "Vi ansætter ikke lige nu",
+    "thesisTitle": "Speciale / PhD samarbejder",
+    "thesisDescription": "Vi er interesserede i at samarbejde med speciale- eller PhD-studerende om emner som forklarlige multi-agent systemer, sandkassede cybersimuleringer, modelevaluering/reproducerbarhed, reinforcement learning, grafanalyse og reviderbarhed for NIS2. Vi kan tilbyde konkrete problemstillinger, syntetiske/benchmark data, ugentlige check-ins og medforfatterskab, hvor det er relevant.",
+    "futureTitle": "Hvad vi måske åbner næste gang",
+    "futureSubtitle": "(ikke åbent i dag)",
+    "futureRoles": {
+      "engineer": "Softwareingeniør (agenter / backend)",
+      "frontend": "Frontend / Produktingeniør",
+      "analyst": "Sikkerhedsanalytiker (rådgiver / deltid)"
+    },
+    "interestedTitle": "Interesseret?",
+    "interestedDescription": "Brug Kontakt-siden til at skrive en kort besked til os (f.eks. \"Speciale/PhD partnerskab\" eller \"Fremtidige roller\").",
+    "contactButton": "Kontakt Os",
+    "noPositions": "Ingen ledige stillinger."
+  },
+  "contact": {
+    "badge": "Kontakt",
+    "headline": "Kontakt ColleaiQ",
+    "description": "Vi er her for at besvare spørgsmål, diskutere pilotprojekter eller udforske speciale/PhD-partnerskaber. Skriv til os nedenfor.",
+    "infoTitle": "Kontaktinformation",
+    "infoEmail": "E-mail",
+    "infoOffice": "Kontor",
+    "infoWebsite": "Hjemmeside",
+    "formTitle": "Send os en besked",
+    "formName": "Navn",
+    "formEmail": "E-mail",
+    "formCompany": "Virksomhed (valgfrit)",
+    "formMessage": "Besked",
+    "formButton": "Send Besked",
+    "formSuccess": "Tak for din besked. Vi vender tilbage snarest!",
+    "demoTitle": "Anmod om Demo",
+    "demoDescription": "Vil du se vores platform i aktion? Book en demo med vores team.",
+    "demoButton": "Anmod Demo"
+  }
+}

@@ -5,12 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,8 +23,8 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
+      title: t('contact.formSuccess'),
+      description: "",
     });
     setFormData({ name: "", email: "", company: "", message: "" });
   };
@@ -43,11 +45,10 @@ const Contact = () => {
         <section className="px-4 py-20">
           <div className="container mx-auto max-w-4xl text-center space-y-6 animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold">
-              Get in <span className="bg-gradient-accent bg-clip-text text-transparent">Touch</span>
+              {t('contact.headline')}
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Ready to transform your cybersecurity with multi-agent AI? 
-              Let's discuss how ColleaiQ can protect your organization.
+              {t('contact.description')}
             </p>
           </div>
         </section>
@@ -61,9 +62,9 @@ const Contact = () => {
                 <Card className="bg-card border-border shadow-card">
                   <CardContent className="p-6 space-y-6">
                     <div className="space-y-4">
-                      <h3 className="text-xl font-semibold">Contact Information</h3>
+                      <h3 className="text-xl font-semibold">{t('contact.infoTitle')}</h3>
                       <p className="text-sm text-muted-foreground">
-                        Reach out to us through any of these channels
+                        {t('contact.description')}
                       </p>
                     </div>
 
@@ -73,12 +74,12 @@ const Contact = () => {
                           <Mail className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <p className="font-medium mb-1">Email</p>
+                          <p className="font-medium mb-1">{t('contact.infoEmail')}</p>
                           <a 
                             href="mailto:kontakt@colleaiq.dk" 
                             className="text-sm text-muted-foreground hover:text-primary transition-colors"
                           >
-                            kontakt@colleaiq.dk
+                            {t('footer.email')}
                           </a>
                         </div>
                       </div>
@@ -88,11 +89,9 @@ const Contact = () => {
                           <MapPin className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <p className="font-medium mb-1">Office</p>
+                          <p className="font-medium mb-1">{t('contact.infoOffice')}</p>
                           <p className="text-sm text-muted-foreground">
-                            Elbagade 19, 2. tv<br />
-                            2300 København S<br />
-                            Denmark
+                            {t('footer.address')}
                           </p>
                         </div>
                       </div>
@@ -102,10 +101,10 @@ const Contact = () => {
                           <Phone className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <p className="font-medium mb-1">Website</p>
+                          <p className="font-medium mb-1">{t('contact.infoWebsite')}</p>
                           <a 
                             href="https://www.colleaiq.dk" 
-                            target="_blank" 
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm text-muted-foreground hover:text-primary transition-colors"
                           >
@@ -133,18 +132,18 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Name *</Label>
+                        <Label htmlFor="name">{t('contact.formName')} *</Label>
                         <Input
                           id="name"
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          placeholder="Your full name"
+                          placeholder={t('contact.formName')}
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
+                        <Label htmlFor="email">{t('contact.formEmail')} *</Label>
                         <Input
                           id="email"
                           name="email"
@@ -152,24 +151,24 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          placeholder="your.email@company.com"
+                          placeholder={t('contact.formEmail')}
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="company">Company</Label>
+                      <Label htmlFor="company">{t('contact.formCompany')}</Label>
                       <Input
                         id="company"
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        placeholder="Your organization"
+                        placeholder={t('contact.formCompany')}
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message">{t('contact.formMessage')} *</Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -182,7 +181,7 @@ const Contact = () => {
                     </div>
 
                     <Button type="submit" size="lg" className="w-full">
-                      Send Message
+                      {t('contact.formButton')}
                     </Button>
 
                     <p className="text-sm text-muted-foreground text-center">

@@ -4,8 +4,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { CheckCircle2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Careers = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -13,11 +16,11 @@ const Careers = () => {
       <main className="pt-24 pb-24 px-4">
         <div className="content-wrapper text-center space-y-4">
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-muted text-muted-foreground text-xs tracking-wide">
-            Alpha stage team
+            {t('careers.badge')}
           </span>
-          <h1 className="text-foreground">Open Positions</h1>
+          <h1 className="text-foreground">{t('careers.headline')}</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're a small team and we hire rarely and deliberately. There are no open roles right now.
+            {t('careers.intro')}
           </p>
         </div>
 
@@ -31,37 +34,32 @@ const Careers = () => {
                     <CheckCircle2 className="w-6 h-6 text-primary" />
                   </div>
                 </div>
-                <h2 className="text-2xl text-foreground">We're not hiring right now</h2>
+                <h2 className="text-2xl text-foreground">{t('careers.noHiring')}</h2>
                 <div className="text-muted-foreground max-w-xl mx-auto space-y-4 text-left">
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Thesis / PhD collaborations</h3>
-                    <p>
-                      We're keen to partner with Master's thesis or PhD students on topics like explainable multi-agent systems, 
-                      sandboxed cyber simulations, model evaluation/reproducibility, reinforcement learning, graph analytics, 
-                      and auditability for NIS2. We can offer real problem statements, synthetic/bench data, weekly check-ins, 
-                      and co-authorship where relevant.
-                    </p>
+                    <h3 className="font-semibold text-foreground mb-2">{t('careers.thesisTitle')}</h3>
+                    <p>{t('careers.thesisDescription')}</p>
                   </div>
                   
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">What we may open next (not open today)</h3>
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {t('careers.futureTitle')} <span className="text-base font-normal">({t('careers.futureSubtitle')})</span>
+                    </h3>
                     <ul className="space-y-1 ml-4">
-                      <li>• Software Engineer (agents / backend)</li>
-                      <li>• Frontend / Product Engineer</li>
-                      <li>• Security Analyst (advisor / part-time)</li>
+                      <li>• {t('careers.futureRoles.engineer')}</li>
+                      <li>• {t('careers.futureRoles.frontend')}</li>
+                      <li>• {t('careers.futureRoles.analyst')}</li>
                     </ul>
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Interested?</h3>
-                    <p>
-                      Use the Contact page to write us a short note (e.g., "Thesis/PhD partnership" or "Future roles").
-                    </p>
+                    <h3 className="font-semibold text-foreground mb-2">{t('careers.interestedTitle')}</h3>
+                    <p>{t('careers.interestedDescription')}</p>
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
                   <Button asChild>
-                    <a href="/contact">Contact Us</a>
+                    <a href="/contact">{t('careers.contactButton')}</a>
                   </Button>
                 </div>
               </CardContent>
@@ -89,7 +87,7 @@ const Careers = () => {
                 </Card>
               ))}
             </div>
-            <p className="text-center text-muted-foreground mt-6">No positions available.</p>
+            <p className="text-center text-muted-foreground mt-6">{t('careers.noPositions')}</p>
           </div>
         </section>
       </main>

@@ -3,20 +3,22 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import LanguageToggle from "@/components/LanguageToggle";
+import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Our Mission", path: "/story" },
-    { name: "Solution", path: "/solution" },
-    { name: "Blog", path: "/blog" },
-    { name: "Team", path: "/team" },
-    { name: "Careers", path: "/careers" },
-    { name: "Compliance", path: "/compliance" },
+    { name: t('nav.mission'), path: "/story" },
+    { name: t('nav.solution'), path: "/solution" },
+    { name: t('nav.blog'), path: "/blog" },
+    { name: t('nav.team'), path: "/team" },
+    { name: t('nav.careers'), path: "/careers" },
+    { name: t('nav.compliance'), path: "/compliance" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -55,14 +57,16 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <LanguageToggle />
             <ThemeToggle />
             <Button asChild size="sm" className="rounded-2xl">
-              <a href="mailto:kontakt@colleaiq.dk">Contact Us</a>
+              <a href="mailto:kontakt@colleaiq.dk">{t('nav.contact')}</a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
+            <LanguageToggle />
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -90,7 +94,7 @@ const Navigation = () => {
             ))}
             <Button asChild size="sm" className="w-full rounded-2xl">
               <a href="mailto:kontakt@colleaiq.dk" onClick={() => setIsOpen(false)}>
-                Contact Us
+                {t('nav.contact')}
               </a>
             </Button>
           </div>

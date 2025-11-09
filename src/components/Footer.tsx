@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-card border-t border-border shadow-soft">
       <div className="container mx-auto px-4 py-12">
@@ -15,79 +18,79 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Proactive, explainable AI cyber defence for European organisations.
+              {t('footer.tagline')}
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Product</h3>
+            <h3 className="font-semibold mb-4">{t('footer.resources')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/solution" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Solution
+                  {t('footer.solution')}
                 </Link>
               </li>
               <li>
                 <Link to="/simulation-deep-dive" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  How It Works
+                  {t('footer.simulationDeepDive')}
                 </Link>
               </li>
               <li>
                 <Link to="/compliance" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Compliance
+                  {t('footer.compliance')}
                 </Link>
               </li>
               <li>
                 <Link to="/faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  FAQ
+                  {t('footer.faq')}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">{t('footer.company')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/story" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Our Mission
+                  {t('footer.mission')}
                 </Link>
               </li>
               <li>
                 <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Blog
+                  {t('footer.blog')}
                 </Link>
               </li>
               <li>
                 <Link to="/community" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Community
+                  {t('footer.community')}
                 </Link>
               </li>
               <li>
                 <Link to="/careers" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Careers
+                  {t('footer.careers')}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
+            <h3 className="font-semibold mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Contact Us
+                  {t('footer.contact')}
                 </Link>
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:kontakt@colleaiq.dk" className="hover:text-primary transition-colors">
-                  kontakt@colleaiq.dk
+                  {t('footer.email')}
                 </a>
               </li>
               <li className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5" />
-                <span>Elbagade 19, 2. tv<br />2300 København S</span>
+                <span>{t('footer.address')}</span>
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Linkedin className="h-4 w-4" />
@@ -100,7 +103,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} ColleaiQ. All rights reserved.</p>
+          <p>{t('footer.rights')}</p>
         </div>
       </div>
     </footer>

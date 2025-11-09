@@ -1,11 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Target, Eye, Network } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import posts from "@/data/blog";
 
 const Index = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -14,27 +17,20 @@ const Index = () => {
       <section className="px-4 pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="content-wrapper text-center space-y-6 animate-fade-in">
           <h1 className="text-foreground">
-            Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence
+            {t('index.hero.headline')}
           </h1>
 
           <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-2xl mx-auto">
-            <p>
-              We service cars and run fire drills before anything goes wrong. Cybersecurity should work the same way.
-              Too many teams still wait for an incident, then scramble.
-            </p>
-            <p>
-              ColleaiQ is our push in the opposite direction. We use a small team of AI agents to rehearse attacks in a
-              safe sandbox, gather evidence, and turn it into plain-English actions. A human analyst reviews every
-              result. The boring work is automated, the judgement stays human, and each run makes the next one better.
-            </p>
+            <p>{t('index.hero.paragraph1')}</p>
+            <p>{t('index.hero.paragraph2')}</p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <Button asChild size="lg" className="text-base px-8">
-              <a href="mailto:kontakt@colleaiq.dk">Get in Touch</a>
+              <a href="mailto:kontakt@colleaiq.dk">{t('index.hero.ctaPrimary')}</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8">
-              <a href="/story">Learn About Our Mission</a>
+              <a href="/story">{t('index.hero.ctaSecondary')}</a>
             </Button>
           </div>
 

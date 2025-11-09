@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "mission": "Our Mission",
+    "solution": "Solution",
+    "story": "Story",
+    "team": "Team",
+    "careers": "Open Positions",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "compliance": "Compliance",
+    "community": "Community",
+    "blog": "Blog"
+  },
+  "footer": {
+    "tagline": "Upgrading cybersecurity with explainable multi-agent systems",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "mission": "Our Mission",
+    "story": "Story",
+    "team": "Team",
+    "careers": "Open Positions",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "compliance": "Compliance",
+    "community": "Community",
+    "solution": "Solution",
+    "simulationDeepDive": "Simulation Deep Dive",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "rights": "© 2025 ColleaiQ. All rights reserved.",
+    "address": "Anker Engelunds Vej 1, 2800 Kgs. Lyngby, Denmark",
+    "email": "kontakt@colleaiq.dk",
+    "website": "colleaiq.dk"
+  },
+  "index": {
+    "hero": {
+      "badge": "Proactive cybersecurity",
+      "headline": "Where Artificial Intelligence meets collective intelligence",
+      "paragraph1": "We service cars and run fire drills before anything goes wrong — then wait for the real incident to tell us what we missed. Cyber teams run the same script: build controls, wait for alerts, react.",
+      "paragraph2": "ColleaiQ is our push in the opposite direction: simulated attacks, AI agents trained on your own SOC analysts' decisions, and a feedback loop that closes itself. Less noise, more clarity, and a team that gets better with every drill.",
+      "ctaPrimary": "Contact Us",
+      "ctaSecondary": "Read Our Story"
+    },
+    "mission": {
+      "badge": "Our Mission",
+      "headline": "Building explainable multi-agent systems for proactive cyber defense",
+      "paragraph1": "ColleaiQ is a Danish startup building explainable multi-agent AI systems that simulate cyber incidents, train on SOC analyst decisions, and deliver proactive security — no black boxes, no noise.",
+      "paragraph2": "We started ColleaiQ because we believe cyber teams deserve tools that explain their reasoning, learn from real analyst decisions, and work with the team — not against them."
+    },
+    "solution": {
+      "badge": "The Solution",
+      "headline": "Train agents. Run simulations. Close the loop.",
+      "description": "Our platform simulates adversary tactics in a safe sandbox, trains AI agents on SOC analyst decisions, and generates explainable findings — closing the feedback loop between learning and action.",
+      "cta": "See How It Works"
+    },
+    "team": {
+      "badge": "Team",
+      "headline": "Meet the founders",
+      "description": "Three engineers who believe cyber teams deserve tools that explain their reasoning and work with the team — not against them.",
+      "cta": "Meet The Team"
+    },
+    "ready": {
+      "headline": "Ready to upgrade your cyber defense?",
+      "description": "Let's talk about how explainable AI agents can help your SOC team stay ahead.",
+      "cta": "Get in Touch"
+    }
+  },
+  "careers": {
+    "badge": "Alpha stage team",
+    "headline": "Open Positions",
+    "intro": "We're a small team and we hire rarely and deliberately. There are no open roles right now.",
+    "noHiring": "We're not hiring right now",
+    "thesisTitle": "Thesis / PhD collaborations",
+    "thesisDescription": "We're keen to partner with Master's thesis or PhD students on topics like explainable multi-agent systems, sandboxed cyber simulations, model evaluation/reproducibility, reinforcement learning, graph analytics, and auditability for NIS2. We can offer real problem statements, synthetic/bench data, weekly check-ins, and co-authorship where relevant.",
+    "futureTitle": "What we may open next",
+    "futureSubtitle": "(not open today)",
+    "futureRoles": {
+      "engineer": "Software Engineer (agents / backend)",
+      "frontend": "Frontend / Product Engineer",
+      "analyst": "Security Analyst (advisor / part-time)"
+    },
+    "interestedTitle": "Interested?",
+    "interestedDescription": "Use the Contact page to write us a short note (e.g., \"Thesis/PhD partnership\" or \"Future roles\").",
+    "contactButton": "Contact Us",
+    "noPositions": "No positions available."
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "headline": "Contact ColleaiQ",
+    "description": "We're here to answer questions, discuss pilots, or explore thesis/PhD partnerships. Reach out below.",
+    "infoTitle": "Contact Information",
+    "infoEmail": "Email",
+    "infoOffice": "Office",
+    "infoWebsite": "Website",
+    "formTitle": "Send us a message",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formCompany": "Company (optional)",
+    "formMessage": "Message",
+    "formButton": "Send Message",
+    "formSuccess": "Thank you for your message. We'll get back to you soon!",
+    "demoTitle": "Request a Demo",
+    "demoDescription": "Want to see our platform in action? Schedule a demo with our team.",
+    "demoButton": "Request Demo"
+  }
+}
