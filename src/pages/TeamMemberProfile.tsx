@@ -36,7 +36,7 @@ const TeamMemberProfile = () => {
               <p className="text-xl text-muted-foreground">{member.title}</p>
               {member.phone && (
                 <p className="text-sm text-muted-foreground">
-                  <a href={`tel:${member.phone.replace(/\s/g, '')}`} className="hover:text-primary transition-colors">
+                  <a href={`tel:${member.phone.replace(/\s/g, "")}`} className="hover:text-primary transition-colors">
                     {member.phone}
                   </a>
                 </p>
@@ -46,7 +46,7 @@ const TeamMemberProfile = () => {
         </section>
 
         {/* Bio */}
-        <section className="container mx-auto max-w-4xl space-y-6">
+        <section className="container mx-auto max-w-4xl space-y-6 -mt-6 md:-mt-8">
           <div className="space-y-4">
             <p className="text-lg text-foreground">{member.intro}</p>
           </div>
