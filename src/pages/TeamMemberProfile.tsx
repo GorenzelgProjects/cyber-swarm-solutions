@@ -48,12 +48,12 @@ const TeamMemberProfile = () => {
         {/* Bio */}
         <section className="container mx-auto max-w-4xl space-y-6 -mt-6 md:-mt-8">
           <div>
-            <p className="text-lg text-foreground">{member.intro}</p>
+            <p className="text-lg text-foreground mt-0">{member.intro}</p>
           </div>
 
           {/* Background */}
           <div>
-            <h2 className="text-2xl font-semibold text-foreground">Background</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-0">Background</h2>
             <ul className="space-y-2 mt-3">
               {member.background.map((item, idx) => (
                 <li key={idx} className="text-muted-foreground flex items-start">
@@ -66,7 +66,7 @@ const TeamMemberProfile = () => {
 
           {/* What I care about */}
           <div>
-            <h2 className="text-2xl font-semibold text-foreground">What I care about</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-0">What I care about</h2>
             <p className="text-muted-foreground mt-3">{member.caresAbout}</p>
           </div>
 
