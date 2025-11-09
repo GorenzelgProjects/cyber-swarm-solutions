@@ -13,7 +13,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="px-4 pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="content-wrapper text-center space-y-6 animate-fade-in">
-          <h1 className="text-foreground">Where artificial intelligence meets collective intelligence</h1>
+          <h1 className="text-foreground">Where <span className="text-sage">artificial intelligence</span> meets collective intelligence</h1>
 
           <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-2xl mx-auto">
             <p>
@@ -29,19 +29,19 @@ const Index = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <Button asChild size="lg" className="text-base px-8">
-              <a href="mailto:kontakt@colleaiq.dk">Book a Consultation</a>
+              <a href="mailto:kontakt@colleaiq.dk">Get in Touch</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8">
-              <a href="/solution">How It Works</a>
+              <a href="/story">Learn About Our Mission</a>
             </Button>
           </div>
 
           <div className="pt-4">
             <a
               href="/blog/safe-sandbox-threat-hunting"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Latest from the lab: <span className="underline">Safe Sandbox Threat Hunting</span> →
+              Latest post: Safe Sandbox Threat Hunting →
             </a>
           </div>
         </div>
@@ -231,12 +231,12 @@ const Index = () => {
         <section className="px-4">
           <div className="content-wrapper space-y-8 animate-fade-in">
             <h2 className="text-center text-foreground">From the lab</h2>
-            <div className="max-w-3xl mx-auto">
-              <a href={`/blog/${posts[0].slug}`} className="block group">
+            <div className="flex justify-center">
+              <a href={`/blog/${posts[0].slug}`} className="block group max-w-[380px] w-full">
                 <Card className="shadow-card hover:shadow-hover transition-all">
                   <img
                     src={posts[0].thumbnail}
-                    alt="Abstract sandbox thumbnail"
+                    alt="Blog post thumbnail"
                     width={1200}
                     height={675}
                     loading="lazy"
@@ -288,19 +288,18 @@ const Index = () => {
       {/* Final CTA Section */}
       <section className="px-4 bg-muted/30">
         <div className="content-wrapper text-center space-y-8 animate-fade-in">
-          <h2 className="text-foreground">Ready to Move from Reactive to Proactive?</h2>
+          <h2 className="text-foreground">Ready to move from reactive to proactive?</h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            [[CTA paragraph – invite them to schedule a consultation, see a demo, or discuss their specific security
-            challenges. Emphasize partnership approach and tailored solutions.]]
+            If you want rehearsals instead of surprises, let's talk. We'll map your setup, agree on what "good" looks like, and onboard you to a pilot where every run is explainable and human-approved.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button asChild size="lg" className="text-base px-8">
-              <a href="mailto:kontakt@colleaiq.dk">Get in Touch</a>
+              <a href="mailto:kontakt@colleaiq.dk?subject=Pilot%20interest">Get in Touch</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8">
-              <a href="mailto:kontakt@colleaiq.dk">Learn About Our Mission</a>
+              <a href="/story">Learn about our mission</a>
             </Button>
           </div>
         </div>

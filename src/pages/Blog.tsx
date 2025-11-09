@@ -13,33 +13,44 @@ const Blog = () => {
 
       <main className="pt-24 pb-20">
         <section className="px-4 py-10">
-          <div className="container mx-auto max-w-4xl text-center space-y-6 animate-fade-in">
+          <div className="container mx-auto max-w-4xl text-center space-y-4 animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground">Blog</h1>
-            <p className="text-xl text-muted-foreground">[[Blog intro – short statement about research notes and updates.]]</p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Short field notes as we build ColleaiQ—what we tried, what worked, and what we changed.
+            </p>
           </div>
         </section>
 
         <section className="px-4 py-6">
-          <div className="container mx-auto max-w-4xl">
-            <div className="grid gap-8">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid gap-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
               {list.map((post) => (
                 <Link key={post.slug} to={`/blog/${post.slug}`} className="group">
-                  <Card className="border-border hover:shadow-hover transition-shadow">
-                    <CardContent className="p-0">
+                  <Card className="border-border hover:shadow-hover transition-shadow h-full">
+                    <CardContent className="p-0 flex flex-col h-full">
                       <img
                         src={post.thumbnail}
-                        alt="Abstract sandbox thumbnail"
-                        width={1200}
-                        height={675}
+                        alt="Blog post thumbnail"
+                        width={800}
+                        height={450}
                         loading="lazy"
-                        className="w-full h-auto rounded-t-xl border-b border-border"
+                        className="w-full max-w-[400px] h-auto aspect-video object-cover rounded-t-xl border-b border-border"
                       />
-                      <div className="p-6 space-y-2">
-                        <h2 className="text-2xl font-semibold group-hover:text-primary transition-colors">{post.title}</h2>
+                      <div className="p-5 space-y-2 flex-1 flex flex-col">
+                        <h2 className="text-xl font-semibold group-hover:text-primary transition-colors line-clamp-2">
+                          {post.title}
+                        </h2>
                         <p className="text-sm text-muted-foreground">
-                          {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                          {new Date(post.date).toLocaleDateString("en-US", { 
+                            month: "short", 
+                            day: "numeric", 
+                            year: "numeric" 
+                          })}
+                          {post.readTime && ` • ${post.readTime}`}
                         </p>
-                        <p className="text-muted-foreground">{post.excerpt}</p>
+                        <p className="text-sm text-muted-foreground line-clamp-3 flex-1">
+                          {post.excerpt}
+                        </p>
                       </div>
                     </CardContent>
                   </Card>

@@ -2,29 +2,52 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Post = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-24 pb-24 px-4">
-        <article className="content-wrapper space-y-8">
-          <header className="space-y-4 text-center">
-            <h1 className="text-foreground">Safe Sandbox Threat Hunting: How We Test Without Touching Production</h1>
-            <p className="text-muted-foreground">
-              {new Date("2025-03-01").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })} • 4 min read
-            </p>
+        <article className="container mx-auto max-w-[760px] space-y-8">
+          <header className="space-y-6">
             <img
               src="/images/blog/safe-sandbox-thumb.webp"
               alt="Abstract sandbox thumbnail"
               loading="lazy"
-              width={1200}
-              height={675}
-              className="w-full h-auto rounded-xl border border-muted shadow-soft"
+              width={1600}
+              height={900}
+              className="w-full max-h-[320px] object-cover rounded-xl border border-muted shadow-soft"
             />
+            <div className="space-y-3">
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+                Safe Sandbox Threat Hunting: How We Test Without Touching Production
+              </h1>
+              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                <Link 
+                  to="/team/mikkel-romvig-grongaard" 
+                  className="flex items-center gap-2 hover:text-primary transition-colors"
+                >
+                  <img 
+                    src="/images/team/mikkel.jpg" 
+                    alt="Mikkel Romvig Grøngaard" 
+                    className="w-8 h-8 rounded-full object-cover border border-border"
+                  />
+                  <span>Mikkel Romvig Grøngaard</span>
+                </Link>
+                <span>•</span>
+                <span>
+                  {new Date("2025-03-01").toLocaleDateString("en-US", { 
+                    month: "short", 
+                    day: "numeric", 
+                    year: "numeric" 
+                  })} • 4 min read
+                </span>
+              </div>
+            </div>
           </header>
 
-          <div className="prose prose-neutral dark:prose-invert max-w-none text-foreground">
+          <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none text-foreground space-y-4">
             <p>Reactive security is like changing your brake pads after the crash. We wanted a safer rehearsal.</p>
             
             <p>ColleaiQ runs realistic attack steps inside a sandbox that mirrors your environment. We record what we attempted, what we observed, and why it matters, then propose a practical fix. A human analyst reviews every result and the decision is logged for audit.</p>

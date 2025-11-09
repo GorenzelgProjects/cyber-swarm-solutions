@@ -17,6 +17,7 @@ import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
 import SafeSandboxThreatHunting from "./pages/blog/SafeSandboxThreatHunting";
 import Team from "./pages/Team";
+import TeamMemberProfile from "./pages/TeamMemberProfile";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/compliance" element={<Compliance />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/team/:slug" element={<TeamMemberProfile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

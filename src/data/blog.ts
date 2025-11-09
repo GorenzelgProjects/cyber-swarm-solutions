@@ -5,6 +5,7 @@ export type BlogPost = {
   date: string; // ISO string
   thumbnail: string; // public path
   readTime?: string;
+  author?: string; // team member slug
 };
 
 export const posts: BlogPost[] = [
@@ -16,6 +17,7 @@ export const posts: BlogPost[] = [
     date: "2025-03-01",
     thumbnail: "/images/blog/safe-sandbox-thumb.webp",
     readTime: "4 min read",
+    author: "mikkel-romvig-grongaard",
   },
 ];
 
