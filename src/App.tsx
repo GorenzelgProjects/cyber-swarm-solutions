@@ -15,6 +15,7 @@ import SimulationDeepDive from "./pages/SimulationDeepDive";
 import Compliance from "./pages/Compliance";
 import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
+import SafeSandboxThreatHunting from "./pages/blog/SafeSandboxThreatHunting";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/story" element={<Story />} />
           <Route path="/solution" element={<Solution />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/safe-sandbox-threat-hunting" element={<SafeSandboxThreatHunting />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
