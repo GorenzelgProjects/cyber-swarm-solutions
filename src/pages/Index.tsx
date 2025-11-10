@@ -48,26 +48,12 @@ const Index = () => {
       {/* The Problem Section */}
       <section className="px-4 bg-muted/30">
         <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">The Challenge</h2>
+          <h2 className="text-center text-foreground">{t("index.challenge.headline")}</h2>
 
           <div className="text-lg text-muted-foreground space-y-4">
-            <p>
-              If you talk to security teams today, the picture is fairly consistent: more systems, more identities, more
-              integrations—and attackers who can move faster than change control. Cloud, OT, third-party services and
-              legacy infrastructure all end up on the same attack surface, but they’re rarely tested as one connected
-              whole.
-            </p>
-            <p>
-              At the same time, the tools meant to help are mostly reactive. SIEM, EDR and threat intel feeds are strong
-              at showing you what just happened or what is already known. They’re less good at answering a simpler
-              question: “If someone really tried to break in here, how would they do it—and what would happen next?”
-              That kind of end-to-end rehearsal is usually reserved for expensive red-team exercises a few times a year.
-            </p>
-            <p>
-              On top of that you have regulation and people. Frameworks like NIS2 expect documented risk management,
-              testing activity and clear decision trails. But the market is short on experienced analysts, and the ones
-              that are there are already busy keeping the lights on.
-            </p>
+            <p>{t("index.challenge.paragraph1")}</p>
+            <p>{t("index.challenge.paragraph2")}</p>
+            <p>{t("index.challenge.paragraph3")}</p>
           </div>
         </div>
       </section>
