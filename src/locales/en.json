@@ -49,9 +49,9 @@
     },
     "challenge": {
       "headline": "The Challenge",
-      "paragraph1": "If you've lived in a SOC, you know the pattern: signatures, threat feeds, a quarterly pentest, and a SIEM that never sleeps. Useful—just late.",
-      "paragraph2": "Exposures spread faster than patches. Regulators ask for proof, not vibes. And most alerts arrive without the context you need to act.",
-      "paragraph3": "With headcount tight, we need proactive work that doesn't touch production and produces evidence you can take to an auditor or a board."
+      "paragraph1": "If you talk to security teams today, the picture is fairly consistent: more systems, more identities, more integrations—and attackers who can move faster than change control. Cloud, OT, third-party services and legacy infrastructure all end up on the same attack surface, but they’re rarely tested as one connected whole.",
+      "paragraph2": "At the same time, the tools meant to help are mostly reactive. SIEM, EDR and threat intel feeds are strong at showing you what just happened or what is already known. They’re less good at answering a simpler question: “If someone really tried to break in here, how would they do it—and what would happen next?” That kind of end-to-end rehearsal is usually reserved for expensive red-team exercises a few times a year.",
+      "paragraph3": "On top of that you have regulation and people. Frameworks like NIS2 expect documented risk management, testing activity and clear decision trails. But the market is short on experienced analysts, and the ones that are there are already busy keeping the lights on."
     },
     "howItWorks": {
       "headline": "How ColleaiQ Works",
