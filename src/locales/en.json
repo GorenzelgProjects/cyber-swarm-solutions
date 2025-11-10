@@ -41,8 +41,8 @@
     "hero": {
       "badge": "Proactive cybersecurity",
       "headline": "Where Artificial Intelligence meets collective intelligence",
-      "paragraph1": "We service cars and run fire drills before anything goes wrong. Cybersecurity should work the same way. Too many teams still wait for an incident, then scramble.",
-      "paragraph2": "ColleaiQ is our push in the opposite direction. We use a small team of AI agents to rehearse attacks in a safe sandbox, gather evidence, and turn it into plain-English actions. A human analyst reviews every result. The boring work is automated, the judgement stays human, and each run makes the next one better.",
+      "paragraph1": "Most security tools sit on top of logs and infrastructure and wait for something to look wrong. They are great at flagging known patterns and policy violations, but they rarely explore how an attacker could actually move through your environment. Misconfigurations and weak paths can sit untouched for months, simply because nobody has walked them end-to-end.",
+      "paragraph2": "ColleaiQ is a multi-agent AI system that continuously rehearses realistic attacks in a sandbox that mirrors your setup. Specialised agents coordinate to explore attack paths, collect evidence and propose concrete actions. A human analyst stays in the loop to review and refine the results, so automation handles the repetitive exploration while judgement, risk appetite and final decisions remain human.",
       "ctaPrimary": "Get in Touch",
       "ctaSecondary": "Learn About Our Mission",
       "latestPost": "Latest post: Safe Sandbox Threat Hunting →"
