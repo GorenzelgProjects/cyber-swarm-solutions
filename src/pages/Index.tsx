@@ -255,21 +255,12 @@ const Index = () => {
       {/* Why ColleaiQ / Differentiators */}
       <section className="px-4">
         <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">Why ColleaiQ</h2>
+          <h2 className="text-center text-foreground">{t("index.whyColleaiQ.headline")}</h2>
 
           <div className="text-lg text-muted-foreground space-y-4">
-            <p>
-              [[Differentiator 1 – Europe's first multi-agent cybersecurity platform. Built on cutting-edge AI research
-              from Copenhagen. Designed for European data sovereignty and compliance requirements.]]
-            </p>
-            <p>
-              [[Differentiator 2 – Unlike traditional tools that generate alerts, ColleaiQ provides context and
-              prioritization. Our AI understands your business environment and focuses on risks that matter.]]
-            </p>
-            <p>
-              [[Differentiator 3 – Continuous evolution: our agent networks learn from each simulation, adapt to new
-              attack techniques, and improve detection accuracy over time.]]
-            </p>
+            <p>{t("index.whyColleaiQ.point1")}</p>
+            <p>{t("index.whyColleaiQ.point2")}</p>
+            <p>{t("index.whyColleaiQ.point3")}</p>
           </div>
         </div>
       </section>
