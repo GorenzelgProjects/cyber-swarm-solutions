@@ -59,7 +59,7 @@
     },
     "whyTeams": {
       "headline": "Why teams work with us",
-      "description": "eams choose ColleaiQ because it does the boring discovery work and brings back something you can act on. It hunts newly published CVE exposures against a sandbox that mirrors your environment, so you see what would happen here, not in theory. Each result includes evidence, the affected assets, and a practical fix, then a human analyst signs it off. You spend less time stitching logs and more time closing risk.",
+      "description": "Teams choose ColleaiQ because it does the boring discovery work and brings back something you can act on. It hunts newly published CVE exposures against a sandbox that mirrors your environment, so you see what would happen here, not in theory. Each result includes evidence, the affected assets, and a practical fix, then a human analyst signs it off. You spend less time stitching logs and more time closing risk.",
       "imageAlt1": "Security workflow with a clear audit trail",
       "imageAlt2": "Isolated sandbox that mirrors production"
     },
