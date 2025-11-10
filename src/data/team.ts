@@ -47,7 +47,7 @@ export const teamMembers: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/martin-christoffersen-b48142253/",
     focus: "Builds the technical foundation of our multi-agent platform.",
     intro:
-      "Engineer from DTU; currently pursuing an MSc in Business Analytics. Focused on building explainable, human-in-the-loop security.",
+      "Engineer from DTU; currently pursuing an MSc in Human-Centered Artificial Intelligences. Focused on building explainable, human-in-the-loop security.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
     background: ["DTU — BSc Engineering", "MSc track — Business Analytics", "ColleaiQ — Co-founder, CTO"],
