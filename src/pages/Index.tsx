@@ -21,16 +21,16 @@ const Index = () => {
           </h1>
 
           <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-2xl mx-auto">
-            <p>{t('index.hero.paragraph1')}</p>
-            <p>{t('index.hero.paragraph2')}</p>
+            <p>{t("index.hero.paragraph1")}</p>
+            <p>{t("index.hero.paragraph2")}</p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <Button asChild size="lg" className="text-base px-8">
-              <a href="mailto:kontakt@colleaiq.dk">{t('index.hero.ctaPrimary')}</a>
+              <a href="mailto:kontakt@colleaiq.dk">{t("index.hero.ctaPrimary")}</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8">
-              <a href="/story">{t('index.hero.ctaSecondary')}</a>
+              <a href="/story">{t("index.hero.ctaSecondary")}</a>
             </Button>
           </div>
 
@@ -52,16 +52,21 @@ const Index = () => {
 
           <div className="text-lg text-muted-foreground space-y-4">
             <p>
-              If you've lived in a SOC, you know the pattern: signatures, threat feeds, a quarterly pentest, and a SIEM
-              that never sleeps. Useful—just late.
+              If you talk to security teams today, the picture is fairly consistent: more systems, more identities, more
+              integrations—and attackers who can move faster than change control. Cloud, OT, third-party services and
+              legacy infrastructure all end up on the same attack surface, but they’re rarely tested as one connected
+              whole.
             </p>
             <p>
-              Exposures spread faster than patches. Regulators ask for proof, not vibes. And most alerts arrive without
-              the context you need to act.
+              At the same time, the tools meant to help are mostly reactive. SIEM, EDR and threat intel feeds are strong
+              at showing you what just happened or what is already known. They’re less good at answering a simpler
+              question: “If someone really tried to break in here, how would they do it—and what would happen next?”
+              That kind of end-to-end rehearsal is usually reserved for expensive red-team exercises a few times a year.
             </p>
             <p>
-              With headcount tight, we need proactive work that doesn't touch production and produces evidence you can
-              take to an auditor or a board.
+              On top of that you have regulation and people. Frameworks like NIS2 expect documented risk management,
+              testing activity and clear decision trails. But the market is short on experienced analysts, and the ones
+              that are there are already busy keeping the lights on.
             </p>
           </div>
         </div>

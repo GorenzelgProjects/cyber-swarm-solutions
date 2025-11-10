@@ -40,16 +40,16 @@
     /* Preview banner colors - sage theme */
     --preview-banner: 150 20% 88%;
     --preview-banner-foreground: 150 20% 25%;
-    
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(60 11% 96%) 0%, hsl(150 15% 94%) 50%, hsl(150 12% 92%) 100%);
     --gradient-accent: linear-gradient(90deg, hsl(150 14% 50%) 0%, hsl(150 18% 45%) 100%);
-    
+
     /* Shadows - soft and professional */
     --shadow-soft: 0 1px 3px hsl(228 8% 12% / 0.06), 0 1px 2px hsl(228 8% 12% / 0.04);
     --shadow-card: 0 2px 8px hsl(228 8% 12% / 0.08), 0 1px 4px hsl(228 8% 12% / 0.06);
     --shadow-hover: 0 4px 16px hsl(228 8% 12% / 0.1), 0 2px 8px hsl(228 8% 12% / 0.08);
-    
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -83,15 +83,15 @@
     --border: 228 8% 22%;
     --input: 228 8% 20%;
     --ring: 150 20% 55%;
-    
+
     /* Preview banner dark mode */
     --preview-banner-dark: 228 12% 18%;
     --preview-banner-foreground-dark: 150 15% 75%;
-    
+
     /* Gradients - dark sage */
     --gradient-hero: linear-gradient(135deg, hsl(228 10% 10%) 0%, hsl(228 10% 14%) 50%, hsl(228 10% 12%) 100%);
     --gradient-accent: linear-gradient(90deg, hsl(150 20% 55%) 0%, hsl(150 18% 50%) 100%);
-    
+
     /* Shadows - subtle glow */
     --shadow-soft: 0 1px 3px hsl(0 0% 0% / 0.3), 0 1px 2px hsl(0 0% 0% / 0.2);
     --shadow-card: 0 2px 8px hsl(0 0% 0% / 0.35), 0 1px 4px hsl(0 0% 0% / 0.25);
@@ -113,13 +113,23 @@
     @apply bg-background text-foreground transition-colors duration-300;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
     font-size: 18px;
     line-height: 1.7;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', Georgia, serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Merriweather", Georgia, serif;
     font-weight: 700;
   }
 
@@ -145,8 +155,9 @@
     line-height: 1.45;
   }
 
-  code, pre {
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
+  code,
+  pre {
+    font-family: "JetBrains Mono", "Courier New", monospace;
   }
 
   /* Content wrappers for professional reading experience */
@@ -176,7 +187,9 @@
   }
 
   /* Layout */
-  html, body, #root {
+  html,
+  body,
+  #root {
     margin: 0;
     padding: 0;
     overflow: visible;
