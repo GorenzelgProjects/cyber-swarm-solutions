@@ -54,30 +54,32 @@
       "paragraph3": "On top of that you have regulation and people. Frameworks like NIS2 expect documented risk management, testing activity and clear decision trails. But the market is short on experienced analysts, and the ones that are there are already busy keeping the lights on."
     },
     "howItWorks": {
-      "headline": "How ColleaiQ Works",
-      "description": "Think of ColleaiQ as a digital blue team you supervise. Our agents explore realistic paths an attacker would try—inside a sandbox that mirrors your setup. We record what we attempted, what we saw and why it matters, then draft a practical fix. An analyst approves or edits the plan, and that decision teaches the system what to focus on next."
+      "headline": "How ColleaiQ works",
+      "description": "Security is hard because real attacks are sequences, not single events. ColleaiQ uses a coordinated multi-agent system to rehearse those sequences in a sandbox that mirrors your environment. Agents map plausible paths, run them safely, and attach evidence to each step. The platform then proposes concrete actions. A human analyst reviews and refines the outcome, and that decision feeds back into the system so the next run is sharper."
     },
     "whyTeams": {
       "headline": "Why teams work with us",
-      "description": "Less noise, more signal. Each finding shows the attempt, the evidence, the impact, and the next step—no detective work required. It's easy to brief and easy to audit, which means fixes actually get done.",
-      "imageAlt1": "Security workflow with audit trail",
-      "imageAlt2": "Isolated sandbox mirroring production"
+      "description": "We aim for clarity, not novelty. Each finding shows four things: what was attempted, what was observed, what it affects, and what to do next. No detective work and no guesswork. Material you can brief, act on, and defend in audit.",
+      "imageAlt1": "Security workflow with a clear audit trail",
+      "imageAlt2": "Isolated sandbox that mirrors production"
     },
     "whatYouGet": {
       "headline": "What you get today",
-      "description": "We're in alpha with a handful of partners. Today you get: safe sandbox simulations; evidence-first reports with affected assets and a proposed fix; analyst-in-the-loop approval; and a clean audit trail built for EU workflows. We integrate and price through partners like itm8. We're not claiming autonomous red teaming."
+      "description": "We are building a threat hunting platform, currently in alpha with pilots. Today you get automatic hunts for newly published CVE exposures, safe sandbox rehearsals that mirror your environment, and evidence-first reports linking attempts to impact with a proposed fix. A human analyst stays in the loop for approval. The platform integrates with tools you already use, such as Velociraptor, your EDR and SIEM, using lightweight adapters and export to your case management."
     },
     "rehearsal": {
       "headline": "Safe rehearsal: exposure → sandbox → observations",
-      "description": "A new exposure pops up. We translate it into a realistic path and run it in the sandbox—never on live systems—then collect what really happened."
+      "description": "When a relevant exposure emerges, ColleaiQ designs a realistic path and runs it in the sandbox, never on live systems. You see what was tried, what actually happened, and where risk concentrates in your environment.",
+      "imageAlt": "Safe rehearsal flow from exposure to observations"
     },
     "learning": {
       "headline": "Analyst approval and learning loop",
-      "description": "We suggest a fix. A human approves or adjusts, and that feedback shapes the next run. Over time, the system gets sharper without changing your risk appetite."
+      "description": "The platform proposes a fix. A human approves or amends it. That judgement, including the reasoning and the outcome, trains the system's focus for future runs. Over time you get faster signal and tighter recommendations without changing your risk appetite.",
+      "imageAlt": "Analyst approval and learning loop"
     },
     "compliance": {
       "headline": "Compliance & documentation",
-      "description": "Every result links attempt → evidence → impact → decision. That gives you the artefacts to show risk management, testing activity and documented responses under NIS2. We don't certify you—we help you prove what you did and why.",
+      "description": "Every result links attempt → evidence → impact → decision. This structure supports NIS2 by documenting risk management, testing activity, and measured responses. We do not certify. We provide the artefacts and traceability that help you show what was done and why.",
       "imageAlt": "Structured finding with evidence and decision log"
     },
     "builtFor": {

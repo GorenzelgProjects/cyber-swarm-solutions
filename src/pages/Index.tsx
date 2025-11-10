@@ -61,13 +61,8 @@ const Index = () => {
       {/* Media Blocks */}
       <section className="px-4">
         <div className="content-wrapper text-center space-y-4">
-          <h2 className="text-foreground">How ColleaiQ Works</h2>
-          <p className="text-lg text-muted-foreground">
-            Think of ColleaiQ as a digital blue team you supervise. Our agents explore realistic paths an attacker would
-            try—inside a sandbox that mirrors your setup. We record what we attempted, what we saw and why it matters,
-            then draft a practical fix. An analyst approves or edits the plan, and that decision teaches the system what
-            to focus on next.
-          </p>
+          <h2 className="text-foreground">{t("index.howItWorks.headline")}</h2>
+          <p className="text-lg text-muted-foreground">{t("index.howItWorks.description")}</p>
         </div>
       </section>
 
@@ -78,17 +73,13 @@ const Index = () => {
           <div className="py-8 md:py-12">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">Why teams work with us</h3>
-                <p className="text-muted-foreground">
-                  Less noise, more signal. Each finding shows the attempt, the evidence, the impact, and the next
-                  step—no detective work required. It's easy to brief and easy to audit, which means fixes actually get
-                  done.
-                </p>
+                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.whyTeams.headline")}</h3>
+                <p className="text-muted-foreground">{t("index.whyTeams.description")}</p>
               </div>
               <div className="md:col-span-2 order-2">
                 <img
                   src="/images/soc-audit-diagram.svg"
-                  alt="Security workflow with audit trail"
+                  alt={t("index.whyTeams.imageAlt1")}
                   loading="lazy"
                   width={960}
                   height={540}
@@ -104,7 +95,7 @@ const Index = () => {
               <div className="md:col-span-2 order-2 md:order-1">
                 <img
                   src="/images/sandbox-lab.svg"
-                  alt="Isolated sandbox mirroring production"
+                  alt={t("index.whyTeams.imageAlt2")}
                   loading="lazy"
                   width={960}
                   height={540}
@@ -112,13 +103,8 @@ const Index = () => {
                 />
               </div>
               <div className="md:col-span-3 order-1 md:order-2 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">What you get today</h3>
-                <p className="text-muted-foreground">
-                  We're in alpha with a handful of partners. Today you get: safe sandbox simulations; evidence-first
-                  reports with affected assets and a proposed fix; analyst-in-the-loop approval; and a clean audit trail
-                  built for EU workflows. We integrate and price through partners like itm8. We're not claiming
-                  autonomous red teaming.
-                </p>
+                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.whatYouGet.headline")}</h3>
+                <p className="text-muted-foreground">{t("index.whatYouGet.description")}</p>
               </div>
             </div>
           </div>
@@ -127,18 +113,13 @@ const Index = () => {
           <div className="py-8 md:py-12">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">
-                  Safe rehearsal: exposure → sandbox → observations
-                </h3>
-                <p className="text-muted-foreground">
-                  A new exposure pops up. We translate it into a realistic path and run it in the sandbox—never on live
-                  systems—then collect what really happened.
-                </p>
+                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.rehearsal.headline")}</h3>
+                <p className="text-muted-foreground">{t("index.rehearsal.description")}</p>
               </div>
               <div className="md:col-span-2 order-2">
                 <img
                   src="/images/rehearsal-flow-16x9.svg"
-                  alt="Safe rehearsal flow from exposure to observations"
+                  alt={t("index.rehearsal.imageAlt")}
                   loading="lazy"
                   width={960}
                   height={540}
@@ -154,7 +135,7 @@ const Index = () => {
               <div className="md:col-span-2 order-2 md:order-1">
                 <img
                   src="/images/analyst-learning-loop-16x9.svg"
-                  alt="Analyst approval and learning loop"
+                  alt={t("index.learning.imageAlt")}
                   loading="lazy"
                   width={960}
                   height={540}
@@ -162,11 +143,8 @@ const Index = () => {
                 />
               </div>
               <div className="md:col-span-3 order-1 md:order-2 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">Analyst approval and learning loop</h3>
-                <p className="text-muted-foreground">
-                  We suggest a fix. A human approves or adjusts, and that feedback shapes the next run. Over time, the
-                  system gets sharper without changing your risk appetite.
-                </p>
+                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.learning.headline")}</h3>
+                <p className="text-muted-foreground">{t("index.learning.description")}</p>
               </div>
             </div>
           </div>
@@ -175,17 +153,13 @@ const Index = () => {
           <div className="py-8 md:py-12">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">Compliance & documentation</h3>
-                <p className="text-muted-foreground">
-                  Every result links attempt → evidence → impact → decision. That gives you the artefacts to show risk
-                  management, testing activity and documented responses under NIS2. We don't certify you—we help you
-                  prove what you did and why.
-                </p>
+                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.compliance.headline")}</h3>
+                <p className="text-muted-foreground">{t("index.compliance.description")}</p>
               </div>
               <div className="md:col-span-2 order-2">
                 <img
                   src="/images/finding-report-mock.webp"
-                  alt="Structured finding with evidence and decision log"
+                  alt={t("index.compliance.imageAlt")}
                   loading="lazy"
                   width={960}
                   height={540}
