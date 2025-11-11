@@ -58,7 +58,7 @@ const Navigation = () => {
             ))}
             <ThemeToggle />
             <Button asChild size="sm" className="rounded-2xl">
-              <a href="mailto:kontakt@colleaiq.dk">{t('nav.contact')}</a>
+              <Link to="/contact">{t('nav.contact')}</Link>
             </Button>
           </div>
 
@@ -90,9 +90,9 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild size="sm" className="w-full rounded-2xl">
-              <a href="mailto:kontakt@colleaiq.dk" onClick={() => setIsOpen(false)}>
+              <Link to="/contact" onClick={() => setIsOpen(false)}>
                 {t('nav.contact')}
-              </a>
+              </Link>
             </Button>
           </div>
         )}
