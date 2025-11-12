@@ -7,6 +7,8 @@ import { PreviewBanner } from "@/components/PreviewBanner";
 import Index from "./pages/Index";
 import Story from "./pages/Story";
 import Solution from "./pages/Solution";
+import Pricing from "./pages/Pricing";
+import ThesisPhd from "./pages/ThesisPhd";
 import Blog from "./pages/Blog";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/story" element={<Story />} />
           <Route path="/solution" element={<Solution />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/thesis-phd" element={<ThesisPhd />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/safe-sandbox-threat-hunting" element={<SafeSandboxThreatHunting />} />
           <Route path="/community" element={<Community />} />

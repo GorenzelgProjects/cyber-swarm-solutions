@@ -14,6 +14,7 @@ const Navigation = () => {
   const navItems = [
     { name: t('nav.mission'), path: "/story" },
     { name: t('nav.solution'), path: "/solution" },
+    { name: t('nav.pricing'), path: "/pricing" },
     { name: t('nav.blog'), path: "/blog" },
     { name: t('nav.team'), path: "/team" },
     { name: t('nav.careers'), path: "/careers" },

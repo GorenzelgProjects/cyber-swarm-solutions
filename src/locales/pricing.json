@@ -1,0 +1,81 @@
+{
+  "pricing": {
+    "hero": {
+      "badge": "Pricing & Services",
+      "headline": "Pricing & services",
+      "subline": "Simple options. No rip-and-replace. SOC-friendly."
+    },
+    "platform": {
+      "headline": "Threat hunting platform",
+      "description": "ColleaiQ runs safe, sandboxed rehearsals of relevant exposures and returns explainable, analyst-approved findings with a practical fix. Works with your tools (e.g., Velociraptor, EDR, SIEM, case management).",
+      "card": {
+        "title": "Threat hunting platform",
+        "price": "$3.42",
+        "priceUnit": "per endpoint / month",
+        "note": "Pilot pricing. Excluding taxes and partner fees. Final pricing typically goes through your SOC/MSSP.",
+        "features": [
+          "Automatic hunts for newly published CVEs",
+          "Sandbox rehearsals that mirror your environment",
+          "Evidence-first reports and proposed fix",
+          "Analyst in the loop",
+          "Audit trail for EU workflows"
+        ],
+        "cta": "Request a quote"
+      }
+    },
+    "consulting": {
+      "headline": "AI consulting (by scope)",
+      "description": "We support scoped work in multi-agent systems, explainability, sandboxed simulation, and evaluation/reproducibility. We'll agree a clear deliverable, cadence and handover plan.",
+      "includes": "What it can include",
+      "items": [
+        "Architecture reviews",
+        "Prototype design",
+        "Evaluation frameworks",
+        "Data & synthetic sets",
+        "Internal enablement"
+      ],
+      "pricingNote": "Pricing depends on scope and timeline. Start with a short scoping call.",
+      "cta": "Book a scoping call"
+    },
+    "talks": {
+      "headline": "Talks & workshops",
+      "description": "Keynotes and team sessions on multi-agent systems in security, safe simulation, and NIS2-friendly auditability.",
+      "formats": "Formats",
+      "items": [
+        "45–60 min talk",
+        "2–3 hour workshop",
+        "private Q&A"
+      ],
+      "cta": "Enquire about a session"
+    },
+    "intro": {
+      "headline": "First conversation",
+      "description": "Prefer to start small? We offer a 30-minute intro call to understand your environment and success criteria.",
+      "cta": "Schedule an intro call"
+    },
+    "legal": "All prices are indicative and may be delivered through partner SOC/MSSP agreements. Taxes and local fees not included."
+  },
+  "thesis": {
+    "hero": {
+      "badge": "Research Collaboration",
+      "headline": "Thesis & PhD collaborations"
+    },
+    "intro": "We collaborate with Master's and PhD students on multi-agent systems, safe simulation, explainability, evaluation/reproducibility, reinforcement learning, graph analytics, and auditability for NIS2. You do not need to be from DTU (though we are DTU-connected).",
+    "offer": {
+      "headline": "What we offer",
+      "items": [
+        "Real problem statements",
+        "Synthetic/bench data where needed",
+        "Weekly or bi-weekly check-ins",
+        "Named supervisor",
+        "Co-authorship opportunities on internal papers",
+        "Practical production constraints"
+      ]
+    },
+    "expect": {
+      "headline": "What we expect",
+      "description": "Clarity of scope, reproducible methods, and written updates."
+    },
+    "cta": "Propose a topic"
+  }
+}

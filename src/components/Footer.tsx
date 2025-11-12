@@ -31,6 +31,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  {t('footer.pricing')}
+                </Link>
+              </li>
+              <li>
                 <Link to="/simulation-deep-dive" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   {t('footer.simulationDeepDive')}
                 </Link>

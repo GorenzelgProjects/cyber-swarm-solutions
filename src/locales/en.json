@@ -2,6 +2,7 @@
   "nav": {
     "mission": "Our Mission",
     "solution": "Solution",
+    "pricing": "Pricing",
     "story": "Our Mission",
     "team": "Team",
     "careers": "Open Positions",
@@ -25,6 +26,7 @@
     "compliance": "Compliance",
     "community": "Community",
     "solution": "Solution",
+    "pricing": "Pricing",
     "simulationDeepDive": "Simulation Deep Dive",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -255,8 +257,9 @@
     "headline": "Open Positions",
     "intro": "We're a small team and we hire rarely and deliberately. There are no open roles right now.",
     "noHiring": "We're not hiring right now",
-    "thesisTitle": "Thesis / PhD collaborations",
-    "thesisDescription": "We're keen to partner with Master's thesis or PhD students on topics like explainable multi-agent systems, sandboxed cyber simulations, model evaluation/reproducibility, reinforcement learning, graph analytics, and auditability for NIS2. We can offer real problem statements, synthetic/bench data, weekly check-ins, and co-authorship where relevant.",
+    "thesisTitle": "Thesis & PhD collaborations",
+    "thesisDescription": "Challenging, real-world work with guidance and the chance to publish.",
+    "thesisLearnMore": "Learn more",
     "futureTitle": "What we may open next",
     "futureSubtitle": "(not open today)",
     "futureRoles": {

@@ -38,7 +38,10 @@ const Careers = () => {
                 <div className="text-muted-foreground max-w-xl mx-auto space-y-4 text-left">
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">{t('careers.thesisTitle')}</h3>
-                    <p>{t('careers.thesisDescription')}</p>
+                    <p className="mb-3">{t('careers.thesisDescription')}</p>
+                    <Button asChild variant="outline" size="sm">
+                      <a href="/thesis-phd">{t('careers.thesisLearnMore')}</a>
+                    </Button>
                   </div>
                   
                   <div>
