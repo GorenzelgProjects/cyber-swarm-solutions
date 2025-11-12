@@ -78,7 +78,7 @@ const Index = () => {
               </div>
               <div className="md:col-span-2 order-2">
                 <img
-                  src="/images/soc-audit-diagram.svg"
+                  src="/images/why-teams-work-with-us.png"
                   alt={t("index.whyTeams.imageAlt1")}
                   loading="lazy"
                   width={960}
@@ -94,7 +94,7 @@ const Index = () => {
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-2 order-2 md:order-1">
                 <img
-                  src="/images/sandbox-lab.svg"
+                  src="/images/what-you-get-today.png"
                   alt={t("index.whyTeams.imageAlt2")}
                   loading="lazy"
                   width={960}
@@ -118,7 +118,7 @@ const Index = () => {
               </div>
               <div className="md:col-span-2 order-2">
                 <img
-                  src="/images/rehearsal-flow-16x9.svg"
+                  src="/images/safe-rehearsal-flow.png"
                   alt={t("index.rehearsal.imageAlt")}
                   loading="lazy"
                   width={960}
@@ -134,7 +134,7 @@ const Index = () => {
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-2 order-2 md:order-1">
                 <img
-                  src="/images/analyst-learning-loop-16x9.svg"
+                  src="/images/analyst-approval-learning.png"
                   alt={t("index.learning.imageAlt")}
                   loading="lazy"
                   width={960}
@@ -158,7 +158,7 @@ const Index = () => {
               </div>
               <div className="md:col-span-2 order-2">
                 <img
-                  src="/images/finding-report-mock.webp"
+                  src="/images/structured-finding-evidence.png"
                   alt={t("index.compliance.imageAlt")}
                   loading="lazy"
                   width={960}
