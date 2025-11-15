@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2.5">
-              <img src={logo} alt="ColleaiQ Logo" className="w-8 h-8" />
+              <img src={logo} alt="colleaq Logo" className="w-8 h-8" />
               <span className="text-xl font-semibold text-foreground">
                 Collea<span className="text-primary">i</span>Q
               </span>
@@ -89,7 +89,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:kontakt@colleaiq.dk" className="hover:text-primary transition-colors">
+                <a href="mailto:kontakt@colleaq.dk" className="hover:text-primary transition-colors">
                   {t('footer.email')}
                 </a>
               </li>
@@ -99,7 +99,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Linkedin className="h-4 w-4" />
-                <a href="https://www.linkedin.com/company/colleaiq/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/company/colleaq/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   LinkedIn
                 </a>
               </li>

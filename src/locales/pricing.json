@@ -7,7 +7,7 @@
     },
     "platform": {
       "headline": "Threat hunting platform",
-      "description": "ColleaiQ runs safe, sandboxed rehearsals of relevant exposures and returns explainable, analyst-approved findings with a practical fix. Works with your tools (e.g., Velociraptor, EDR, SIEM, case management).",
+      "description": "colleaq runs safe, sandboxed rehearsals of relevant exposures and returns explainable, analyst-approved findings with a practical fix. Works with your tools (e.g., Velociraptor, EDR, SIEM, case management).",
       "card": {
         "title": "Threat hunting platform",
         "price": "$3.42",

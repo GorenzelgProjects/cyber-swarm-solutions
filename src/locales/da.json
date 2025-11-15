@@ -29,20 +29,20 @@
     "privacy": "Privatlivspolitik",
     "terms": "Servicevilkår",
     "contact": "Kontakt",
-    "rights": "© 2025 ColleaiQ. Alle rettigheder forbeholdes.",
+    "rights": "© 2025 colleaq. Alle rettigheder forbeholdes.",
     "address": "Elbagade 19, 2. tv, 2300 København S, Danmark",
-    "email": "kontakt@colleaiq.dk",
-    "website": "colleaiq.dk"
+    "email": "kontakt@colleaq.dk",
+    "website": "colleaq.dk"
   },
   "preview": {
-    "banner": "ColleaiQ er under aktiv udvikling. Skriv til kontakt@colleaiq.dk"
+    "banner": "colleaq er under aktiv udvikling. Skriv til kontakt@colleaq.dk"
   },
   "index": {
     "hero": {
       "badge": "Proaktiv cybersikkerhed",
       "headline": "Hvor kunstig intelligens møder kollektiv intelligens",
       "paragraph1": "Vi servicerer biler og laver brandøvelser, før noget går galt — men i cybersikkerhed venter mange stadig på det rigtige angreb for at se, hvad der manglede.",
-      "paragraph2": "ColleaiQ går den anden vej: simulerede angreb, AI-agenter der lærer af jeres egne SOC-beslutninger, og en feedback-sløjfe der lukker sig selv. Mindre støj, mere klarhed — og et team der bliver bedre for hver øvelse.",
+      "paragraph2": "colleaq går den anden vej: simulerede angreb, AI-agenter der lærer af jeres egne SOC-beslutninger, og en feedback-sløjfe der lukker sig selv. Mindre støj, mere klarhed — og et team der bliver bedre for hver øvelse.",
       "ctaPrimary": "Kontakt os",
       "ctaSecondary": "Læs vores historie",
       "latestPost": "Seneste indlæg: Safe Sandbox Threat Hunting →"
@@ -54,8 +54,8 @@
       "paragraph3": "Når bemandingen er stram, har vi brug for proaktivt arbejde, der ikke rører produktion — og som skaber dokumentation, du kan tage med til bestyrelse og audit."
     },
     "howItWorks": {
-      "headline": "Sådan fungerer ColleaiQ",
-      "description": "Tænk ColleaiQ som et digitalt blåteam, du superviserer. Agenterne afprøver realistiske angrebsveje i en sandkasse, der spejler jeres opsætning. Vi registrerer hvad vi forsøgte, hvad vi så, og hvorfor det betyder noget — og foreslår en praktisk løsning. En analytiker godkender eller justerer, og den beslutning lærer systemet af til næste kørsel."
+      "headline": "Sådan fungerer colleaq",
+      "description": "Tænk colleaq som et digitalt blåteam, du superviserer. Agenterne afprøver realistiske angrebsveje i en sandkasse, der spejler jeres opsætning. Vi registrerer hvad vi forsøgte, hvad vi så, og hvorfor det betyder noget — og foreslår en praktisk løsning. En analytiker godkender eller justerer, og den beslutning lærer systemet af til næste kørsel."
     },
     "whyTeams": {
       "headline": "Derfor vælger teams os",
@@ -93,7 +93,7 @@
       "postExcerpt": "Vi øver angreb i en sandkasse, der spejler produktion — aldrig på live — og leverer bevis, påvirkning og en praktisk løsning til menneskelig godkendelse."
     },
     "whyColleaiQ": {
-      "headline": "Hvorfor ColleaiQ",
+      "headline": "Hvorfor colleaq",
       "point1": "Udviklet i København med fokus på europæiske arbejdsgange og forklarlighed.",
       "point2": "Kontekst frem for alarmer: fund forbinder forsøg, observation og relevans for jeres miljø.",
       "point3": "Bliver bedre i brug: analytiker-feedback guider agenterne, så hver kørsel skærper den næste."
@@ -112,7 +112,7 @@
     },
     "vision": {
       "headline": "Vision",
-      "description": "2025 er blevet kaldt året for agentisk AI. ColleaiQ undersøger det naturlige næste skridt: multi-agent netværk. Vores mål er at gøre denne tilgang brugbar i europæisk cybersikkerhed — så forsvaret kan komme foran truslerne."
+      "description": "2025 er blevet kaldt året for agentisk AI. colleaq undersøger det naturlige næste skridt: multi-agent netværk. Vores mål er at gøre denne tilgang brugbar i europæisk cybersikkerhed — så forsvaret kan komme foran truslerne."
     },
     "platform": {
       "description": "Specialiserede AI-agenter simulerer realistisk angriberadfærd i sikre, afgrænsede miljøer og oversætter fund til klare, reviderbare handlinger, som jeres SOC kan bruge."
@@ -218,7 +218,7 @@
   "blog": {
     "hero": {
       "headline": "Blog",
-      "subtitle": "Korte felt-noter mens vi bygger ColleaiQ — hvad vi prøvede, hvad der virkede, og hvad vi ændrede."
+      "subtitle": "Korte felt-noter mens vi bygger colleaq — hvad vi prøvede, hvad der virkede, og hvad vi ændrede."
     },
     "safeSandbox": {
       "title": "Safe Sandbox Threat Hunting",
@@ -274,7 +274,7 @@
     },
     "nis2": {
       "headline": "NIS2",
-      "description": "EU's NIS2 stiller skærpede krav til kritisk infrastruktur og væsentlige tjenester. ColleaiQ hjælper med:",
+      "description": "EU's NIS2 stiller skærpede krav til kritisk infrastruktur og væsentlige tjenester. colleaq hjælper med:",
       "risk": "Løbende risikovurdering — proaktive simulationer finder svagheder tidligt.",
       "incident": "Hændelsesrespons — forklarlige anbefalinger til hurtig reaktion.",
       "management": "Sikkerhedsstyring — komplet logning og revisionsspor.",
@@ -305,7 +305,7 @@
   },
   "contact": {
     "badge": "Kontakt",
-    "headline": "Kontakt ColleaiQ",
+    "headline": "Kontakt colleaq",
     "description": "Vi er her for at besvare spørgsmål, diskutere pilotprojekter eller udforske speciale/PhD-partnerskaber. Skriv til os nedenfor.",
     "infoTitle": "Kontaktinformation",
     "infoEmail": "E-mail",

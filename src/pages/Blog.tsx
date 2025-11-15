@@ -16,7 +16,7 @@ const Blog = () => {
           <div className="container mx-auto max-w-4xl text-center space-y-4 animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground">Blog</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Short field notes as we build ColleaiQ—what we tried, what worked, and what we changed.
+              Short field notes as we build colleaq—what we tried, what worked, and what we changed.
             </p>
           </div>
         </section>

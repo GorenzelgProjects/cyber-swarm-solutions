@@ -76,7 +76,7 @@ const Contact = () => {
                         <div>
                           <p className="font-medium mb-1">{t('contact.infoEmail')}</p>
                           <a 
-                            href="mailto:kontakt@colleaiq.dk" 
+                            href="mailto:kontakt@colleaq.dk" 
                             className="text-sm text-muted-foreground hover:text-primary transition-colors"
                           >
                             {t('footer.email')}
@@ -103,12 +103,12 @@ const Contact = () => {
                         <div>
                           <p className="font-medium mb-1">{t('contact.infoWebsite')}</p>
                           <a 
-                            href="https://www.colleaiq.dk" 
+                            href="https://www.colleaq.dk" 
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm text-muted-foreground hover:text-primary transition-colors"
                           >
-                            www.colleaiq.dk
+                            www.colleaq.dk
                           </a>
                         </div>
                       </div>
@@ -202,7 +202,7 @@ const Contact = () => {
               <CardContent className="p-12 text-center space-y-6">
                 <h2 className="text-3xl font-bold">Request a Demo</h2>
                 <p className="text-lg text-muted-foreground">
-                  See ColleaiQ's multi-agent AI system in action. Schedule a personalized 
+                  See colleaq's multi-agent AI system in action. Schedule a personalized 
                   demonstration to learn how we can strengthen your cybersecurity posture.
                 </p>
                 <Button size="lg">

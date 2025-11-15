@@ -115,7 +115,7 @@ const TeamMemberProfile = () => {
           {/* CTA */}
           <div className="pt-4">
             <Button asChild size="lg">
-              <a href={`mailto:${member.email || "kontakt@colleaiq.dk"}?subject=To%20${member.firstName}`}>
+              <a href={`mailto:${member.email || "kontakt@colleaq.dk"}?subject=To%20${member.firstName}`}>
                 Email {member.firstName}
               </a>
             </Button>

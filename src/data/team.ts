@@ -32,7 +32,7 @@ export const teamMembers: TeamMember[] = [
     background: [
       "DTU — BSc Engineering",
       "MSc track — Human-Centered Artificial Intelligence",
-      "ColleaiQ — Co-founder, CEO",
+      "colleaq — Co-founder, CEO",
     ],
     caresAbout:
       "Proactive security that real analysts can trust. Clear evidence, calm workflows, and tools that get better with each iteration.",
@@ -43,14 +43,14 @@ export const teamMembers: TeamMember[] = [
     title: "CTO & Co-founder",
     slug: "martin-christoffersen",
     image: "/images/team/martin.png",
-    email: "Martinchristoffersen@colleaiq.dk",
+    email: "Martinchristoffersen@colleaq.dk",
     linkedin: "https://www.linkedin.com/in/martin-christoffersen-b48142253/",
     focus: "Builds the technical foundation of our multi-agent platform.",
     intro:
       "Engineer from DTU; currently pursuing an MSc in Human-Centered Artificial Intelligences. Focused on building explainable, human-in-the-loop security.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
-    background: ["DTU — BSc Engineering", "MSc track — Business Analytics", "ColleaiQ — Co-founder, CTO"],
+    background: ["DTU — BSc Engineering", "MSc track — Business Analytics", "colleaq — Co-founder, CTO"],
     caresAbout:
       "Proactive security that real analysts can trust. Clear evidence, calm workflows, and tools that get better with each iteration.",
   },
@@ -60,18 +60,18 @@ export const teamMembers: TeamMember[] = [
     title: "CFO & Co-founder",
     slug: "christoffer-christian-dreist",
     image: "/images/team/christoffer.png",
-    email: "Christofferdreist@colleaiq.dk",
+    email: "Christofferdreist@colleaq.dk",
     linkedin: "https://www.linkedin.com/in/christoffer-dreist-b71849186/",
     focus: "Operations, funding and customer discovery.",
     intro:
-      "Christoffer Christian Dreist is co-founder and CFO at ColleaiQ. He holds a BSc in Engineering from DTU and is completing an MSc in Business Analytics. Christoffer keeps pilots and partnerships on track.",
+      "Christoffer Christian Dreist is co-founder and CFO at colleaq. He holds a BSc in Engineering from DTU and is completing an MSc in Business Analytics. Christoffer keeps pilots and partnerships on track.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
     phone: "+45 50 48 14 49",
     background: [
       "DTU — Bachelor of Science in Engineering (Data Science and Management)",
       "(Ongoing) DTU — Master of Science in Engineering (Business Analytics)",
-      "Co-founder & CFO, ColleaiQ",
+      "Co-founder & CFO, colleaq",
     ],
     caresAbout:
       "Bridging the gap between complex technology and practical implementation. Focused on translating technical innovation into clear business value, partnerships, and communication that make advanced ideas understandable and actionable.",
