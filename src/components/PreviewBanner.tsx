@@ -41,10 +41,10 @@ export const PreviewBanner = () => {
         <p className="text-sm md:text-base text-preview-banner-foreground dark:text-preview-banner-foreground-dark text-center w-full">
           colleaq is in active development. Email{" "}
           <a 
-            href="mailto:kontakt@colleaq.dk" 
+            href="mailto:kontakt@colleaiq.dk" 
             className="underline hover:no-underline font-semibold"
           >
-            kontakt@colleaq.dk
+            kontakt@colleaiq.dk
           </a>
         </p>
       </div>

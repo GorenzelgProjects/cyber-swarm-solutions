@@ -76,7 +76,7 @@ const Contact = () => {
                         <div>
                           <p className="font-medium mb-1">{t('contact.infoEmail')}</p>
                           <a 
-                            href="mailto:kontakt@colleaq.dk" 
+                            href="mailto:kontakt@colleaiq.dk" 
                             className="text-sm text-muted-foreground hover:text-primary transition-colors"
                           >
                             {t('footer.email')}

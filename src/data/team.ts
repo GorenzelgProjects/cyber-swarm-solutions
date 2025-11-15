@@ -22,7 +22,7 @@ export const teamMembers: TeamMember[] = [
     title: "CEO & Co-founder",
     slug: "mikkel-romvig-grongaard",
     image: "/images/team/mikkel.png",
-    email: "Mikkelromvig@colleaq.dk",
+    email: "Mikkelromvig@colleaiq.dk",
     linkedin: "https://www.linkedin.com/in/mikkel-gr%C3%B8ng%C3%A5rd-a8b149286/",
     focus: "Leads ColleaiQ's direction and partnerships.",
     intro:
@@ -43,7 +43,7 @@ export const teamMembers: TeamMember[] = [
     title: "CTO & Co-founder",
     slug: "martin-christoffersen",
     image: "/images/team/martin.png",
-    email: "Martinchristoffersen@colleaq.dk",
+    email: "Martinchristoffersen@colleaiq.dk",
     linkedin: "https://www.linkedin.com/in/martin-christoffersen-b48142253/",
     focus: "Builds the technical foundation of our multi-agent platform.",
     intro:
@@ -60,7 +60,7 @@ export const teamMembers: TeamMember[] = [
     title: "CFO & Co-founder",
     slug: "christoffer-christian-dreist",
     image: "/images/team/christoffer.png",
-    email: "Christofferdreist@colleaq.dk",
+    email: "Christofferdreist@colleaiq.dk",
     linkedin: "https://www.linkedin.com/in/christoffer-dreist-b71849186/",
     focus: "Operations, funding and customer discovery.",
     intro:
