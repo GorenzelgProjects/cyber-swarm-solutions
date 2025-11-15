@@ -8,22 +8,22 @@ const Story = () => {
     {
       icon: Lightbulb,
       title: "The Genesis",
-      description: "ColleaiQ's foundation is based on multi-agent systems, originally intended for administrative tasks in customer support and HR. The technological complexity revealed a better fit for technical domains."
+      description: "ColleaiQ's foundation is multi-agent systems, originally built for administrative tasks in customer support and HR. Very quickly, the technological complexity showed a better fit for highly technical domains."
     },
     {
       icon: Target,
       title: "Strategic Pivot",
-      description: "After meetings with major Danish IT and cybersecurity companies, we discovered a critical need in cybersecurity. The complexity of our technology perfectly matched the challenges in this sector."
+      description: "After meetings with major Danish IT and cybersecurity companies, we discovered a critical need in cyber defence. The complexity of our technology matched the complexity of the threat landscape far better than traditional automation tools."
     },
     {
       icon: Rocket,
       title: "Innovation Focus",
-      description: "We now focus on building the bridge between AI and cybersecurity - an increasingly vital necessity. 2025 is the year of agentic AI, and ColleaiQ explores the natural next step: multi-agent networks."
+      description: "We now focus on building the bridge between AI and cybersecurity – an increasingly vital necessity. While everyone talks about agentic AI in 2025, ColleaiQ works on the natural next step: multi-agent networks designed specifically for security."
     },
     {
       icon: Globe,
-      title: "European Leadership",
-      description: "ColleaiQ aims to be the first company in Europe utilising multi-agent networks in cybersecurity - a proposal that might finally bring cybersecurity ahead of cyber threats."
+      title: "European Ambition",
+      description: "As a Danish deep-tech startup, ColleaiQ aims to be the first company in Europe to operationalise multi-agent networks in cybersecurity – and to prove that this approach can bring defenders ahead of attackers."
     }
   ];
 
@@ -40,7 +40,8 @@ const Story = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Building the bridge between advanced AI and cybersecurity to create 
-              proactive, explainable defence for organisations that can't afford to wait.
+              proactive, explainable defence for organisations that can't afford to wait 
+              for the next incident.
             </p>
           </div>
         </section>
@@ -52,16 +53,18 @@ const Story = () => {
               <CardContent className="p-8 md:p-12 space-y-6">
                 <h2 className="text-3xl font-bold text-center text-foreground">Our Vision</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  2025 has been called the year of agentic AI. However, ColleaiQ explores the natural 
-                  next step: <span className="font-semibold text-foreground">multi-agent networks</span>. ColleaiQ aims to be the first company in Europe that 
-                  utilises these networks in cybersecurity - a proposal that might finally bring 
-                  cybersecurity ahead of cyber threats.
+                  2025 has been called the year of agentic AI. ColleaiQ explores the natural 
+                  next step: multi-agent networks.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  ColleaiQ is building <span className="font-semibold text-foreground">proactive, explainable cyber defence</span> for organisations that can't 
-                  afford to wait for the next incident. Our platform uses specialised AI agents that 
-                  continuously simulate real attacker behaviour in safe, bounded environments, then translate 
-                  those findings into clear, auditable actions your security operations centre can trust.
+                  We aim to be the first company in Europe that uses these networks in 
+                  cybersecurity – a step that can finally move defence ahead of cyber threats 
+                  instead of constantly reacting to them.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our platform uses specialised AI agents that continuously simulate real attacker 
+                  behaviour in safe, bounded environments, then translate those findings into 
+                  clear, auditable actions your security operations centre can trust.
                 </p>
               </CardContent>
             </Card>
@@ -108,9 +111,9 @@ const Story = () => {
                       <h3 className="text-2xl font-semibold text-foreground mb-3">The European Security Landscape</h3>
                       <p className="text-muted-foreground leading-relaxed">
                         Denmark and the rest of Europe find themselves in an extraordinary security situation 
-                        following the conflict in Ukraine and a politically uncertain USA. During this time, 
-                        it is particularly important to promote the UN's sustainable development goals of creating 
-                        robust digital infrastructure and supporting strong operation and sovereignty of critical functions.
+                        following the conflict in Ukraine and a politically uncertain USA. In this context, 
+                        it is especially important to promote the UN Sustainable Development Goals around 
+                        robust digital infrastructure and resilient, sovereign operation of critical functions.
                       </p>
                     </div>
                   </div>
@@ -122,10 +125,10 @@ const Story = () => {
                     <div>
                       <h3 className="text-2xl font-semibold text-foreground mb-3">Digital Vulnerability</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        Danish society has for many years benefited from being one of the world's most digitalised 
-                        countries, but the benefits it has brought also bring increased risk and consequences for 
-                        cyber-attacks. Danish Industry assesses the cyber threat as one of the greatest societal 
-                        risks, and almost every other Danish company is not sufficiently secured.
+                        Danish society has benefited for years from being one of the world's most digitalised 
+                        countries. The same digitisation also increases the impact of cyber-attacks. Danish 
+                        Industry assesses the cyber threat as one of the greatest societal risks, and almost 
+                        every second Danish company is still not sufficiently secured.
                       </p>
                     </div>
                   </div>
@@ -135,12 +138,11 @@ const Story = () => {
                   <div className="flex items-start gap-4">
                     <Lightbulb className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-2xl font-semibold text-foreground mb-3">The Wake-Up Call</h3>
+                      <h3 className="text-2xl font-semibold text-foreground mb-3">A Wake-Up Call</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        The need became particularly clear in 2017, when Danish companies truly had their eyes 
-                        opened when Mærsk was hit by the NotPetya attack, which cost them up to DKK 2 billion. 
-                        For shipping companies and other actors operating 24/7, downtime can result in 
-                        losses in the millions per day.
+                        The need became painfully clear in 2017, when Mærsk was hit by the NotPetya attack, 
+                        costing up to DKK 2 billion. For shipping companies and other actors operating 24/7, 
+                        downtime can mean losses in the millions per day.
                       </p>
                     </div>
                   </div>
@@ -152,9 +154,9 @@ const Story = () => {
                     <div>
                       <h3 className="text-2xl font-semibold text-foreground mb-3">Supporting Digital Sovereignty</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        As Danish-developed technology, our solution supports the EU's strategy and requirements 
-                        for digital sovereignty and can be scaled to other EU countries where the same needs exist. 
-                        We're not just building a product - we're contributing to European cybersecurity independence.
+                        As Danish-developed technology, ColleaiQ supports the EU's strategy and requirements 
+                        for digital sovereignty and can be scaled to other EU countries facing the same needs. 
+                        We're not just building a product – we're contributing to European cybersecurity independence.
                       </p>
                     </div>
                   </div>
@@ -172,8 +174,8 @@ const Story = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Mission</h2>
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   To become a natural tool in the fight for cybersecurity and sovereignty, 
-                  providing explainable and secure AI within sectors where the threat of cyber-attacks 
-                  is very high - including energy, defence, shipping, and critical infrastructure.
+                  providing explainable and secure AI in sectors where the threat of cyber-attacks 
+                  is very high – including energy, defence, shipping and critical infrastructure.
                 </p>
                 <p className="text-lg text-foreground font-semibold">
                   We're bridging AI and cybersecurity to create a safer digital Europe.
