@@ -1,6 +1,6 @@
 # Translation Guide
 
-This guide explains how to add and edit translations for the colleaq website.
+This guide explains how to add and edit translations for the ColleaiQ website.
 
 ## Overview
 
@@ -25,7 +25,7 @@ Translations are organized by section. For example:
   },
   "footer": {
     "tagline": "Upgrading cybersecurity with explainable multi-agent systems",
-    "rights": "© 2025 colleaq. All rights reserved."
+    "rights": "© 2025 ColleaiQ. All rights reserved."
   },
   "index": {
     "hero": {

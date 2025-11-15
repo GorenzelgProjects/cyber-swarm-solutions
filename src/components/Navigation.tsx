@@ -38,9 +38,9 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-14">
           <Link to="/" className="flex items-center space-x-2.5">
-            <img src={logo} alt="colleaq Logo" className="w-8 h-8" />
-            <span className="text-xl font-semibold text-foreground">
-              colleaq
+            <img src={logo} alt="ColleaiQ Logo" className="w-8 h-8" />
+            <span className="text-xl font-semibold tracking-tight">
+              ColleaiQ
             </span>
           </Link>
 
