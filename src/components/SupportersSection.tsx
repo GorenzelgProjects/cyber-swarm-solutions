@@ -3,18 +3,17 @@ const SupportersSection = () => {
     {
       name: "DTU Skylab",
       alt: "DTU Skylab logo",
-      // Placeholder - replace with actual logo path when available
       logo: "/images/supporters/dtu-skylab.png",
     },
     {
       name: "Sagalabs",
       alt: "Sagalabs logo",
-      logo: "/images/supporters/sagalabs.png",
+      logo: "/images/supporters/sagalabs.webp",
     },
     {
       name: "Den Danske Maritime Fond",
       alt: "Den Danske Maritime Fond logo",
-      logo: "/images/supporters/ddmf.png",
+      logo: "/images/supporters/maritime-fond.jpg",
     },
   ];
 
@@ -36,11 +35,11 @@ const SupportersSection = () => {
               key={supporter.name}
               className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
             >
-              <div className="w-32 h-20 md:w-40 md:h-24 flex items-center justify-center bg-card/50 rounded-lg border border-border/50 px-4">
-                <span className="text-sm md:text-base font-medium text-muted-foreground text-center">
-                  {supporter.name}
-                </span>
-              </div>
+              <img
+                src={supporter.logo}
+                alt={supporter.alt}
+                className="h-16 md:h-20 w-auto object-contain"
+              />
             </div>
           ))}
         </div>
