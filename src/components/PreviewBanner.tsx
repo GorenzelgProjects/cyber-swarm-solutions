@@ -38,7 +38,7 @@ export const PreviewBanner = () => {
       aria-live="polite"
     >
       <div className="container mx-auto px-4 flex items-center">
-        <p className="text-sm md:text-base text-preview-banner-foreground dark:text-preview-banner-foreground-dark text-center w-full">
+        <p className="text-sm md:text-base text-center w-full" style={{ color: 'hsl(var(--preview-banner-foreground))' }}>
           ColleaiQ is in active development. Email{" "}
           <a 
             href="mailto:kontakt@colleaiq.dk" 
