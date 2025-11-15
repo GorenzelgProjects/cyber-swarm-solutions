@@ -66,17 +66,19 @@ const TeamMemberProfile = () => {
           </div>
 
           {/* Background */}
-          <div>
-            <h2 className="text-2xl font-semibold text-foreground mt-0">Background</h2>
-            <ul className="space-y-2 mt-3">
-              {member.background.map((item, idx) => (
-                <li key={idx} className="text-muted-foreground flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {member.background && member.background.length > 0 && (
+            <div>
+              <h2 className="text-2xl font-semibold text-foreground mt-0">Background</h2>
+              <ul className="space-y-2 mt-3">
+                {member.background.map((item, idx) => (
+                  <li key={idx} className="text-muted-foreground flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* What I care about */}
           <div>
