@@ -29,19 +29,22 @@ const SupportersSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 pt-4">
-          {supporters.map((supporter) => (
-            <div
-              key={supporter.name}
-              className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
-            >
-              <img
-                src={supporter.logo}
-                alt={supporter.alt}
-                className="h-16 md:h-20 w-auto object-contain"
-              />
-            </div>
-          ))}
+        <div className="relative overflow-hidden w-full pt-4">
+          <div className="flex animate-scroll-horizontal gap-12 md:gap-16">
+            {/* Duplicate logos for seamless infinite scroll */}
+            {[...supporters, ...supporters].map((supporter, index) => (
+              <div
+                key={`${supporter.name}-${index}`}
+                className="flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300"
+              >
+                <img
+                  src={supporter.logo}
+                  alt={supporter.alt}
+                  className="h-16 md:h-20 w-auto object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

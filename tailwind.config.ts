@@ -111,6 +111,10 @@ export default {
         "node-pulse": {
           "0%, 100%": { opacity: "0.4", transform: "scale(1)" },
           "50%": { opacity: "1", transform: "scale(1.1)" }
+        },
+        "scroll-horizontal": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" }
         }
       },
       animation: {
@@ -122,6 +126,7 @@ export default {
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "draw-line": "draw-line 2s ease-out forwards",
         "node-pulse": "node-pulse 3s ease-in-out infinite",
+        "scroll-horizontal": "scroll-horizontal 20s linear infinite",
       },
     },
   },
