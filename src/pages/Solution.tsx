@@ -11,7 +11,7 @@ const Solution = () => {
     {
       icon: Network,
       title: "Multi-Agent Collaboration",
-      description: "Specialised agents work together in real-time. Red-team agents simulate attacks whilst blue-team agents monitor, detect, and defend across all assets and environments."
+      description: "Specialised agents work together in real time: red-team agents simulate attacks while blue-team agents monitor, detect and defend across assets and environments."
     },
     {
       icon: Eye,
@@ -30,31 +30,31 @@ const Solution = () => {
       phase: "Red Team Action",
       icon: AlertTriangle,
       color: "text-destructive",
-      description: "Simulates credential dumping from LSASS memory in a sandbox environment",
+      description: "Simulates credential dumping from LSASS memory in a sandbox environment.",
     },
     {
       phase: "Blue Team Detection",
       icon: Shield,
       color: "text-primary",
-      description: "Detects suspicious memory access patterns and alerts on potential credential theft",
+      description: "Detects suspicious memory access patterns and alerts on potential credential theft.",
     },
     {
       phase: "Traceable Fix",
       icon: CheckCircle,
       color: "text-accent",
-      description: "Generates EDR rule to block unauthorised LSASS memory access with full audit trail",
+      description: "Generates an EDR rule to block unauthorised LSASS memory access, with a full audit trail.",
     },
     {
       phase: "Analyst Verification",
       icon: Eye,
       color: "text-muted-foreground",
-      description: "Security analyst reviews recommendation, verifies impact, and approves deployment",
+      description: "A security analyst reviews the recommendation, verifies impact and approves deployment.",
     }
   ];
 
   const advantages = [
     "Proactive vulnerability discovery before attackers",
-    "Reduces false positives through continuous learning",
+    "Reduced false positives through continuous learning",
     "24/7 coverage without expanding security team",
     "Explainable AI for audit and compliance requirements",
     "Safe simulations in bounded sandbox environments",
@@ -112,9 +112,64 @@ const Solution = () => {
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-4xl font-bold text-center mb-8 text-foreground">Multi-Agent Architecture</h2>
             <p className="text-center text-lg text-muted-foreground mb-16 max-w-3xl mx-auto">
-              Our specialised AI agents work in concert: red-team agents simulate threats whilst blue-team agents 
-              detect and respond. The result is continuous, proactive defence with full explainability.
+              Our specialised AI agents work in concert to create continuous, proactive defence with full explainability:
             </p>
+            
+            {/* Four key components */}
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
+                <CardContent className="p-8 space-y-4">
+                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                    <AlertTriangle className="h-7 w-7 text-destructive" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-foreground">Red-Team Agent</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Simulates realistic cyber threats in safe, bounded sandbox environments. Continuously tests 
+                    for vulnerabilities by mimicking real attacker behaviour.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
+                <CardContent className="p-8 space-y-4">
+                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                    <Shield className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-foreground">Blue-Team Agent</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Monitors system telemetry, fuses signals from multiple sources and generates explainable, 
+                    auditable alerts and remediation recommendations.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
+                <CardContent className="p-8 space-y-4">
+                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                    <Lock className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-foreground">Sandbox Environment</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Safe, isolated testing grounds where red-team agents launch simulated attacks without risk 
+                    to production systems.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
+                <CardContent className="p-8 space-y-4">
+                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                    <Eye className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-foreground">Explainable Outputs</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Every detection and recommendation includes context, reasoning and audit trails for 
+                    compliance and trust.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
             <InteractiveAgentDiagram />
           </div>
         </section>
@@ -190,9 +245,9 @@ const Solution = () => {
                   <div>
                     <h3 className="text-2xl font-semibold mb-3 text-foreground">Advanced AI Architecture</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Our product combines generative models with advanced methods including <span className="font-semibold text-foreground">graph analysis</span>, 
-                      <span className="font-semibold text-foreground"> reinforcement learning</span>, and <span className="font-semibold text-foreground">deterministic logic</span>. This multi-faceted approach allows us 
-                      to both emulate attacker patterns and discover new vulnerabilities.
+                      Our product combines generative models with advanced methods including graph analysis, 
+                      reinforcement learning and deterministic logic. This approach allows us to both emulate 
+                      attacker patterns and discover new vulnerabilities.
                     </p>
                   </div>
                 </div>
@@ -203,8 +258,7 @@ const Solution = () => {
                     <h3 className="text-2xl font-semibold mb-3 text-foreground">Expert Integration</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       Expertise from professional cybersecurity specialists is integrated into the system, 
-                      enabling us to protect companies against attacks through explainable and reliable 
-                      defence strategies that security teams can trust and verify.
+                      enabling explainable and reliable defence strategies that security teams can trust and verify.
                     </p>
                   </div>
                 </div>
@@ -215,8 +269,7 @@ const Solution = () => {
                     <h3 className="text-2xl font-semibold mb-3 text-foreground">Sandbox Environments</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       All attack simulations run in safe, bounded sandbox environments that mirror your 
-                      production infrastructure without any risk to live systems. This allows for aggressive 
-                      testing whilst maintaining complete safety.
+                      production infrastructure without any risk to live systems.
                     </p>
                   </div>
                 </div>
@@ -226,7 +279,7 @@ const Solution = () => {
                   <div>
                     <h3 className="text-2xl font-semibold mb-3 text-foreground">Continuous Evolution</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      The system continuously learns from each simulation, analyst feedback, and emerging 
+                      The system continuously learns from each simulation, analyst feedback and emerging 
                       threat intelligence. Detection capabilities improve over time, becoming increasingly 
                       effective at identifying and preventing sophisticated attacks.
                     </p>
