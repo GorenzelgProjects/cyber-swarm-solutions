@@ -4,6 +4,7 @@ import { Shield, Target, Eye, Network } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SupportersSection from "@/components/SupportersSection";
 import posts from "@/data/blog";
 
 const Index = () => {
@@ -238,6 +239,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Supporters Section */}
+      <SupportersSection />
 
       {/* Final CTA Section */}
       <section className="px-4 bg-muted/30">
