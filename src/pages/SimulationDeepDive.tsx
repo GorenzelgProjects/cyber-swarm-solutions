@@ -78,27 +78,35 @@ const SimulationDeepDive = () => {
           <div className="container mx-auto max-w-6xl">
             {/* Progress Bar */}
             <div className="mb-12 relative">
-              {/* Background line */}
-              <div className="absolute top-6 left-0 right-0 h-1 bg-border hidden md:block" style={{ left: '5%', right: '5%' }} />
-              
-              {/* Progress line */}
-              <div 
-                className="absolute top-6 left-0 h-1 bg-primary hidden md:block transition-all duration-500"
-                style={{ 
-                  left: '5%',
-                  width: `${(currentStep / (steps.length - 1)) * 90}%`
-                }}
-              />
-              
-              <div className="flex items-center justify-between relative z-10">
+              <div className="flex items-center justify-between relative">
                 {steps.map((step, index) => (
                   <div 
                     key={index} 
-                    className="flex flex-col items-center cursor-pointer"
+                    className="flex flex-col items-center cursor-pointer relative flex-1"
                     onClick={() => setCurrentStep(index)}
                   >
+                    {/* Line segment before icon (except for first item) */}
+                    {index > 0 && (
+                      <div 
+                        className={`absolute top-6 right-1/2 h-1 w-full hidden md:block transition-all duration-500 ${
+                          index <= currentStep ? 'bg-primary' : 'bg-border'
+                        }`}
+                        style={{ marginRight: '24px' }}
+                      />
+                    )}
+                    
+                    {/* Line segment after icon (except for last item) */}
+                    {index < steps.length - 1 && (
+                      <div 
+                        className={`absolute top-6 left-1/2 h-1 w-full hidden md:block transition-all duration-500 ${
+                          index < currentStep ? 'bg-primary' : 'bg-border'
+                        }`}
+                        style={{ marginLeft: '24px' }}
+                      />
+                    )}
+                    
                     <div 
-                      className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 relative z-10 ${
                         index === currentStep 
                           ? `${step.bgColor} ${step.color} scale-110` 
                           : index < currentStep
