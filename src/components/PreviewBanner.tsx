@@ -39,7 +39,7 @@ export const PreviewBanner = () => {
     >
       <div className="container mx-auto px-4 flex items-center">
         <p className="text-sm md:text-base text-preview-banner-foreground dark:text-preview-banner-foreground-dark text-center w-full">
-          colleaq is in active development. Email{" "}
+          ColleaiQ is in active development. Email{" "}
           <a 
             href="mailto:kontakt@colleaiq.dk" 
             className="underline hover:no-underline font-semibold"

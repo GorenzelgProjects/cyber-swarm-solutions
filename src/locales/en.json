@@ -31,20 +31,20 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "contact": "Contact",
-    "rights": "© 2025 colleaq. All rights reserved.",
-    "address": "Elbagade 19, 2. tv, 2300 København S, Denmark",
+    "rights": "© 2025 ColleaiQ. All rights reserved.",
+    "address": "Elbagade 19, 2. tv, 2300 Copenhagen S, Denmark",
     "email": "kontakt@colleaiq.dk",
-    "website": "colleaq.dk"
+    "website": "colleaiq.dk"
   },
   "preview": {
-    "banner": "colleaq is under active development. Write to kontakt@colleaiq.dk"
+    "banner": "ColleaiQ is under active development. Write to kontakt@colleaiq.dk"
   },
   "index": {
     "hero": {
       "badge": "Proactive cybersecurity",
       "headline": "Where Artificial Intelligence meets collective intelligence",
       "paragraph1": "Most security tools sit on top of logs and infrastructure and wait for something to look wrong. They are great at flagging known patterns and policy violations, but they rarely explore how an attacker could actually move through your environment. Misconfigurations and weak paths can sit untouched for months, simply because nobody has walked them end-to-end.",
-      "paragraph2": "colleaq is a multi-agent AI system that continuously rehearses realistic attacks in a sandbox that mirrors your setup. Specialised agents coordinate to explore attack paths, collect evidence and propose concrete actions. A human analyst stays in the loop to review and refine the results, so automation handles the repetitive exploration while judgement, risk appetite and final decisions remain human.",
+      "paragraph2": "ColleaiQ is a multi-agent AI system that continuously rehearses realistic attacks in a sandbox that mirrors your setup. Specialised agents coordinate to explore attack paths, collect evidence and propose concrete actions. A human analyst stays in the loop to review and refine the results, so automation handles the repetitive exploration while judgement, risk appetite and final decisions remain human.",
       "ctaPrimary": "Get in Touch",
       "ctaSecondary": "Learn About Our Mission",
       "latestPost": "Latest post: Safe Sandbox Threat Hunting →"
@@ -56,12 +56,12 @@
       "paragraph3": "On top of that you have regulation and people. Frameworks like NIS2 expect documented risk management, testing activity and clear decision trails. But the market is short on experienced analysts, and the ones that are there are already busy keeping the lights on."
     },
     "howItWorks": {
-      "headline": "How colleaq works",
-      "description": "Security is hard because real attacks are sequences, not single events. colleaq uses a coordinated multi-agent system to rehearse those sequences in a sandbox that mirrors your environment. Agents map plausible paths, run them safely, and attach evidence to each step. The platform then proposes concrete actions. A human analyst reviews and refines the outcome, and that decision feeds back into the system so the next run is sharper."
+      "headline": "How ColleaiQ works",
+      "description": "Security is hard because real attacks are sequences, not single events. ColleaiQ uses a coordinated multi-agent system to rehearse those sequences in a sandbox that mirrors your environment. Agents map plausible paths, run them safely, and attach evidence to each step. The platform then proposes concrete actions. A human analyst reviews and refines the outcome, and that decision feeds back into the system so the next run is sharper."
     },
     "whyTeams": {
       "headline": "Why teams work with us",
-      "description": "Teams choose colleaq because it does the boring discovery work and brings back something you can act on. It hunts newly published CVE exposures against a sandbox that mirrors your environment, so you see what would happen here, not in theory. Each result includes evidence, the affected assets, and a practical fix, then a human analyst signs it off. You spend less time stitching logs and more time closing risk.",
+      "description": "Teams choose ColleaiQ because it does the boring discovery work and brings back something you can act on. It hunts newly published CVE exposures against a sandbox that mirrors your environment, so you see what would happen here, not in theory. Each result includes evidence, the affected assets, and a practical fix, then a human analyst signs it off. You spend less time stitching logs and more time closing risk.",
       "imageAlt1": "Security workflow with a clear audit trail",
       "imageAlt2": "Isolated sandbox that mirrors production"
     },
@@ -71,7 +71,7 @@
     },
     "rehearsal": {
       "headline": "Safe rehearsal: exposure → sandbox → observations",
-      "description": "When a relevant exposure emerges, colleaq designs a realistic path and runs it in the sandbox, never on live systems. You see what was tried, what actually happened, and where risk concentrates in your environment.",
+      "description": "When a relevant exposure emerges, ColleaiQ designs a realistic path and runs it in the sandbox, never on live systems. You see what was tried, what actually happened, and where risk concentrates in your environment.",
       "imageAlt": "Safe rehearsal flow from exposure to observations"
     },
     "learning": {
@@ -97,7 +97,7 @@
       "postExcerpt": "We rehearse attacks in a sandbox that mirrors production—never on live systems—and deliver evidence, impact, and a practical fix for human approval."
     },
     "whyColleaiQ": {
-      "headline": "Why colleaq",
+      "headline": "Why ColleaiQ",
       "point1": "Built in Copenhagen with focus on European workflows and explainability.",
       "point2": "Context over alerts: findings connect attempt, observation, and relevance to your environment.",
       "point3": "Gets better with use: analyst feedback guides the agents, so each run sharpens the next."
@@ -116,7 +116,7 @@
     },
     "vision": {
       "headline": "Vision",
-      "description": "2025 has been called the year of agentic AI. colleaq explores the natural next step: multi-agent networks. Our goal is to make this approach usable in European cybersecurity—so defense can get ahead of threats."
+      "description": "2025 has been called the year of agentic AI. ColleaiQ explores the natural next step: multi-agent networks. Our goal is to make this approach usable in European cybersecurity—so defense can get ahead of threats."
     },
     "platform": {
       "description": "Specialized AI agents simulate realistic attacker behavior in secure, contained environments and translate findings into clear, auditable actions your SOC can use."
@@ -222,7 +222,7 @@
   "blog": {
     "hero": {
       "headline": "Blog",
-      "subtitle": "Brief field notes while we build colleaq—what we tried, what worked, and what we changed."
+      "subtitle": "Brief field notes while we build ColleaiQ—what we tried, what worked, and what we changed."
     },
     "safeSandbox": {
       "title": "Safe Sandbox Threat Hunting",
@@ -279,7 +279,7 @@
     },
     "nis2": {
       "headline": "NIS2",
-      "description": "EU's NIS2 sets stricter requirements for critical infrastructure and essential services. colleaq helps with:",
+      "description": "EU's NIS2 sets stricter requirements for critical infrastructure and essential services. ColleaiQ helps with:",
       "risk": "Continuous risk assessment—proactive simulations find weaknesses early.",
       "incident": "Incident response—explainable recommendations for rapid reaction.",
       "management": "Security management—complete logging and audit trail.",
@@ -310,7 +310,7 @@
   },
   "contact": {
     "badge": "Get in Touch",
-    "headline": "Contact colleaq",
+    "headline": "Contact ColleaiQ",
     "description": "We're here to answer questions, discuss pilots, or explore thesis/PhD partnerships. Reach out below.",
     "infoTitle": "Contact Information",
     "infoEmail": "Email",
