@@ -13,9 +13,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2.5">
               <img src={logo} alt="colleaq Logo" className="w-8 h-8" />
-              <span className="text-xl font-semibold text-foreground">
-                Collea<span className="text-primary">i</span>Q
-              </span>
+            <span className="text-xl font-semibold text-foreground">
+              colleaq
+            </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t('footer.tagline')}
