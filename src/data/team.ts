@@ -22,7 +22,7 @@ export const teamMembers: TeamMember[] = [
     title: "CEO & Co-founder",
     slug: "mikkel-romvig-grongaard",
     image: "/images/team/mikkel.png",
-    email: "Mikkelromvig@colleaiq.dk",
+    email: "Mikkelromvig@colleaq.dk",
     linkedin: "https://www.linkedin.com/in/mikkel-gr%C3%B8ng%C3%A5rd-a8b149286/",
     focus: "Leads ColleaiQ's direction and partnerships.",
     intro:
