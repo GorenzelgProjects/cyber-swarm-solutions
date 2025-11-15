@@ -1,6 +1,8 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SupportersSection from "@/components/SupportersSection";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { teamMembers } from "@/data/team";
@@ -10,35 +12,71 @@ const Team = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      <main className="pt-24 pb-24 px-4">
+      <main className="pt-24 pb-16 px-4">
         <div className="content-wrapper text-center space-y-4">
           <h1 className="text-foreground">
-            Our <span className="text-sage">Team</span>
+            Our <span className="text-primary">Team</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Meet the people who make ColleaiQ possible</p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Meet the people who make ColleaiQ possible
+          </p>
         </div>
 
-        <section className="mt-12">
+        <section className="mt-12 mb-16">
           <div className="container mx-auto max-w-5xl">
-            <div className="grid gap-6 md:grid-cols-3 grid-cols-1">
+            <div className="grid gap-8 md:grid-cols-3 grid-cols-1">
               {teamMembers.map((member) => (
-                <Link key={member.slug} to={`/team/${member.slug}`} className="group">
-                  <Card className="border-[#E6E8E6] shadow-soft hover:shadow-hover hover:-translate-y-1 transition-all duration-200">
-                    <CardContent className="p-6 text-center space-y-4">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-28 h-28 rounded-full object-cover border-2 border-border mx-auto"
-                      />
-                      <div className="space-y-1">
-                        <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
-                        <p className="text-sm text-muted-foreground">{member.title}</p>
+                <Link
+                  key={member.slug}
+                  to={`/team/${member.slug}`}
+                  className="group block"
+                >
+                  <Card className="relative overflow-hidden border border-border shadow-soft hover:shadow-hover transition-all duration-200 h-full">
+                    {/* Card content - visible by default */}
+                    <div className="relative">
+                      {/* Profile image */}
+                      <div className="aspect-square w-full overflow-hidden">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
                       </div>
-                      <p className="text-sm text-muted-foreground">{member.focus}</p>
-                      <div className="flex items-center justify-center text-sm text-primary group-hover:underline">
+
+                      {/* Hover overlay - only on desktop */}
+                      <div className="hidden md:block absolute inset-0 bg-foreground/60 opacity-0 group-hover:opacity-100 transition-all duration-200">
+                        <div className="flex flex-col items-center justify-center h-full p-6 text-center space-y-4">
+                          <div className="space-y-2">
+                            <h3 className="text-xl font-bold text-background">
+                              {member.name}
+                            </h3>
+                            <p className="text-sm text-background/90 font-medium">
+                              {member.title}
+                            </p>
+                            <p className="text-sm text-background/85 leading-relaxed">
+                              {member.focus}
+                            </p>
+                          </div>
+                          <div className="flex items-center text-sm text-background font-medium pt-2">
+                            View profile <ArrowRight className="ml-1 h-4 w-4" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Info below image - always visible */}
+                    <div className="p-6 text-center space-y-2">
+                      <h3 className="text-lg font-semibold text-foreground">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">{member.title}</p>
+                      <p className="text-sm text-muted-foreground md:hidden">
+                        {member.focus}
+                      </p>
+                      <div className="flex items-center justify-center text-sm text-primary group-hover:underline pt-2">
                         View profile <ArrowRight className="ml-1 h-4 w-4" />
                       </div>
-                    </CardContent>
+                    </div>
                   </Card>
                 </Link>
               ))}
@@ -46,6 +84,8 @@ const Team = () => {
           </div>
         </section>
       </main>
+
+      <SupportersSection />
 
       <Footer />
     </div>
