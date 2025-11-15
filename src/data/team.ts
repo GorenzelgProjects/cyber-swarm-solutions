@@ -67,6 +67,7 @@ export const teamMembers: TeamMember[] = [
       "Christoffer Christian Dreist is co-founder and CFO at ColleaiQ. He holds a BSc in Engineering from DTU and is completing an MSc in Business Analytics. Christoffer keeps pilots and partnerships on track.",
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
+    background: ["DTU — BSc Engineering", "MSc track — Business Analytics", "ColleaiQ — Co-founder, CFO"],
     caresAbout:
       "Bridging the gap between complex technology and practical implementation. Focused on translating technical innovation into clear business value, partnerships, and communication that make advanced ideas understandable and actionable.",
   },
