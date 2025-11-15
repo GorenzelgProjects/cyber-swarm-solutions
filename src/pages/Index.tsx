@@ -27,7 +27,7 @@ const Index = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <Button asChild size="lg" className="text-base px-8">
-              <a href="mailto:kontakt@colleaq.dk">{t("index.hero.ctaPrimary")}</a>
+              <a href="mailto:kontakt@colleaiq.dk">{t("index.hero.ctaPrimary")}</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8">
               <a href="/story">{t("index.hero.ctaSecondary")}</a>
@@ -251,7 +251,7 @@ const Index = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button asChild size="lg" className="text-base px-8">
-              <a href="mailto:kontakt@colleaq.dk?subject=Pilot%20interest">Get in Touch</a>
+              <a href="mailto:kontakt@colleaiq.dk?subject=Pilot%20interest">Get in Touch</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8">
               <a href="/story">Learn about our mission</a>

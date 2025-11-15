@@ -62,14 +62,14 @@ const Post = () => {
             
             <p>Why this matters: you get proactive coverage without touching production, evidence that survives scrutiny, and a workflow that gets faster as the system learns.</p>
             
-            <p>If you want to help shape the pilot, email us at <a href="mailto:kontakt@colleaq.dk" className="text-primary hover:underline">kontakt@colleaq.dk</a>.</p>
+            <p>If you want to help shape the pilot, email us at <a href="mailto:kontakt@colleaiq.dk" className="text-primary hover:underline">kontakt@colleaiq.dk</a>.</p>
           </div>
 
           <Card className="border-border">
             <CardContent className="p-6 text-center space-y-3">
               <p className="text-lg text-muted-foreground">Want to discuss how this applies to your environment?</p>
               <Button asChild>
-                <a href="mailto:kontakt@colleaq.dk">Email us</a>
+                <a href="mailto:kontakt@colleaiq.dk">Email us</a>
               </Button>
             </CardContent>
           </Card>
