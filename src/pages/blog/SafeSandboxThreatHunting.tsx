@@ -58,18 +58,18 @@ const Post = () => {
           <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none text-foreground space-y-4">
             <p>Reactive security is like changing your brake pads after the crash. We wanted a safer rehearsal.</p>
             
-            <p>ColleaiQ runs realistic attack steps inside a sandbox that mirrors your environment. We record what we attempted, what we observed, and why it matters, then propose a practical fix. A human analyst reviews every result and the decision is logged for audit.</p>
+            <p>colleaq runs realistic attack steps inside a sandbox that mirrors your environment. We record what we attempted, what we observed, and why it matters, then propose a practical fix. A human analyst reviews every result and the decision is logged for audit.</p>
             
             <p>Why this matters: you get proactive coverage without touching production, evidence that survives scrutiny, and a workflow that gets faster as the system learns.</p>
             
-            <p>If you want to help shape the pilot, email us at <a href="mailto:kontakt@colleaiq.dk" className="text-primary hover:underline">kontakt@colleaiq.dk</a>.</p>
+            <p>If you want to help shape the pilot, email us at <a href="mailto:kontakt@colleaq.dk" className="text-primary hover:underline">kontakt@colleaq.dk</a>.</p>
           </div>
 
           <Card className="border-border">
             <CardContent className="p-6 text-center space-y-3">
               <p className="text-lg text-muted-foreground">Want to discuss how this applies to your environment?</p>
               <Button asChild>
-                <a href="mailto:kontakt@colleaiq.dk">Email us</a>
+                <a href="mailto:kontakt@colleaq.dk">Email us</a>
               </Button>
             </CardContent>
           </Card>

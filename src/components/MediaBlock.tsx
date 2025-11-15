@@ -56,7 +56,7 @@ const MediaBlock = ({
               </div>
               <div className="pt-6">
                 <Button asChild>
-                  <a href="mailto:kontakt@colleaiq.dk">Talk to us</a>
+                  <a href="mailto:kontakt@colleaq.dk">Talk to us</a>
                 </Button>
               </div>
             </div>

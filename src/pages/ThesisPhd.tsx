@@ -56,7 +56,7 @@ const ThesisPhd = () => {
               {/* CTA */}
               <div className="pt-4">
                 <Button asChild size="lg" className="w-full sm:w-auto">
-                  <a href="mailto:kontakt@colleaiq.dk?subject=Thesis/PhD collaboration">
+                  <a href="mailto:kontakt@colleaq.dk?subject=Thesis/PhD collaboration">
                     {t.cta}
                   </a>
                 </Button>

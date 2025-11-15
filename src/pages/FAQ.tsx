@@ -13,23 +13,23 @@ import { Link } from "react-router-dom";
 const FAQ = () => {
   const faqs = [
     {
-      question: "What makes ColleaiQ different from traditional cybersecurity solutions?",
-      answer: "ColleaiQ uses a proactive multi-agent AI system that continuously simulates real attacks before they happen, rather than waiting to react to incidents. Our specialized red-team and blue-team agents work together to discover vulnerabilities and strengthen defenses in safe, bounded environments. Every action is traceable and explainable, meeting NIS2 compliance requirements."
+      question: "What makes colleaq different from traditional cybersecurity solutions?",
+      answer: "colleaq uses a proactive multi-agent AI system that continuously simulates real attacks before they happen, rather than waiting to react to incidents. Our specialized red-team and blue-team agents work together to discover vulnerabilities and strengthen defenses in safe, bounded environments. Every action is traceable and explainable, meeting NIS2 compliance requirements."
     },
     {
       question: "How does the multi-agent system work?",
       answer: "Our platform employs specialized AI agents that collaborate in real-time. Red-team agents simulate attacker behavior in sandbox environments, while blue-team agents monitor, detect patterns, and recommend defensive actions. The agents learn from each simulation and analyst feedback, continuously improving detection capabilities and reducing false positives."
     },
     {
-      question: "Is ColleaiQ compliant with NIS2 directives?",
-      answer: "Yes. ColleaiQ is specifically designed to meet NIS2 requirements for explainability and auditability. Every AI decision and recommendation comes with a complete audit trail showing the reasoning process, detection methodology, and supporting evidence. This transparency is built into the core of our platform."
+      question: "Is colleaq compliant with NIS2 directives?",
+      answer: "Yes. colleaq is specifically designed to meet NIS2 requirements for explainability and auditability. Every AI decision and recommendation comes with a complete audit trail showing the reasoning process, detection methodology, and supporting evidence. This transparency is built into the core of our platform."
     },
     {
       question: "Will this work with our existing security tools?",
-      answer: "Absolutely. ColleaiQ is designed to integrate with existing SOC workflows and security tools. Our platform complements your current security stack by adding proactive threat hunting and continuous attack simulation capabilities. We work alongside EDR, SIEM, and other security solutions you already have in place."
+      answer: "Absolutely. colleaq is designed to integrate with existing SOC workflows and security tools. Our platform complements your current security stack by adding proactive threat hunting and continuous attack simulation capabilities. We work alongside EDR, SIEM, and other security solutions you already have in place."
     },
     {
-      question: "What types of organizations benefit most from ColleaiQ?",
+      question: "What types of organizations benefit most from colleaq?",
       answer: "Organizations that can't afford security incidents - particularly those in critical infrastructure sectors like energy, defense, maritime, shipping, and financial services. Companies facing NIS2 compliance requirements, organizations with 24/7 operations, or those struggling with cybersecurity talent shortages see immediate value from our platform."
     },
     {
@@ -38,27 +38,27 @@ const FAQ = () => {
     },
     {
       question: "Do we need to expand our security team to use ColleaiQ?",
-      answer: "No. ColleaiQ is designed to extend your existing team's capabilities, not replace them. The platform provides 24/7 coverage and handles continuous monitoring and simulation, allowing your security analysts to focus on strategic decisions and high-priority incidents. Think of it as adding multiple expert team members who never sleep."
+      answer: "No. colleaq is designed to extend your existing team's capabilities, not replace them. The platform provides 24/7 coverage and handles continuous monitoring and simulation, allowing your security analysts to focus on strategic decisions and high-priority incidents. Think of it as adding multiple expert team members who never sleep."
     },
     {
-      question: "What kind of threats can ColleaiQ detect?",
-      answer: "ColleaiQ specializes in discovering zero-day vulnerabilities and emerging threats before attackers find them. Our agents simulate everything from credential dumping and privilege escalation to advanced persistent threats and novel attack vectors. The system learns and adapts to new attack techniques continuously."
+      question: "What kind of threats can colleaq detect?",
+      answer: "colleaq specializes in discovering zero-day vulnerabilities and emerging threats before attackers find them. Our agents simulate everything from credential dumping and privilege escalation to advanced persistent threats and novel attack vectors. The system learns and adapts to new attack techniques continuously."
     },
     {
       question: "How long does implementation take?",
       answer: "Implementation typically takes 2-4 weeks depending on your infrastructure complexity. This includes environment setup, integration with existing tools, sandbox configuration, and team training. We work closely with your team throughout the process to ensure smooth onboarding and optimal configuration."
     },
     {
-      question: "What level of expertise is needed to operate ColleaiQ?",
-      answer: "While ColleaiQ leverages advanced AI, it's designed for security professionals of varying expertise levels. The platform provides clear, explainable recommendations that analysts can verify and implement. We also provide comprehensive training and ongoing support to ensure your team gets maximum value from the system."
+      question: "What level of expertise is needed to operate colleaq?",
+      answer: "While colleaq leverages advanced AI, it's designed for security professionals of varying expertise levels. The platform provides clear, explainable recommendations that analysts can verify and implement. We also provide comprehensive training and ongoing support to ensure your team gets maximum value from the system."
     },
     {
-      question: "Can ColleaiQ help with our NIS2 budget requirements?",
-      answer: "Yes. By automating continuous threat hunting and simulation, ColleaiQ can help optimize your NIS2-related cybersecurity spending. The platform's ability to discover vulnerabilities proactively can prevent costly incidents, and its explainability features reduce the overhead of compliance documentation and audits."
+      question: "Can colleaq help with our NIS2 budget requirements?",
+      answer: "Yes. By automating continuous threat hunting and simulation, colleaq can help optimize your NIS2-related cybersecurity spending. The platform's ability to discover vulnerabilities proactively can prevent costly incidents, and its explainability features reduce the overhead of compliance documentation and audits."
     },
     {
-      question: "Is ColleaiQ suitable for organizations outside Denmark?",
-      answer: "Absolutely. While ColleaiQ is Danish-developed, our solution is designed to scale across the EU and beyond. We support EU digital sovereignty goals and can be deployed wherever organizations need advanced, explainable AI-driven cybersecurity."
+      question: "Is colleaq suitable for organizations outside Denmark?",
+      answer: "Absolutely. While colleaq is Danish-developed, our solution is designed to scale across the EU and beyond. We support EU digital sovereignty goals and can be deployed wherever organizations need advanced, explainable AI-driven cybersecurity."
     }
   ];
 
@@ -74,7 +74,7 @@ const FAQ = () => {
               Frequently Asked <span className="bg-gradient-accent bg-clip-text text-transparent">Questions</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Everything you need to know about ColleaiQ's multi-agent AI cybersecurity platform.
+              Everything you need to know about colleaq's multi-agent AI cybersecurity platform.
             </p>
           </div>
         </section>

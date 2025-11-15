@@ -72,7 +72,7 @@ const Compliance = () => {
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   The EU's NIS2 directive establishes stringent cybersecurity requirements for critical infrastructure 
-                  and essential services. ColleaiQ helps organisations meet these requirements through:
+                  and essential services. colleaq helps organisations meet these requirements through:
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
@@ -183,7 +183,7 @@ const Compliance = () => {
               <CardContent className="p-12 md:p-16 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">Ready to Strengthen Your Compliance Posture?</h2>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Let us show you how ColleaiQ can help meet your regulatory requirements whilst 
+                  Let us show you how colleaq can help meet your regulatory requirements whilst 
                   enhancing your security capabilities.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
