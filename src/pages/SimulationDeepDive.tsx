@@ -88,20 +88,26 @@ const SimulationDeepDive = () => {
                     {/* Line segment before icon (except for first item) */}
                     {index > 0 && (
                       <div 
-                        className={`absolute top-6 right-1/2 h-1 w-full hidden md:block transition-all duration-500 ${
+                        className={`absolute top-6 h-1 hidden md:block transition-all duration-500 ${
                           index <= currentStep ? 'bg-primary' : 'bg-border'
                         }`}
-                        style={{ marginRight: '24px' }}
+                        style={{ 
+                          right: 'calc(50% + 30px)',
+                          width: 'calc(100% - 60px)'
+                        }}
                       />
                     )}
                     
                     {/* Line segment after icon (except for last item) */}
                     {index < steps.length - 1 && (
                       <div 
-                        className={`absolute top-6 left-1/2 h-1 w-full hidden md:block transition-all duration-500 ${
+                        className={`absolute top-6 h-1 hidden md:block transition-all duration-500 ${
                           index < currentStep ? 'bg-primary' : 'bg-border'
                         }`}
-                        style={{ marginLeft: '24px' }}
+                        style={{ 
+                          left: 'calc(50% + 30px)',
+                          width: 'calc(100% - 60px)'
+                        }}
                       />
                     )}
                     
