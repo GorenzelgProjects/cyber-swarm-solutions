@@ -12,8 +12,8 @@ const Team = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      <main className="pt-24 pb-16 px-4">
-        <div className="content-wrapper text-center space-y-4">
+      <main className="pt-16 pb-12 px-4">
+        <div className="content-wrapper text-center space-y-3">
           <h1 className="text-foreground">
             Our <span className="text-primary">Team</span>
           </h1>
@@ -22,7 +22,7 @@ const Team = () => {
           </p>
         </div>
 
-        <section className="mt-12 mb-16">
+        <section className="mt-8 mb-12">
           <div className="container mx-auto max-w-5xl">
             <div className="grid gap-8 md:grid-cols-3 grid-cols-1">
               {teamMembers.map((member) => (
