@@ -13,9 +13,9 @@ const Pricing = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      <main className="pt-16 pb-16 px-4">
+      <main className="pt-12 pb-8 px-4">
         {/* Hero */}
-        <div className="content-wrapper text-center space-y-3 mb-12">
+        <div className="content-wrapper text-center space-y-3 mb-6">
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-muted text-muted-foreground text-xs tracking-wide">
             {t.hero.badge}
           </span>
@@ -23,7 +23,7 @@ const Pricing = () => {
         </div>
 
         {/* Platform Section */}
-        <section className="container mx-auto max-w-5xl mb-12">
+        <section className="container mx-auto max-w-5xl mb-6">
           <div className="max-w-xl mx-auto">
             <Card className="border-primary/20 shadow-lg">
               <CardHeader className="text-center pb-6">
@@ -52,7 +52,7 @@ const Pricing = () => {
         </section>
 
         {/* Consulting, Talks, Intro - Grid Layout */}
-        <section className="container mx-auto max-w-6xl">
+        <section className="container mx-auto max-w-6xl py-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* AI Consulting */}
