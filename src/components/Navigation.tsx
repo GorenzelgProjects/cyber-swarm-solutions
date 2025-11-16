@@ -92,7 +92,7 @@ const Navigation = () => {
                 isActive("/team") ? "text-primary" : "text-muted-foreground"
               }`}
             >
-              Team
+              About us
             </Link>
 
             <Link
@@ -192,7 +192,7 @@ const Navigation = () => {
                   : "text-muted-foreground hover:text-primary hover:bg-accent"
               }`}
             >
-              Team
+              About us
             </Link>
 
             <Link
