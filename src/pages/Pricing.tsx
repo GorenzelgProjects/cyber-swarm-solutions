@@ -16,7 +16,9 @@ const Pricing = () => {
       <main className="pt-12 pb-8 px-4">
         {/* Hero */}
         <div className="content-wrapper text-center mb-6">
-          <h1 className="text-foreground">{t.hero.headline}</h1>
+          <h1 className="text-foreground">
+            Pricing <span className="text-primary">& Services</span>
+          </h1>
         </div>
 
         {/* Platform Section */}
