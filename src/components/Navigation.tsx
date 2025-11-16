@@ -138,7 +138,7 @@ const Navigation = () => {
             <div className="ml-4 flex items-center space-x-3">
               <ThemeToggle />
               <Button asChild size="sm" className="rounded-2xl">
-                <Link to="/contact">Request Demo</Link>
+                <Link to="/contact">Contact us</Link>
               </Button>
             </div>
           </div>
@@ -244,7 +244,7 @@ const Navigation = () => {
             <div className="pt-2 mt-2 border-t border-border">
               <Button asChild size="sm" className="w-full rounded-2xl">
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Request Demo
+                  Contact us
                 </Link>
               </Button>
             </div>
