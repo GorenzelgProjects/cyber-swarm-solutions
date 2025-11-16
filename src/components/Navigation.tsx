@@ -83,7 +83,7 @@ const Navigation = () => {
                 isActive("/pricing") ? "text-primary" : "text-muted-foreground"
               }`}
             >
-              Pricing & services
+              Pricing <span className="text-primary">& Services</span>
             </Link>
 
             <Link

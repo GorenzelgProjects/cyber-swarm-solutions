@@ -2,12 +2,10 @@
   "pricing": {
     "hero": {
       "badge": "Pricing & Services",
-      "headline": "Pricing & services",
-      "subline": "Simple options. No rip-and-replace. SOC-friendly."
+      "headline": "Pricing & services"
     },
     "platform": {
       "headline": "Threat hunting platform",
-      "description": "ColleaiQ runs safe, sandboxed rehearsals of relevant exposures and returns explainable, analyst-approved findings with a practical fix. Works with your tools (e.g., Velociraptor, EDR, SIEM, case management).",
       "card": {
         "title": "Threat hunting platform",
         "pricingModel": [
@@ -24,14 +22,6 @@
         ],
         "cta": "Request a quote"
       }
-    },
-    "howPricingWorks": {
-      "headline": "How pricing works",
-      "points": [
-        "Usage-based: typically per endpoint per month.",
-        "Delivered via partner SOC/MSSP agreements where possible.",
-        "Pilot and scoped engagements available for new customers."
-      ]
     },
     "consulting": {
       "headline": "AI consulting (by scope)",
