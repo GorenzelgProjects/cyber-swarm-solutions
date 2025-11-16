@@ -13,25 +13,19 @@ const Pricing = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      <main className="pt-24 pb-24 px-4">
+      <main className="pt-16 pb-16 px-4">
         {/* Hero */}
-        <div className="content-wrapper text-center space-y-4 mb-16">
+        <div className="content-wrapper text-center space-y-3 mb-12">
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-muted text-muted-foreground text-xs tracking-wide">
             {t.hero.badge}
           </span>
           <h1 className="text-foreground">{t.hero.headline}</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t.hero.subline}
-          </p>
         </div>
 
         {/* Platform Section */}
-        <section className="container mx-auto max-w-5xl mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">{t.platform.headline}</h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto">
-              {t.platform.description}
-            </p>
+        <section className="container mx-auto max-w-5xl mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-foreground">{t.platform.headline}</h2>
           </div>
 
           <div className="max-w-xl mx-auto">
@@ -58,21 +52,6 @@ const Pricing = () => {
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        </section>
-
-        {/* How Pricing Works Section */}
-        <section className="container mx-auto max-w-5xl mb-20">
-          <div className="max-w-2xl mx-auto bg-muted/30 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">{t.howPricingWorks.headline}</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              {t.howPricingWorks.points.map((point, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="text-primary mt-1">•</span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 
