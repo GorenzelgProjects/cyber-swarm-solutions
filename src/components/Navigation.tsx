@@ -19,35 +19,20 @@ import {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
+  const [companyOpen, setCompanyOpen] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
 
-  const moreItems = [
+  const companyItems = [
     {
       name: t('nav.mission'),
       path: "/story",
       description: "Why we're building explainable multi-agent cybersecurity in Europe.",
     },
     {
-      name: "Simulation Deep Dive",
-      path: "/simulation-deep-dive",
-      description: "Step-by-step view of how our attack simulations and defence cycles work.",
-    },
-    {
       name: "Compliance",
       path: "/compliance",
       description: "How ColleaiQ supports NIS2, auditability and digital sovereignty.",
-    },
-    {
-      name: "FAQ",
-      path: "/faq",
-      description: "Answers to common questions about the platform and security model.",
-    },
-    {
-      name: "Community",
-      path: "/community",
-      description: "Research, collaborations and ecosystem initiatives around ColleaiQ.",
     },
     {
       name: "Open Positions",
@@ -57,7 +42,7 @@ const Navigation = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
-  const isDropdownActive = (items: typeof moreItems) =>
+  const isDropdownActive = (items: typeof companyItems) =>
     items.some((item) => isActive(item.path));
 
   return (
@@ -119,20 +104,20 @@ const Navigation = () => {
               Blog
             </Link>
 
-            {/* More Dropdown */}
+            {/* Company Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger
                 className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:text-primary hover:bg-accent flex items-center gap-1 ${
-                  isDropdownActive(moreItems)
+                  isDropdownActive(companyItems)
                     ? "text-primary"
                     : "text-muted-foreground"
                 }`}
               >
-                More
+                Company
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-80 bg-background border-border">
-                {moreItems.map((item) => (
+                {companyItems.map((item) => (
                   <DropdownMenuItem key={item.path} asChild>
                     <Link
                       to={item.path}
@@ -222,24 +207,24 @@ const Navigation = () => {
               Blog
             </Link>
 
-            {/* More Collapsible */}
-            <Collapsible open={moreOpen} onOpenChange={setMoreOpen}>
+            {/* Company Collapsible */}
+            <Collapsible open={companyOpen} onOpenChange={setCompanyOpen}>
               <CollapsibleTrigger
                 className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isDropdownActive(moreItems)
+                  isDropdownActive(companyItems)
                     ? "text-primary bg-accent"
                     : "text-muted-foreground hover:text-primary hover:bg-accent"
                 }`}
               >
-                More
+                Company
                 <ChevronDown
                   className={`h-4 w-4 transition-transform ${
-                    moreOpen ? "rotate-180" : ""
+                    companyOpen ? "rotate-180" : ""
                   }`}
                 />
               </CollapsibleTrigger>
               <CollapsibleContent className="space-y-1 mt-1 ml-3">
-                {moreItems.map((item) => (
+                {companyItems.map((item) => (
                   <Link
                     key={item.path}
                     to={item.path}
