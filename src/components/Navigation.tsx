@@ -19,12 +19,16 @@ import {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [resourcesOpen, setResourcesOpen] = useState(false);
-  const [companyOpen, setCompanyOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
 
-  const resourcesItems = [
+  const moreItems = [
+    {
+      name: t('nav.mission'),
+      path: "/story",
+      description: "Why we're building explainable multi-agent cybersecurity in Europe.",
+    },
     {
       name: "Simulation Deep Dive",
       path: "/simulation-deep-dive",
@@ -41,37 +45,19 @@ const Navigation = () => {
       description: "Answers to common questions about the platform and security model.",
     },
     {
-      name: "Blog",
-      path: "/blog",
-      description: "Updates, research insights and perspectives on AI-driven security.",
-    },
-  ];
-
-  const companyItems = [
-    {
-      name: t('nav.mission'),
-      path: "/story",
-      description: "Why we're building explainable multi-agent cybersecurity in Europe.",
-    },
-    {
-      name: "Team",
-      path: "/team",
-      description: "Meet the people behind ColleaiQ.",
+      name: "Community",
+      path: "/community",
+      description: "Research, collaborations and ecosystem initiatives around ColleaiQ.",
     },
     {
       name: "Open Positions",
       path: "/careers",
       description: "Join us in building proactive, explainable cyber defence.",
     },
-    {
-      name: "Community",
-      path: "/community",
-      description: "Research, collaborations and ecosystem initiatives around ColleaiQ.",
-    },
   ];
 
   const isActive = (path: string) => location.pathname === path;
-  const isDropdownActive = (items: typeof resourcesItems) =>
+  const isDropdownActive = (items: typeof moreItems) =>
     items.some((item) => isActive(item.path));
 
   return (
@@ -115,51 +101,38 @@ const Navigation = () => {
               Pricing
             </Link>
 
-            {/* Resources Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:text-primary hover:bg-accent flex items-center gap-1 ${
-                  isDropdownActive(resourcesItems)
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
-              >
-                Resources
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-80 bg-background border-border">
-                {resourcesItems.map((item) => (
-                  <DropdownMenuItem key={item.path} asChild>
-                    <Link
-                      to={item.path}
-                      className={`flex flex-col items-start gap-1 p-3 cursor-pointer ${
-                        isActive(item.path) ? "bg-accent" : ""
-                      }`}
-                    >
-                      <span className="font-medium">{item.name}</span>
-                      <span className="text-xs text-muted-foreground leading-relaxed">
-                        {item.description}
-                      </span>
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Link
+              to="/team"
+              className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:text-primary hover:bg-accent ${
+                isActive("/team") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Team
+            </Link>
 
-            {/* Company Dropdown */}
+            <Link
+              to="/blog"
+              className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:text-primary hover:bg-accent ${
+                isActive("/blog") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Blog
+            </Link>
+
+            {/* More Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger
                 className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:text-primary hover:bg-accent flex items-center gap-1 ${
-                  isDropdownActive(companyItems)
+                  isDropdownActive(moreItems)
                     ? "text-primary"
                     : "text-muted-foreground"
                 }`}
               >
-                Company
+                More
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-80 bg-background border-border">
-                {companyItems.map((item) => (
+                {moreItems.map((item) => (
                   <DropdownMenuItem key={item.path} asChild>
                     <Link
                       to={item.path}
@@ -225,58 +198,48 @@ const Navigation = () => {
               Pricing
             </Link>
 
-            {/* Resources Collapsible */}
-            <Collapsible open={resourcesOpen} onOpenChange={setResourcesOpen}>
-              <CollapsibleTrigger
-                className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isDropdownActive(resourcesItems)
-                    ? "text-primary bg-accent"
-                    : "text-muted-foreground hover:text-primary hover:bg-accent"
-                }`}
-              >
-                Resources
-                <ChevronDown
-                  className={`h-4 w-4 transition-transform ${
-                    resourcesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </CollapsibleTrigger>
-              <CollapsibleContent className="space-y-1 mt-1 ml-3">
-                {resourcesItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setIsOpen(false)}
-                    className={`block px-3 py-2 text-sm rounded-md transition-colors ${
-                      isActive(item.path)
-                        ? "text-primary bg-accent"
-                        : "text-muted-foreground hover:text-primary hover:bg-accent"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </CollapsibleContent>
-            </Collapsible>
+            <Link
+              to="/team"
+              onClick={() => setIsOpen(false)}
+              className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                isActive("/team")
+                  ? "text-primary bg-accent"
+                  : "text-muted-foreground hover:text-primary hover:bg-accent"
+              }`}
+            >
+              Team
+            </Link>
 
-            {/* Company Collapsible */}
-            <Collapsible open={companyOpen} onOpenChange={setCompanyOpen}>
+            <Link
+              to="/blog"
+              onClick={() => setIsOpen(false)}
+              className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                isActive("/blog")
+                  ? "text-primary bg-accent"
+                  : "text-muted-foreground hover:text-primary hover:bg-accent"
+              }`}
+            >
+              Blog
+            </Link>
+
+            {/* More Collapsible */}
+            <Collapsible open={moreOpen} onOpenChange={setMoreOpen}>
               <CollapsibleTrigger
                 className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isDropdownActive(companyItems)
+                  isDropdownActive(moreItems)
                     ? "text-primary bg-accent"
                     : "text-muted-foreground hover:text-primary hover:bg-accent"
                 }`}
               >
-                Company
+                More
                 <ChevronDown
                   className={`h-4 w-4 transition-transform ${
-                    companyOpen ? "rotate-180" : ""
+                    moreOpen ? "rotate-180" : ""
                   }`}
                 />
               </CollapsibleTrigger>
               <CollapsibleContent className="space-y-1 mt-1 ml-3">
-                {companyItems.map((item) => (
+                {moreItems.map((item) => (
                   <Link
                     key={item.path}
                     to={item.path}
