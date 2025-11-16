@@ -15,10 +15,7 @@ const Pricing = () => {
 
       <main className="pt-12 pb-8 px-4">
         {/* Hero */}
-        <div className="content-wrapper text-center space-y-3 mb-6">
-          <span className="inline-flex items-center px-3 py-1 rounded-full bg-muted text-muted-foreground text-xs tracking-wide">
-            {t.hero.badge}
-          </span>
+        <div className="content-wrapper text-center mb-6">
           <h1 className="text-foreground">{t.hero.headline}</h1>
         </div>
 
