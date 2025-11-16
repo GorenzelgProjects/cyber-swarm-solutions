@@ -24,10 +24,6 @@ const Pricing = () => {
 
         {/* Platform Section */}
         <section className="container mx-auto max-w-5xl mb-12">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-foreground">{t.platform.headline}</h2>
-          </div>
-
           <div className="max-w-xl mx-auto">
             <Card className="border-primary/20 shadow-lg">
               <CardHeader className="text-center pb-6">

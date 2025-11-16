@@ -15,18 +15,18 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="px-4 pt-20 pb-16 md:pt-24 md:pb-20">
-        <div className="content-wrapper text-center space-y-6 animate-fade-in">
+      <section className="px-4 pt-16 pb-8">
+        <div className="content-wrapper text-center space-y-4 animate-fade-in">
           <h1 className="text-foreground">
             Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence
           </h1>
 
-          <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-2xl mx-auto">
+          <div className="text-lg md:text-xl text-muted-foreground space-y-3 max-w-2xl mx-auto">
             <p>{t("index.hero.paragraph1")}</p>
             <p>{t("index.hero.paragraph2")}</p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button asChild size="lg" className="text-base px-8">
               <a href="mailto:kontakt@colleaiq.dk">{t("index.hero.ctaPrimary")}</a>
             </Button>
@@ -35,7 +35,7 @@ const Index = () => {
             </Button>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-3">
             <a
               href="/blog/safe-sandbox-threat-hunting"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -47,11 +47,11 @@ const Index = () => {
       </section>
 
       {/* The Problem Section */}
-      <section className="px-4 bg-muted/30">
-        <div className="content-wrapper space-y-8 animate-fade-in">
+      <section className="px-4 bg-muted/30 py-8">
+        <div className="content-wrapper space-y-6 animate-fade-in">
           <h2 className="text-center text-foreground">{t("index.challenge.headline")}</h2>
 
-          <div className="text-lg text-muted-foreground space-y-4">
+          <div className="text-lg text-muted-foreground space-y-3">
             <p>{t("index.challenge.paragraph1")}</p>
             <p>{t("index.challenge.paragraph2")}</p>
             <p>{t("index.challenge.paragraph3")}</p>
@@ -60,18 +60,18 @@ const Index = () => {
       </section>
 
       {/* Media Blocks */}
-      <section className="px-4">
-        <div className="content-wrapper text-center space-y-4">
+      <section className="px-4 py-8">
+        <div className="content-wrapper text-center space-y-3">
           <h2 className="text-foreground">{t("index.howItWorks.headline")}</h2>
           <p className="text-lg text-muted-foreground">{t("index.howItWorks.description")}</p>
         </div>
       </section>
 
       {/* Alternating media sections */}
-      <section className="px-4">
+      <section className="px-4 py-0">
         <div className="container-wide">
           {/* Why teams work with us – image right */}
-          <div className="py-8 md:py-12">
+          <div className="py-6">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">{t("index.whyTeams.headline")}</h3>
@@ -91,7 +91,7 @@ const Index = () => {
           </div>
 
           {/* What you get today – image left */}
-          <div className="py-8 md:py-12">
+          <div className="py-6">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-2 order-2 md:order-1">
                 <img
@@ -111,7 +111,7 @@ const Index = () => {
           </div>
 
           {/* How the platform works – row 1 image right */}
-          <div className="py-8 md:py-12">
+          <div className="py-6">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">{t("index.rehearsal.headline")}</h3>
@@ -131,7 +131,7 @@ const Index = () => {
           </div>
 
           {/* How the platform works – row 2 image left */}
-          <div className="py-8 md:py-12">
+          <div className="py-6">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-2 order-2 md:order-1">
                 <img
@@ -151,7 +151,7 @@ const Index = () => {
           </div>
 
           {/* Compliance & documentation – image right 35% */}
-          <div className="py-8 md:py-12">
+          <div className="py-6">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">{t("index.compliance.headline")}</h3>
@@ -173,11 +173,11 @@ const Index = () => {
       </section>
 
       {/* Use Cases / Who It's For */}
-      <section className="px-4 bg-muted/30">
-        <div className="content-wrapper space-y-8 animate-fade-in">
+      <section className="px-4 bg-muted/30 py-8">
+        <div className="content-wrapper space-y-6 animate-fade-in">
           <h2 className="text-center text-foreground">Built for Enterprise Security Teams</h2>
 
-          <div className="text-lg text-muted-foreground space-y-4">
+          <div className="text-lg text-muted-foreground space-y-3">
             <p>
               CISOs & leaders: continuous validation you can explain in one slide, with artefacts that stand up in
               audit.
@@ -192,8 +192,8 @@ const Index = () => {
 
       {/* From the lab (if post exists) */}
       {posts.length > 0 && (
-        <section className="px-4">
-          <div className="content-wrapper space-y-8 animate-fade-in">
+        <section className="px-4 py-8">
+          <div className="content-wrapper space-y-6 animate-fade-in">
             <h2 className="text-center text-foreground">From the lab</h2>
             <div className="flex justify-center">
               <a href={`/blog/${posts[0].slug}`} className="block group max-w-[380px] w-full">
@@ -228,11 +228,11 @@ const Index = () => {
       )}
 
       {/* Why ColleaiQ / Differentiators */}
-      <section className="px-4">
-        <div className="content-wrapper space-y-8 animate-fade-in">
+      <section className="px-4 py-8">
+        <div className="content-wrapper space-y-6 animate-fade-in">
           <h2 className="text-center text-foreground">{t("index.whyColleaiQ.headline")}</h2>
 
-          <div className="text-lg text-muted-foreground space-y-4">
+          <div className="text-lg text-muted-foreground space-y-3">
             <p>{t("index.whyColleaiQ.point1")}</p>
             <p>{t("index.whyColleaiQ.point2")}</p>
             <p>{t("index.whyColleaiQ.point3")}</p>
@@ -244,8 +244,8 @@ const Index = () => {
       <SupportersSection />
 
       {/* Final CTA Section */}
-      <section className="px-4 bg-muted/30">
-        <div className="content-wrapper text-center space-y-8 animate-fade-in">
+      <section className="px-4 bg-muted/30 py-8">
+        <div className="content-wrapper text-center space-y-6 animate-fade-in">
           <h2 className="text-foreground">Ready to move from reactive to proactive?</h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -253,7 +253,7 @@ const Index = () => {
             like, and onboard you to a pilot where every run is explainable and human-approved.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-3">
             <Button asChild size="lg" className="text-base px-8">
               <a href="mailto:kontakt@colleaiq.dk?subject=Pilot%20interest">Get in Touch</a>
             </Button>
