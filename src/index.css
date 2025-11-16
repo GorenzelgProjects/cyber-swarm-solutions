@@ -25,8 +25,8 @@
     --muted: 150 10% 90%;
     --muted-foreground: 150 8% 40%;
 
-    --accent: 27 56% 46%; /* Muted copper #B87333 */
-    --accent-foreground: 60 11% 96%;
+    --accent: 150 15% 88%; /* Light sage for hover states */
+    --accent-foreground: 150 20% 30%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 60 11% 96%;
@@ -74,8 +74,8 @@
     --muted: 228 8% 20%;
     --muted-foreground: 150 8% 65%;
 
-    --accent: 27 56% 55%;
-    --accent-foreground: 228 10% 10%;
+    --accent: 150 15% 20%; /* Dark sage for hover states */
+    --accent-foreground: 150 15% 85%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 60 11% 92%;
