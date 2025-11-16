@@ -67,9 +67,9 @@ const Solution = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      <div className="pt-16 pb-12">
+      <div className="pt-12 pb-10">
         {/* Hero */}
-        <section className="px-4 py-8 relative overflow-hidden">
+        <section className="px-4 py-8 md:py-10 relative overflow-hidden">
           <div className="container mx-auto max-w-4xl text-center space-y-6 animate-fade-in relative z-10">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground">
               Our <span className="text-primary">Solution</span>
@@ -82,9 +82,9 @@ const Solution = () => {
         </section>
 
         {/* Core Components */}
-        <section className="px-4 py-8 bg-muted/30">
+        <section className="px-4 py-8 md:py-10 bg-muted/30">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Core Components</h2>
+            <h2 className="text-4xl font-bold text-center mb-8 text-foreground">Core Components</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {components.map((component, index) => (
                 <Card 
@@ -108,15 +108,15 @@ const Solution = () => {
         </section>
 
         {/* Multi-Agent Architecture */}
-        <section className="px-4 py-8 bg-muted/30">
+        <section className="px-4 py-8 md:py-10 bg-muted/30">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-4xl font-bold text-center mb-6 text-foreground">Multi-Agent Architecture</h2>
-            <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+            <p className="text-center text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
               Our specialised AI agents work in concert to create continuous, proactive defence with full explainability:
             </p>
             
             {/* Four key components */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
               <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
                 <CardContent className="p-8 space-y-4">
                   <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
@@ -175,9 +175,9 @@ const Solution = () => {
         </section>
 
         {/* How It Works */}
-        <section className="px-4 py-8">
+        <section className="px-4 py-8 md:py-10">
           <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-8">
+            <div className="text-center mb-6">
               <h2 className="text-4xl font-bold mb-3 text-foreground">Continuous Defence Cycle</h2>
               <p className="text-xl text-muted-foreground">
                 Example: Credential Dumping Attack Simulation
@@ -211,10 +211,10 @@ const Solution = () => {
         </section>
 
         {/* Key Advantages */}
-        <section className="px-4 py-8 bg-muted/30 relative overflow-hidden">
+        <section className="px-4 py-8 md:py-10 bg-muted/30 relative overflow-hidden">
           <div className="absolute inset-0 graph-pattern opacity-50" />
           <div className="container mx-auto max-w-5xl relative z-10">
-            <h2 className="text-4xl font-bold text-center mb-8 text-foreground">Key Competitive Advantages</h2>
+            <h2 className="text-4xl font-bold text-center mb-6 text-foreground">Key Competitive Advantages</h2>
             <Card className="bg-card border-border shadow-card rounded-2xl">
               <CardContent className="p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
@@ -235,9 +235,9 @@ const Solution = () => {
         </section>
 
         {/* Technical Details */}
-        <section className="px-4 py-8">
+        <section className="px-4 py-8 md:py-10">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-4xl font-bold text-center mb-8 text-foreground">Technical Foundation</h2>
+            <h2 className="text-4xl font-bold text-center mb-6 text-foreground">Technical Foundation</h2>
             <Card className="bg-card border-border shadow-card rounded-2xl">
               <CardContent className="p-8 md:p-12 space-y-10">
                 <div className="flex items-start gap-4">
@@ -291,10 +291,10 @@ const Solution = () => {
         </section>
 
         {/* CTA */}
-        <section className="px-4 py-8 bg-muted/30">
+        <section className="px-4 py-8 md:py-10 bg-muted/30">
           <div className="container mx-auto max-w-4xl text-center">
             <Card className="bg-gradient-mesh border-border shadow-hover rounded-2xl">
-              <CardContent className="p-8 md:p-12 space-y-5">
+              <CardContent className="p-8 md:p-10 space-y-5">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">Ready to See It in Action?</h2>
                 <p className="text-xl text-muted-foreground">
                   Experience how our multi-agent system can transform your cybersecurity posture.
