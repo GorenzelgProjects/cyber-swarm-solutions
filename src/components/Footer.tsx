@@ -62,6 +62,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/team" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Team
+                </Link>
+              </li>
+              <li>
                 <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   {t('footer.blog')}
                 </Link>
@@ -73,7 +78,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/careers" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  {t('footer.careers')}
+                  Open Positions
                 </Link>
               </li>
             </ul>
