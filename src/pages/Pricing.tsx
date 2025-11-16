@@ -36,15 +36,13 @@ const Pricing = () => {
 
           <div className="max-w-xl mx-auto">
             <Card className="border-primary/20 shadow-lg">
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl mb-2">{t.platform.card.title}</CardTitle>
-                <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-5xl font-bold text-primary">{t.platform.card.price}</span>
-                  <span className="text-muted-foreground">{t.platform.card.priceUnit}</span>
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-2xl mb-4">{t.platform.card.title}</CardTitle>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  {t.platform.card.pricingModel.map((line, index) => (
+                    <p key={index}>{line}</p>
+                  ))}
                 </div>
-                <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
-                  {t.platform.card.note}
-                </p>
               </CardHeader>
               <CardContent className="space-y-6">
                 <ul className="space-y-3">
@@ -60,6 +58,21 @@ const Pricing = () => {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+        </section>
+
+        {/* How Pricing Works Section */}
+        <section className="container mx-auto max-w-5xl mb-20">
+          <div className="max-w-2xl mx-auto bg-muted/30 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-foreground mb-4">{t.howPricingWorks.headline}</h3>
+            <ul className="space-y-2 text-muted-foreground">
+              {t.howPricingWorks.points.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span className="text-primary mt-1">•</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
