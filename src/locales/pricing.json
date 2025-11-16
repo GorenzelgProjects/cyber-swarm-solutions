@@ -10,9 +10,11 @@
       "description": "ColleaiQ runs safe, sandboxed rehearsals of relevant exposures and returns explainable, analyst-approved findings with a practical fix. Works with your tools (e.g., Velociraptor, EDR, SIEM, case management).",
       "card": {
         "title": "Threat hunting platform",
-        "price": "$3.42",
-        "priceUnit": "per endpoint / month",
-        "note": "Pilot pricing. Excluding taxes and partner fees. Final pricing typically goes through your SOC/MSSP.",
+        "pricingModel": [
+          "We typically price per endpoint per month, with volume- and risk-based adjustments.",
+          "Most customers buy ColleaiQ through their existing SOC/MSSP; final commercials are agreed with them.",
+          "Pilot and proof-of-concept options are available."
+        ],
         "features": [
           "Automatic hunts for newly published CVEs",
           "Sandbox rehearsals that mirror your environment",
@@ -22,6 +24,14 @@
         ],
         "cta": "Request a quote"
       }
+    },
+    "howPricingWorks": {
+      "headline": "How pricing works",
+      "points": [
+        "Usage-based: typically per endpoint per month.",
+        "Delivered via partner SOC/MSSP agreements where possible.",
+        "Pilot and scoped engagements available for new customers."
+      ]
     },
     "consulting": {
       "headline": "AI consulting (by scope)",
