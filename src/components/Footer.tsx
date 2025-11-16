@@ -36,11 +36,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/simulation-deep-dive" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  {t('footer.simulationDeepDive')}
-                </Link>
-              </li>
-              <li>
                 <Link to="/compliance" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   {t('footer.compliance')}
                 </Link>
@@ -64,16 +59,6 @@ const Footer = () => {
               <li>
                 <Link to="/team" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Team
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  {t('footer.blog')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/community" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  {t('footer.community')}
                 </Link>
               </li>
               <li>
