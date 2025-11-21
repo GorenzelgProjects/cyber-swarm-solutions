@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import { InteractiveAgentDiagram } from "@/components/InteractiveAgentDiagram";
 import { Button } from "@/components/ui/button";
 import { Network, RefreshCw, CheckCircle, AlertTriangle, Lock } from "lucide-react";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
 const Solution = () => {
   const components = [
@@ -117,47 +116,29 @@ const Solution = () => {
             
             {/* Four key components */}
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <HoverCard>
-                <HoverCardTrigger asChild>
-                  <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl cursor-help">
-                    <CardContent className="p-8 space-y-4">
-                      <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
-                        <AlertTriangle className="h-7 w-7 text-destructive" />
-                      </div>
-                      <h3 className="text-2xl font-semibold text-foreground">Red-Team Agent</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Simulates realistic attack paths in safe, bounded sandbox environments. Focuses on how an attacker could move under agreed scenarios, without touching live systems.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </HoverCardTrigger>
-                <HoverCardContent className="w-80">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    The red-team agent turns an exposure or scenario into one or more multi-step attack paths. It executes those steps only inside the sandbox, records which actions succeed or fail, and marks where an attacker could realistically move next.
+              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
+                <CardContent className="p-8 space-y-4">
+                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                    <AlertTriangle className="h-7 w-7 text-destructive" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-foreground">Red-Team Agent</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Simulates realistic attack paths in safe, bounded sandbox environments. Focuses on how an attacker could move under agreed scenarios, without touching live systems.
                   </p>
-                </HoverCardContent>
-              </HoverCard>
+                </CardContent>
+              </Card>
 
-              <HoverCard>
-                <HoverCardTrigger asChild>
-                  <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl cursor-help">
-                    <CardContent className="p-8 space-y-4">
-                      <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
-                        <Shield className="h-7 w-7 text-primary" />
-                      </div>
-                      <h3 className="text-2xl font-semibold text-foreground">Blue-Team Agent</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Collects observations from each rehearsal, notes which steps worked in the sandbox and highlights where controls did or did not stop the path.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </HoverCardTrigger>
-                <HoverCardContent className="w-80">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    The blue-team agent looks at what happened during the rehearsal: which systems were touched, which controls reacted, and where the path stayed open. It groups these observations into a clear story and drafts suggested changes, so a human analyst can review, adjust and decide what to do in the real environment.
+              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
+                <CardContent className="p-8 space-y-4">
+                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                    <Shield className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-foreground">Blue-Team Agent</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Collects observations from each rehearsal, notes which steps worked in the sandbox and highlights where controls did or did not stop the path.
                   </p>
-                </HoverCardContent>
-              </HoverCard>
+                </CardContent>
+              </Card>
 
               <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
                 <CardContent className="p-8 space-y-4">
@@ -188,41 +169,6 @@ const Solution = () => {
           </div>
         </section>
 
-        {/* How It Works */}
-        <section className="px-4 py-8 md:py-10">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-6">
-              <h2 className="text-4xl font-bold mb-3 text-foreground">Example rehearsal: credential theft path</h2>
-              <p className="text-xl text-muted-foreground">
-                Example: rehearsing a credential-theft scenario
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {attackScenario.map((step, index) => (
-                <Card 
-                  key={index}
-                  className="bg-card border-border shadow-card animate-fade-in rounded-2xl"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardContent className="p-6 md:p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0">
-                        <div className="h-12 w-12 rounded-2xl bg-muted flex items-center justify-center">
-                          <step.icon className={`h-6 w-6 ${step.color}`} />
-                        </div>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold mb-2 text-foreground">{step.phase}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Key Advantages */}
         <section className="px-4 py-8 md:py-10 bg-muted/30 relative overflow-hidden">
