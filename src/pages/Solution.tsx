@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { InteractiveAgentDiagram } from "@/components/InteractiveAgentDiagram";
 import { Button } from "@/components/ui/button";
 import { Network, RefreshCw, CheckCircle, AlertTriangle, Lock } from "lucide-react";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
 const Solution = () => {
   const components = [
@@ -116,29 +117,47 @@ const Solution = () => {
             
             {/* Four key components */}
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
-                <CardContent className="p-8 space-y-4">
-                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
-                    <AlertTriangle className="h-7 w-7 text-destructive" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">Red-Team Agent</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Simulates realistic attack paths in safe, bounded sandbox environments. Focuses on how an attacker could move under agreed scenarios, without touching live systems.
+              <HoverCard>
+                <HoverCardTrigger asChild>
+                  <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl cursor-help">
+                    <CardContent className="p-8 space-y-4">
+                      <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                        <AlertTriangle className="h-7 w-7 text-destructive" />
+                      </div>
+                      <h3 className="text-2xl font-semibold text-foreground">Red-Team Agent</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Simulates realistic attack paths in safe, bounded sandbox environments. Focuses on how an attacker could move under agreed scenarios, without touching live systems.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-80">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    The red-team agent turns an exposure or scenario into one or more multi-step attack paths. It executes those steps only inside the sandbox, records which actions succeed or fail, and marks where an attacker could realistically move next.
                   </p>
-                </CardContent>
-              </Card>
+                </HoverCardContent>
+              </HoverCard>
 
-              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
-                <CardContent className="p-8 space-y-4">
-                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
-                    <Shield className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">Blue-Team Agent</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Collects observations from each rehearsal, notes which steps worked in the sandbox and highlights where controls did or did not stop the path.
+              <HoverCard>
+                <HoverCardTrigger asChild>
+                  <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl cursor-help">
+                    <CardContent className="p-8 space-y-4">
+                      <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
+                        <Shield className="h-7 w-7 text-primary" />
+                      </div>
+                      <h3 className="text-2xl font-semibold text-foreground">Blue-Team Agent</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Collects observations from each rehearsal, notes which steps worked in the sandbox and highlights where controls did or did not stop the path.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-80">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    The blue-team agent looks at what happened during the rehearsal: which systems were touched, which controls reacted, and where the path stayed open. It groups these observations into a clear story and drafts suggested changes, so a human analyst can review, adjust and decide what to do in the real environment.
                   </p>
-                </CardContent>
-              </Card>
+                </HoverCardContent>
+              </HoverCard>
 
               <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
                 <CardContent className="p-8 space-y-4">
