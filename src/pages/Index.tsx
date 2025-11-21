@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SupportersSection from "@/components/SupportersSection";
+import FormattedText from "@/components/FormattedText";
 import posts from "@/data/blog";
 
 const Index = () => {
@@ -18,7 +19,7 @@ const Index = () => {
       <section className="px-4 pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="content-wrapper text-center space-y-6 animate-fade-in">
           <h1 className="text-foreground">
-            Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence
+            {t("index.hero.headline")}
           </h1>
 
           <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-2xl mx-auto">
@@ -51,11 +52,10 @@ const Index = () => {
         <div className="content-wrapper space-y-8 animate-fade-in">
           <h2 className="text-center text-foreground">{t("index.challenge.headline")}</h2>
 
-          <div className="text-lg text-muted-foreground space-y-4">
-            <p>{t("index.challenge.paragraph1")}</p>
-            <p>{t("index.challenge.paragraph2")}</p>
-            <p>{t("index.challenge.paragraph3")}</p>
-          </div>
+          <FormattedText 
+            text={`${t("index.challenge.paragraph1")}\n\n${t("index.challenge.paragraph2")}\n\n${t("index.challenge.paragraph3")}`}
+            className="text-lg text-muted-foreground space-y-4"
+          />
         </div>
       </section>
 
@@ -63,7 +63,10 @@ const Index = () => {
       <section className="px-4 py-16 md:py-20">
         <div className="content-wrapper text-center space-y-4">
           <h2 className="text-foreground">{t("index.howItWorks.headline")}</h2>
-          <p className="text-lg text-muted-foreground">{t("index.howItWorks.description")}</p>
+          <FormattedText 
+            text={t("index.howItWorks.description")}
+            className="text-lg text-muted-foreground space-y-4 max-w-4xl mx-auto text-left"
+          />
         </div>
       </section>
 
@@ -75,7 +78,10 @@ const Index = () => {
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">{t("index.whyTeams.headline")}</h3>
-                <p className="text-muted-foreground">{t("index.whyTeams.description")}</p>
+                <FormattedText 
+                  text={t("index.whyTeams.description")}
+                  className="text-muted-foreground space-y-4"
+                />
               </div>
               <div className="md:col-span-2 order-2">
                 <img
@@ -105,7 +111,10 @@ const Index = () => {
               </div>
               <div className="md:col-span-3 order-1 md:order-2 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">{t("index.whatYouGet.headline")}</h3>
-                <p className="text-muted-foreground">{t("index.whatYouGet.description")}</p>
+                <FormattedText 
+                  text={t("index.whatYouGet.description")}
+                  className="text-muted-foreground space-y-4"
+                />
               </div>
             </div>
           </div>
@@ -115,7 +124,10 @@ const Index = () => {
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">{t("index.rehearsal.headline")}</h3>
-                <p className="text-muted-foreground">{t("index.rehearsal.description")}</p>
+                <FormattedText 
+                  text={t("index.rehearsal.description")}
+                  className="text-muted-foreground space-y-4"
+                />
               </div>
               <div className="md:col-span-2 order-2">
                 <img
@@ -145,7 +157,10 @@ const Index = () => {
               </div>
               <div className="md:col-span-3 order-1 md:order-2 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">{t("index.learning.headline")}</h3>
-                <p className="text-muted-foreground">{t("index.learning.description")}</p>
+                <FormattedText 
+                  text={t("index.learning.description")}
+                  className="text-muted-foreground space-y-4"
+                />
               </div>
             </div>
           </div>
@@ -155,7 +170,10 @@ const Index = () => {
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
                 <h3 className="text-xl font-serif text-foreground mb-4">{t("index.compliance.headline")}</h3>
-                <p className="text-muted-foreground">{t("index.compliance.description")}</p>
+                <FormattedText 
+                  text={t("index.compliance.description")}
+                  className="text-muted-foreground space-y-4"
+                />
               </div>
               <div className="md:col-span-2 order-2">
                 <img
@@ -175,18 +193,12 @@ const Index = () => {
       {/* Use Cases / Who It's For */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
         <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">Built for Enterprise Security Teams</h2>
+          <h2 className="text-center text-foreground">{t("index.builtFor.headline")}</h2>
 
-          <div className="text-lg text-muted-foreground space-y-4">
-            <p>
-              CISOs & leaders: continuous validation you can explain in one slide, with artefacts that stand up in
-              audit.
-            </p>
-            <p>Red teams & testers: let the system handle routine recon so you can spend time on bespoke tradecraft.</p>
-            <p>
-              Regulated orgs: repeatable runs and clear evidence for finance, healthcare and critical infrastructure.
-            </p>
-          </div>
+          <FormattedText 
+            text={`${t("index.builtFor.ciso")}\n\n${t("index.builtFor.redTeams")}\n\n${t("index.builtFor.regulated")}`}
+            className="text-lg text-muted-foreground space-y-4"
+          />
         </div>
       </section>
 
@@ -232,11 +244,10 @@ const Index = () => {
         <div className="content-wrapper space-y-8 animate-fade-in">
           <h2 className="text-center text-foreground">{t("index.whyColleaiQ.headline")}</h2>
 
-          <div className="text-lg text-muted-foreground space-y-4">
-            <p>{t("index.whyColleaiQ.point1")}</p>
-            <p>{t("index.whyColleaiQ.point2")}</p>
-            <p>{t("index.whyColleaiQ.point3")}</p>
-          </div>
+          <FormattedText 
+            text={`${t("index.whyColleaiQ.point1")}\n\n${t("index.whyColleaiQ.point2")}\n\n${t("index.whyColleaiQ.point3")}`}
+            className="text-lg text-muted-foreground space-y-4"
+          />
         </div>
       </section>
 
@@ -248,17 +259,17 @@ const Index = () => {
         <div className="content-wrapper text-center space-y-8 animate-fade-in">
           <h2 className="text-foreground">{t("index.finalCTA.headline")}</h2>
 
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            If you want rehearsals instead of surprises, let's talk. We'll map your setup, agree on what "good" looks
-            like, and onboard you to a pilot where every run is explainable and human-approved.
-          </p>
+          <FormattedText 
+            text={t("index.finalCTA.description")}
+            className="text-lg text-muted-foreground max-w-2xl mx-auto space-y-4"
+          />
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button asChild size="lg" className="text-base px-8">
-              <a href="mailto:kontakt@colleaiq.dk?subject=Pilot%20interest">Get in Touch</a>
+              <a href="mailto:kontakt@colleaiq.dk?subject=Pilot%20interest">{t("index.finalCTA.ctaPrimary")}</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8">
-              <a href="/story">Learn about our mission</a>
+              <a href="/story">{t("index.finalCTA.ctaSecondary")}</a>
             </Button>
           </div>
         </div>
