@@ -116,22 +116,6 @@ export const InteractiveAgentDiagram = () => {
         </Card>
       </div>
 
-      {/* Info Banner */}
-      {activeAgent && (
-        <div className="mt-8 animate-fade-in">
-          <Card className={`${
-            activeAgent === "red" ? agents[0].bgColor : agents[1].bgColor
-          } border-border rounded-2xl`}>
-            <CardContent className="p-6 text-center">
-              <p className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">
-                  Hover over each agent to learn more about their role in the multi-agent network
-                </span>
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      )}
     </div>
   );
 };

@@ -119,30 +119,6 @@ const Solution = () => {
               <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
                 <CardContent className="p-8 space-y-4">
                   <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
-                    <AlertTriangle className="h-7 w-7 text-destructive" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">Red-Team Agent</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Simulates realistic attack paths in safe, bounded sandbox environments. Focuses on how an attacker could move under agreed scenarios, without touching live systems.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
-                <CardContent className="p-8 space-y-4">
-                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
-                    <Shield className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">Blue-Team Agent</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Collects observations from each rehearsal, notes which steps worked in the sandbox and highlights where controls did or did not stop the path.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
-                <CardContent className="p-8 space-y-4">
-                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
                     <Lock className="h-7 w-7 text-primary" />
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">Sandbox Environment</h3>
