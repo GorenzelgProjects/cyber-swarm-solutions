@@ -8,10 +8,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const { toast } = useToast();
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
@@ -22,10 +20,22 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: t('contact.formSuccess'),
-      description: "",
-    });
+    
+    // Construct mailto link with pre-filled content
+    const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Company: ${formData.company || 'N/A'}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    const mailtoLink = `mailto:kontakt@colleaiq.dk?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Clear form
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
