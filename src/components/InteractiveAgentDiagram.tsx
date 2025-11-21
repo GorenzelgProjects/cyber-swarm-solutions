@@ -51,7 +51,7 @@ export const InteractiveAgentDiagram = () => {
               <h3 className={`text-2xl font-semibold text-center ${agents[0].color}`}>
                 {agents[0].title}
               </h3>
-              <p className="text-muted-foreground text-center leading-relaxed">
+              <p className="text-base text-muted-foreground text-center leading-relaxed">
                 {agents[0].description}
               </p>
             </CardContent>
@@ -77,7 +77,7 @@ export const InteractiveAgentDiagram = () => {
               <h3 className={`text-2xl font-semibold text-center ${agents[1].color}`}>
                 {agents[1].title}
               </h3>
-              <p className="text-muted-foreground text-center leading-relaxed">
+              <p className="text-base text-muted-foreground text-center leading-relaxed">
                 {agents[1].description}
               </p>
             </CardContent>
@@ -93,7 +93,7 @@ export const InteractiveAgentDiagram = () => {
               <Database className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-2">Sandbox Environment</h4>
+              <h4 className="font-semibold text-base text-foreground mb-2">Sandbox Environment</h4>
               <p className="text-sm text-muted-foreground">
                 Safe, isolated testing grounds where red-team agents launch simulated attacks without risk to production systems.
               </p>
@@ -107,7 +107,7 @@ export const InteractiveAgentDiagram = () => {
               <AlertCircle className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-2">Explainable Outputs</h4>
+              <h4 className="font-semibold text-base text-foreground mb-2">Explainable Outputs</h4>
               <p className="text-sm text-muted-foreground">
                 Every detection and recommendation includes full context, reasoning, and audit trails for compliance and trust.
               </p>
