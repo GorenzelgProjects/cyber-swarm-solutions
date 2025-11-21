@@ -48,7 +48,7 @@ const Post = () => {
                     day: "numeric",
                     year: "numeric",
                   })}{" "}
-                  • 7 min read
+                  • 6 min read
                 </span>
               </div>
             </div>
