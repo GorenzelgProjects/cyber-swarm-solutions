@@ -93,8 +93,8 @@ export const InteractiveAgentDiagram = () => {
               <Database className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h4 className="font-semibold text-base text-foreground mb-2">Sandbox Environment</h4>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-semibold text-2xl text-foreground mb-2">Sandbox Environment</h3>
+              <p className="text-base text-muted-foreground">
                 Safe, isolated testing grounds where red-team agents launch simulated attacks without risk to production systems.
               </p>
             </div>
@@ -107,8 +107,8 @@ export const InteractiveAgentDiagram = () => {
               <AlertCircle className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h4 className="font-semibold text-base text-foreground mb-2">Explainable Outputs</h4>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-semibold text-2xl text-foreground mb-2">Explainable Outputs</h3>
+              <p className="text-base text-muted-foreground">
                 Every detection and recommendation includes full context, reasoning, and audit trails for compliance and trust.
               </p>
             </div>
