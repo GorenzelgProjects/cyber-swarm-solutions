@@ -43,8 +43,8 @@
     "hero": {
       "badge": "Proactive cybersecurity",
       "headline": "Where Artificial Intelligence meets collective intelligence",
-      "paragraph1": "Most security tools sit on top of logs and infrastructure and wait for something to look wrong. They are great at flagging known patterns and policy violations, but they rarely explore how an attacker could actually move through your environment. Misconfigurations and weak paths can sit untouched for months, simply because nobody has walked them end-to-end.",
-      "paragraph2": "ColleaiQ is a multi-agent AI system that continuously rehearses realistic attacks in a sandbox that mirrors your setup. Specialised agents coordinate to explore attack paths, collect evidence and propose concrete actions. A human analyst stays in the loop to review and refine the results, so automation handles the repetitive exploration while judgement, risk appetite and final decisions remain human.",
+      "paragraph1": "Many security tools sit on top of logs and infrastructure and wait for something to look wrong. They are great at flagging known patterns and policy violations, yet they rarely explore how an attacker could actually move through your environment. Misconfigurations and weak paths can sit untouched for months simply because nobody has walked them end-to-end.",
+      "paragraph2": "ColleaiQ is a multi-agent AI system that continuously rehearses realistic attacks in a sandbox that mirrors your setup. Specialised agents explore attack paths, collect evidence and propose concrete actions. A human analyst reviews and refines the results, so automation handles the repetitive exploration while judgement, risk appetite and final decisions stay human.",
       "ctaPrimary": "Get in Touch",
       "ctaSecondary": "Learn About Our Mission",
       "latestPost": "Latest post: Safe Sandbox Threat Hunting →"
@@ -53,25 +53,25 @@
       "headline": "The Challenge",
       "paragraph1": "If you talk to security teams today, the picture is fairly consistent: more systems, more identities, more integrations—and attackers who can move faster than change control. Cloud, OT, third-party services and legacy infrastructure all end up on the same attack surface, but they’re rarely tested as one connected whole.",
       "paragraph2": "At the same time, the tools meant to help are mostly reactive. SIEM, EDR and threat intel feeds are strong at showing you what just happened or what is already known. They’re less good at answering a simpler question: “If someone really tried to break in here, how would they do it—and what would happen next?” That kind of end-to-end rehearsal is usually reserved for expensive red-team exercises a few times a year.",
-      "paragraph3": "On top of that you have regulation and people. Frameworks like NIS2 expect documented risk management, testing activity and clear decision trails. But the market is short on experienced analysts, and the ones that are there are already busy keeping the lights on."
+      "paragraph3": "On top of that you have regulation and people. Frameworks like NIS2 expect documented risk management, testing activity and clear decision trails. The market is short on experienced analysts, and the ones who are there are already busy keeping the lights on."
     },
     "howItWorks": {
       "headline": "How ColleaiQ works",
-      "description": "Security is hard because real attacks are sequences, not single events. ColleaiQ uses a coordinated multi-agent system to rehearse those sequences in a sandbox that mirrors your environment. Agents map plausible paths, run them safely, and attach evidence to each step. The platform then proposes concrete actions. A human analyst reviews and refines the outcome, and that decision feeds back into the system so the next run is sharper."
+      "description": "Security is hard because real attacks are sequences, not single events. ColleaiQ uses a coordinated multi-agent system to rehearse those sequences in a sandbox that mirrors your environment. Agents map plausible paths, run them safely and attach evidence to each step. The platform then proposes concrete actions. A human analyst reviews and refines the outcome, and those decisions feed back into the system so the next run is sharper."
     },
     "whyTeams": {
       "headline": "Why teams work with us",
-      "description": "Teams choose ColleaiQ because it does the boring discovery work and brings back something you can act on. It hunts newly published CVE exposures against a sandbox that mirrors your environment, so you see what would happen here, not in theory. Each result includes evidence, the affected assets, and a practical fix, then a human analyst signs it off. You spend less time stitching logs and more time closing risk.",
+      "description": "Teams choose ColleaiQ because it does the boring discovery work and brings back something you can act on. It hunts newly published CVE exposures against a sandbox that mirrors your environment, so you see what would happen in your setup instead of reading about it in the abstract. Each result includes evidence, the affected assets and a practical fix, then a human analyst signs it off. You spend less time stitching logs and more time closing risk.",
       "imageAlt1": "Security workflow with a clear audit trail",
       "imageAlt2": "Isolated sandbox that mirrors production"
     },
     "whatYouGet": {
       "headline": "What you get today",
-      "description": "We are building a threat hunting platform, currently in alpha with pilots. Today you get automatic hunts for newly published CVE exposures, safe sandbox rehearsals that mirror your environment, and evidence-first reports linking attempts to impact with a proposed fix. A human analyst stays in the loop for approval. The platform integrates with tools you already use, such as Velociraptor, your EDR and SIEM, using lightweight adapters and export to your case management."
+      "description": "We are building a threat hunting platform, currently in alpha with pilots. Today you get automatic hunts for newly published CVE exposures, safe sandbox rehearsals that mirror your environment, and evidence-first reports that link each attempt to impact with a proposed fix. A human analyst stays in the loop for approval.\n\nThe platform integrates with tools you already use, such as Velociraptor, your EDR and your SIEM, using lightweight adapters and exports to your case management."
     },
     "rehearsal": {
       "headline": "Safe rehearsal: exposure → sandbox → observations",
-      "description": "When a relevant exposure emerges, ColleaiQ designs a realistic path and runs it in the sandbox, never on live systems. You see what was tried, what actually happened, and where risk concentrates in your environment.",
+      "description": "When a relevant exposure emerges, ColleaiQ designs a realistic path and runs it in the sandbox, never on live systems. You see what was tried, what actually happened and where risk concentrates in your environment.",
       "imageAlt": "Safe rehearsal flow from exposure to observations"
     },
     "learning": {
@@ -103,7 +103,7 @@
       "point3": "Gets better with use: analyst feedback guides the agents, so each run sharpens the next."
     },
     "finalCTA": {
-      "headline": "Ready to move from reactive to proactive?",
+      "headline": "Ready to rehearse attacks before they happen for real?",
       "description": "If you want rehearsals instead of surprises, let's talk. We'll map your setup, agree on what \"good\" looks like, and onboard you to a pilot where every run is explainable and human-approved.",
       "ctaPrimary": "Get in Touch",
       "ctaSecondary": "Learn about our mission"
