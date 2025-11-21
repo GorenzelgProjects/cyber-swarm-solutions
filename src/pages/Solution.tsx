@@ -1,10 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Target, Database, Brain, GitBranch, Eye } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { InteractiveAgentDiagram } from "@/components/InteractiveAgentDiagram";
 import { Button } from "@/components/ui/button";
-import { Network, RefreshCw, CheckCircle, AlertTriangle, Lock } from "lucide-react";
+import { Network, RefreshCw, CheckCircle, Eye, Shield, Lock } from "lucide-react";
 
 const Solution = () => {
   const components = [
@@ -22,33 +21,6 @@ const Solution = () => {
       icon: RefreshCw,
       title: "Continuous Learning",
       description: "Agents learn from analyst decisions and post-simulation results. Detection rules and policies update automatically, becoming sharper and faster at countering new techniques."
-    }
-  ];
-
-  const attackScenario = [
-    {
-      phase: "Planned path",
-      icon: AlertTriangle,
-      color: "text-destructive",
-      description: "The system suggests a sequence where an attacker gains access to a low-privilege account, reaches a server that holds credentials and attempts to extract them.",
-    },
-    {
-      phase: "Rehearsal in the sandbox",
-      icon: Shield,
-      color: "text-primary",
-      description: "The rehearsal walks this path step by step in the sandbox and records where existing controls stop the attempt and where they do not.",
-    },
-    {
-      phase: "Suggested change",
-      icon: CheckCircle,
-      color: "text-accent",
-      description: "ColleaiQ produces a finding that shows which steps succeeded in the sandbox and which configuration or control changes would have blocked the path.",
-    },
-    {
-      phase: "Analyst review",
-      icon: Eye,
-      color: "text-muted-foreground",
-      description: "A human analyst reviews the result with you, checks that the suggestion is realistic in your environment and helps decide what to do next.",
     }
   ];
 
@@ -107,39 +79,12 @@ const Solution = () => {
         </section>
 
         {/* Multi-Agent Architecture */}
-        <section className="px-4 py-8 md:py-10 bg-muted/30">
+        <section className="px-4 py-8 md:py-10">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-4xl font-bold text-center mb-6 text-foreground">Multi-Agent Architecture</h2>
             <p className="text-center text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
               Our specialised AI agents work together to plan and run rehearsals in a sandbox and describe what happens in a way that people can understand and act on:
             </p>
-            
-            {/* Four key components */}
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
-                <CardContent className="p-8 space-y-4">
-                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
-                    <Lock className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">Sandbox Environment</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Isolated test environments that mirror key parts of your setup. Rehearsals run here only, so experiments never put production systems at risk.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card border-border shadow-card hover:shadow-hover transition-all rounded-2xl">
-                <CardContent className="p-8 space-y-4">
-                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center">
-                    <Eye className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">Explainable Outputs</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Summarises each rehearsal as a short, structured finding that links the attempted path, the evidence from the sandbox and the suggested changes.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
 
             <InteractiveAgentDiagram />
           </div>
@@ -147,8 +92,7 @@ const Solution = () => {
 
 
         {/* Key Advantages */}
-        <section className="px-4 py-8 md:py-10 bg-muted/30 relative overflow-hidden">
-          <div className="absolute inset-0 graph-pattern opacity-50" />
+        <section className="px-4 py-8 md:py-10 relative overflow-hidden">
           <div className="container mx-auto max-w-5xl relative z-10">
             <h2 className="text-4xl font-bold text-center mb-6 text-foreground">Key Competitive Advantages</h2>
             <Card className="bg-card border-border shadow-card rounded-2xl">
@@ -171,7 +115,7 @@ const Solution = () => {
         </section>
 
         {/* Technical Details */}
-        <section className="px-4 py-8 md:py-10">
+        <section className="px-4 py-8 md:py-10 bg-muted/30">
           <div className="container mx-auto max-w-5xl">
             <h2 className="text-4xl font-bold text-center mb-6 text-foreground">Technical Foundation</h2>
             <Card className="bg-card border-border shadow-card rounded-2xl">
@@ -221,7 +165,7 @@ const Solution = () => {
         </section>
 
         {/* CTA */}
-        <section className="px-4 py-8 md:py-10 bg-muted/30">
+        <section className="px-4 py-8 md:py-10">
           <div className="container mx-auto max-w-4xl text-center">
             <Card className="bg-gradient-mesh border-border shadow-hover rounded-2xl">
               <CardContent className="p-8 md:p-10 space-y-5">
