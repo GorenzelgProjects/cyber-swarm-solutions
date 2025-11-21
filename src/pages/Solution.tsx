@@ -27,40 +27,39 @@ const Solution = () => {
 
   const attackScenario = [
     {
-      phase: "Red Team Action",
+      phase: "Planned path",
       icon: AlertTriangle,
       color: "text-destructive",
-      description: "Simulates credential dumping from LSASS memory in a sandbox environment.",
+      description: "The system suggests a sequence where an attacker gains access to a low-privilege account, reaches a server that holds credentials and attempts to extract them.",
     },
     {
-      phase: "Blue Team Detection",
+      phase: "Rehearsal in the sandbox",
       icon: Shield,
       color: "text-primary",
-      description: "Detects suspicious memory access patterns and alerts on potential credential theft.",
+      description: "The rehearsal walks this path step by step in the sandbox and records where existing controls stop the attempt and where they do not.",
     },
     {
-      phase: "Traceable Fix",
+      phase: "Suggested change",
       icon: CheckCircle,
       color: "text-accent",
-      description: "Generates an EDR rule to block unauthorised LSASS memory access, with a full audit trail.",
+      description: "ColleaiQ produces a finding that shows which steps succeeded in the sandbox and which configuration or control changes would have blocked the path.",
     },
     {
-      phase: "Analyst Verification",
+      phase: "Analyst review",
       icon: Eye,
       color: "text-muted-foreground",
-      description: "A security analyst reviews the recommendation, verifies impact and approves deployment.",
+      description: "A human analyst reviews the result with you, checks that the suggestion is realistic in your environment and helps decide what to do next.",
     }
   ];
 
   const advantages = [
-    "Proactive vulnerability discovery before attackers",
-    "Reduced false positives through continuous learning",
-    "24/7 coverage without expanding security team",
-    "Explainable AI for audit and compliance requirements",
-    "Safe simulations in bounded sandbox environments",
-    "Integration with existing SOC workflows",
-    "NIS2-compliant traceability and documentation",
-    "EU-based technology supporting digital sovereignty"
+    "Helps you discover practical exposure paths before attackers use them",
+    "Focuses on concrete scenarios instead of only static reports",
+    "Provides clear, evidence-based findings that are easy to share with stakeholders",
+    "Runs rehearsals in safe, bounded sandbox environments",
+    "Exports results into your existing ticket or case systems",
+    "Supports NIS2 work with structured documentation of testing and decisions",
+    "Built and developed in the EU, supporting European digital sovereignty"
   ];
 
   return (
@@ -75,8 +74,8 @@ const Solution = () => {
               Our <span className="text-primary">Solution</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              A multi-agent AI system that proactively defends your organisation through 
-              continuous attack simulations and intelligent threat detection.
+              A multi-agent AI system that rehearses realistic attacks in a safe environment 
+              and turns the results into concrete, traceable findings.
             </p>
           </div>
         </section>
@@ -112,7 +111,7 @@ const Solution = () => {
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-4xl font-bold text-center mb-6 text-foreground">Multi-Agent Architecture</h2>
             <p className="text-center text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Our specialised AI agents work in concert to create continuous, proactive defence with full explainability:
+              Our specialised AI agents work together to plan and run rehearsals in a sandbox and describe what happens in a way that people can understand and act on:
             </p>
             
             {/* Four key components */}
@@ -124,8 +123,7 @@ const Solution = () => {
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">Red-Team Agent</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Simulates realistic cyber threats in safe, bounded sandbox environments. Continuously tests 
-                    for vulnerabilities by mimicking real attacker behaviour.
+                    Simulates realistic attack paths in safe, bounded sandbox environments. Focuses on how an attacker could move under agreed scenarios, without touching live systems.
                   </p>
                 </CardContent>
               </Card>
@@ -137,8 +135,7 @@ const Solution = () => {
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">Blue-Team Agent</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Monitors system telemetry, fuses signals from multiple sources and generates explainable, 
-                    auditable alerts and remediation recommendations.
+                    Collects observations from each rehearsal, notes which steps worked in the sandbox and highlights where controls did or did not stop the path.
                   </p>
                 </CardContent>
               </Card>
@@ -150,8 +147,7 @@ const Solution = () => {
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">Sandbox Environment</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Safe, isolated testing grounds where red-team agents launch simulated attacks without risk 
-                    to production systems.
+                    Isolated test environments that mirror key parts of your setup. Rehearsals run here only, so experiments never put production systems at risk.
                   </p>
                 </CardContent>
               </Card>
@@ -163,8 +159,7 @@ const Solution = () => {
                   </div>
                   <h3 className="text-2xl font-semibold text-foreground">Explainable Outputs</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Every detection and recommendation includes context, reasoning and audit trails for 
-                    compliance and trust.
+                    Summarises each rehearsal as a short, structured finding that links the attempted path, the evidence from the sandbox and the suggested changes.
                   </p>
                 </CardContent>
               </Card>
@@ -178,9 +173,9 @@ const Solution = () => {
         <section className="px-4 py-8 md:py-10">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-6">
-              <h2 className="text-4xl font-bold mb-3 text-foreground">Continuous Defence Cycle</h2>
+              <h2 className="text-4xl font-bold mb-3 text-foreground">Example rehearsal: credential theft path</h2>
               <p className="text-xl text-muted-foreground">
-                Example: Credential Dumping Attack Simulation
+                Example: rehearsing a credential-theft scenario
               </p>
             </div>
 
@@ -245,9 +240,7 @@ const Solution = () => {
                   <div>
                     <h3 className="text-2xl font-semibold mb-3 text-foreground">Advanced AI Architecture</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Our product combines generative models with advanced methods including graph analysis, 
-                      reinforcement learning and deterministic logic. This approach allows us to both emulate 
-                      attacker patterns and discover new vulnerabilities.
+                      ColleaiQ combines modern language models with graph-based views of your environment and simple rule engines. The agents use these ingredients to propose attack paths, carry out steps in the sandbox and describe what happened in normal language.
                     </p>
                   </div>
                 </div>
@@ -257,8 +250,7 @@ const Solution = () => {
                   <div>
                     <h3 className="text-2xl font-semibold mb-3 text-foreground">Expert Integration</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Expertise from professional cybersecurity specialists is integrated into the system, 
-                      enabling explainable and reliable defence strategies that security teams can trust and verify.
+                      We work with experienced security practitioners and red-teamers when we design scenarios and interpret results. Their input shapes how the agents explore and how findings are presented, so the output is useful for real security work.
                     </p>
                   </div>
                 </div>
@@ -268,8 +260,7 @@ const Solution = () => {
                   <div>
                     <h3 className="text-2xl font-semibold mb-3 text-foreground">Sandbox Environments</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      All attack simulations run in safe, bounded sandbox environments that mirror your 
-                      production infrastructure without any risk to live systems.
+                      All rehearsals run in isolated sandbox environments that mirror important parts of your production infrastructure. No simulations are executed directly against live systems.
                     </p>
                   </div>
                 </div>
@@ -279,9 +270,7 @@ const Solution = () => {
                   <div>
                     <h3 className="text-2xl font-semibold mb-3 text-foreground">Continuous Evolution</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      The system continuously learns from each simulation, analyst feedback and emerging 
-                      threat intelligence. Detection capabilities improve over time, becoming increasingly 
-                      effective at identifying and preventing sophisticated attacks.
+                      The system can use feedback from simulations and analysts to adjust which paths it explores and how it phrases recommendations. Over time, this helps make rehearsals and findings more relevant for your specific environment.
                     </p>
                   </div>
                 </div>
@@ -297,7 +286,7 @@ const Solution = () => {
               <CardContent className="p-8 md:p-10 space-y-5">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">Ready to See It in Action?</h2>
                 <p className="text-xl text-muted-foreground">
-                  Experience how our multi-agent system can transform your cybersecurity posture.
+                  See how a few focused rehearsals in a sandbox can give you clearer insight into your real exposure.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
                   <Button size="lg" className="rounded-2xl" asChild>
