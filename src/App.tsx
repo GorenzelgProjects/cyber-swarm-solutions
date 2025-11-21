@@ -18,7 +18,7 @@ import SimulationDeepDive from "./pages/SimulationDeepDive";
 import Compliance from "./pages/Compliance";
 import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
-import SafeSandboxThreatHunting from "./pages/blog/SafeSandboxThreatHunting";
+import PentagonAIHacking from "./pages/blog/PentagonAIHacking";
 import Team from "./pages/Team";
 import TeamMemberProfile from "./pages/TeamMemberProfile";
 
@@ -37,7 +37,7 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/thesis-phd" element={<ThesisPhd />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/safe-sandbox-threat-hunting" element={<SafeSandboxThreatHunting />} />
+          <Route path="/blog/pentagon-ai-hacking" element={<PentagonAIHacking />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
