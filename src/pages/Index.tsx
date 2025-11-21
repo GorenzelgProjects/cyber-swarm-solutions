@@ -246,7 +246,7 @@ const Index = () => {
       {/* Final CTA Section */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
         <div className="content-wrapper text-center space-y-8 animate-fade-in">
-          <h2 className="text-foreground">Ready to move from reactive to proactive?</h2>
+          <h2 className="text-foreground">{t("index.finalCTA.headline")}</h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             If you want rehearsals instead of surprises, let's talk. We'll map your setup, agree on what "good" looks
