@@ -37,10 +37,10 @@ const Index = () => {
 
           <div className="pt-4">
             <a
-              href="/blog/safe-sandbox-threat-hunting"
+              href={`/blog/${posts[0].slug}`}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Latest post: Safe Sandbox Threat Hunting →
+              Latest post: {posts[0].title} →
             </a>
           </div>
         </div>

@@ -10,14 +10,14 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
-    slug: "safe-sandbox-threat-hunting",
-    title: "Safe Sandbox Threat Hunting",
+    slug: "pentagon-ai-hacking",
+    title: "The US And China Are Pouring Money Into AI Hacking. Where Does That Leave Europe?",
     excerpt:
-      "We rehearse attacks in a sandbox that mirrors production—never on live systems—and ship evidence, impact and a practical fix for a human to approve.",
-    date: "2025-03-01",
+      "ChatGPT and other versions of generative AI have taken most of the spotlight over the past few years. But in a less sexy corner of AI, huge shifts are happening right now with AI-driven hacking capabilities.",
+    date: "2025-11-21",
     thumbnail: "/images/blog/safe-sandbox-thumb.webp",
-    readTime: "4 min read",
-    author: "mikkel-romvig-grongaard",
+    readTime: "6 min read",
+    author: "christoffer-christian-dreist",
   },
 ];
 
