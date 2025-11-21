@@ -5,51 +5,32 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import posts from "@/data/blog";
 import { teamMembers } from "@/data/team";
-
 const Post = () => {
   // Get author details from team data
   const post = posts.find(p => p.slug === "pentagon-ai-hacking");
   const author = post?.author ? teamMembers.find(m => m.slug === post.author) : null;
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <main className="pt-24 pb-24 px-4">
         <article className="container mx-auto max-w-[760px] space-y-8">
           <header className="space-y-6">
-            <img
-              src="/images/blog/safe-sandbox-thumb.webp"
-              alt="AI Hacking Pentagon China Europe"
-              loading="lazy"
-              width={1600}
-              height={900}
-              className="w-full max-h-[320px] object-cover rounded-xl border border-muted shadow-soft"
-            />
+            <img src="/images/blog/safe-sandbox-thumb.webp" alt="AI Hacking Pentagon China Europe" loading="lazy" width={1600} height={900} className="w-full max-h-[320px] object-cover rounded-xl border border-muted shadow-soft" />
             <div className="space-y-3">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground">
                 The US And China Are Pouring Money Into AI Hacking. Where Does That Leave Europe?
               </h1>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                {author && (
-                  <Link 
-                    to={`/team/${author.slug}`}
-                    className="flex items-center gap-2 hover:text-primary transition-colors"
-                  >
-                    <img 
-                      src={author.image}
-                      alt={author.name}
-                      className="w-8 h-8 rounded-full object-cover border border-border"
-                    />
+                {author && <Link to={`/team/${author.slug}`} className="flex items-center gap-2 hover:text-primary transition-colors">
+                    <img src={author.image} alt={author.name} className="w-8 h-8 rounded-full object-cover border border-border" />
                     <span>{author.name}</span>
-                  </Link>
-                )}
+                  </Link>}
                 <span>•</span>
                 <span>
-                  {new Date("2025-11-21").toLocaleDateString("en-US", { 
-                    month: "short", 
-                    day: "numeric", 
-                    year: "numeric" 
-                  })} • 6 min read
+                  {new Date("2025-11-21").toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric"
+                })} • 6 min read
                 </span>
               </div>
             </div>
@@ -86,9 +67,9 @@ const Post = () => {
 
             <p>The exact same characteristics and interconnectivity that makes Danish and European networks work efficiently also makes them attractive targets for attackers. In September 2024, Danish companies were on average subjected to 1,362 attempted cyberattacks per week, according to Check Point - an increase of more than 26 percent since 2023. Not every attempt turns into a crisis, but it helps explain why cybersecurity has moved from a niche topic to something boards and politicians talk about every week.</p>
 
-            <p>The arrival of AI-assisted hacking does not introduce a brand-new type of risk.</p>
+            
 
-            <p>It changes the tempo and the scale of risks that are already there. The gap between "we know this vulnerability exists in theory" and "someone has actually tried it against one of our systems" shrinks, and that gap was already uncomfortable for a lot of organisations.</p>
+            <p>The arrival of AI-assisted hacking does not introduce a brand-new type of risk. It changes the tempo and the scale of risks that are already there. The gap between &quot;we know this vulnerability exists in theory&quot; and &quot;someone has actually tried it against one of our systems&quot; shrinks, and that gap was already uncomfortable for a lot of organisations.</p>
 
             <h2>Politics and paperwork vs practical capability</h2>
 
@@ -126,8 +107,6 @@ const Post = () => {
         </article>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Post;
