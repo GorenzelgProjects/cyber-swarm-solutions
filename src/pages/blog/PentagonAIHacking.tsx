@@ -86,7 +86,7 @@ const Post = () => {
 
             <p>The exact same characteristics and interconnectivity that makes Danish and European networks work efficiently also makes them attractive targets for attackers. In September 2024, Danish companies were on average subjected to 1,362 attempted cyberattacks per week, according to Check Point - an increase of more than 26 percent since 2023. Not every attempt turns into a crisis, but it helps explain why cybersecurity has moved from a niche topic to something boards and politicians talk about every week.</p>
 
-            <h2>The arrival of AI-assisted hacking does not introduce a brand-new type of risk.</h2>
+            <p>The arrival of AI-assisted hacking does not introduce a brand-new type of risk.</p>
 
             <p>It changes the tempo and the scale of risks that are already there. The gap between "we know this vulnerability exists in theory" and "someone has actually tried it against one of our systems" shrinks, and that gap was already uncomfortable for a lot of organisations.</p>
 
