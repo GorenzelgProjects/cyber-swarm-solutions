@@ -15,7 +15,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "ChatGPT and other versions of generative AI have taken most of the spotlight over the past few years. But in a less sexy corner of AI, huge shifts are happening right now with AI-driven hacking capabilities.",
     date: "2025-11-21",
-    thumbnail: "/images/blog/safe-sandbox-thumb.webp",
+    thumbnail: "/images/blog/ai-hacking-europe.png",
     readTime: "6 min read",
     author: "christoffer-christian-dreist",
   },
