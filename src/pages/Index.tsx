@@ -54,7 +54,7 @@ const Index = () => {
 
           <FormattedText 
             text={`${t("index.challenge.paragraph1")}\n\n${t("index.challenge.paragraph2")}\n\n${t("index.challenge.paragraph3")}`}
-            className="text-lg text-muted-foreground space-y-4"
+            className="text-base text-muted-foreground space-y-4"
           />
         </div>
       </section>
@@ -65,7 +65,7 @@ const Index = () => {
           <h2 className="text-foreground">{t("index.howItWorks.headline")}</h2>
           <FormattedText 
             text={t("index.howItWorks.description")}
-            className="text-lg text-muted-foreground space-y-4 max-w-4xl mx-auto text-left"
+            className="text-xl text-muted-foreground space-y-4 max-w-4xl mx-auto text-left"
           />
         </div>
       </section>
@@ -77,10 +77,10 @@ const Index = () => {
           <div className="py-8 md:py-12">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.whyTeams.headline")}</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.whyTeams.headline")}</h3>
                 <FormattedText 
                   text={t("index.whyTeams.description")}
-                  className="text-muted-foreground space-y-4"
+                  className="text-base text-muted-foreground space-y-4"
                 />
               </div>
               <div className="md:col-span-2 order-2">
@@ -110,10 +110,10 @@ const Index = () => {
                 />
               </div>
               <div className="md:col-span-3 order-1 md:order-2 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.whatYouGet.headline")}</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.whatYouGet.headline")}</h3>
                 <FormattedText 
                   text={t("index.whatYouGet.description")}
-                  className="text-muted-foreground space-y-4"
+                  className="text-base text-muted-foreground space-y-4"
                 />
               </div>
             </div>
@@ -123,10 +123,10 @@ const Index = () => {
           <div className="py-8 md:py-12">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.rehearsal.headline")}</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.rehearsal.headline")}</h3>
                 <FormattedText 
                   text={t("index.rehearsal.description")}
-                  className="text-muted-foreground space-y-4"
+                  className="text-base text-muted-foreground space-y-4"
                 />
               </div>
               <div className="md:col-span-2 order-2">
@@ -156,10 +156,10 @@ const Index = () => {
                 />
               </div>
               <div className="md:col-span-3 order-1 md:order-2 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.learning.headline")}</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.learning.headline")}</h3>
                 <FormattedText 
                   text={t("index.learning.description")}
-                  className="text-muted-foreground space-y-4"
+                  className="text-base text-muted-foreground space-y-4"
                 />
               </div>
             </div>
@@ -169,10 +169,10 @@ const Index = () => {
           <div className="py-8 md:py-12">
             <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3 order-1 text-left">
-                <h3 className="text-xl font-serif text-foreground mb-4">{t("index.compliance.headline")}</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.compliance.headline")}</h3>
                 <FormattedText 
                   text={t("index.compliance.description")}
-                  className="text-muted-foreground space-y-4"
+                  className="text-base text-muted-foreground space-y-4"
                 />
               </div>
               <div className="md:col-span-2 order-2">
@@ -197,7 +197,7 @@ const Index = () => {
 
           <FormattedText 
             text={`${t("index.builtFor.ciso")}\n\n${t("index.builtFor.redTeams")}\n\n${t("index.builtFor.regulated")}`}
-            className="text-lg text-muted-foreground space-y-4"
+            className="text-base text-muted-foreground space-y-4"
           />
         </div>
       </section>
@@ -219,7 +219,7 @@ const Index = () => {
                     className="w-full h-auto rounded-t-xl border-b border-border"
                   />
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                    <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">
                       {posts[0].title}
                     </h3>
                     <p className="text-sm text-muted-foreground mb-2">
@@ -230,7 +230,7 @@ const Index = () => {
                       })}
                       {posts[0].readTime && ` • ${posts[0].readTime}`}
                     </p>
-                    <p className="text-muted-foreground">{posts[0].excerpt}</p>
+                    <p className="text-base text-muted-foreground">{posts[0].excerpt}</p>
                   </div>
                 </Card>
               </a>
@@ -246,7 +246,7 @@ const Index = () => {
 
           <FormattedText 
             text={`${t("index.whyColleaiQ.point1")}\n\n${t("index.whyColleaiQ.point2")}\n\n${t("index.whyColleaiQ.point3")}`}
-            className="text-lg text-muted-foreground space-y-4"
+            className="text-base text-muted-foreground space-y-4"
           />
         </div>
       </section>
@@ -261,7 +261,7 @@ const Index = () => {
 
           <FormattedText 
             text={t("index.finalCTA.description")}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto space-y-4"
+            className="text-xl text-muted-foreground max-w-2xl mx-auto space-y-4"
           />
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
