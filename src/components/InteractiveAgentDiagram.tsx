@@ -13,7 +13,7 @@ export const InteractiveAgentDiagram = () => {
       color: "text-red-600 dark:text-red-400",
       bgColor: "bg-red-50 dark:bg-red-950/20",
       borderColor: "border-red-300 dark:border-red-700",
-      description: "Simulates realistic cyber threats in safe, bounded sandbox environments. Continuously tests for vulnerabilities by mimicking real attacker behaviour.",
+      description: "The red-team agent turns an exposure or scenario into one or more multi-step attack paths. It executes those steps only inside the sandbox, records which actions succeed or fail, and marks where an attacker could realistically move next.",
       position: "left"
     },
     {
@@ -23,7 +23,7 @@ export const InteractiveAgentDiagram = () => {
       color: "text-blue-600 dark:text-blue-400",
       bgColor: "bg-blue-50 dark:bg-blue-950/20",
       borderColor: "border-blue-300 dark:border-blue-700",
-      description: "Monitors system telemetry, fuses signals from multiple sources, and generates explainable, auditable alerts and remediation recommendations.",
+      description: "The blue-team agent looks at what happened during the rehearsal: which systems were touched, which controls reacted, and where the path stayed open. It groups these observations into a clear story and drafts suggested changes, so a human analyst can review, adjust and decide what to do in the real environment.",
       position: "right"
     }
   ];
