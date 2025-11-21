@@ -43,7 +43,7 @@ const Post = () => {
                 )}
                 <span>•</span>
                 <span>
-                  {new Date("2025-11-22").toLocaleDateString("en-US", {
+                  {new Date("2025-11-21").toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
                     year: "numeric",
