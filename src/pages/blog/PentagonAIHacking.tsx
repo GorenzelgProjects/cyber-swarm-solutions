@@ -14,7 +14,7 @@ const Post = () => {
       <main className="pt-24 pb-24 px-4">
         <article className="container mx-auto max-w-[760px] space-y-8">
           <header className="space-y-6">
-            <img src="/images/blog/ai-hacking-europe.png" alt="AI Hacking Pentagon China Europe" loading="lazy" width={1600} height={900} className="w-full max-h-[320px] object-cover rounded-xl border border-muted shadow-soft" />
+            <img src="/images/blog/ai-hacking-europe.png" alt="AI Hacking Pentagon China Europe" loading="lazy" width={1600} height={900} className="w-full object-contain rounded-xl border border-muted shadow-soft" />
             <div className="space-y-3">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground">
                 The US And China Are Pouring Money Into AI Hacking. Where Does That Leave Europe?
