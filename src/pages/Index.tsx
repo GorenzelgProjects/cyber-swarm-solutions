@@ -76,7 +76,7 @@ const Index = () => {
       <section className="px-4 pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="content-wrapper text-center space-y-6 animate-fade-in">
           <h1 className="text-foreground">
-            {t("index.hero.headline")}
+            Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence
           </h1>
 
           <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-3xl mx-auto">
