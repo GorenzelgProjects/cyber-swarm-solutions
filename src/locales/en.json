@@ -42,69 +42,51 @@
   "index": {
     "hero": {
       "badge": "Proactive cybersecurity",
-      "headline": "Where artificial intelligence rehearses real attacks",
-      "paragraph1": "Most security tools watch logs and infrastructure and wait for something to look wrong. They are useful for alerts and policy checks, yet they rarely explore how an attacker could actually move through your systems. Weak paths can stay invisible for a long time simply because nobody has walked them end to end.",
-      "paragraph2": "ColleaiQ is built from the ground up as a multi-agent system for cybersecurity. A coordinated network of specialised AI agents work together: some read new exposures and understand how they relate to your setup, others plan and execute realistic attack paths in a safe sandbox, and others collect traces and turn them into a clear story. A human analyst reviews the results with you, so the agents handle the heavy exploration while risk appetite and final decisions stay human.",
+      "headline": "Where Artificial Intelligence Meets Collective Intelligence",
+      "paragraph1": "Most AI products give you one clever assistant in a box. You ask a question, it answers, and then the conversation starts over from scratch. The world rarely works that way. Real problems spill over systems, people and time. They feel more like a team project than a single prompt.",
+      "paragraph2": "ColleaiQ builds AI that behaves more like a small, well-briefed team. We specialise in coordinating groups of agents that share context, take on different roles and work through scenarios step by step in safe environments. The aim is simple: turn messy, high-stakes questions into clear stories and options that people can actually use.",
+      "paragraph3": "Right now, we are proving this out in cybersecurity. Our agents rehearse realistic attacks in sandboxes that mirror real infrastructure and bring back concrete narratives of how those attacks would unfold. Internally, we experiment with similar patterns for work around complex documents and rules, so the platform is ready for other domains when the time is right. In every case, human experts stay in the loop. The agents handle the grind; judgement and responsibility stay human.",
       "ctaPrimary": "Get in touch",
       "ctaSecondary": "Learn about our mission",
       "latestPost": "Latest post: The US And China Are Pouring Money Into AI Hacking. Where Does That Leave Europe? →"
     },
-    "challenge": {
-      "headline": "The challenge",
-      "paragraph1": "Talk to people who work with security today and a few themes repeat themselves. There are more systems, more identities and more integrations than ever. Cloud services, operational technology, third-party providers and older infrastructure all end up on the same attack surface, yet they are rarely tested as one connected whole.",
-      "paragraph2": "Many teams rely on log platforms, endpoint protection and threat intelligence feeds. These tools are strong at telling you what just happened, or warning when a known indicator appears. They are much less helpful when you want to answer a simple question:\n\n\"If someone really tried to get in here this month, where would they start, and how far could they get?\"",
-      "paragraph3": "That kind of end-to-end rehearsal is usually reserved for manual red-team exercises a few times a year. At the same time, rules such as NIS2 expect documented risk management, testing activity and clear decision trails, while experienced security people are in short supply."
+    "whatIs": {
+      "headline": "What ColleaiQ is",
+      "description": "ColleaiQ is a platform for multi-agent AI.\n\nInstead of one model trying to do everything, we coordinate several specialised agents. Some are good at reading and summarising large amounts of information. Others are better at planning multi-step procedures. Others again are designed to execute those procedures in a controlled setting and keep track of what happened along the way.\n\nAll of this happens inside a shared context for a specific task. The agents talk to each other with a common understanding of what they are doing and what \"finished\" looks like. When the work is done, the system produces something that feels less like a raw model output and more like a briefing: this is what was explored, this is what we saw, and these are realistic next steps.\n\nWe design ColleaiQ so every run leaves a trace. You can look back and see how the agents arrived where they did. That matters in any setting where you need to explain decisions to colleagues, customers or regulators."
     },
-    "howItWorks": {
-      "headline": "How ColleaiQ works in practice",
-      "description": "ColleaiQ is built around one idea: security improves when you can safely test how things fail.\n\nIn pilots today, we work with you to create a sandbox that mirrors key parts of your environment. Our multi-agent system then follows a simple rhythm:\n\n**1. Plan realistic paths**\nA group of reader and planner agents take a newly published exposure or a scenario we agree together and propose one or more plausible ways an attacker could move through your environment.\n\n**2. Rehearse them safely**\nOrchestration agents walk those paths step by step inside the sandbox, never on live systems, and record what actually happens at each stage: which actions succeed, which controls react and where the path stalls.\n\n**3. Turn it into actions**\nReporting agents assemble a short, evidence-based finding: which systems were involved, what the impact was in the sandbox, and which changes would have blocked the path.\n\nA human analyst from our side reviews each result with you. Over time, these rehearsals build up a concrete picture of how exposures behave in your specific setup instead of staying abstract."
+    "whereWeStart": {
+      "headline": "Where we start: cyber rehearsals",
+      "description": "Our first product lives in cybersecurity.\n\nOrganisations depend on a dense mix of cloud services, on-premise systems, identities and vendors. When a new weakness is discovered or a new technique makes the news, it is easy to drown in headlines and generic scores. The questions inside a specific company are far more down-to-earth:\n\nDo we have anything that looks like this?\nIf someone tried this against us, what could they actually reach?\n\nColleaiQ uses multi-agent AI as a rehearsal engine for those questions.\n\nTogether with a customer, we set up a safe \"digital stage\" that mirrors key parts of their environment. On that stage, agent teams explore realistic attack paths. They walk those paths step by step, always inside the sandbox, and observe what actually happens under the current setup.\n\nThe output is a short, evidence-based story. It describes the path that was tried, how far it went, which systems and identities were involved, and which practical changes would have cut the path short. A human analyst from our side reviews the story with the customer and helps turn it into concrete action.\n\nThe result feels less like another dashboard and more like a series of rehearsals: \"this is how the attack would play out here, and this is how we could change the script.\""
     },
-    "whyTeams": {
-      "headline": "Why teams try ColleaiQ",
-      "description": "Teams use ColleaiQ because multi-agent rehearsals take on the slow discovery work and come back with something concrete.\n\nIn the current alpha, ColleaiQ can:\n\n• track selected newly published vulnerabilities that are relevant for your technology stack\n\n• run rehearsals for agreed exposures in a sandbox that mirrors important parts of your environment\n\n• produce short reports that link each rehearsal to affected systems and suggested changes\n\nEvery run is signed off by a human analyst. You get fewer \"maybe\" findings and more specific examples such as: \"here is what we tried in the sandbox, here is how far it went under your current setup, and here is what would have stopped it.\"",
-      "imageAlt1": "Security workflow with a clear audit trail",
-      "imageAlt2": "Isolated sandbox that mirrors production"
+    "whyStart": {
+      "headline": "Why we start here",
+      "description": "Cybersecurity is a demanding place to test a multi-agent platform.\n\nThe systems are complex, the pressure is real, and the line between \"interesting idea\" and \"actually useful\" is very sharp. Exposure paths either reach something important or they do not. That clarity is useful when you are shaping how agents should behave, how they should talk to each other and how they should report back to humans.\n\nIt also forces us to care about reliability. When agents explore possible attacks on real-world infrastructure, it matters that they keep track of what they are doing, avoid drifting away from the scenario and explain themselves in a way that experienced security people respect. Those habits carry over to any other domain we touch later."
     },
-    "whatYouGet": {
-      "headline": "What you can use today",
-      "description": "ColleaiQ is in alpha with pilot customers. We prefer to be clear about what is ready now and what is still in progress.\n\nRight now, you can expect:\n\n• multi-agent, exposure-driven rehearsals for selected newly published vulnerabilities\n\n• safe sandbox runs that never touch production systems\n\n• evidence-first findings that show attempt → observation → suggested fix\n\n• lightweight integrations with existing tools such as Velociraptor, endpoint protection and log platforms, plus export into your case or ticket system\n\nWe are still early. Some things require our hands-on help, and we only take on a small number of pilots at a time. The upside is that you can influence how the product grows."
+    "whatUnlock": {
+      "headline": "What this could unlock",
+      "description": "The patterns we use in cyber show up in other places.\n\nA lot of professional work revolves around long chains of reasoning, large piles of documents and rules that keep evolving. Someone has to keep the whole picture in their head while checking details and playing through \"what if\" scenarios.\n\nInside ColleaiQ, we run small internal experiments where agent teams read and compare complex material, check obligations against rules and sketch out how different choices would play out over time. These are not public products yet. They are ways for us to test how far the platform can stretch without sacrificing traceability and human control.\n\nIf you work in law, regulation, critical infrastructure or operational risk and you recognise these patterns, we are always interested in early conversations about what a careful pilot might look like."
     },
-    "rehearsal": {
-      "headline": "Safe rehearsal: exposure → sandbox → observations",
-      "description": "When a relevant exposure appears, we work with you to decide whether it is worth rehearsing. If it is, ColleaiQ sets up a realistic path in the sandbox and runs it step by step.\n\nYou see what was attempted, what actually worked inside the sandbox, and where risk tends to concentrate in your environment under that scenario.",
-      "imageAlt": "Safe rehearsal flow from exposure to observations"
-    },
-    "learning": {
-      "headline": "Analyst approval and learning loop",
-      "description": "For each rehearsal, the platform suggests one or more fixes. A human analyst reviews the suggestion with you, and you decide what is realistic to change.\n\nThat judgement – what you chose to do and why – feeds back into the system. Over time, this helps the agents focus on the types of paths and recommendations that match your risk appetite and constraints.",
-      "imageAlt": "Analyst approval and learning loop"
-    },
-    "compliance": {
-      "headline": "Compliance & documentation",
-      "description": "Every rehearsal links attempt → evidence → impact → decision.\n\nThis structure supports NIS2 work by giving you documentation for risk management and testing activity. We do not certify or replace your legal advisors. We provide artefacts and traceability that make it easier to show what was tested, what you learned and how you responded.",
-      "imageAlt": "Structured finding with evidence and decision log"
-    },
-    "builtFor": {
-      "headline": "Who we build for",
-      "ciso": "**Security and risk leaders**\nA way to validate your posture regularly and explain results in a few slides, backed by artefacts that hold up in audits and board discussions.",
-      "redTeams": "**Red teams and internal testers**\nLet the platform handle routine reconnaissance and repeatable paths, so you can focus on creative scenarios and bespoke tradecraft.",
-      "regulated": "**Regulated organisations**\nRepeatable rehearsals and clear evidence for sectors such as finance, healthcare and critical infrastructure, where you need both resilience and documentation."
+    "howWeWork": {
+      "headline": "How we work with pilots",
+      "description": "ColleaiQ is in active development and currently runs with a limited number of pilot customers.\n\nA typical start is simple. We talk through your world and what you are trying to understand. We agree on a narrow scope and a few scenarios that would actually teach us something. We set up a safe environment together. Then we let the agent teams work, with a human from our side watching closely, and look at the traces and stories that come out.\n\nIf those stories help you make better decisions, we continue. If they do not, we have both learned something valuable early.\n\nWe care more about finding the right partners than about scaling quickly at this stage."
     },
     "fromLab": {
       "headline": "From the lab",
-      "postTitle": "Safe Sandbox Threat Hunting",
-      "postMeta": "Mar 1, 2025 • 4 min read",
-      "postExcerpt": "We rehearse attacks in a sandbox that mirrors production—never on live systems—and deliver evidence, impact, and a practical fix for human approval."
+      "postTitle": "The US And China Are Pouring Money Into AI Hacking. Where Does That Leave Europe?",
+      "postMeta": "Nov 25, 2025 • 6 min read",
+      "postExcerpt": "Large language models have taken most of the AI spotlight in recent years. In this piece, we look at a quieter shift: how the US and China are already using AI-assisted hacking, what that means for European organisations, and why rehearsal and evidence matter when attacks speed up."
     },
-    "whyColleaiQ": {
-      "headline": "Why ColleaiQ",
-      "point1": "Built in Copenhagen with a focus on European workflows, regulation and explainability.",
-      "point2": "We favour context over raw alerts. Each finding connects an attempted path, what happened in a realistic test and why it matters for your environment.",
-      "point3": "The system improves with use. Analyst feedback shapes how the agents explore, so each run has the potential to be more relevant than the last."
+    "supporters": {
+      "headline": "Who supports us",
+      "description": "ColleaiQ is based in Copenhagen and grows inside environments that care about both AI and critical systems.\n\nWe are supported by DTU Skylab, Sagalabs, and Den Danske Maritime Fond.\n\nThese communities give us access to practitioners, researchers and early adopters who push us on both ambition and responsibility."
+    },
+    "whyDoing": {
+      "headline": "Why we are doing this",
+      "description": "We started ColleaiQ with a simple belief: some of the most important problems in society deserve more than a single answer box.\n\nSecurity, law, infrastructure and similar fields are full of moving parts and long-running processes. People working there juggle many views of the same system, many constraints and many \"what if\" scenarios at once. That is team-shaped work.\n\nMulti-agent AI offers a way to bring software closer to that reality. The hard part is getting those agents to behave in a way that experts can trust: disciplined communication, clear traces, sensible limits and room for humans to shape the outcome.\n\nOur job is to build that into products that feel natural in real workflows and earn their place next to the people doing the work."
     },
     "finalCTA": {
-      "headline": "Ready to rehearse attacks before they happen for real?",
-      "description": "If you want rehearsals instead of surprises, let's talk. We will map your setup at a sensible level of detail, agree on what \"good enough\" looks like for a pilot, and run a small set of explainable, human-approved exercises in a sandbox.\n\nFrom there we can decide together whether ColleaiQ makes a meaningful difference for your security work.",
+      "headline": "Curious what a team of AI agents could do in your world?",
+      "description": "If you work in security, law, critical infrastructure or a related area and want to explore multi-agent AI in a grounded way, we would be happy to talk.\n\nWe prefer to start small: a few well-chosen scenarios, a safe environment, agent runs that leave a clear trace, and humans firmly in the loop. From there, we decide together whether it deserves a larger role.",
       "ctaPrimary": "Get in touch",
       "ctaSecondary": "Learn about our mission"
     }
