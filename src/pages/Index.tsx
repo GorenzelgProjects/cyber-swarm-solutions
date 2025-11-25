@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Shield, Target, Eye, Network } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SupportersSection from "@/components/SupportersSection";
@@ -12,19 +12,77 @@ const Index = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>ColleaiQ - Multi-Agent AI for Cybersecurity & Complex Problem Solving</title>
+        <meta 
+          name="description" 
+          content="ColleaiQ builds AI that behaves like a well-briefed team. We coordinate groups of specialized agents for cybersecurity rehearsals, complex document analysis, and high-stakes decision-making."
+        />
+        <meta 
+          name="keywords" 
+          content="multi-agent AI, cybersecurity, AI agents, attack simulation, security rehearsal, collective intelligence, AI coordination, sandbox testing"
+        />
+        <link rel="canonical" href="https://colleaiq.dk/" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="ColleaiQ - Multi-Agent AI for Cybersecurity & Complex Problem Solving" />
+        <meta property="og:description" content="ColleaiQ builds AI that behaves like a well-briefed team. We coordinate groups of specialized agents for cybersecurity rehearsals and complex problem solving." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://colleaiq.dk/" />
+        <meta property="og:image" content="https://colleaiq.dk/logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ColleaiQ - Multi-Agent AI for Cybersecurity & Complex Problem Solving" />
+        <meta name="twitter:description" content="ColleaiQ builds AI that behaves like a well-briefed team. Specialized agents coordinate to solve complex cybersecurity and operational challenges." />
+        <meta name="twitter:image" content="https://colleaiq.dk/logo.png" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "ColleaiQ",
+            "applicationCategory": "SecurityApplication",
+            "description": "Multi-agent AI platform for cybersecurity rehearsals, attack simulations, and complex decision-making processes.",
+            "operatingSystem": "Web",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR"
+            },
+            "provider": {
+              "@type": "Organization",
+              "name": "ColleaiQ",
+              "url": "https://colleaiq.dk",
+              "logo": "https://colleaiq.dk/logo.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Elbagade 19, 2. tv",
+                "addressLocality": "Copenhagen S",
+                "postalCode": "2300",
+                "addressCountry": "DK"
+              }
+            }
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
       <section className="px-4 pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="content-wrapper text-center space-y-6 animate-fade-in">
           <h1 className="text-foreground">
-            Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence
+            {t("index.hero.headline")}
           </h1>
 
-          <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-2xl mx-auto">
+          <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-3xl mx-auto">
             <p>{t("index.hero.paragraph1")}</p>
             <p>{t("index.hero.paragraph2")}</p>
+            <p>{t("index.hero.paragraph3")}</p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -41,174 +99,79 @@ const Index = () => {
               href={`/blog/${posts[0].slug}`}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Latest post: {posts[0].title} →
+              {t("index.hero.latestPost")}
             </a>
           </div>
         </div>
       </section>
 
-      {/* The Problem Section */}
+      {/* What ColleaiQ is */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
         <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">{t("index.challenge.headline")}</h2>
+          <h2 className="text-center text-foreground">{t("index.whatIs.headline")}</h2>
 
           <FormattedText 
-            text={`${t("index.challenge.paragraph1")}\n\n${t("index.challenge.paragraph2")}\n\n${t("index.challenge.paragraph3")}`}
-            className="text-base text-muted-foreground space-y-4"
+            text={t("index.whatIs.description")}
+            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
           />
         </div>
       </section>
 
-      {/* Media Blocks */}
+      {/* Where we start: cyber rehearsals */}
       <section className="px-4 py-16 md:py-20">
-        <div className="content-wrapper text-center space-y-4">
-          <h2 className="text-foreground">{t("index.howItWorks.headline")}</h2>
+        <div className="content-wrapper space-y-8 animate-fade-in">
+          <h2 className="text-center text-foreground">{t("index.whereWeStart.headline")}</h2>
+
           <FormattedText 
-            text={t("index.howItWorks.description")}
-            className="text-xl text-muted-foreground space-y-4 max-w-4xl mx-auto text-left"
+            text={t("index.whereWeStart.description")}
+            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
           />
         </div>
       </section>
 
-      {/* Alternating media sections */}
-      <section className="px-4 py-0">
-        <div className="container-wide">
-          {/* Why teams work with us – image right */}
-          <div className="py-8 md:py-12">
-            <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
-              <div className="md:col-span-3 order-1 text-left">
-                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.whyTeams.headline")}</h3>
-                <FormattedText 
-                  text={t("index.whyTeams.description")}
-                  className="text-base text-muted-foreground space-y-4"
-                />
-              </div>
-              <div className="md:col-span-2 order-2">
-                <img
-                  src="/images/why-teams-work-with-us.png"
-                  alt={t("index.whyTeams.imageAlt1")}
-                  loading="lazy"
-                  width={960}
-                  height={540}
-                  className="w-full h-auto rounded-xl border border-muted shadow-soft"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* What you get today – image left */}
-          <div className="py-8 md:py-12">
-            <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
-              <div className="md:col-span-2 order-2 md:order-1">
-                <img
-                  src="/images/what-you-get-today.png"
-                  alt={t("index.whyTeams.imageAlt2")}
-                  loading="lazy"
-                  width={960}
-                  height={540}
-                  className="w-full h-auto rounded-xl border border-muted shadow-soft"
-                />
-              </div>
-              <div className="md:col-span-3 order-1 md:order-2 text-left">
-                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.whatYouGet.headline")}</h3>
-                <FormattedText 
-                  text={t("index.whatYouGet.description")}
-                  className="text-base text-muted-foreground space-y-4"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* How the platform works – row 1 image right */}
-          <div className="py-8 md:py-12">
-            <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
-              <div className="md:col-span-3 order-1 text-left">
-                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.rehearsal.headline")}</h3>
-                <FormattedText 
-                  text={t("index.rehearsal.description")}
-                  className="text-base text-muted-foreground space-y-4"
-                />
-              </div>
-              <div className="md:col-span-2 order-2">
-                <img
-                  src="/images/safe-rehearsal-flow.png"
-                  alt={t("index.rehearsal.imageAlt")}
-                  loading="lazy"
-                  width={960}
-                  height={540}
-                  className="w-full h-auto rounded-xl border border-muted shadow-soft"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* How the platform works – row 2 image left */}
-          <div className="py-8 md:py-12">
-            <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
-              <div className="md:col-span-2 order-2 md:order-1">
-                <img
-                  src="/images/analyst-approval-learning.png"
-                  alt={t("index.learning.imageAlt")}
-                  loading="lazy"
-                  width={960}
-                  height={540}
-                  className="w-full h-auto rounded-xl border border-muted shadow-soft"
-                />
-              </div>
-              <div className="md:col-span-3 order-1 md:order-2 text-left">
-                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.learning.headline")}</h3>
-                <FormattedText 
-                  text={t("index.learning.description")}
-                  className="text-base text-muted-foreground space-y-4"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Compliance & documentation – image right 35% */}
-          <div className="py-8 md:py-12">
-            <div className="max-w-[1180px] mx-auto grid md:grid-cols-5 gap-8 items-center">
-              <div className="md:col-span-3 order-1 text-left">
-                <h3 className="text-2xl font-semibold text-foreground mb-4">{t("index.compliance.headline")}</h3>
-                <FormattedText 
-                  text={t("index.compliance.description")}
-                  className="text-base text-muted-foreground space-y-4"
-                />
-              </div>
-              <div className="md:col-span-2 order-2">
-                <img
-                  src="/images/structured-finding-evidence.png"
-                  alt={t("index.compliance.imageAlt")}
-                  loading="lazy"
-                  width={960}
-                  height={540}
-                  className="w-full h-auto rounded-xl border border-muted shadow-soft"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases / Who It's For */}
+      {/* Why we start here */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
         <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">{t("index.builtFor.headline")}</h2>
+          <h2 className="text-center text-foreground">{t("index.whyStart.headline")}</h2>
 
           <FormattedText 
-            text={`${t("index.builtFor.ciso")}\n\n${t("index.builtFor.redTeams")}\n\n${t("index.builtFor.regulated")}`}
-            className="text-base text-muted-foreground space-y-4"
+            text={t("index.whyStart.description")}
+            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
           />
         </div>
       </section>
 
-      {/* From the lab (if post exists) */}
+      {/* What this could unlock */}
+      <section className="px-4 py-16 md:py-20">
+        <div className="content-wrapper space-y-8 animate-fade-in">
+          <h2 className="text-center text-foreground">{t("index.whatUnlock.headline")}</h2>
+
+          <FormattedText 
+            text={t("index.whatUnlock.description")}
+            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
+          />
+        </div>
+      </section>
+
+      {/* How we work with pilots */}
+      <section className="px-4 bg-muted/30 py-16 md:py-20">
+        <div className="content-wrapper space-y-8 animate-fade-in">
+          <h2 className="text-center text-foreground">{t("index.howWeWork.headline")}</h2>
+
+          <FormattedText 
+            text={t("index.howWeWork.description")}
+            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
+          />
+        </div>
+      </section>
+
+      {/* From the lab */}
       {posts.length > 0 && (
         <section className="px-4 py-16 md:py-20">
           <div className="content-wrapper space-y-8 animate-fade-in">
-            <h2 className="text-center text-foreground">From the lab</h2>
+            <h2 className="text-center text-foreground">{t("index.fromLab.headline")}</h2>
             <div className="flex justify-center">
-              <a href={`/blog/${posts[0].slug}`} className="block group max-w-[380px] w-full">
+              <a href={`/blog/${posts[0].slug}`} className="block group max-w-[680px] w-full">
                 <Card className="shadow-card hover:shadow-hover transition-all">
                   <img
                     src={posts[0].thumbnail}
@@ -219,18 +182,13 @@ const Index = () => {
                     className="w-full h-auto rounded-t-xl border-b border-border"
                   />
                   <div className="p-6">
-                    <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">
-                      {posts[0].title}
+                    <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors mb-2">
+                      {t("index.fromLab.postTitle")}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      {new Date(posts[0].date).toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
-                      {posts[0].readTime && ` • ${posts[0].readTime}`}
+                    <p className="text-sm text-muted-foreground mb-4">
+                      {t("index.fromLab.postMeta")}
                     </p>
-                    <p className="text-base text-muted-foreground">{posts[0].excerpt}</p>
+                    <p className="text-base text-muted-foreground">{t("index.fromLab.postExcerpt")}</p>
                   </div>
                 </Card>
               </a>
@@ -239,20 +197,20 @@ const Index = () => {
         </section>
       )}
 
-      {/* Why ColleaiQ / Differentiators */}
+      {/* Supporters Section */}
+      <SupportersSection />
+
+      {/* Why we are doing this */}
       <section className="px-4 py-16 md:py-20">
         <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">{t("index.whyColleaiQ.headline")}</h2>
+          <h2 className="text-center text-foreground">{t("index.whyDoing.headline")}</h2>
 
           <FormattedText 
-            text={`${t("index.whyColleaiQ.point1")}\n\n${t("index.whyColleaiQ.point2")}\n\n${t("index.whyColleaiQ.point3")}`}
-            className="text-base text-muted-foreground space-y-4"
+            text={t("index.whyDoing.description")}
+            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
           />
         </div>
       </section>
-
-      {/* Supporters Section */}
-      <SupportersSection />
 
       {/* Final CTA Section */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
@@ -277,6 +235,7 @@ const Index = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

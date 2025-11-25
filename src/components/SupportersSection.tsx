@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 const SupportersSection = () => {
+  const { t } = useTranslation();
+  
   const supporters = [
     {
       name: "DTU Skylab",
@@ -22,10 +26,10 @@ const SupportersSection = () => {
       <div className="content-wrapper text-center space-y-8">
         <div className="space-y-3">
           <h2 className="text-2xl md:text-3xl font-serif text-foreground">
-            They Support Us
+            {t("index.supporters.headline")}
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're backed by leading innovation hubs and startup programs.
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto whitespace-pre-line">
+            {t("index.supporters.description")}
           </p>
         </div>
 
