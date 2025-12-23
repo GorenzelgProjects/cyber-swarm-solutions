@@ -6,8 +6,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SupportersSection from "@/components/SupportersSection";
 import FormattedText from "@/components/FormattedText";
+import { AgentNetworkBackground } from "@/components/AgentNetworkBackground";
 import posts from "@/data/blog";
-
 const Index = () => {
   const { t } = useTranslation();
 
@@ -73,8 +73,9 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="px-4 pt-20 pb-16 md:pt-24 md:pb-20">
-        <div className="content-wrapper text-center space-y-6 animate-fade-in">
+      <section className="relative px-4 pt-20 pb-16 md:pt-24 md:pb-20 overflow-hidden">
+        <AgentNetworkBackground />
+        <div className="relative z-10 content-wrapper text-center space-y-6 animate-fade-in">
           <h1 className="text-foreground">
             Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence
           </h1>
