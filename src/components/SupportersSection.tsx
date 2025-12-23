@@ -19,6 +19,21 @@ const SupportersSection = () => {
       alt: "Den Danske Maritime Fond logo",
       logo: "/images/supporters/maritime-fond.jpg",
     },
+    {
+      name: "Google for Startups",
+      alt: "Google for Startups logo",
+      logo: "/images/supporters/google-for-startups.png",
+    },
+    {
+      name: "Mikrolegat",
+      alt: "Mikrolegat logo",
+      logo: "/images/supporters/mikrolegat.png",
+    },
+    {
+      name: "Scaleway",
+      alt: "Scaleway logo",
+      logo: "/images/supporters/scaleway.png",
+    },
   ];
 
   return (
