@@ -1,33 +1,33 @@
 {
   "nav": {
-    "mission": "Our Mission",
-    "solution": "Solution",
+    "mission": "Mission & Vision",
+    "solution": "Architecture",
     "pricing": "Pricing",
-    "story": "Our Mission",
+    "story": "The Lab",
     "team": "Team",
-    "careers": "Open Positions",
+    "careers": "Research & Careers",
     "contact": "Contact",
     "faq": "FAQ",
-    "compliance": "Compliance",
+    "compliance": "Compliance (NIS2)",
     "community": "Community",
-    "blog": "Blog"
+    "blog": "Field Notes"
   },
   "footer": {
-    "tagline": "Upgrading cybersecurity with explainable multi-agent systems",
+    "tagline": "Engineering the next generation of traceable multi-agent systems.",
     "company": "Company",
     "resources": "Resources",
     "legal": "Legal",
-    "mission": "Our Mission",
-    "story": "Our Mission",
+    "mission": "Mission",
+    "story": "The Lab",
     "team": "Team",
-    "careers": "Open Positions",
-    "blog": "Blog",
+    "careers": "Careers",
+    "blog": "Field Notes",
     "faq": "FAQ",
     "compliance": "Compliance",
     "community": "Community",
-    "solution": "Solution",
+    "solution": "Architecture",
     "pricing": "Pricing",
-    "simulationDeepDive": "Simulation Deep Dive",
+    "simulationDeepDive": "Simulation Engine",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "contact": "Contact",
@@ -37,276 +37,201 @@
     "website": "colleaiq.dk"
   },
   "preview": {
-    "banner": "ColleaiQ is under active development. Write to kontakt@colleaiq.dk"
+    "banner": "ColleaiQ is currently in closed pilot. Research inquiries: kontakt@colleaiq.dk"
   },
   "index": {
     "hero": {
-      "badge": "Proactive cybersecurity",
-      "headline": "Where Artificial Intelligence Meets Collective Intelligence",
-      "paragraph1": "Most AI products give you one clever assistant in a box. You ask a question, it answers, and then the conversation starts over from scratch. The world rarely works that way. Real problems spill over systems, people and time. They feel more like a team project than a single prompt.",
-      "paragraph2": "ColleaiQ builds AI that behaves more like a small, well-briefed team. We specialise in coordinating groups of agents that share context, take on different roles and work through scenarios step by step in safe environments. The aim is simple: turn messy, high-stakes questions into clear stories and options that people can actually use.",
-      "paragraph3": "Right now, we are proving this out in cybersecurity. Our agents rehearse realistic attacks in sandboxes that mirror real infrastructure and bring back concrete narratives of how those attacks would unfold. Internally, we experiment with similar patterns for work around complex documents and rules, so the platform is ready for other domains when the time is right. In every case, human experts stay in the loop. The agents handle the grind; judgement and responsibility stay human.",
-      "ctaPrimary": "Get in touch",
-      "ctaSecondary": "Learn about our mission",
-      "latestPost": "Latest post: The US And China Are Pouring Money Into AI Hacking. Where Does That Leave Europe? →"
+      "badge": "Multi-Agent Systems Research & Deployment",
+      "headline": "Beyond the Chatbot: Engineering Collective Intelligence.",
+      "paragraph1": "2025 is the year of the AI agent. But single agents struggle with systemic complexity. Real-world problems—whether in cybersecurity, law, or biotech—require a team, not a chatbot.",
+      "paragraph2": "ColleaiQ builds Multi-Agent Systems (MAS) where specialized nodes collaborate to solve high-stakes problems. We coordinate diverse agents—some focused on research, others on execution, others on oversight—within bounded, safe environments.",
+      "paragraph3": "We are currently proving this architecture in the most hostile environment possible: Cybersecurity. Our agents simulate attackers and defenders in sandboxed networks to produce traceable, evidence-backed defense strategies. The agents do the grunt work; the reasoning remains transparent.",
+      "ctaPrimary": "Request Pilot Access",
+      "ctaSecondary": "Explore the Architecture",
+      "latestPost": "Analysis: How Multi-Agent Networks outperform single LLMs in CVE detection →"
     },
     "whatIs": {
-      "headline": "What ColleaiQ is",
-      "description": "ColleaiQ is a platform for multi-agent AI.\n\nInstead of one model trying to do everything, we coordinate several specialised agents. Some are good at reading and summarising large amounts of information. Others are better at planning multi-step procedures. Others again are designed to execute those procedures in a controlled setting and keep track of what happened along the way.\n\nAll of this happens inside a shared context for a specific task. The agents talk to each other with a common understanding of what they are doing and what \"finished\" looks like. When the work is done, the system produces something that feels less like a raw model output and more like a briefing: this is what was explored, this is what we saw, and these are realistic next steps.\n\nWe design ColleaiQ so every run leaves a trace. You can look back and see how the agents arrived where they did. That matters in any setting where you need to explain decisions to colleagues, customers or regulators."
+      "headline": "The Architecture",
+      "description": "ColleaiQ is not a 'wrapper' for a language model. It is a coordination layer for specialized intelligence.\n\nIn a single-agent system, one model attempts to be a jack-of-all-trades. In our architecture, we instantiate distinct roles: A 'Red Team' agent that attempts to traverse a graph, a 'Blue Team' agent that monitors telemetry, and an 'Auditor' agent that logs decision trees.\n\nThese agents share a dynamic context but maintain distinct goals. They debate, verify, and converge on a solution. The output is not just a generated answer, but a verifiable workflow: 'We tested paths A, B, and C. Path B succeeded. Here is the log.'\n\nThis is 'Traceable AI' by design. We do not trust black boxes, and neither should you."
     },
     "whereWeStart": {
-      "headline": "Where we start: cyber rehearsals",
-      "description": "Our first product lives in cybersecurity.\n\nOrganisations depend on a dense mix of cloud services, on-premise systems, identities and vendors. When a new weakness is discovered or a new technique makes the news, it is easy to drown in headlines and generic scores. The questions inside a specific company are far more down-to-earth:\n\nDo we have anything that looks like this?\nIf someone tried this against us, what could they actually reach?\n\nColleaiQ uses multi-agent AI as a rehearsal engine for those questions.\n\nTogether with a customer, we set up a safe \"digital stage\" that mirrors key parts of their environment. On that stage, agent teams explore realistic attack paths. They walk those paths step by step, always inside the sandbox, and observe what actually happens under the current setup.\n\nThe output is a short, evidence-based story. It describes the path that was tried, how far it went, which systems and identities were involved, and which practical changes would have cut the path short. A human analyst from our side reviews the story with the customer and helps turn it into concrete action.\n\nThe result feels less like another dashboard and more like a series of rehearsals: \"this is how the attack would play out here, and this is how we could change the script.\""
+      "headline": "Deployment 01: Cybersecurity",
+      "description": "We chose cybersecurity as our initial domain because it is intolerant of hallucination.\n\nIn our current deployment, ColleaiQ acts as an autonomous Purple Team. It ingests your network topology and spins up safe, isolated sandboxes. Inside these sandboxes, our agents continuously simulate new attack vectors (based on the latest CVEs) against your specific configuration.\n\nIf an agent finds a breach path, it doesn't just guess—it proves it inside the sandbox. It then generates a remediation plan, which a separate agent validates against your compliance requirements. This turns 'theoretical risk' into 'empirical evidence' without ever touching your production data."
     },
     "whyStart": {
-      "headline": "Why we start here",
-      "description": "Cybersecurity is a demanding place to test a multi-agent platform.\n\nThe systems are complex, the pressure is real, and the line between \"interesting idea\" and \"actually useful\" is very sharp. Exposure paths either reach something important or they do not. That clarity is useful when you are shaping how agents should behave, how they should talk to each other and how they should report back to humans.\n\nIt also forces us to care about reliability. When agents explore possible attacks on real-world infrastructure, it matters that they keep track of what they are doing, avoid drifting away from the scenario and explain themselves in a way that experienced security people respect. Those habits carry over to any other domain we touch later."
+      "headline": "Why Start in the Trenches?",
+      "description": "We are a team of engineers, not marketers. We believe that if a Multi-Agent System can survive the adversarial nature of cybersecurity, it is ready for anything.\n\nCybersecurity demands speed, absolute precision, and explainability. By solving the 'Signal-to-Noise' problem here—where false positives cost money and false negatives cost jobs—we are refining the core coordination protocols of our MAS. \n\nThis rigorous testing ground ensures our agents learn to be conservative, factual, and audit-ready before we deploy them to other high-stakes verticals."
     },
     "whatUnlock": {
-      "headline": "What this could unlock",
-      "description": "The patterns we use in cyber show up in other places.\n\nA lot of professional work revolves around long chains of reasoning, large piles of documents and rules that keep evolving. Someone has to keep the whole picture in their head while checking details and playing through \"what if\" scenarios.\n\nInside ColleaiQ, we run small internal experiments where agent teams read and compare complex material, check obligations against rules and sketch out how different choices would play out over time. These are not public products yet. They are ways for us to test how far the platform can stretch without sacrificing traceability and human control.\n\nIf you work in law, regulation, critical infrastructure or operational risk and you recognise these patterns, we are always interested in early conversations about what a careful pilot might look like."
+      "headline": "The Roadmap: Legal & Biotech",
+      "description": "The logic we use to trace an attack vector is the same logic needed to trace a legal precedent or a biological pathway.\n\nInternally, we are already experimenting with 'LegalTech' agents that use our Proposer/Verifier architecture for complex discovery and compliance mapping. The goal is the same: ingest massive complexity, coordinate specialized sub-agents to process it, and output a human-verifiable decision trail.\n\nWhether it is NIS2 compliance today or clinical trial data analysis tomorrow, the future belongs to systems that can explain their work."
     },
     "howWeWork": {
-      "headline": "How we work with pilots",
-      "description": "ColleaiQ is in active development and currently runs with a limited number of pilot customers.\n\nA typical start is simple. We talk through your world and what you are trying to understand. We agree on a narrow scope and a few scenarios that would actually teach us something. We set up a safe environment together. Then we let the agent teams work, with a human from our side watching closely, and look at the traces and stories that come out.\n\nIf those stories help you make better decisions, we continue. If they do not, we have both learned something valuable early.\n\nWe care more about finding the right partners than about scaling quickly at this stage."
+      "headline": "Pilot Methodology",
+      "description": "We are currently working with a select group of partners who understand that this is deep technology, not a magic wand.\n\nOur pilot process is scientific. We define a hypothesis (e.g., 'Can a MAS detect this specific vulnerability class faster than a human tier-1 analyst?'). We set up the sandbox. We run the agents. We measure the results.\n\nWe are looking for partners who value transparency and engineering rigor over sales pitches."
     },
     "fromLab": {
-      "headline": "From the lab",
-      "postTitle": "The US And China Are Pouring Money Into AI Hacking. Where Does That Leave Europe?",
-      "postMeta": "Nov 25, 2025 • 6 min read",
-      "postExcerpt": "Large language models have taken most of the AI spotlight in recent years. In this piece, we look at a quieter shift: how the US and China are already using AI-assisted hacking, what that means for European organisations, and why rehearsal and evidence matter when attacks speed up."
+      "headline": "Field Notes",
+      "postTitle": "Traceability in Agentic Networks: Why 'Chain of Thought' isn't enough for NIS2.",
+      "postMeta": "Engineering Blog • 5 min read",
+      "postExcerpt": "Standard LLMs offer reasoning traces, but they are often post-hoc rationalizations. Here is how we enforce deterministic logging in our agent communications to satisfy EU audit requirements."
     },
     "supporters": {
-      "headline": "Who supports us",
-      "description": "ColleaiQ is based in Copenhagen and grows inside environments that care about both AI and critical systems.\n\nThese communities give us access to practitioners, researchers and early adopters who push us on both ambition and responsibility."
+      "headline": "Ecosystem & Research",
+      "description": "ColleaiQ operates out of Copenhagen, leveraging the strong Scandinavian tradition of trust and digital sovereignty.\n\nWe collaborate closely with academic institutions to ensure our multi-agent orchestration remains at the state of the art."
     },
     "whyDoing": {
-      "headline": "Why we are doing this",
-      "description": "We started ColleaiQ with a simple belief: some of the most important problems in society deserve more than a single answer box.\n\nSecurity, law, infrastructure and similar fields are full of moving parts and long-running processes. People working there juggle many views of the same system, many constraints and many \"what if\" scenarios at once. That is team-shaped work.\n\nMulti-agent AI offers a way to bring software closer to that reality. The hard part is getting those agents to behave in a way that experts can trust: disciplined communication, clear traces, sensible limits and room for humans to shape the outcome.\n\nOur job is to build that into products that feel natural in real workflows and earn their place next to the people doing the work."
+      "headline": "The Engineering Philosophy",
+      "description": "We founded ColleaiQ because we saw a gap between 'AI Demos' and 'Production Engineering.'\n\nDemo AI is impressive but fragile. Production engineering requires redundancy, error-handling, and accountability. By building Multi-Agent Systems, we introduce redundancy into the AI itself. If one agent fails, another catches it. If one hallucinates, another corrects it.\n\nThis is how we move AI from a novelty to a critical infrastructure component."
     },
     "finalCTA": {
-      "headline": "Curious what a team of AI agents could do in your world?",
-      "description": "If you work in security, law, critical infrastructure or a related area and want to explore multi-agent AI in a grounded way, we would be happy to talk.\n\nWe prefer to start small: a few well-chosen scenarios, a safe environment, agent runs that leave a clear trace, and humans firmly in the loop. From there, we decide together whether it deserves a larger role.",
-      "ctaPrimary": "Get in touch",
-      "ctaSecondary": "Learn about our mission"
+      "headline": "Deploy the Lab.",
+      "description": "If you are ready to move beyond simple chatbots and explore what a coordinated Multi-Agent System can do for your security or compliance posture, let's talk.\n\nWe are engineers. We promise no fluff, just code that works and results we can prove.",
+      "ctaPrimary": "Contact Engineering",
+      "ctaSecondary": "Read the Whitepaper"
     }
   },
   "story": {
     "hero": {
-      "headline": "Our Mission",
-      "subtitle": "We bridge advanced AI and cybersecurity to create proactive, explainable protection for organizations that cannot wait for the next incident."
+      "headline": "The Lab's Mission",
+      "subtitle": "Bridging the gap between academic Multi-Agent research and industrial-grade Cybersecurity."
     },
     "vision": {
-      "headline": "Vision",
-      "description": "2025 has been called the year of agentic AI. ColleaiQ explores the natural next step: multi-agent networks. Our goal is to make this approach usable in European cybersecurity—so defense can get ahead of threats."
+      "headline": "The Next Step",
+      "description": "2025 is the year of Agentic AI. We are building the infrastructure for what comes next: Multi-Agent Networks. Our goal is to bring structure, safety, and traceability to autonomous systems."
     },
     "platform": {
-      "description": "Specialized AI agents simulate realistic attacker behavior in secure, contained environments and translate findings into clear, auditable actions your SOC can use."
-    },
-    "journey": {
-      "headline": "The Journey",
-      "genesis": {
-        "title": "Genesis",
-        "description": "The multi-agent foundation began in support/HR tasks. The complexity fit better in technical domains."
-      },
-      "pivot": {
-        "title": "Strategic Pivot",
-        "description": "Conversations with Danish IT and security companies pointed to a gap in cybersecurity—here our technology matched the challenge."
-      },
-      "innovation": {
-        "title": "Innovation Focus",
-        "description": "We build the bridge between AI and security: from agentic AI to collaborative multi-agent networks."
-      },
-      "leadership": {
-        "title": "European Leadership",
-        "description": "We develop in Denmark with an eye on EU needs, data handling, and documentation requirements."
-      }
+      "description": "We do not build black boxes. We build glass boxes. Our platform coordinates specialized agents in full view of the operator, translating complex autonomous actions into simple, auditable logs."
     },
     "whyNow": {
-      "headline": "Why Now?",
+      "headline": "The Context",
       "threat": {
-        "title": "The European threat landscape",
-        "description": "An intensified security environment demands robust digital infrastructure and operations."
+        "title": "The Automation Gap",
+        "description": "Attackers are already using AI to automate vulnerability discovery. Defenders cannot rely on manual labor alone to keep up."
       },
       "vulnerability": {
-        "title": "Digital vulnerability",
-        "description": "Denmark is highly digital—the benefits come with increased risk. Many companies are not adequately secured."
-      },
-      "wakeup": {
-        "title": "Wake-up call",
-        "description": "NotPetya against Mærsk in 2017 cost up to DKK 2 billion. Downtime costs—even today."
+        "title": "Complexity is the Enemy",
+        "description": "Modern infrastructure is too complex for a single human—or a single AI model—to secure. It requires a network of specialists."
       },
       "sovereignty": {
-        "title": "Digital sovereignty",
-        "description": "Danish-developed technology, scalable in the EU, aligned with European sovereignty goals."
+        "title": "Digital Sovereignty",
+        "description": "We are building in Europe, for Europe. We prioritize data locality, NIS2 compliance, and transparent auditing."
       }
     },
     "mission": {
-      "description": "To become a natural tool in the work for cybersecurity and sovereignty—explainable and secure AI for high-risk sectors such as energy, defense, shipping and critical infrastructure."
+      "description": "To create the standard for Explainable Multi-Agent Systems. We start by securing critical infrastructure, but our horizon is the automation of complex, high-trust knowledge work."
     }
   },
   "solution": {
     "hero": {
-      "headline": "Our Solution",
-      "subtitle": "A multi-agent AI system that defends proactively through continuous attack simulations and explainable recommendations."
+      "headline": "The Architecture",
+      "subtitle": "A technical overview of our Proactive Defense System."
     },
     "components": {
-      "headline": "Core Components",
+      "headline": "System Nodes",
       "multiAgent": {
-        "title": "Multi-agent collaboration",
-        "description": "Specialized agents work together. \"Red\" simulates, \"blue\" monitors and defends."
+        "title": "The Agent Swarm",
+        "description": "Distinct agent personas (Red Team, Blue Team, Auditor) instantiated with specific tools and permissions."
       },
       "traceable": {
-        "title": "Traceable recommendations",
-        "description": "Every action is explainable and auditable—helps with NIS2 documentation."
+        "title": "The Ledger",
+        "description": "A continuously updated graph of every decision, API call, and reasoning step taken by the swarm."
       },
       "learning": {
-        "title": "Continuous learning",
-        "description": "Agents learn from analyst decisions and results—sharpen rules and focus over time."
+        "title": "Feedback Loops",
+        "description": "Deterministic post-simulation analysis that updates the system's rule engine based on success/failure rates."
       }
     },
     "architecture": {
-      "headline": "Architecture",
-      "redTeam": "Red team agent → simulates threats in sandbox.",
-      "blueTeam": "Blue team agent → gathers signals, explains findings and proposes remediation.",
-      "sandbox": "Sandbox environment → secure, isolated, mirrors production.",
-      "explainable": "Explainable outputs → context, rationale and audit trail."
-    },
-    "cycle": {
-      "headline": "Continuous defense cycle — example (Credential Dumping)",
-      "red": "Red: simulates LSASS extraction in sandbox",
-      "blue": "Blue: detects patterns and warns",
-      "solution": "Solution: generate EDR rule with audit trail",
-      "analyst": "Analyst: reviews, assesses, approves"
+      "headline": "Data Flow",
+      "redTeam": "Red Team Agent: Ingests CTI data, crafts attack vectors, executes in sandbox.",
+      "blueTeam": "Blue Team Agent: Monitors sandbox telemetry, fuses signals, generates detection logic.",
+      "sandbox": "Isolation Layer: Docker/K8s based ephemeral environments for safe detonation.",
+      "explainable": "Output Layer: Natural language reporting mapped to MITRE ATT&CK framework."
     },
     "benefits": {
-      "headline": "Benefits",
-      "benefit1": "Finds weaknesses before attackers",
-      "benefit2": "Reduces false positives through learning",
-      "benefit3": "24/7 coverage without expanding the team",
-      "benefit4": "Explainable AI for audit and compliance",
-      "benefit5": "Safe simulations in contained environments",
-      "benefit6": "Fits into existing SOC flows",
-      "benefit7": "Traceability that helps NIS2",
-      "benefit8": "EU-developed technology"
+      "headline": "System Capabilities",
+      "benefit1": "Autonomous Vulnerability Validation (Zero-False Positives)",
+      "benefit2": "Continuous 24/7 Threat Simulation",
+      "benefit3": "Automated NIS2 Compliance Documentation",
+      "benefit4": "Human-in-the-loop Approval Gates",
+      "benefit5": "Knowledge Graph Construction",
+      "benefit6": "Rapid CVE Impact Analysis",
+      "benefit7": "Full Audit Trail for Regulatory Review",
+      "benefit8": "On-Premise / Private Cloud Deployment Options"
     },
     "technical": {
-      "headline": "Technical Foundation",
-      "description": "Generative models combined with graph analysis, RL and deterministic logic. Expertise from security specialists is integrated for explainable, credible results."
+      "headline": "Under the Hood",
+      "description": "Our stack combines Large Language Models for reasoning with Graph Neural Networks for structure and Symbolic Logic for safety. This hybrid approach allows us to utilize the creativity of GenAI while enforcing the strict boundaries required by security operations."
     },
     "cta": {
-      "headline": "Ready to see it in practice?",
-      "description": "Experience how our multi-agent system can elevate your security.",
-      "ctaPrimary": "Book a demo",
-      "ctaSecondary": "See the simulation process"
-    }
-  },
-  "blog": {
-    "hero": {
-      "headline": "Blog",
-      "subtitle": "Brief field notes while we build ColleaiQ—what we tried, what worked, and what we changed."
-    },
-    "safeSandbox": {
-      "title": "Safe Sandbox Threat Hunting",
-      "date": "Mar 1, 2025",
-      "readTime": "4 min read",
-      "excerpt": "We rehearse attacks in a sandbox that mirrors production—never on live systems—and deliver evidence, impact, and a practical fix for human approval."
+      "headline": "Examine the Tech",
+      "description": "We are happy to walk technical teams through our architecture and sandbox safety protocols.",
+      "ctaPrimary": "Schedule Technical Deep Dive",
+      "ctaSecondary": "View API Documentation"
     }
   },
   "team": {
     "hero": {
-      "headline": "Team",
-      "subtitle": "Three founders building sober, proactive cybersecurity."
+      "headline": "The Engineers",
+      "subtitle": "A multidisciplinary team combining AI research with operational security experience."
     },
     "mikkel": {
       "title": "CEO & Co-founder",
-      "description": "Sets direction and drives partnerships.",
-      "cta": "View profile"
+      "description": "Focus: Strategic partnerships and MAS application theory.",
+      "cta": "Linkedin"
     },
     "martin": {
       "title": "CTO & Co-founder",
-      "description": "Builds the technical platform for our multi-agent system.",
-      "cta": "View profile"
+      "description": "Focus: System architecture, agent coordination protocols, and sandbox security.",
+      "cta": "GitHub"
     },
     "christoffer": {
       "title": "CFO & Co-founder",
-      "description": "Operations, partnerships and planning.",
-      "cta": "View profile"
+      "description": "Focus: Operations, compliance strategy, and resource planning.",
+      "cta": "Linkedin"
     }
   },
   "careers": {
-    "badge": "Alpha stage team",
-    "headline": "Open Positions",
-    "intro": "We're a small team and we hire rarely and deliberately. There are no open roles right now.",
-    "noHiring": "We're not hiring right now",
-    "thesisTitle": "Thesis & PhD collaborations",
-    "thesisDescription": "Challenging, real-world work with guidance and the chance to publish.",
-    "thesisLearnMore": "Learn more",
-    "futureTitle": "What we may open next",
-    "futureSubtitle": "(not open today)",
+    "badge": "Join the Lab",
+    "headline": "Research & Engineering Roles",
+    "intro": "We are an engineering-first company. We value curiosity, rigor, and the ability to read academic papers as well as write production code.",
+    "thesisTitle": "University Collaboration",
+    "thesisDescription": "We are actively looking for Master's and PhD students interested in Multi-Agent Reinforcement Learning (MARL) and Explainable AI (XAI).",
+    "thesisLearnMore": "Academic Inquiries",
     "futureRoles": {
-      "engineer": "Software Engineer (agents / backend)",
-      "frontend": "Frontend / Product Engineer",
-      "analyst": "Security Analyst (advisor / part-time)"
+      "engineer": "Systems Engineer (Rust/Python)",
+      "frontend": "Product Engineer (React/Graph Viz)",
+      "analyst": "Cybersecurity Researcher (Red Teaming)"
     },
-    "interestedTitle": "Interested?",
-    "interestedDescription": "Use the Contact page to write us a short note (e.g., \"Thesis/PhD partnership\" or \"Future roles\").",
-    "contactButton": "Contact Us",
-    "noPositions": "No positions available."
+    "interestedTitle": "Collaborate",
+    "interestedDescription": "Whether you are a researcher or an engineer, if you are obsessed with multi-agent systems, ping us.",
+    "contactButton": "Contact Team"
   },
   "compliance": {
     "hero": {
-      "headline": "Compliance & Security",
-      "subtitle": "Built for EU requirements—transparent, auditable, and aligned with digital sovereignty."
+      "headline": "Compliance & Trust",
+      "subtitle": "Security is not a feature; it is the baseline. We build for the strictest EU standards."
     },
     "nis2": {
-      "headline": "NIS2",
-      "description": "EU's NIS2 sets stricter requirements for critical infrastructure and essential services. ColleaiQ helps with:",
-      "risk": "Continuous risk assessment—proactive simulations find weaknesses early.",
-      "incident": "Incident response—explainable recommendations for rapid reaction.",
-      "management": "Security management—complete logging and audit trail.",
-      "supply": "Supply chain—European-developed solution for sovereignty."
-    },
-    "features": {
-      "headline": "Security & Compliance Features",
-      "nis2Ready": "Ready for NIS2 documentation",
-      "explainability": "Explainability as standard",
-      "secure": "Secure development practices (sandbox, privacy, human control)",
-      "sovereignty": "Data sovereignty in focus"
-    },
-    "standards": {
-      "headline": "Standards & Best Practice",
-      "iso": "ISO 27001-supported infrastructure",
-      "gdpr": "GDPR considerations",
-      "audit": "Complete audit trail",
-      "sandbox": "Secure sandbox isolation",
-      "encryption": "End-to-end encryption",
-      "rbac": "RBAC"
-    },
-    "documentation": {
-      "headline": "Documentation?",
-      "description": "Contact us for your specific requirements. We deliver detailed documentation and evidence for audits and certifications.",
-      "ctaPrimary": "Contact compliance team",
-      "ctaSecondary": "See how it works"
+      "headline": "NIS2 Readiness",
+      "description": "The NIS2 directive requires 'technical and organizational measures' to manage risk. ColleaiQ automates the evidence gathering for these measures.",
+      "risk": "Risk Analysis: Automated, continuous testing of your defense posture.",
+      "incident": "Incident Handling: Pre-computed response plans for high-probability threats.",
+      "management": "Accountability: A permanent, unalterable log of all security tests.",
+      "supply": "Sovereignty: Built in Denmark, hosted in the EU, fully GDPR compliant."
     }
   },
   "contact": {
-    "badge": "Get in Touch",
-    "headline": "Contact ColleaiQ",
-    "description": "We're here to answer questions, discuss pilots, or explore thesis/PhD partnerships. Reach out below.",
-    "infoTitle": "Contact Information",
-    "infoEmail": "Email",
-    "infoOffice": "Office",
-    "infoWebsite": "Website",
-    "formTitle": "Send us a message",
+    "badge": "Connect",
+    "headline": "Contact the Lab",
+    "description": "We are currently prioritizing pilot partners in the Critical Infrastructure and Legal sectors.",
+    "formTitle": "Initiate Protocol",
     "formName": "Name",
-    "formEmail": "Email",
-    "formCompany": "Company (optional)",
-    "formMessage": "Message",
-    "formButton": "Send Message",
-    "formSuccess": "Thank you for your message. We'll get back to you soon!",
-    "demoTitle": "Request a Demo",
-    "demoDescription": "Want to see our platform in action? Schedule a demo with our team.",
-    "demoButton": "Request Demo"
+    "formEmail": "Work Email",
+    "formCompany": "Organization",
+    "formMessage": "Technical Query / Pilot Interest",
+    "formButton": "Transmit",
+    "formSuccess": "Message received. Our team will analyze and respond."
   }
 }
