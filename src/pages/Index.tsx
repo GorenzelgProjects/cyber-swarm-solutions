@@ -8,7 +8,6 @@ import SupportersSection from "@/components/SupportersSection";
 import FormattedText from "@/components/FormattedText";
 import { ThoughtStreamBackground } from "@/components/ThoughtStreamBackground";
 import { SimulationView } from "@/components/SimulationView";
-import { LabInterface } from "@/components/LabInterface";
 import { ResearchTimeline } from "@/components/ResearchTimeline";
 import posts from "@/data/blog";
 const Index = () => {
@@ -111,18 +110,13 @@ const Index = () => {
 
       {/* What ColleaiQ is */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
-        <div className="content-wrapper space-y-12 animate-fade-in">
-          <div className="space-y-8">
-            <h2 className="text-center text-foreground">{t("index.whatIs.headline")}</h2>
+        <div className="content-wrapper space-y-8 animate-fade-in">
+          <h2 className="text-center text-foreground">{t("index.whatIs.headline")}</h2>
 
-            <FormattedText 
-              text={t("index.whatIs.description")}
-              className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
-            />
-          </div>
-
-          {/* Lab Interface Demo */}
-          <LabInterface />
+          <FormattedText 
+            text={t("index.whatIs.description")}
+            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
+          />
         </div>
       </section>
 
@@ -209,17 +203,6 @@ const Index = () => {
       {/* Supporters Section */}
       <SupportersSection />
 
-      {/* Why we are doing this */}
-      <section className="px-4 py-16 md:py-20">
-        <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">{t("index.whyDoing.headline")}</h2>
-
-          <FormattedText 
-            text={t("index.whyDoing.description")}
-            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
-          />
-        </div>
-      </section>
 
       {/* Final CTA Section */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
