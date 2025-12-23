@@ -9,6 +9,7 @@ import FormattedText from "@/components/FormattedText";
 import { ThoughtStreamBackground } from "@/components/ThoughtStreamBackground";
 import { SimulationView } from "@/components/SimulationView";
 import { LabInterface } from "@/components/LabInterface";
+import { ResearchTimeline } from "@/components/ResearchTimeline";
 import posts from "@/data/blog";
 const Index = () => {
   const { t } = useTranslation();
@@ -168,6 +169,9 @@ const Index = () => {
             text={t("index.whatUnlock.description")}
             className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
           />
+
+          {/* Research Timeline */}
+          <ResearchTimeline />
         </div>
       </section>
 
