@@ -72,7 +72,7 @@ const SupportersSection = () => {
                 <img
                   src={supporter.logo}
                   alt={supporter.alt}
-                  className="h-12 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                  className="h-12 md:h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
             ))}
