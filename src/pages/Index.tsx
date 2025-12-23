@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import SupportersSection from "@/components/SupportersSection";
 import FormattedText from "@/components/FormattedText";
 import { AgentNetworkBackground } from "@/components/AgentNetworkBackground";
+import { SimulationView } from "@/components/SimulationView";
 import posts from "@/data/blog";
 const Index = () => {
   const { t } = useTranslation();
@@ -120,13 +121,23 @@ const Index = () => {
 
       {/* Where we start: cyber rehearsals */}
       <section className="px-4 py-16 md:py-20">
-        <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">{t("index.whereWeStart.headline")}</h2>
+        <div className="content-wrapper space-y-12 animate-fade-in">
+          <div className="space-y-8">
+            <h2 className="text-center text-foreground">{t("index.whereWeStart.headline")}</h2>
 
-          <FormattedText 
-            text={t("index.whereWeStart.description")}
-            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
-          />
+            <FormattedText 
+              text={t("index.whereWeStart.description")}
+              className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
+            />
+          </div>
+
+          {/* Simulation View - Traceable AI Demo */}
+          <div className="pt-4">
+            <p className="text-center text-sm text-muted-foreground mb-6">
+              See how our agents work — technical trace on the left, human briefing on the right
+            </p>
+            <SimulationView />
+          </div>
         </div>
       </section>
 
