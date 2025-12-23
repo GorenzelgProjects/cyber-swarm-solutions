@@ -175,25 +175,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* How we work with pilots */}
-      <section className="px-4 bg-muted/30 py-16 md:py-20">
-        <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">{t("index.howWeWork.headline")}</h2>
-
-          <FormattedText 
-            text={t("index.howWeWork.description")}
-            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
-          />
-        </div>
-      </section>
-
       {/* From the lab */}
       {posts.length > 0 && (
-        <section className="px-4 py-16 md:py-20">
-          <div className="content-wrapper space-y-8 animate-fade-in">
-            <h2 className="text-center text-foreground">{t("index.fromLab.headline")}</h2>
+        <section className="px-4 py-12 md:py-16 bg-muted/30">
+          <div className="content-wrapper space-y-6 animate-fade-in">
+            <h2 className="text-center text-foreground text-xl md:text-2xl">{t("index.fromLab.headline")}</h2>
             <div className="flex justify-center">
-              <a href={`/blog/${posts[0].slug}`} className="block group max-w-[680px] w-full">
+              <a href={`/blog/${posts[0].slug}`} className="block group max-w-[520px] w-full">
                 <Card className="shadow-card hover:shadow-hover transition-all">
                   <img
                     src={posts[0].thumbnail}
@@ -203,14 +191,13 @@ const Index = () => {
                     loading="lazy"
                     className="w-full h-auto rounded-t-xl border-b border-border"
                   />
-                  <div className="p-6">
-                    <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors mb-2">
-                      {t("index.fromLab.postTitle")}
+                  <div className="p-4">
+                    <h3 className="text-base md:text-lg font-semibold group-hover:text-primary transition-colors mb-2 leading-snug">
+                      The US And China Are Pouring Money Into AI Hacking. Where Does That Leave Europe?
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      {t("index.fromLab.postMeta")}
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      ChatGPT and other versions of generative AI have taken most of the spotlight over the past few years and have added billions of dollars of value to companies. It is easy to get lost in all the news and product launches, but in a less sexy corner of AI, huge shifts are happening right now.
                     </p>
-                    <p className="text-base text-muted-foreground">{t("index.fromLab.postExcerpt")}</p>
                   </div>
                 </Card>
               </a>
