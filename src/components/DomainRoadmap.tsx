@@ -63,8 +63,6 @@ const statusStyles = {
 export const DomainRoadmap = () => {
   return (
     <div className="relative">
-      {/* Connection line */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-sage via-primary/30 to-muted-foreground/20 hidden md:block" />
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         {domains.map((domain, index) => {
