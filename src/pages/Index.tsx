@@ -133,26 +133,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Where we start: cyber rehearsals */}
-      <section className="px-4 py-16 md:py-20">
-        <div className="content-wrapper space-y-12 animate-fade-in">
-          <div className="space-y-8">
-            <h2 className="text-center text-foreground">{t("index.whereWeStart.headline")}</h2>
-
-            <p className="text-base text-muted-foreground max-w-3xl mx-auto text-center">
-              Our first application domain is cybersecurity. Agents simulate attacks in a sandbox, while another team analyzes defenses and produces structured reports.
-            </p>
-          </div>
-
-          {/* Simulation View - Traceable AI Demo */}
-          <div className="pt-4">
-            <p className="text-center text-sm text-muted-foreground mb-6">
-              See how our agents work — technical trace on the left, human briefing on the right
-            </p>
-            <SimulationView />
-          </div>
-        </div>
-      </section>
 
       {/* Beyond Security - Domain Roadmap */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
