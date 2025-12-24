@@ -15,7 +15,7 @@ import Community from "./pages/Community";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import SimulationDeepDive from "./pages/SimulationDeepDive";
-import Compliance from "./pages/Compliance";
+
 import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
 import PentagonAIHacking from "./pages/blog/PentagonAIHacking";
@@ -42,7 +42,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/simulation-deep-dive" element={<SimulationDeepDive />} />
-          <Route path="/compliance" element={<Compliance />} />
+          
           <Route path="/careers" element={<Careers />} />
           <Route path="/team" element={<Team />} />
           <Route path="/team/:slug" element={<TeamMemberProfile />} />
