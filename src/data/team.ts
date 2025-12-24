@@ -71,6 +71,25 @@ export const teamMembers: TeamMember[] = [
     caresAbout:
       "Bridging the gap between complex technology and practical implementation. Focused on translating technical innovation into clear business value, partnerships, and communication that make advanced ideas understandable and actionable.",
   },
+  {
+    name: "Rasmus Saugmann Sørensen",
+    firstName: "Rasmus",
+    title: "Junior Developer",
+    slug: "rasmus-saugmann-sorensen",
+    image: "/images/team/rasmus.png",
+    focus: "Development and technical implementation.",
+    intro:
+      "Engineer from DTU; currently pursuing an MSc in Human-Centered Artificial Intelligence. Contributing to ColleaiQ's technical development.",
+    degree: "DTU — BSc Engineering",
+    track: "MSc track — Human-Centered Artificial Intelligence",
+    background: [
+      "DTU — BSc Engineering",
+      "MSc track — Human-Centered Artificial Intelligence",
+      "ColleaiQ — Junior Developer",
+    ],
+    caresAbout:
+      "Building reliable, user-focused software that makes complex security systems accessible and effective.",
+  },
 ];
 
 export default teamMembers;
