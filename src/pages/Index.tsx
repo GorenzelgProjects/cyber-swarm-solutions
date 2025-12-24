@@ -5,11 +5,13 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SupportersSection from "@/components/SupportersSection";
-import FormattedText from "@/components/FormattedText";
 import { ThoughtStreamBackground } from "@/components/ThoughtStreamBackground";
 import { SimulationView } from "@/components/SimulationView";
 import { ResearchTimeline } from "@/components/ResearchTimeline";
+import { AgentNetworkGraph } from "@/components/AgentNetworkGraph";
+import { SingleAgentBottleneck } from "@/components/SingleAgentBottleneck";
 import posts from "@/data/blog";
+
 const Index = () => {
   const { t } = useTranslation();
 
@@ -79,13 +81,12 @@ const Index = () => {
         <ThoughtStreamBackground />
         <div className="relative z-10 content-wrapper text-center space-y-6 animate-fade-in">
           <h1 className="text-foreground">
-            Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence
+            Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence.
           </h1>
 
           <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-3xl mx-auto">
-            <p>{t("index.hero.paragraph1")}</p>
-            <p>{t("index.hero.paragraph2")}</p>
-            <p>{t("index.hero.paragraph3")}</p>
+            <p>Most AI interactions are one-on-one. You prompt, it answers. But complex problems require a process, not just an answer.</p>
+            <p>We are building the coordination layer that allows specialized AI agents to work together. We treat AI less like a magic box and more like a briefing room.</p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -108,15 +109,27 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What ColleaiQ is */}
+      {/* Single Agent Bottleneck */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
-        <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">{t("index.whatIs.headline")}</h2>
+        <div className="content-wrapper max-w-2xl mx-auto">
+          <SingleAgentBottleneck />
+        </div>
+      </section>
 
-          <FormattedText 
-            text={t("index.whatIs.description")}
-            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
-          />
+      {/* The Architecture */}
+      <section className="px-4 py-16 md:py-20">
+        <div className="content-wrapper space-y-8 animate-fade-in">
+          <div className="space-y-4 max-w-3xl mx-auto">
+            <h2 className="text-foreground">The Architecture</h2>
+            <p className="text-muted-foreground">
+              For any given task, we spin up a specific team of agents. They share a context but have different instructions (System Prompts). This separation of duties forces logic and traceability.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              <strong>Interact with the nodes below</strong> to understand the role of each agent in our current prototype swarm.
+            </p>
+          </div>
+
+          <AgentNetworkGraph />
         </div>
       </section>
 
@@ -126,10 +139,9 @@ const Index = () => {
           <div className="space-y-8">
             <h2 className="text-center text-foreground">{t("index.whereWeStart.headline")}</h2>
 
-            <FormattedText 
-              text={t("index.whereWeStart.description")}
-              className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
-            />
+            <p className="text-base text-muted-foreground max-w-3xl mx-auto text-center">
+              Our first application domain is cybersecurity. Agents simulate attacks in a sandbox, while another team analyzes defenses and produces structured reports.
+            </p>
           </div>
 
           {/* Simulation View - Traceable AI Demo */}
@@ -147,10 +159,9 @@ const Index = () => {
         <div className="content-wrapper space-y-8 animate-fade-in">
           <h2 className="text-center text-foreground">{t("index.whyStart.headline")}</h2>
 
-          <FormattedText 
-            text={t("index.whyStart.description")}
-            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
-          />
+          <p className="text-base text-muted-foreground max-w-3xl mx-auto text-center">
+            Cybersecurity is the perfect proving ground for multi-agent coordination. It's high-stakes, verifiable, and requires both adversarial thinking and structured analysis.
+          </p>
         </div>
       </section>
 
@@ -159,10 +170,9 @@ const Index = () => {
         <div className="content-wrapper space-y-8 animate-fade-in">
           <h2 className="text-center text-foreground">{t("index.whatUnlock.headline")}</h2>
 
-          <FormattedText 
-            text={t("index.whatUnlock.description")}
-            className="text-base text-muted-foreground space-y-4 max-w-3xl mx-auto"
-          />
+          <p className="text-base text-muted-foreground max-w-3xl mx-auto text-center">
+            Beyond cybersecurity, coordinated AI agents could transform legal discovery, financial auditing, medical diagnostics, and any domain requiring structured multi-step reasoning.
+          </p>
 
           {/* Research Timeline */}
           <ResearchTimeline />
@@ -209,10 +219,9 @@ const Index = () => {
         <div className="content-wrapper text-center space-y-8 animate-fade-in">
           <h2 className="text-foreground">{t("index.finalCTA.headline")}</h2>
 
-          <FormattedText 
-            text={t("index.finalCTA.description")}
-            className="text-xl text-muted-foreground max-w-2xl mx-auto space-y-4"
-          />
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Ready to see how coordinated AI could work for your security challenges?
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button asChild size="lg" className="text-base px-8">
