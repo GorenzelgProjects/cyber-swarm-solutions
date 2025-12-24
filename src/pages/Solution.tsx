@@ -1,22 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { InteractiveAgentDiagram } from "@/components/InteractiveAgentDiagram";
 import { Button } from "@/components/ui/button";
-import { Network, RefreshCw, CheckCircle, Eye, Shield, Lock } from "lucide-react";
+import { Swords, Shield, ClipboardCheck, Server, Network, Users, RefreshCw, Target, FileText, Scale } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+import Plot from "react-plotly.js";
 
 const Solution = () => {
-  const advantages = [
-    "Helps you discover practical exposure paths before attackers use them",
-    "Focuses on concrete scenarios instead of only static reports",
-    "Provides clear, evidence-based findings that are easy to share with stakeholders",
-    "Runs rehearsals in safe, bounded sandbox environments",
-    "Exports results into your existing ticket or case systems",
-    "Supports NIS2 work with structured documentation of testing and decisions",
-    "Built and developed in the EU, supporting European digital sovereignty"
-  ];
-
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -37,6 +28,124 @@ const Solution = () => {
       "NIS2 compliance support",
       "EU-developed cybersecurity"
     ]
+  };
+
+  const agents = [
+    {
+      type: "Offensive Node",
+      name: "Red-Team Agent",
+      icon: <Swords className="w-5 h-5" />,
+      iconBg: "bg-destructive/10",
+      iconColor: "text-destructive",
+      description: "Turns exposures into multi-step attack paths. It executes steps inside the sandbox to prove feasibility."
+    },
+    {
+      type: "Defensive Node",
+      name: "Blue-Team Agent",
+      icon: <Shield className="w-5 h-5" />,
+      iconBg: "bg-primary/10",
+      iconColor: "text-primary",
+      description: "Monitors rehearsal logs to see which controls reacted and where detection gaps exist."
+    },
+    {
+      type: "Verification Node",
+      name: "Auditor Agent",
+      icon: <ClipboardCheck className="w-5 h-5" />,
+      iconBg: "bg-sage/20",
+      iconColor: "text-sage",
+      description: "Logs every decision point and reasoning step. Meets NIS2 requirements through full visibility."
+    },
+    {
+      type: "Infrastructure",
+      name: "The Sandbox",
+      icon: <Server className="w-5 h-5" />,
+      iconBg: "bg-muted",
+      iconColor: "text-muted-foreground",
+      description: "Isolated testing grounds mirroring your production without risk to live operations."
+    }
+  ];
+
+  const foundationItems = [
+    {
+      icon: <Network className="w-5 h-5" />,
+      title: "Graph Integration",
+      description: "The agents use a graph representation of assets to identify logical connection points that traditional scanners miss."
+    },
+    {
+      icon: <Users className="w-5 h-5" />,
+      title: "Expert Design",
+      description: "Scenario logic is designed by experienced red-teamers, ensuring agents explore realistic, high-impact paths."
+    },
+    {
+      icon: <RefreshCw className="w-5 h-5" />,
+      title: "Continuous Evolution",
+      description: "Post-simulation results feed back into the system, sharpening the agents' detection and exploration logic."
+    }
+  ];
+
+  const outcomes = [
+    {
+      number: "01",
+      icon: <Target className="w-6 h-6" />,
+      title: "Practical Exposure",
+      description: "Discover actual attack paths before malicious actors can use them. Move beyond theoretical risks into concrete rehearsals."
+    },
+    {
+      number: "02",
+      icon: <FileText className="w-6 h-6" />,
+      title: "Evidence-Based Findings",
+      description: "Share findings with stakeholders that are backed by logs, not just opinions. Ideal for board-level reporting."
+    },
+    {
+      number: "03",
+      icon: <Scale className="w-6 h-6" />,
+      title: "NIS2 Support",
+      description: "Structured documentation of testing and decisions that aligns directly with European cybersecurity mandates."
+    }
+  ];
+
+  // Chart data for Simulation Efficacy
+  const chartData = {
+    data: [
+      {
+        x: ['Discovery Time', 'Verification Time', 'Documentation Time', 'Total Cycle'],
+        y: [100, 100, 100, 100],
+        name: 'Manual Testing',
+        type: 'bar' as const,
+        marker: { color: 'hsl(var(--muted-foreground))' }
+      },
+      {
+        x: ['Discovery Time', 'Verification Time', 'Documentation Time', 'Total Cycle'],
+        y: [25, 15, 10, 20],
+        name: 'ColleaiQ',
+        type: 'bar' as const,
+        marker: { color: 'hsl(var(--sage))' }
+      }
+    ],
+    layout: {
+      barmode: 'group' as const,
+      paper_bgcolor: 'transparent',
+      plot_bgcolor: 'transparent',
+      font: { color: 'hsl(var(--muted-foreground))', family: 'Inter, system-ui, sans-serif' },
+      legend: { 
+        orientation: 'h' as const, 
+        y: -0.2,
+        font: { size: 12 }
+      },
+      margin: { t: 20, b: 80, l: 60, r: 20 },
+      yaxis: { 
+        title: 'Relative Time (%)',
+        gridcolor: 'hsl(var(--border))',
+        zerolinecolor: 'hsl(var(--border))'
+      },
+      xaxis: {
+        tickangle: 0
+      }
+    },
+    config: {
+      displayModeBar: false,
+      responsive: true
+    }
   };
 
   return (
@@ -65,170 +174,194 @@ const Solution = () => {
       </Helmet>
       <Navigation />
       
-      <div className="pt-12 pb-10">
+      <main className="pt-12 pb-10">
         {/* Hero */}
-        <section className="px-4 py-8 md:py-10 relative overflow-hidden">
-          <header className="container mx-auto max-w-4xl text-center space-y-6 animate-fade-in relative z-10">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground">
-              Our <span className="text-primary">Solution</span>
+        <section className="px-4 py-12 md:py-16">
+          <header className="container mx-auto max-w-4xl text-center space-y-6 animate-fade-in">
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Document: Our Solution</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+              Rehearsing Resilience.
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              A multi-agent AI system that rehearses realistic attacks in a safe environment 
-              and turns the results into concrete, traceable findings.
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              ColleaiQ is a multi-agent AI system that rehearses realistic attacks in a safe, bounded environment. 
+              We don't just find vulnerabilities; we turn them into concrete, traceable findings.
             </p>
           </header>
         </section>
 
-        {/* Core Components */}
-        <section className="px-4 py-8 md:py-10 bg-muted/30" aria-labelledby="core-components">
+        {/* Multi-Agent Collaboration */}
+        <section className="px-4 py-12 md:py-16 bg-muted/30">
           <div className="container mx-auto max-w-6xl">
-            <h2 id="core-components" className="text-4xl font-bold text-center mb-8 text-foreground">Core Components</h2>
-            <div className="grid md:grid-cols-3 gap-8" role="list">
-              <article className="bg-card border-border shadow-card hover:shadow-hover transition-all duration-300 animate-fade-in rounded-2xl">
-                <div className="p-8 space-y-4">
-                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center" aria-hidden="true">
-                    <Network className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">Multi-Agent Collaboration</h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Specialised agents work together in real time: red-team agents simulate attacks while blue-team agents monitor, detect and defend across assets and environments.
-                  </p>
-                </div>
-              </article>
-              <article className="bg-card border-border shadow-card hover:shadow-hover transition-all duration-300 animate-fade-in rounded-2xl" style={{ animationDelay: '0.1s' }}>
-                <div className="p-8 space-y-4">
-                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center" aria-hidden="true">
-                    <Eye className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">Traceable Recommendations</h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Every decision and action is fully explainable and auditable. Meet NIS2 compliance requirements with complete visibility into agent reasoning and recommendations.
-                  </p>
-                </div>
-              </article>
-              <article className="bg-card border-border shadow-card hover:shadow-hover transition-all duration-300 animate-fade-in rounded-2xl" style={{ animationDelay: '0.2s' }}>
-                <div className="p-8 space-y-4">
-                  <div className="h-14 w-14 rounded-2xl bg-muted flex items-center justify-center" aria-hidden="true">
-                    <RefreshCw className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground">Continuous Learning</h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Agents learn from analyst decisions and post-simulation results. Detection rules and policies update automatically, becoming sharper and faster at countering new techniques.
-                  </p>
-                </div>
-              </article>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Multi-Agent Collaboration</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Instead of one generalist model, we structure work into specific roles. This separation of duties is the cornerstone of our explainability.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {agents.map((agent, index) => (
+                <motion.div
+                  key={agent.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                >
+                  <Card className="h-full border-border bg-card hover:shadow-hover transition-shadow">
+                    <CardContent className="p-6 space-y-4">
+                      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{agent.type}</p>
+                      <div className="flex items-center gap-3">
+                        <div className={`w-10 h-10 rounded-lg ${agent.iconBg} ${agent.iconColor} flex items-center justify-center`}>
+                          {agent.icon}
+                        </div>
+                        <h3 className="font-semibold text-foreground">{agent.name}</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{agent.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Multi-Agent Architecture */}
-        <section className="px-4 py-8 md:py-10" aria-labelledby="architecture">
-          <div className="container mx-auto max-w-6xl">
-            <h2 id="architecture" className="text-4xl font-bold text-center mb-6 text-foreground">Multi-Agent Architecture</h2>
-            <p className="text-center text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Our specialised AI agents work together to plan and run rehearsals in a sandbox and describe what happens in a way that people can understand and act on:
-            </p>
+        {/* Foundation */}
+        <section className="px-4 py-12 md:py-16">
+          <div className="container mx-auto max-w-5xl">
+            <div className="mb-10">
+              <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">Foundation 01</p>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Advanced AI Architecture</h2>
+              <p className="text-muted-foreground max-w-3xl">
+                ColleaiQ combines modern language models with <strong>graph-based views</strong> of your environment and deterministic rule engines.
+              </p>
+            </div>
 
-            <InteractiveAgentDiagram />
+            <div className="grid md:grid-cols-3 gap-6">
+              {foundationItems.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="flex gap-4"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
+        {/* Simulation Efficacy Chart */}
+        <section className="px-4 py-12 md:py-16 bg-muted/30">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-foreground mb-2">Simulation Efficacy (Manual vs. ColleaiQ)</h2>
+              <p className="text-muted-foreground">
+                ColleaiQ accelerates the "Time to Verification" by automating the rehearsal process in bounded environments.
+              </p>
+            </div>
 
-        {/* Key Advantages */}
-        <section className="px-4 py-8 md:py-10 relative overflow-hidden" aria-labelledby="advantages">
-          <div className="container mx-auto max-w-5xl relative z-10">
-            <h2 id="advantages" className="text-4xl font-bold text-center mb-6 text-foreground">Key Competitive Advantages</h2>
-            <Card className="bg-card border-border shadow-card rounded-2xl">
-              <CardContent className="p-8 md:p-12">
-                <ul className="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                  {advantages.map((advantage, index) => (
-                    <li 
-                      key={index}
-                      className="flex items-start gap-3 animate-fade-in"
-                      style={{ animationDelay: `${index * 0.05}s` }}
-                    >
-                      <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
-                      <span className="text-base text-muted-foreground leading-relaxed">{advantage}</span>
-                    </li>
-                  ))}
-                </ul>
+            <Card className="bg-card border-border">
+              <CardContent className="p-6">
+                <Plot
+                  data={chartData.data}
+                  layout={chartData.layout}
+                  config={chartData.config}
+                  style={{ width: '100%', height: '300px' }}
+                  useResizeHandler
+                />
               </CardContent>
             </Card>
           </div>
         </section>
 
-        {/* Technical Details */}
-        <section className="px-4 py-8 md:py-10 bg-muted/30" aria-labelledby="technical">
+        {/* The Resulting Intelligence */}
+        <section className="px-4 py-12 md:py-16">
           <div className="container mx-auto max-w-5xl">
-            <h2 id="technical" className="text-4xl font-bold text-center mb-6 text-foreground">Technical Foundation</h2>
-            <Card className="bg-card border-border shadow-card rounded-2xl">
-              <CardContent className="p-8 md:p-12 space-y-10">
-                <article className="flex items-start gap-4">
-                  <Network className="h-8 w-8 text-primary flex-shrink-0 mt-1" aria-hidden="true" />
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-foreground">Advanced AI Architecture</h3>
-                    <p className="text-base text-muted-foreground leading-relaxed">
-                      ColleaiQ combines modern language models with graph-based views of your environment and simple rule engines. The agents use these ingredients to propose attack paths, carry out steps in the sandbox and describe what happened in normal language.
-                    </p>
-                  </div>
-                </article>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-foreground mb-4">The Resulting Intelligence.</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                The primary output of ColleaiQ isn't a list of bugs; it's a verifiable story of your organization's resilience.
+              </p>
+            </div>
 
-                <article className="flex items-start gap-4">
-                  <Shield className="h-8 w-8 text-primary flex-shrink-0 mt-1" aria-hidden="true" />
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-foreground">Expert Integration</h3>
-                    <p className="text-base text-muted-foreground leading-relaxed">
-                      We work with experienced security practitioners and red-teamers when we design scenarios and interpret results. Their input shapes how the agents explore and how findings are presented, so the output is useful for real security work.
-                    </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {outcomes.map((outcome, index) => (
+                <motion.div
+                  key={outcome.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-sage/10 text-sage mb-4">
+                    <span className="text-lg font-bold">{outcome.number}</span>
                   </div>
-                </article>
+                  <h3 className="font-semibold text-foreground mb-2">{outcome.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{outcome.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                <article className="flex items-start gap-4">
-                  <Lock className="h-8 w-8 text-primary flex-shrink-0 mt-1" aria-hidden="true" />
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-foreground">Sandbox Environments</h3>
-                    <p className="text-base text-muted-foreground leading-relaxed">
-                      All rehearsals run in isolated sandbox environments that mirror important parts of your production infrastructure. No simulations are executed directly against live systems.
-                    </p>
-                  </div>
-                </article>
+        {/* Continuous Learning Loop */}
+        <section className="px-4 py-12 md:py-16 bg-muted/30">
+          <div className="container mx-auto max-w-4xl">
+            <Card className="bg-card border-border overflow-hidden">
+              <CardContent className="p-8 md:p-10">
+                <div className="text-center mb-8">
+                  <h2 className="text-2xl font-bold text-foreground mb-3">Continuous Learning Loop</h2>
+                  <p className="text-muted-foreground max-w-2xl mx-auto">
+                    Our agents learn from analyst decisions and simulation results. As you interact with the system, the detection rules and rehearsal policies update automatically.
+                  </p>
+                </div>
 
-                <article className="flex items-start gap-4">
-                  <RefreshCw className="h-8 w-8 text-primary flex-shrink-0 mt-1" aria-hidden="true" />
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-foreground">Continuous Evolution</h3>
-                    <p className="text-base text-muted-foreground leading-relaxed">
-                      The system can use feedback from simulations and analysts to adjust which paths it explores and how it phrases recommendations. Over time, this helps make rehearsals and findings more relevant for your specific environment.
-                    </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+                  <div className="flex items-center gap-3 px-6 py-3 bg-primary/10 rounded-lg border border-primary/20">
+                    <RefreshCw className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium text-foreground">Analysis Ingestion</span>
                   </div>
-                </article>
+                  <div className="hidden sm:block text-muted-foreground">→</div>
+                  <div className="sm:hidden text-muted-foreground">↓</div>
+                  <div className="flex items-center gap-3 px-6 py-3 bg-sage/10 rounded-lg border border-sage/20">
+                    <RefreshCw className="w-5 h-5 text-sage" />
+                    <span className="text-sm font-medium text-foreground">Policy Refinement</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="px-4 py-8 md:py-10" aria-labelledby="cta">
-          <div className="container mx-auto max-w-4xl text-center">
-            <Card className="bg-gradient-mesh border-border shadow-hover rounded-2xl">
-              <CardContent className="p-8 md:p-10 space-y-5">
-                <h2 id="cta" className="text-4xl font-bold text-foreground">Ready to See It in Action?</h2>
-                <p className="text-xl text-muted-foreground">
-                  See how a few focused rehearsals in a sandbox can give you clearer insight into your real exposure.
-                </p>
-                <nav className="flex flex-col sm:flex-row gap-4 justify-center mt-6" aria-label="Call to action">
-                  <Button size="lg" className="rounded-2xl" asChild>
-                    <a href="/contact">Request a Demo</a>
-                  </Button>
-                  <Button size="lg" variant="outline" className="rounded-2xl" asChild>
-                    <a href="/simulation-deep-dive">Explore Simulation Process</a>
-                  </Button>
-                </nav>
-              </CardContent>
-            </Card>
+        <section className="px-4 py-12 md:py-16">
+          <div className="container mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-4">Ready to see it in action?</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              See how a few focused rehearsals in a sandbox can give you clearer insight into your real exposure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <a href="/contact">Request a Demo</a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="/pricing">View Pricing</a>
+              </Button>
+            </div>
           </div>
         </section>
-      </div>
+      </main>
 
       <Footer />
     </div>
