@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import SupportersSection from "@/components/SupportersSection";
 import { ThoughtStreamBackground } from "@/components/ThoughtStreamBackground";
 import { SimulationView } from "@/components/SimulationView";
-import { ResearchTimeline } from "@/components/ResearchTimeline";
 import { AgentNetworkGraph } from "@/components/AgentNetworkGraph";
 import { SingleAgentBottleneck } from "@/components/SingleAgentBottleneck";
+import { DomainRoadmap } from "@/components/DomainRoadmap";
 import posts from "@/data/blog";
 
 const Index = () => {
@@ -76,48 +76,48 @@ const Index = () => {
       <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section */}
+      {/* Hero Section with Bottleneck */}
       <section className="relative px-4 pt-20 pb-16 md:pt-24 md:pb-20 overflow-hidden">
         <ThoughtStreamBackground />
-        <div className="relative z-10 content-wrapper text-center space-y-6 animate-fade-in">
-          <h1 className="text-foreground">
-            Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence.
-          </h1>
+        <div className="relative z-10 content-wrapper space-y-12 animate-fade-in">
+          <div className="text-center space-y-6">
+            <h1 className="text-foreground">
+              Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence.
+            </h1>
 
-          <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-3xl mx-auto">
-            <p>Most AI interactions are one-on-one. You prompt, it answers. But complex problems require a process, not just an answer.</p>
-            <p>We are building the coordination layer that allows specialized AI agents to work together. We treat AI less like a magic box and more like a briefing room.</p>
+            <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-3xl mx-auto">
+              <p>Most AI interactions are one-on-one. You prompt, it answers. But complex problems require a process, not just an answer.</p>
+              <p>We are building the coordination layer that allows specialized AI agents to work together. We treat AI less like a magic box and more like a briefing room.</p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+              <Button asChild size="lg" className="text-base px-8">
+                <a href="mailto:kontakt@colleaiq.dk">{t("index.hero.ctaPrimary")}</a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-base px-8">
+                <a href="/story">{t("index.hero.ctaSecondary")}</a>
+              </Button>
+            </div>
+
+            <div className="pt-4">
+              <a
+                href={`/blog/${posts[0].slug}`}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                {t("index.hero.latestPost")}
+              </a>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <Button asChild size="lg" className="text-base px-8">
-              <a href="mailto:kontakt@colleaiq.dk">{t("index.hero.ctaPrimary")}</a>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="text-base px-8">
-              <a href="/story">{t("index.hero.ctaSecondary")}</a>
-            </Button>
+          {/* Single Agent Bottleneck - now in hero */}
+          <div className="max-w-2xl mx-auto">
+            <SingleAgentBottleneck />
           </div>
-
-          <div className="pt-4">
-            <a
-              href={`/blog/${posts[0].slug}`}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              {t("index.hero.latestPost")}
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Single Agent Bottleneck */}
-      <section className="px-4 bg-muted/30 py-16 md:py-20">
-        <div className="content-wrapper max-w-2xl mx-auto">
-          <SingleAgentBottleneck />
         </div>
       </section>
 
       {/* The Architecture */}
-      <section className="px-4 py-16 md:py-20">
+      <section className="px-4 bg-muted/30 py-16 md:py-20">
         <div className="content-wrapper space-y-8 animate-fade-in">
           <div className="space-y-4 max-w-3xl mx-auto">
             <h2 className="text-foreground">The Architecture</h2>
@@ -154,28 +154,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why we start here */}
+      {/* Beyond Security - Domain Roadmap */}
       <section className="px-4 bg-muted/30 py-16 md:py-20">
         <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">{t("index.whyStart.headline")}</h2>
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <h2 className="text-foreground">Beyond Security</h2>
+            <p className="text-base text-muted-foreground">
+              Cybersecurity is the perfect proving ground—high-stakes, verifiable, and demanding both adversarial thinking and structured analysis. But our coordination layer extends further.
+            </p>
+          </div>
 
-          <p className="text-base text-muted-foreground max-w-3xl mx-auto text-center">
-            Cybersecurity is the perfect proving ground for multi-agent coordination. It's high-stakes, verifiable, and requires both adversarial thinking and structured analysis.
-          </p>
-        </div>
-      </section>
-
-      {/* What this could unlock */}
-      <section className="px-4 py-16 md:py-20">
-        <div className="content-wrapper space-y-8 animate-fade-in">
-          <h2 className="text-center text-foreground">{t("index.whatUnlock.headline")}</h2>
-
-          <p className="text-base text-muted-foreground max-w-3xl mx-auto text-center">
-            Beyond cybersecurity, coordinated AI agents could transform legal discovery, financial auditing, medical diagnostics, and any domain requiring structured multi-step reasoning.
-          </p>
-
-          {/* Research Timeline */}
-          <ResearchTimeline />
+          <DomainRoadmap />
         </div>
       </section>
 

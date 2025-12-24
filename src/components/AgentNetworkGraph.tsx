@@ -128,7 +128,7 @@ export const AgentNetworkGraph = () => {
 
         {/* Agent Nodes */}
         {agents.map((agent) => (
-          <motion.div
+          <div
             key={agent.id}
             className="absolute cursor-pointer group"
             style={{
@@ -137,11 +137,10 @@ export const AgentNetworkGraph = () => {
               transform: 'translate(-50%, -50%)',
               zIndex: selectedAgent?.id === agent.id ? 10 : 1,
             }}
-            whileHover={{ scale: 1.1 }}
             onClick={() => setSelectedAgent(agent)}
           >
             <div
-              className={`w-4 h-4 rounded-full transition-all duration-200`}
+              className="w-4 h-4 rounded-full transition-all duration-200 hover:scale-110"
               style={{ 
                 backgroundColor: agent.color,
                 boxShadow: selectedAgent?.id === agent.id ? `0 0 20px ${agent.color}50, 0 0 0 4px ${agent.color}30` : 'none',
@@ -152,7 +151,7 @@ export const AgentNetworkGraph = () => {
               {agent.id === 'red' && ' Team'}
               {agent.id === 'blue' && ' Team'}
             </span>
-          </motion.div>
+          </div>
         ))}
 
         {/* Footer */}
