@@ -30,11 +30,6 @@ const Navigation = () => {
       description: "Why we're building explainable multi-agent cybersecurity in Europe.",
     },
     {
-      name: "Compliance",
-      path: "/compliance",
-      description: "How ColleaiQ supports NIS2, auditability and digital sovereignty.",
-    },
-    {
       name: "Open Positions",
       path: "/careers",
       description: "Join us in building proactive, explainable cyber defence.",
