@@ -8,7 +8,6 @@ import SupportersSection from "@/components/SupportersSection";
 import { ThoughtStreamBackground } from "@/components/ThoughtStreamBackground";
 import { SimulationView } from "@/components/SimulationView";
 import { AgentNetworkGraph } from "@/components/AgentNetworkGraph";
-import { SingleAgentBottleneck } from "@/components/SingleAgentBottleneck";
 import { DomainRoadmap } from "@/components/DomainRoadmap";
 import posts from "@/data/blog";
 
@@ -86,8 +85,8 @@ const Index = () => {
             </h1>
 
             <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-3xl mx-auto">
-              <p>Most AI interactions are one-on-one. You prompt, it answers. But complex problems require a process, not just an answer.</p>
-              <p>We are building the coordination layer that allows specialized AI agents to work together. We treat AI less like a magic box and more like a briefing room.</p>
+              <p>Most AI interactions today are limited by a one-on-one paradigm. You prompt, the model predicts, and you receive an answer. For simple tasks, this is sufficient. For complex, high-stakes problems, it is fundamentally flawed.</p>
+              <p>Complex challenges require a process. They require specialized roles, check-and-balance loops, and a clear chain of reasoning. ColleaiQ is not a better model; it is the briefing room where specialized agents collaborate to solve problems that are too big for a single context window.</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -107,11 +106,6 @@ const Index = () => {
                 {t("index.hero.latestPost")}
               </a>
             </div>
-          </div>
-
-          {/* Single Agent Bottleneck - now in hero */}
-          <div className="max-w-2xl mx-auto">
-            <SingleAgentBottleneck />
           </div>
         </div>
       </section>
