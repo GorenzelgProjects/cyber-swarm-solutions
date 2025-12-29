@@ -96,7 +96,7 @@ const Community = () => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-8 space-y-6">
-                    <div className="h-14 w-14 rounded-lg bg-muted flex items-center justify-center">
+                    <div className="h-14 w-14 rounded-lg bg-gradient-cyber flex items-center justify-center">
                       <channel.icon className="h-7 w-7 text-primary" />
                     </div>
                     <div className="space-y-3">
@@ -114,7 +114,7 @@ const Community = () => {
         </section>
 
         {/* Community Benefits */}
-        <section className="px-4 py-20 bg-muted/30">
+        <section className="px-4 py-20 bg-gradient-cyber">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-4xl font-bold text-center mb-12">Community Benefits</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -125,7 +125,7 @@ const Community = () => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-8 space-y-4 text-center">
-                    <div className="h-14 w-14 rounded-lg bg-muted flex items-center justify-center mx-auto">
+                    <div className="h-14 w-14 rounded-lg bg-gradient-cyber flex items-center justify-center mx-auto">
                       <benefit.icon className="h-7 w-7 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold">{benefit.title}</h3>
@@ -172,7 +172,7 @@ const Community = () => {
         {/* CTA */}
         <section className="px-4 py-20">
           <div className="container mx-auto max-w-3xl">
-            <Card className="bg-muted/30 border-border shadow-card">
+            <Card className="bg-gradient-cyber border-border shadow-glow">
               <CardContent className="p-12 text-center space-y-6">
                 <h2 className="text-3xl font-bold">Ready to Get Involved?</h2>
                 <p className="text-lg text-muted-foreground">

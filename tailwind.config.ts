@@ -52,11 +52,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: {
+          cream: "hsl(var(--cream))",
+          beige: "hsl(var(--beige))",
+          tan: "hsl(var(--tan))",
+        brown: "hsl(var(--brown))",
+        espresso: "hsl(var(--espresso))",
         "preview-banner": "hsl(var(--preview-banner))",
         "preview-banner-foreground": "hsl(var(--preview-banner-foreground))",
+        "preview-banner-dark": "hsl(var(--preview-banner-dark))",
+        "preview-banner-foreground-dark": "hsl(var(--preview-banner-foreground-dark))",
+        },
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-cyber': 'var(--gradient-cyber)',
         'gradient-accent': 'var(--gradient-accent)',
       },
       boxShadow: {
