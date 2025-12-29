@@ -104,7 +104,7 @@ const FAQ = () => {
         {/* Still Have Questions CTA */}
         <section className="px-4 py-20">
           <div className="container mx-auto max-w-3xl">
-            <Card className="bg-gradient-cyber border-border shadow-glow">
+            <Card className="bg-muted/30 border-border shadow-card">
               <CardContent className="p-12 text-center space-y-6">
                 <h2 className="text-3xl font-bold">Still Have Questions?</h2>
                 <p className="text-lg text-muted-foreground">

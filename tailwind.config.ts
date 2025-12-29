@@ -57,7 +57,6 @@ export default {
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
-        'gradient-cyber': 'var(--gradient-cyber)',
         'gradient-accent': 'var(--gradient-accent)',
       },
       boxShadow: {
