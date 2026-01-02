@@ -57,7 +57,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center space-x-2.5">
             <img src={logo} alt="ColleaiQ Logo" className="w-8 h-8" />
             <span className="text-xl font-semibold tracking-tight">
-              ColleaiQ
+              Collea<span className="bg-gradient-to-r from-[#00d4aa] to-[#0077b6] bg-clip-text text-transparent">i</span>Q
             </span>
           </Link>
 
