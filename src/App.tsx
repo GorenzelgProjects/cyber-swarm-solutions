@@ -13,7 +13,7 @@ import ThesisPhd from "./pages/ThesisPhd";
 import Blog from "./pages/Blog";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
-import FAQ from "./pages/FAQ";
+
 import SimulationDeepDive from "./pages/SimulationDeepDive";
 
 import Careers from "./pages/Careers";
@@ -40,7 +40,7 @@ const App = () => (
           <Route path="/blog/pentagon-ai-hacking" element={<PentagonAIHacking />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/faq" element={<FAQ />} />
+          
           <Route path="/simulation-deep-dive" element={<SimulationDeepDive />} />
           
           <Route path="/careers" element={<Careers />} />
