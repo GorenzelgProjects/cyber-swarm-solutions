@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -106,22 +106,22 @@ const Contact = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3">
+                      <a 
+                        href="https://www.linkedin.com/company/colleaiq/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start gap-3 group"
+                      >
                         <div className="h-10 w-10 rounded-lg bg-gradient-cyber flex items-center justify-center flex-shrink-0">
-                          <Phone className="h-5 w-5 text-primary" />
+                          <Linkedin className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <p className="font-medium mb-1">{t('contact.infoWebsite')}</p>
-                          <a 
-                            href="https://www.colleaq.dk" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            www.colleaq.dk
-                          </a>
+                          <p className="font-medium mb-1">{t('contact.infoLinkedIn')}</p>
+                          <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                            ColleaiQ
+                          </p>
                         </div>
-                      </div>
+                      </a>
                     </div>
                   </CardContent>
                 </Card>

@@ -36,13 +36,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/compliance" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  {t('footer.compliance')}
-                </Link>
-              </li>
-              <li>
-                <Link to="/faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  {t('footer.faq')}
+                <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  {t('footer.blog')}
                 </Link>
               </li>
             </ul>
