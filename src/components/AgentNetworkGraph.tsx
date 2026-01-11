@@ -25,31 +25,31 @@ const agents: AgentData[] = [
     riskTolerance: 20,
     color: '#3b82f6',
     x: 50,
-    y: 15,
+    y: 12,
   },
   {
     id: 'red',
-    name: 'RedTeam_Agent',
-    role: 'OFFENSIVE OPERATOR',
-    directive: 'Executes attack simulations against target systems. Tests defenses by attempting exploitation within sandbox boundaries.',
-    capabilities: ['Vulnerability scanning', 'Exploit execution', 'Lateral movement'],
+    name: 'RedTeam_MAS',
+    role: 'OFFENSIVE MULTI-AGENT SYSTEM',
+    directive: 'A coordinated network of offensive agents. The Scout identifies targets, the Exploiter attempts access, and the Validator confirms impact. Together they simulate real adversary behavior.',
+    capabilities: ['Vulnerability scanning', 'Exploit execution', 'Lateral movement', 'Attack chain coordination'],
     autonomy: 75,
     riskTolerance: 85,
     color: '#ef4444',
     x: 20,
-    y: 50,
+    y: 45,
   },
   {
     id: 'blue',
-    name: 'BlueTeam_Agent',
-    role: 'DEFENSIVE MONITOR',
-    directive: 'Watches system logs and alerts. Identifies the Red Team\'s actions and evaluates if current defenses were sufficient.',
-    capabilities: ['Log analysis', 'Threat detection', 'Defense assessment'],
+    name: 'BlueTeam_MAS',
+    role: 'DEFENSIVE MULTI-AGENT SYSTEM',
+    directive: 'A coordinated network of defensive agents. The Monitor watches logs, the Analyst correlates events, and the Responder evaluates countermeasures. They work together to detect and assess threats.',
+    capabilities: ['Log analysis', 'Threat detection', 'Defense assessment', 'Incident correlation'],
     autonomy: 70,
     riskTolerance: 15,
     color: '#22c55e',
     x: 80,
-    y: 50,
+    y: 45,
   },
   {
     id: 'auditor',
@@ -61,7 +61,7 @@ const agents: AgentData[] = [
     riskTolerance: 5,
     color: '#6b7280',
     x: 70,
-    y: 80,
+    y: 85,
   },
   {
     id: 'reporter',
@@ -73,8 +73,22 @@ const agents: AgentData[] = [
     riskTolerance: 10,
     color: '#f59e0b',
     x: 30,
-    y: 80,
+    y: 85,
   },
+];
+
+// Sub-agents within Red Team MAS
+const redSubAgents = [
+  { id: 'red-scout', name: 'Scout', x: 10, y: 35 },
+  { id: 'red-exploiter', name: 'Exploiter', x: 20, y: 55 },
+  { id: 'red-validator', name: 'Validator', x: 30, y: 35 },
+];
+
+// Sub-agents within Blue Team MAS
+const blueSubAgents = [
+  { id: 'blue-monitor', name: 'Monitor', x: 70, y: 35 },
+  { id: 'blue-analyst', name: 'Analyst', x: 80, y: 55 },
+  { id: 'blue-responder', name: 'Responder', x: 90, y: 35 },
 ];
 
 const connections = [
@@ -106,6 +120,7 @@ export const AgentNetworkGraph = () => {
       >
         {/* Connection Lines */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
+          {/* Main agent connections */}
           {connections.map((conn, idx) => {
             const fromAgent = agents.find(a => a.id === conn.from);
             const toAgent = agents.find(a => a.id === conn.to);
@@ -124,9 +139,93 @@ export const AgentNetworkGraph = () => {
               />
             );
           })}
+          
+          {/* Red Team internal connections */}
+          {redSubAgents.map((agent, idx) => {
+            const nextAgent = redSubAgents[(idx + 1) % redSubAgents.length];
+            return (
+              <line
+                key={`red-internal-${idx}`}
+                x1={`${agent.x}%`}
+                y1={`${agent.y}%`}
+                x2={`${nextAgent.x}%`}
+                y2={`${nextAgent.y}%`}
+                stroke="#ef4444"
+                strokeOpacity={0.3}
+                strokeWidth={1}
+                strokeDasharray="3,3"
+              />
+            );
+          })}
+          
+          {/* Blue Team internal connections */}
+          {blueSubAgents.map((agent, idx) => {
+            const nextAgent = blueSubAgents[(idx + 1) % blueSubAgents.length];
+            return (
+              <line
+                key={`blue-internal-${idx}`}
+                x1={`${agent.x}%`}
+                y1={`${agent.y}%`}
+                x2={`${nextAgent.x}%`}
+                y2={`${nextAgent.y}%`}
+                stroke="#22c55e"
+                strokeOpacity={0.3}
+                strokeWidth={1}
+                strokeDasharray="3,3"
+              />
+            );
+          })}
         </svg>
 
-        {/* Agent Nodes */}
+        {/* Red Team Sub-Agents */}
+        {redSubAgents.map((subAgent) => (
+          <div
+            key={subAgent.id}
+            className="absolute"
+            style={{
+              left: `${subAgent.x}%`,
+              top: `${subAgent.y}%`,
+              transform: 'translate(-50%, -50%)',
+              zIndex: 0,
+            }}
+          >
+            <div
+              className="w-2.5 h-2.5 rounded-full opacity-60"
+              style={{ 
+                backgroundColor: '#ef4444',
+              }}
+            />
+            <span className="absolute top-4 left-1/2 -translate-x-1/2 text-[10px] text-muted-foreground/60 whitespace-nowrap">
+              {subAgent.name}
+            </span>
+          </div>
+        ))}
+
+        {/* Blue Team Sub-Agents */}
+        {blueSubAgents.map((subAgent) => (
+          <div
+            key={subAgent.id}
+            className="absolute"
+            style={{
+              left: `${subAgent.x}%`,
+              top: `${subAgent.y}%`,
+              transform: 'translate(-50%, -50%)',
+              zIndex: 0,
+            }}
+          >
+            <div
+              className="w-2.5 h-2.5 rounded-full opacity-60"
+              style={{ 
+                backgroundColor: '#22c55e',
+              }}
+            />
+            <span className="absolute top-4 left-1/2 -translate-x-1/2 text-[10px] text-muted-foreground/60 whitespace-nowrap">
+              {subAgent.name}
+            </span>
+          </div>
+        ))}
+
+        {/* Main Agent Nodes */}
         {agents.map((agent) => (
           <div
             key={agent.id}
@@ -140,23 +239,26 @@ export const AgentNetworkGraph = () => {
             onClick={() => setSelectedAgent(agent)}
           >
             <div
-              className="w-4 h-4 rounded-full transition-all duration-200 hover:scale-110"
+              className={`rounded-full transition-all duration-200 hover:scale-110 ${
+                agent.id === 'red' || agent.id === 'blue' ? 'w-5 h-5 ring-2 ring-offset-1 ring-offset-background ring-current/40' : 'w-4 h-4'
+              }`}
               style={{ 
                 backgroundColor: agent.color,
                 boxShadow: selectedAgent?.id === agent.id ? `0 0 20px ${agent.color}50, 0 0 0 4px ${agent.color}30` : 'none',
+                color: agent.color,
               }}
             />
-            <span className="absolute top-6 left-1/2 -translate-x-1/2 text-xs text-muted-foreground whitespace-nowrap font-medium">
-              {agent.id.charAt(0).toUpperCase() + agent.id.slice(1).replace('-', ' ')}
-              {agent.id === 'red' && ' Team'}
-              {agent.id === 'blue' && ' Team'}
+            <span className="absolute top-7 left-1/2 -translate-x-1/2 text-xs text-muted-foreground whitespace-nowrap font-medium">
+              {agent.id === 'red' && 'Red Team MAS'}
+              {agent.id === 'blue' && 'Blue Team MAS'}
+              {agent.id !== 'red' && agent.id !== 'blue' && (agent.id.charAt(0).toUpperCase() + agent.id.slice(1))}
             </span>
           </div>
         ))}
 
         {/* Footer */}
         <div className="absolute bottom-3 left-3 text-xs text-muted-foreground/60 font-mono">
-          Visualization: Interactive | Mode: Click to explore
+          MAS = Multi-Agent System | Click nodes to explore
         </div>
       </div>
 

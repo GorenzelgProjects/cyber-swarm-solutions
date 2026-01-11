@@ -55,7 +55,7 @@
     },
     "whatIs": {
       "headline": "The Architecture",
-      "description": "The core of ColleaiQ is a multi-agent system (MAS). We treat AI less like a magic box and more like a briefing room.\n\nFor any given task, we spin up a specific team of agents. In our security work, one agent might act as an attacker looking for a path, while another watches the logs to see if that path is visible. They share a context but have different instructions.\n\nThis separation of duties helps us catch errors. When one agent has to explain its plan to another, it forces a level of logic and traceability that is hard to get from a single model."
+      "description": "The core of ColleaiQ is a multi-agent system (MAS). We treat AI less like a magic box and more like a briefing room.\n\nFor any given task, we spin up a specific team of agents. In our security work, one agent might act as an attacker looking for a path, while another watches the logs to see if that path is visible. They share a memory and a context but have different instructions and learning paradigms.\n\nThis separation enforces logic, traceability, and security. When one agent has to explain its plan to another, it forces a level of reasoning that is hard to get from a single model."
     },
     "whereWeStart": {
       "headline": "Current Focus: Threat Simulation",
