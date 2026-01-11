@@ -22,14 +22,14 @@ const domains: Domain[] = [
     icon: <Scale className="w-6 h-6" />,
     title: 'LegalTech',
     status: 'research',
-    description: 'Research phase. Synthesizing large case files and compliance logic.',
+    description: 'Research phase. Synthesizing complex regulatory documents and compliance logic.',
   },
   {
     id: 'biotech',
     icon: <FlaskConical className="w-6 h-6" />,
     title: 'Biotech',
     status: 'future',
-    description: 'Future exploration. Managing complex experimental data pipelines.',
+    description: 'Future exploration. Experimental data pipelines and complex specialized algorithms.',
   },
 ];
 
