@@ -16,14 +16,14 @@ interface AgentData {
 
 const agents: AgentData[] = [
   {
-    id: 'planner',
-    name: 'Planner_Agent',
+    id: 'orchestrator',
+    name: 'Orchestrator_Agent',
     role: 'STRATEGIC COORDINATOR',
     directive: 'Orchestrates the overall operation. Breaks down objectives into actionable tasks and assigns them to specialized agents.',
     capabilities: ['Task decomposition', 'Resource allocation', 'Timeline management'],
     autonomy: 90,
     riskTolerance: 20,
-    color: '#3b82f6',
+    color: '#22c55e',
     x: 50,
     y: 12,
   },
@@ -47,7 +47,7 @@ const agents: AgentData[] = [
     capabilities: ['Log analysis', 'Threat detection', 'Defense assessment', 'Incident correlation'],
     autonomy: 70,
     riskTolerance: 15,
-    color: '#22c55e',
+    color: '#3b82f6',
     x: 80,
     y: 45,
   },
@@ -92,14 +92,14 @@ const blueSubAgents = [
 ];
 
 const connections = [
-  { from: 'planner', to: 'red' },
-  { from: 'planner', to: 'blue' },
+  { from: 'orchestrator', to: 'red' },
+  { from: 'orchestrator', to: 'blue' },
   { from: 'red', to: 'blue' },
   { from: 'blue', to: 'auditor' },
   { from: 'red', to: 'reporter' },
   { from: 'blue', to: 'reporter' },
   { from: 'auditor', to: 'reporter' },
-  { from: 'planner', to: 'auditor' },
+  { from: 'orchestrator', to: 'auditor' },
 ];
 
 export const AgentNetworkGraph = () => {
@@ -168,7 +168,7 @@ export const AgentNetworkGraph = () => {
                 y1={`${agent.y}%`}
                 x2={`${nextAgent.x}%`}
                 y2={`${nextAgent.y}%`}
-                stroke="#22c55e"
+                stroke="#3b82f6"
                 strokeOpacity={0.3}
                 strokeWidth={1}
                 strokeDasharray="3,3"
@@ -216,7 +216,7 @@ export const AgentNetworkGraph = () => {
             <div
               className="w-2.5 h-2.5 rounded-full opacity-60"
               style={{ 
-                backgroundColor: '#22c55e',
+                backgroundColor: '#3b82f6',
               }}
             />
             <span className="absolute top-4 left-1/2 -translate-x-1/2 text-[10px] text-muted-foreground/60 whitespace-nowrap">
@@ -249,9 +249,10 @@ export const AgentNetworkGraph = () => {
               }}
             />
             <span className="absolute top-7 left-1/2 -translate-x-1/2 text-xs text-muted-foreground whitespace-nowrap font-medium">
+              {agent.id === 'orchestrator' && 'Orchestrator'}
               {agent.id === 'red' && 'Red Team MAS'}
               {agent.id === 'blue' && 'Blue Team MAS'}
-              {agent.id !== 'red' && agent.id !== 'blue' && (agent.id.charAt(0).toUpperCase() + agent.id.slice(1))}
+              {agent.id !== 'red' && agent.id !== 'blue' && agent.id !== 'orchestrator' && (agent.id.charAt(0).toUpperCase() + agent.id.slice(1))}
             </span>
           </div>
         ))}
