@@ -88,7 +88,7 @@ export const teamMembers: TeamMember[] = [
     firstName: "Rasmus",
     title: "Junior Developer",
     slug: "rasmus-saugmann-sorensen",
-    image: "/images/team/rasmus.png",
+    image: "/images/team/rasmus.pn",
     focus: "Development and technical implementation.",
     intro:
       "Engineer from DTU; currently pursuing an MSc in Human-Centered Artificial Intelligence. Contributing to ColleaiQ's technical development.",
