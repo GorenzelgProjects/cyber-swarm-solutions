@@ -208,9 +208,13 @@
     "badge": "Join Us",
     "headline": "Research & Engineering",
     "intro": "We are a small team. We care about clean code, reading papers, and solving hard problems.",
+    "noHiring": "No open positions right now",
+    "noPositions": "Check back soon for new opportunities",
     "thesisTitle": "Student Collaborations",
     "thesisDescription": "We work closely with the university. If you are writing a thesis on Multi-Agent Systems or Explainable AI, we might be a good home for your research.",
     "thesisLearnMore": "Academic Inquiries",
+    "futureTitle": "Future roles we are planning for",
+    "futureSubtitle": "not hiring yet",
     "futureRoles": {
       "engineer": "Systems Engineer",
       "frontend": "Product Engineer",

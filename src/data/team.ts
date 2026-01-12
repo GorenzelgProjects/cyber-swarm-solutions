@@ -7,13 +7,31 @@ export type TeamMember = {
   focus?: string;
   intro?: string;
   background?: string[];
-  caresAbout?: string;
   degree?: string;
   track?: string;
   phone?: string;
   email?: string;
   linkedin?: string;
 };
+
+export type AdvisoryMember = {
+  name: string;
+  title: string;
+  organization: string;
+  slug: string;
+  image?: string;
+  linkedin?: string;
+};
+
+export const advisoryBoard: AdvisoryMember[] = [
+  {
+    name: "Christian Henriksen",
+    title: "Chairman",
+    organization: "Foreningen for Danske Cyberalumner",
+    slug: "christian-henriksen",
+    linkedin: "https://www.linkedin.com/in/christian-henriksen/",
+  },
+];
 
 export const teamMembers: TeamMember[] = [
   {
@@ -34,8 +52,6 @@ export const teamMembers: TeamMember[] = [
       "MSc track — Human-Centered Artificial Intelligence",
       "ColleaiQ — Co-founder, CEO",
     ],
-    caresAbout:
-      "Proactive security that real analysts can trust. Clear evidence, calm workflows, and tools that get better with each iteration.",
   },
   {
     name: "Martin Christoffersen",
@@ -51,8 +67,6 @@ export const teamMembers: TeamMember[] = [
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
     background: ["DTU — BSc Engineering", "MSc track — Business Analytics", "ColleaiQ — Co-founder, CTO"],
-    caresAbout:
-      "Proactive security that real analysts can trust. Clear evidence, calm workflows, and tools that get better with each iteration.",
   },
   {
     name: "Christoffer Christian Dreist",
@@ -68,8 +82,6 @@ export const teamMembers: TeamMember[] = [
     degree: "DTU — BSc Engineering",
     track: "MSc track — Business Analytics",
     background: ["DTU — BSc Engineering", "MSc track — Business Analytics", "ColleaiQ — Co-founder, CFO"],
-    caresAbout:
-      "Bridging the gap between complex technology and practical implementation. Focused on translating technical innovation into clear business value, partnerships, and communication that make advanced ideas understandable and actionable.",
   },
   {
     name: "Rasmus Saugmann Sørensen",
@@ -87,8 +99,6 @@ export const teamMembers: TeamMember[] = [
       "MSc track — Human-Centered Artificial Intelligence",
       "ColleaiQ — Junior Developer",
     ],
-    caresAbout:
-      "Building reliable, user-focused software that makes complex security systems accessible and effective.",
   },
 ];
 
