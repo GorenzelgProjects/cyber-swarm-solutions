@@ -35,10 +35,10 @@ export const advisoryBoard: AdvisoryMember[] = [
 
 export const teamMembers: TeamMember[] = [
   {
-    name: "Mikkel Romvig Grøngaard",
+    name: "Mikkel Romvig Grøngård",
     firstName: "Mikkel",
     title: "CEO & Co-founder",
-    slug: "mikkel-romvig-grongaard",
+    slug: "mikkel-romvig-grongard",
     image: "/images/team/mikkel.png",
     email: "Mikkelromvig@colleaiq.dk",
     linkedin: "https://www.linkedin.com/in/mikkel-gr%C3%B8ng%C3%A5rd-a8b149286/",
