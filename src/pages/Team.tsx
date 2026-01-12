@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SupportersSection from "@/components/SupportersSection";
 import { Link } from "react-router-dom";
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { teamMembers, advisoryBoard } from "@/data/team";
 
 const Team = () => {
@@ -118,17 +118,6 @@ const Team = () => {
                         {advisor.organization}
                       </p>
                     </div>
-                    {advisor.linkedin && (
-                      <a
-                        href={advisor.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                        LinkedIn
-                      </a>
-                    )}
                   </div>
                 </Card>
               ))}
