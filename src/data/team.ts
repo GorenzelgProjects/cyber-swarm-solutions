@@ -26,8 +26,8 @@ export type AdvisoryMember = {
 export const advisoryBoard: AdvisoryMember[] = [
   {
     name: "Christian Henriksen",
-    title: "Chairman",
-    organization: "Foreningen for Danske Cyberalumner",
+    title: "Co-founder",
+    organization: "SagaLabs",
     slug: "christian-henriksen",
     linkedin: "https://www.linkedin.com/in/christian-henriksen/",
   },
