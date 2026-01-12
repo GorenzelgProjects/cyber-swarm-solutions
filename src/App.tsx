@@ -22,6 +22,7 @@ import NotFound from "./pages/NotFound";
 import PentagonAIHacking from "./pages/blog/PentagonAIHacking";
 import Team from "./pages/Team";
 import TeamMemberProfile from "./pages/TeamMemberProfile";
+import Privacy from "./pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/team" element={<Team />} />
           <Route path="/team/:slug" element={<TeamMemberProfile />} />
+          <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
