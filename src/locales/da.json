@@ -41,8 +41,7 @@
     "hero": {
       "badge": "Proaktiv cybersikkerhed",
       "headline": "Hvor kunstig intelligens møder kollektiv intelligens",
-      "paragraph1": "Vi servicerer biler og laver brandøvelser, før noget går galt — men i cybersikkerhed venter mange stadig på det rigtige angreb for at se, hvad der manglede.",
-      "paragraph2": "ColleaiQ går den anden vej: simulerede angreb, AI-agenter der lærer af jeres egne SOC-beslutninger, og en feedback-sløjfe der lukker sig selv. Mindre støj, mere klarhed — og et team der bliver bedre for hver øvelse.",
+      "paragraph1": "ColleaiQ leverer den neuro-symbolske arkitektur, der kræves for at styre specialiserede agenter i højrisiko-miljøer. Platformen automatiserer arbejdsgange ved at håndhæve kontrolleret inter-agent dialog og en \"glassbox\" ræsonneringsproces. Denne struktur muliggør løsning af problemer, der overstiger enkelt-modellers kontekstvinduer gennem sikker MAS-orkestrering, integrerede guardrails og fuld operationel sporbarhed.",
       "ctaPrimary": "Kontakt os",
       "ctaSecondary": "Læs vores historie",
       "latestPost": "Seneste indlæg: Safe Sandbox Threat Hunting →"
