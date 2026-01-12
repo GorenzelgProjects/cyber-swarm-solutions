@@ -65,20 +65,6 @@ const TeamMemberProfile = () => {
             <p className="text-lg text-foreground mt-0">{member.intro}</p>
           </div>
 
-          {/* Background */}
-          {member.background && member.background.length > 0 && (
-            <div>
-              <h2 className="text-2xl font-semibold text-foreground mt-0">Background</h2>
-              <ul className="space-y-2 mt-3">
-                {member.background.map((item, idx) => (
-                  <li key={idx} className="text-muted-foreground flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
 
           {/* Co-authored posts */}
           {authorPosts.length > 0 && (
