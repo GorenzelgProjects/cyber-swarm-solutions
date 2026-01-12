@@ -1,54 +1,67 @@
 import { useState, useEffect, useCallback } from 'react';
-
-type ConsentStatus = 'pending' | 'accepted' | 'declined';
+import { CookiePreferences, getCookiePreferences, getConsentStatus } from '@/components/CookieConsent';
 
 const CONSENT_KEY = 'cookie-consent';
+const PREFERENCES_KEY = 'cookie-preferences';
 
 export const useCookieConsent = () => {
-  const [consentStatus, setConsentStatus] = useState<ConsentStatus>('pending');
+  const [hasMadeChoice, setHasMadeChoice] = useState(false);
+  const [preferences, setPreferences] = useState<CookiePreferences>(getCookiePreferences());
 
   useEffect(() => {
     // Get initial status
-    const stored = localStorage.getItem(CONSENT_KEY);
-    if (stored === 'accepted' || stored === 'declined') {
-      setConsentStatus(stored);
-    }
+    const status = getConsentStatus();
+    setHasMadeChoice(status === 'decided');
+    setPreferences(getCookiePreferences());
 
     // Listen for consent changes
-    const handleAccepted = () => setConsentStatus('accepted');
-    const handleDeclined = () => setConsentStatus('declined');
+    const handleConsentUpdated = (event: Event) => {
+      const customEvent = event as CustomEvent<CookiePreferences>;
+      setPreferences(customEvent.detail);
+      setHasMadeChoice(true);
+    };
 
-    window.addEventListener('cookies-accepted', handleAccepted);
-    window.addEventListener('cookies-declined', handleDeclined);
+    window.addEventListener('cookies-consent-updated', handleConsentUpdated);
 
     return () => {
-      window.removeEventListener('cookies-accepted', handleAccepted);
-      window.removeEventListener('cookies-declined', handleDeclined);
+      window.removeEventListener('cookies-consent-updated', handleConsentUpdated);
     };
   }, []);
 
-  const hasConsent = consentStatus === 'accepted';
-  const hasMadeChoice = consentStatus !== 'pending';
+  // Check if a specific category is allowed
+  const hasConsent = useCallback((category: keyof CookiePreferences): boolean => {
+    return preferences[category];
+  }, [preferences]);
 
-  // Helper to run code only if cookies are accepted
-  const withConsent = useCallback(<T,>(callback: () => T): T | undefined => {
-    if (consentStatus === 'accepted') {
+  // Helper to run code only if a specific cookie category is accepted
+  const withConsent = useCallback(<T,>(
+    category: keyof CookiePreferences,
+    callback: () => T
+  ): T | undefined => {
+    if (preferences[category]) {
       return callback();
     }
     return undefined;
-  }, [consentStatus]);
+  }, [preferences]);
 
   // Reset consent (useful for settings page)
   const resetConsent = useCallback(() => {
     localStorage.removeItem(CONSENT_KEY);
-    setConsentStatus('pending');
+    localStorage.removeItem(PREFERENCES_KEY);
+    setHasMadeChoice(false);
+    setPreferences({
+      necessary: true,
+      statistics: false,
+      marketing: false,
+      personalization: false,
+    });
     window.location.reload();
   }, []);
 
   return {
-    consentStatus,
-    hasConsent,
+    preferences,
     hasMadeChoice,
+    hasConsent,
     withConsent,
     resetConsent,
   };
