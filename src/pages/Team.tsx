@@ -1,11 +1,10 @@
-import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SupportersSection from "@/components/SupportersSection";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import { teamMembers } from "@/data/team";
+import { ArrowRight, Linkedin } from "lucide-react";
+import { teamMembers, advisoryBoard } from "@/data/team";
 
 const Team = () => {
   return (
@@ -79,6 +78,59 @@ const Team = () => {
                     </div>
                   </Card>
                 </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Advisory Board Section */}
+        <section className="mt-16 mb-8">
+          <div className="container mx-auto max-w-5xl">
+            <div className="text-center space-y-3 mb-8">
+              <h2 className="text-3xl font-bold text-foreground">
+                Advisory Board
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Industry experts guiding our strategic direction
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 grid-cols-1 max-w-3xl mx-auto">
+              {advisoryBoard.map((advisor) => (
+                <Card
+                  key={advisor.slug}
+                  className="border border-border shadow-soft hover:shadow-hover transition-all duration-200"
+                >
+                  <div className="p-6 text-center space-y-3">
+                    <div className="w-20 h-20 mx-auto rounded-full bg-muted flex items-center justify-center">
+                      <span className="text-2xl font-bold text-muted-foreground">
+                        {advisor.name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                    <div className="space-y-1">
+                      <h3 className="text-lg font-semibold text-foreground">
+                        {advisor.name}
+                      </h3>
+                      <p className="text-sm text-primary font-medium">
+                        {advisor.title}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {advisor.organization}
+                      </p>
+                    </div>
+                    {advisor.linkedin && (
+                      <a
+                        href={advisor.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Linkedin className="h-4 w-4" />
+                        LinkedIn
+                      </a>
+                    )}
+                  </div>
+                </Card>
               ))}
             </div>
           </div>

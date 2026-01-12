@@ -80,12 +80,6 @@ const TeamMemberProfile = () => {
             </div>
           )}
 
-          {/* What I care about */}
-          <div>
-            <h2 className="text-2xl font-semibold text-foreground mt-0">What I care about</h2>
-            <p className="text-muted-foreground mt-3">{member.caresAbout}</p>
-          </div>
-
           {/* Co-authored posts */}
           {authorPosts.length > 0 && (
             <div className="space-y-4">
