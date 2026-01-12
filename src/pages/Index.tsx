@@ -84,9 +84,8 @@ const Index = () => {
               Where <span className="text-sage">Artificial Intelligence</span> Meets Collective Intelligence.
             </h1>
 
-            <div className="text-lg md:text-xl text-muted-foreground space-y-4 max-w-3xl mx-auto">
-              <p>Most AI interactions today are limited by a one-on-one paradigm. You prompt, the model predicts, and you receive an answer. For simple tasks, this is sufficient. For complex, high-stakes problems, it is fundamentally flawed.</p>
-              <p>Complex challenges require a process. They require specialized roles, check-and-balance loops, and a clear chain of reasoning. ColleaiQ is not a better model; it is the briefing room where specialized agents collaborate to solve problems that are too big for a single context window.</p>
+            <div className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p>ColleaiQ provides the neuro-symbolic architecture required to manage specialized agents in high-stakes environments. The platform automates workflows by enforcing controlled inter-agent dialog and a "glassbox" reasoning process. This structure enables the solving of problems that exceed single-model context windows through secure MAS orchestration, integrated guardrails, and total operational traceability.</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">

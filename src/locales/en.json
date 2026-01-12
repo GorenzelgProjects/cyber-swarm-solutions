@@ -43,9 +43,7 @@
     "hero": {
       "badge": "Multi-Agent Systems Research",
       "headline": "When Artificial Intelligence behaves like a team.",
-      "paragraph1": "Most AI interactions today are one-on-one. You prompt a model, and it answers. That works well for simple tasks, but complex problems usually require a different approach. They need a process.",
-      "paragraph2": "We are building the coordination layer that allows specialized AI agents to work together. Instead of a single model trying to do everything, we structure the work into roles. Some agents research, others plan, and others verify the output.",
-      "paragraph3": "We are starting with cybersecurity. It is a domain where details matter and mistakes are costly. By training our agents to navigate these high-stakes environments safely, we are learning how to build autonomous systems that are both capable and trustworthy.",
+      "paragraph1": "ColleaiQ provides the neuro-symbolic architecture required to manage specialized agents in high-stakes environments. The platform automates workflows by enforcing controlled inter-agent dialog and a \"glassbox\" reasoning process. This structure enables the solving of problems that exceed single-model context windows through secure MAS orchestration, integrated guardrails, and total operational traceability.",
       "ctaPrimary": "Request Pilot Access",
       "ctaSecondary": "See how it works",
       "latestPost": "Field Notes: Why single-agent LLMs struggle with multi-step attacks →"
