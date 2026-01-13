@@ -25,7 +25,7 @@ const agents: AgentData[] = [
     riskTolerance: 20,
     color: '#22c55e',
     x: 50,
-    y: 12,
+    y: 50,
   },
   {
     id: 'red',
@@ -36,8 +36,8 @@ const agents: AgentData[] = [
     autonomy: 75,
     riskTolerance: 85,
     color: '#ef4444',
-    x: 20,
-    y: 45,
+    x: 15,
+    y: 25,
   },
   {
     id: 'blue',
@@ -48,8 +48,8 @@ const agents: AgentData[] = [
     autonomy: 70,
     riskTolerance: 15,
     color: '#3b82f6',
-    x: 80,
-    y: 45,
+    x: 85,
+    y: 25,
   },
   {
     id: 'auditor',
@@ -60,8 +60,8 @@ const agents: AgentData[] = [
     autonomy: 60,
     riskTolerance: 5,
     color: '#6b7280',
-    x: 70,
-    y: 85,
+    x: 85,
+    y: 75,
   },
   {
     id: 'reporter',
@@ -72,34 +72,34 @@ const agents: AgentData[] = [
     autonomy: 50,
     riskTolerance: 10,
     color: '#f59e0b',
-    x: 30,
-    y: 85,
+    x: 15,
+    y: 75,
   },
 ];
 
 // Sub-agents within Red Team MAS
 const redSubAgents = [
-  { id: 'red-scout', name: 'Scout', x: 10, y: 35 },
-  { id: 'red-exploiter', name: 'Exploiter', x: 20, y: 55 },
-  { id: 'red-validator', name: 'Validator', x: 30, y: 35 },
+  { id: 'red-scout', name: 'Scout', x: 8, y: 15 },
+  { id: 'red-exploiter', name: 'Exploiter', x: 8, y: 35 },
+  { id: 'red-validator', name: 'Validator', x: 22, y: 15 },
 ];
 
 // Sub-agents within Blue Team MAS
 const blueSubAgents = [
-  { id: 'blue-monitor', name: 'Monitor', x: 70, y: 35 },
-  { id: 'blue-analyst', name: 'Analyst', x: 80, y: 55 },
-  { id: 'blue-responder', name: 'Responder', x: 90, y: 35 },
+  { id: 'blue-monitor', name: 'Monitor', x: 78, y: 15 },
+  { id: 'blue-analyst', name: 'Analyst', x: 92, y: 35 },
+  { id: 'blue-responder', name: 'Responder', x: 92, y: 15 },
 ];
 
 const connections = [
   { from: 'orchestrator', to: 'red' },
   { from: 'orchestrator', to: 'blue' },
-  { from: 'red', to: 'blue' },
-  { from: 'blue', to: 'auditor' },
-  { from: 'red', to: 'reporter' },
-  { from: 'blue', to: 'reporter' },
-  { from: 'auditor', to: 'reporter' },
   { from: 'orchestrator', to: 'auditor' },
+  { from: 'orchestrator', to: 'reporter' },
+  { from: 'red', to: 'blue' },
+  { from: 'red', to: 'reporter' },
+  { from: 'blue', to: 'auditor' },
+  { from: 'auditor', to: 'reporter' },
 ];
 
 export const AgentNetworkGraph = () => {
