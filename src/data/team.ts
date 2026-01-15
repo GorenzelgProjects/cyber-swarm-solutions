@@ -84,7 +84,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Rasmus Saugmann Sørensen",
     firstName: "Rasmus",
-    title: "Junior Developer",
+    title: "ML-Engineer & Developer",
     slug: "rasmus-saugmann-sorensen",
     image: "/images/team/rasmus.png",
     focus: "Development and technical implementation.",
@@ -95,7 +95,7 @@ export const teamMembers: TeamMember[] = [
     background: [
       "DTU — BSc Engineering",
       "MSc track — Human-Centered Artificial Intelligence",
-      "ColleaiQ — Junior Developer",
+      "ColleaiQ — ML-Engineer & Developer",
     ],
   },
 ];
