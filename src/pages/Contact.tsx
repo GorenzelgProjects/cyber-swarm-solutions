@@ -15,51 +15,47 @@ const Contact = () => {
     name: "",
     email: "",
     company: "",
-    message: ""
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Construct mailto link with pre-filled content
     const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Company: ${formData.company || 'N/A'}\n\n` +
-      `Message:\n${formData.message}`
+        `Email: ${formData.email}\n` +
+        `Company: ${formData.company || "N/A"}\n\n` +
+        `Message:\n${formData.message}`,
     );
-    
+
     const mailtoLink = `mailto:kontakt@colleaiq.dk?subject=${subject}&body=${body}`;
-    
+
     // Open email client
     window.location.href = mailtoLink;
-    
+
     // Clear form
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <div className="pt-24 pb-20">
         {/* Hero */}
         <section className="px-4 py-20">
           <div className="container mx-auto max-w-4xl text-center space-y-6 animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold">
-              {t('contact.headline')}
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {t('contact.description')}
-            </p>
+            <h1 className="text-5xl md:text-6xl font-bold">{t("contact.headline")}</h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">{t("contact.description")}</p>
           </div>
         </section>
 
@@ -72,10 +68,8 @@ const Contact = () => {
                 <Card className="bg-card border-border shadow-card">
                   <CardContent className="p-6 space-y-6">
                     <div className="space-y-4">
-                      <h3 className="text-xl font-semibold">{t('contact.infoTitle')}</h3>
-                      <p className="text-sm text-muted-foreground">
-                        {t('contact.description')}
-                      </p>
+                      <h3 className="text-xl font-semibold">{t("contact.infoTitle")}</h3>
+                      <p className="text-sm text-muted-foreground">{t("contact.description")}</p>
                     </div>
 
                     <div className="space-y-4">
@@ -84,12 +78,12 @@ const Contact = () => {
                           <Mail className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <p className="font-medium mb-1">{t('contact.infoEmail')}</p>
-                          <a 
-                            href="mailto:kontakt@colleaiq.dk" 
+                          <p className="font-medium mb-1">{t("contact.infoEmail")}</p>
+                          <a
+                            href="mailto:kontakt@colleaiq.dk"
                             className="text-sm text-muted-foreground hover:text-primary transition-colors"
                           >
-                            {t('footer.email')}
+                            {t("footer.email")}
                           </a>
                         </div>
                       </div>
@@ -99,15 +93,13 @@ const Contact = () => {
                           <MapPin className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <p className="font-medium mb-1">{t('contact.infoOffice')}</p>
-                          <p className="text-sm text-muted-foreground">
-                            {t('footer.address')}
-                          </p>
+                          <p className="font-medium mb-1">{t("contact.infoOffice")}</p>
+                          <p className="text-sm text-muted-foreground">{t("footer.address")}</p>
                         </div>
                       </div>
 
-                      <a 
-                        href="https://www.linkedin.com/company/colleaiq/" 
+                      <a
+                        href="https://www.linkedin.com/company/colleaiq/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-start gap-3 group"
@@ -116,7 +108,7 @@ const Contact = () => {
                           <Linkedin className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <p className="font-medium mb-1">{t('contact.infoLinkedIn')}</p>
+                          <p className="font-medium mb-1">{t("contact.infoLinkedIn")}</p>
                           <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
                             ColleaiQ
                           </p>
@@ -142,18 +134,18 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">{t('contact.formName')} *</Label>
+                        <Label htmlFor="name">{t("contact.formName")} *</Label>
                         <Input
                           id="name"
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          placeholder={t('contact.formName')}
+                          placeholder={t("contact.formName")}
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">{t('contact.formEmail')} *</Label>
+                        <Label htmlFor="email">{t("contact.formEmail")} *</Label>
                         <Input
                           id="email"
                           name="email"
@@ -161,24 +153,24 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          placeholder={t('contact.formEmail')}
+                          placeholder={t("contact.formEmail")}
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="company">{t('contact.formCompany')}</Label>
+                      <Label htmlFor="company">{t("contact.formCompany")}</Label>
                       <Input
                         id="company"
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        placeholder={t('contact.formCompany')}
+                        placeholder={t("contact.formCompany")}
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">{t('contact.formMessage')} *</Label>
+                      <Label htmlFor="message">{t("contact.formMessage")} *</Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -191,12 +183,12 @@ const Contact = () => {
                     </div>
 
                     <Button type="submit" size="lg" className="w-full">
-                      {t('contact.formButton')}
+                      {t("contact.formButton")}
                     </Button>
 
                     <p className="text-sm text-muted-foreground text-center">
-                      By submitting this form, you agree to our privacy policy 
-                      and consent to be contacted regarding your inquiry.
+                      By submitting this form, you agree to our privacy policy and consent to be contacted regarding
+                      your inquiry.
                     </p>
                   </form>
                 </CardContent>
@@ -212,12 +204,10 @@ const Contact = () => {
               <CardContent className="p-12 text-center space-y-6">
                 <h2 className="text-3xl font-bold">Request a Demo</h2>
                 <p className="text-lg text-muted-foreground">
-                  See colleaq's multi-agent AI system in action. Schedule a personalized 
-                  demonstration to learn how we can strengthen your cybersecurity posture.
+                  See ColleaiQ's multi-agent AI system in action. Schedule a personalized demonstration to learn how we
+                  can strengthen your cybersecurity posture.
                 </p>
-                <Button size="lg">
-                  Schedule Demo
-                </Button>
+                <Button size="lg">Schedule Demo</Button>
               </CardContent>
             </Card>
           </div>
